@@ -1,0 +1,19 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0a1a22}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s8" data-width="1080" data-height="1920">
+    <div class="clip" id="s8-clip" data-start="0" data-duration="4.052">
+      <div id="s8-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="cableG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a3f45"/><stop offset="1" stop-color="#23282d"/></linearGradient>
+<radialGradient id="bulbG"><stop offset="0" stop-color="#fff3b0" stop-opacity="0.95"/><stop offset="1" stop-color="#ffd60a" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#0c1116"/><rect x="0" y="0" width="1080" height="1920" fill="#0a1a22"/><g class="lamp8" transform="translate(540 620) scale(1.8)"><path d="M -60 -40 q 30 -70 60 -70 q 30 0 60 70 z" fill="#3d4a52"/><rect x="-8" y="-118" width="16" height="20" fill="#8fa3b1"/><circle class="bulbGlow" cx="0" cy="0" r="150" fill="url(#bulbG)" opacity="0.9"/><ellipse cx="0" cy="-4" rx="52" ry="14" fill="#ffd60a" opacity="0.95"/></g><path class="drop8" d="M 380 760 l 0 30" stroke="#7fd0f2" stroke-width="6" opacity="0.6"/><path class="drop8" d="M 420 760 l 0 30" stroke="#7fd0f2" stroke-width="6" opacity="0.6"/><path class="drop8" d="M 460 760 l 0 30" stroke="#7fd0f2" stroke-width="6" opacity="0.6"/><path class="drop8" d="M 500 760 l 0 30" stroke="#7fd0f2" stroke-width="6" opacity="0.6"/><path class="drop8" d="M 540 760 l 0 30" stroke="#7fd0f2" stroke-width="6" opacity="0.6"/><path class="drop8" d="M 580 760 l 0 30" stroke="#7fd0f2" stroke-width="6" opacity="0.6"/><path class="drop8" d="M 620 760 l 0 30" stroke="#7fd0f2" stroke-width="6" opacity="0.6"/><path class="drop8" d="M 660 760 l 0 30" stroke="#7fd0f2" stroke-width="6" opacity="0.6"/><text class="hl" x="60" y="1300" font-family="Nunito, Arial, sans-serif" font-size="60" font-weight="900" fill="#f2f6f8" text-anchor="start" letter-spacing="-1">ВАННАЯ</text><text class="hl" x="60" y="1370" font-family="Nunito, Arial, sans-serif" font-size="30" font-weight="900" fill="#9fd8ee" text-anchor="start" letter-spacing="-1">влагозащищённый светильник</text><text class="hl" x="60" y="1440" font-family="Nunito, Arial, sans-serif" font-size="44" font-weight="900" fill="#ffd60a" text-anchor="start" letter-spacing="-1">УЗО 30 мА</text><text class="hl" x="60" y="1520" font-family="Nunito, Arial, sans-serif" font-size="30" font-weight="900" fill="#8fa3b1" text-anchor="start" letter-spacing="-1">IP44 и выше</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s8 = gsap.timeline({ paused: true });
+    const tl = tl_s8;
+    tl.fromTo("#s8 .world", { scale:1.0 }, { scale:1.04, duration:4.052, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.to(".drop8", {y:120, opacity:0, duration:1.4, stagger:0.1, repeat:3, ease:"power1.in"}, 0.2);tl.to(".lamp8 .bulbGlow", {opacity:0.5, duration:1.2, yoyo:true, repeat:5}, 0);
+    window.__timelines["s8"] = tl_s8;
+  </script>
+</template>

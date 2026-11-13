@@ -1,0 +1,28 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#f2f5f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s8" data-width="1080" data-height="1920">
+    <div class="clip" id="s8-clip" data-start="0" data-duration="5.385">
+      <div id="s8-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="hotG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb37a"/><stop offset="1" stop-color="#e0642f"/></linearGradient>
+<linearGradient id="insG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd98a"/><stop offset="1" stop-color="#e8a63a"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#f2f5f7"/><text x="540" y="280" font-family="Nunito, Arial" font-size="54" font-weight="900" fill="#1f2c36" text-anchor="middle">ЗАПУСК</text><g class="day"><rect x="120" y="1240" width="100" height="60" rx="8" fill="#e0642f" opacity="0.35"/><text x="170" y="1340" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#1f2c36" text-anchor="middle">15°</text></g><g class="day"><rect x="260" y="1150" width="100" height="150" rx="8" fill="#e0642f" opacity="0.44999999999999996"/><text x="310" y="1340" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#1f2c36" text-anchor="middle">20°</text></g><g class="day"><rect x="400" y="1060" width="100" height="240" rx="8" fill="#e0642f" opacity="0.55"/><text x="450" y="1340" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#1f2c36" text-anchor="middle">25°</text></g><g class="day"><rect x="540" y="970" width="100" height="330" rx="8" fill="#e0642f" opacity="0.65"/><text x="590" y="1340" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#1f2c36" text-anchor="middle">30°</text></g><g class="day"><rect x="680" y="880" width="100" height="420" rx="8" fill="#e0642f" opacity="0.75"/><text x="730" y="1340" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#1f2c36" text-anchor="middle">35°</text></g><g class="day"><rect x="820" y="790" width="100" height="510" rx="8" fill="#e0642f" opacity="0.85"/><text x="870" y="1340" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#1f2c36" text-anchor="middle">40°</text></g><text x="540" y="1460" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#1f2c36" text-anchor="middle">+5° в день, шесть дней</text><g class="ico " transform="translate(430 1540) scale(3.75)" opacity="1.0"><path fill="#2c8a58" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z"/></g><text x="540" y="1690" font-family="Nunito, Arial" font-size="32" font-weight="800" fill="#1f2c36" text-anchor="middle">резкий прогрев = трещины в стяжке</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s8 = gsap.timeline({ paused: true });
+    const tl = tl_s8;
+    tl.fromTo("#s8 .world", { scale:1.0 }, { scale:1.04, duration:5.385, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.5, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.35, ease:"back.out(3)" }, 0.15);
+    tl.to(".coldWave", { y:-20, opacity:0.25, duration:1.4, yoyo:true, repeat:6, stagger:0.08 }, 0);
+    tl.to(".feet", { y:6, duration:1.0, yoyo:true, repeat:8, ease:"sine.inOut" }, 0);
+    tl.to(".heatUp", { y:-24, opacity:0.5, duration:1.6, yoyo:true, repeat:4 }, 0);
+    tl.to(".lay", { x:10, duration:0.6, yoyo:true, repeat:6, stagger:0.12 }, 0);
+    tl.to(".coilG", { opacity:0.75, duration:1.2, yoyo:true, repeat:4 }, 0);
+    tl.to(".crack5", { opacity:0.3, duration:0.5, yoyo:true, repeat:10 }, 0);
+    tl.to(".stripe", { opacity:0.9, duration:1.0, yoyo:true, repeat:4, stagger:0.05 }, 0);
+    tl.to(".sensor", { scale:1.6, transformOrigin:"50% 50%", duration:0.8, yoyo:true, repeat:5 }, 0);
+    tl.fromTo(".day", { scaleY:0, transformOrigin:"50% 100%" }, { scaleY:1, duration:0.5, stagger:0.25, ease:"power2.out" }, 0.2);
+    window.__timelines["s8"] = tl_s8;
+  </script>
+</template>

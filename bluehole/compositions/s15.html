@@ -1,0 +1,14 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#030d12}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s15" data-width="1080" data-height="1920">
+    <div class="clip" id="s15-clip" data-start="0" data-duration="2.634">
+      <div id="s15-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#050b0e"/><rect x="90" y="420" width="900" height="1080" fill="#0b1c22" stroke="#8aa9b3" stroke-width="3"/><circle cx="150" cy="480" r="12" fill="#d9524a"/><text class="hl" x="180" y="490" font-family="Nunito, Arial" font-size="24" font-weight="900" fill="#d9524a" text-anchor="start" letter-spacing="0" stroke="#020a0e" stroke-width="9" paint-order="stroke" stroke-linejoin="round">REC</text><path d="M 300 1200 q 200 -300 480 -200" stroke="#ffe6a8" stroke-width="5" fill="none" opacity="0.5"/><circle cx="640" cy="900" r="60" fill="#ffe6a8" opacity="0.12"/><text class="hl" x="60" y="250" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#8aa9b3" text-anchor="start" letter-spacing="1" stroke="#020a0e" stroke-width="9" paint-order="stroke" stroke-linejoin="round">КАМЕРА НА ШЛЕМЕ</text><text class="hl" x="60" y="1620" font-family="Nunito, Arial" font-size="24" font-weight="700" fill="#9fe8dd" text-anchor="start" letter-spacing="0" stroke="#020a0e" stroke-width="9" paint-order="stroke" stroke-linejoin="round">записала последние минуты</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s15 = gsap.timeline({ paused: true });
+    const tl = tl_s15;
+    tl.fromTo(".hl", {opacity:0}, {opacity:1, duration:0.45, stagger:0.1}, 0);
+    window.__timelines["s15"] = tl_s15;
+  </script>
+</template>

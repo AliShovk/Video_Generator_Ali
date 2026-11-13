@@ -1,0 +1,29 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef4f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div class="clip" id="s4-clip" data-start="0" data-duration="6.025">
+      <div id="s4-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="pipeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2d2dc"/><stop offset="0.5" stop-color="#93a8b6"/><stop offset="1" stop-color="#5d7280"/></linearGradient>
+<linearGradient id="waterG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b7fa8"/><stop offset="1" stop-color="#7fd0f2"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#eef4f7"/><line x1="120" y1="760" x2="960" y2="760" stroke="#546a78" stroke-width="3" stroke-dasharray="12 10"/><line x1="120" y1="750" x2="960" y2="770" stroke="#7f97a6" stroke-width="110" stroke-linecap="round"/><line x1="120" y1="750" x2="960" y2="770" stroke="#2f8fc4" stroke-width="80" stroke-linecap="round" opacity="0.9"/><circle class="silt" cx="180" cy="758" r="9" fill="#8a6a3a" opacity="0.85"/><circle class="silt" cx="265" cy="760" r="10" fill="#8a6a3a" opacity="0.85"/><circle class="silt" cx="350" cy="762" r="11" fill="#8a6a3a" opacity="0.85"/><circle class="silt" cx="435" cy="764" r="12" fill="#8a6a3a" opacity="0.85"/><circle class="silt" cx="520" cy="766" r="9" fill="#8a6a3a" opacity="0.85"/><circle class="silt" cx="605" cy="768" r="10" fill="#8a6a3a" opacity="0.85"/><circle class="silt" cx="690" cy="770" r="11" fill="#8a6a3a" opacity="0.85"/><circle class="silt" cx="775" cy="772" r="12" fill="#8a6a3a" opacity="0.85"/><circle class="silt" cx="860" cy="774" r="9" fill="#8a6a3a" opacity="0.85"/><rect x="700" y="700" width="90" height="110" rx="8" fill="#8a6a3a" opacity="0.9"/><text x="745" y="680" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#c93a26" text-anchor="middle">ЗАСОР</text><text x="120" y="1020" font-family="Nunito, Arial" font-size="34" font-weight="800" fill="#1f2c36">уклон меньше нормы</text><line x1="980" y1="750" x2="980" y2="770" stroke="#c93a26" stroke-width="3" stroke-dasharray="10 8"/><text x="980" y="746" font-family="Nunito, Arial" font-size="30" font-weight="900" fill="#c93a26" text-anchor="middle">1–2 см</text><g class="b"><circle cx="106" cy="420" r="44" fill="#1f2c36"/><text x="106" y="434" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#fff" text-anchor="middle">1</text></g><text class="hl" x="52" y="150" fill="#1f2c36" font-family="Nunito, Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="-1">МЕНЬШЕ НОРМЫ</text><text class="hl" x="52" y="222" fill="#c93a26" font-family="Nunito, Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="-1">ИЛ ОСЕДАЕТ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s4 = gsap.timeline({ paused: true });
+    const tl = tl_s4;
+    tl.fromTo("#s4 .world", { scale:1.0 }, { scale:1.04, duration:6.025, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.5, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.35, ease:"back.out(3)" }, 0.15);
+    tl.to(".still", { scaleY:1.12, transformOrigin:"50% 50%", duration:1.6, yoyo:true, repeat:3, ease:"sine.inOut" }, 0);
+    tl.to(".smell", { y:-60, opacity:0, duration:2.2, stagger:0.15, repeat:2 }, 0);
+    tl.to(".silt", { y:12, x:20, duration:2.4, stagger:0.08, ease:"sine.inOut" }, 0);
+    tl.to(".fast", { x:120, y:100, duration:1.4, stagger:0.1, repeat:6, ease:"none" }, 0);
+    tl.to(".left", { x:-20, opacity:0.4, duration:1.6, stagger:0.12, repeat:3 }, 0);
+    tl.to(".elb", { rotation:12, svgOrigin:"400 700", duration:1.2, yoyo:true, repeat:3 }, 0);
+    tl.to(".elb2", { rotation:-8, svgOrigin:"800 830", duration:1.4, yoyo:true, repeat:3 }, 0);
+    tl.to(".air7", { y:-40, duration:2.0, stagger:0.12, repeat:4 }, 0);
+    tl.to(".smell7", { y:-30, opacity:0.2, duration:2.0, repeat:4 }, 0);
+    tl.fromTo(".row, .row3", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s4"] = tl_s4;
+  </script>
+</template>

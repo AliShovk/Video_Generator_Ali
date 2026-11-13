@@ -1,0 +1,29 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef4f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s6" data-width="1080" data-height="1920">
+    <div class="clip" id="s6-clip" data-start="0" data-duration="6.293">
+      <div id="s6-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="pipeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2d2dc"/><stop offset="0.5" stop-color="#93a8b6"/><stop offset="1" stop-color="#5d7280"/></linearGradient>
+<linearGradient id="waterG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b7fa8"/><stop offset="1" stop-color="#7fd0f2"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#eef4f7"/><text x="270" y="620" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#c93a26" text-anchor="middle">90° — ПЛОХО</text><line x1="150" y1="700" x2="400" y2="700" stroke="#7f97a6" stroke-width="96" stroke-linecap="round"/><line x1="150" y1="700" x2="400" y2="700" stroke="#2f8fc4" stroke-width="66" stroke-linecap="round" opacity="0.9"/><line x1="400" y1="700" x2="400" y2="980" stroke="#7f97a6" stroke-width="96" stroke-linecap="round"/><line x1="400" y1="700" x2="400" y2="980" stroke="#2f8fc4" stroke-width="66" stroke-linecap="round" opacity="0.9"/><circle class="elb" cx="400" cy="700" r="48" fill="none" stroke="#c93a26" stroke-width="10"/><text x="800" y="1120" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#2c8a58" text-anchor="middle">2×45° — ХОРОШО</text><line x1="620" y1="700" x2="800" y2="830" stroke="#7f97a6" stroke-width="96" stroke-linecap="round"/><line x1="620" y1="700" x2="800" y2="830" stroke="#2f8fc4" stroke-width="66" stroke-linecap="round" opacity="0.9"/><line x1="800" y1="830" x2="940" y2="1000" stroke="#7f97a6" stroke-width="96" stroke-linecap="round"/><line x1="800" y1="830" x2="940" y2="1000" stroke="#2f8fc4" stroke-width="66" stroke-linecap="round" opacity="0.9"/><circle class="elb2" cx="800" cy="830" r="48" fill="none" stroke="#2c8a58" stroke-width="10"/><g class="b"><circle cx="106" cy="420" r="44" fill="#1f2c36"/><text x="106" y="434" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#fff" text-anchor="middle">3</text></g><text class="hl" x="52" y="150" fill="#1f2c36" font-family="Nunito, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-1">ПОВОРОТЫ</text><text class="hl" x="52" y="228" fill="#2c8a58" font-family="Nunito, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-1">ПЛАВНО</text><text x="54" y="1500" font-family="Nunito, Arial" font-size="32" font-weight="800" fill="#1f2c36">на длинных участках — ревизия</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s6 = gsap.timeline({ paused: true });
+    const tl = tl_s6;
+    tl.fromTo("#s6 .world", { scale:1.0 }, { scale:1.04, duration:6.293, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.5, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.35, ease:"back.out(3)" }, 0.15);
+    tl.to(".still", { scaleY:1.12, transformOrigin:"50% 50%", duration:1.6, yoyo:true, repeat:3, ease:"sine.inOut" }, 0);
+    tl.to(".smell", { y:-60, opacity:0, duration:2.2, stagger:0.15, repeat:2 }, 0);
+    tl.to(".silt", { y:12, x:20, duration:2.4, stagger:0.08, ease:"sine.inOut" }, 0);
+    tl.to(".fast", { x:120, y:100, duration:1.4, stagger:0.1, repeat:6, ease:"none" }, 0);
+    tl.to(".left", { x:-20, opacity:0.4, duration:1.6, stagger:0.12, repeat:3 }, 0);
+    tl.to(".elb", { rotation:12, svgOrigin:"400 700", duration:1.2, yoyo:true, repeat:3 }, 0);
+    tl.to(".elb2", { rotation:-8, svgOrigin:"800 830", duration:1.4, yoyo:true, repeat:3 }, 0);
+    tl.to(".air7", { y:-40, duration:2.0, stagger:0.12, repeat:4 }, 0);
+    tl.to(".smell7", { y:-30, opacity:0.2, duration:2.0, repeat:4 }, 0);
+    tl.fromTo(".row, .row3", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s6"] = tl_s6;
+  </script>
+</template>

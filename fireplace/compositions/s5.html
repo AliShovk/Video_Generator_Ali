@@ -1,0 +1,38 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #f2e4c8; }
+    .world { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .stamp {
+      position: absolute; left: 72px; top: 238px;
+      border: 3px solid #c1442e; color: #c1442e; border-radius: 6px;
+      font: 700 24px/1 "Oswald", Arial, sans-serif; letter-spacing: 4px; text-transform: uppercase;
+      padding: 9px 14px; transform: rotate(-2deg); opacity: 0.9;
+    }
+    .foot {
+      position: absolute; left: 72px; right: 72px; bottom: 300px;
+      font: 700 46px/1.16 "Playfair Display", Georgia, serif; color: #3a2a1e; text-align: left;
+    }
+    .foot::before { content: ""; display: block; width: 120px; height: 6px; background: #c1442e; margin-bottom: 20px; }
+  </style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="6">
+      <div id="s5-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="brick" width="120" height="56" patternUnits="userSpaceOnUse"><rect width="120" height="56" fill="#c1442e" opacity="0.92"/><rect x="2" y="2" width="116" height="24" rx="3" fill="#b03c27"/><rect x="-58" y="30" width="116" height="24" rx="3" fill="#b03c27"/><rect x="62" y="30" width="116" height="24" rx="3" fill="#b03c27"/></pattern><pattern id="hatch" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="14" stroke="#3a2a1e" stroke-width="2" opacity="0.25"/></pattern></defs><rect width="1080" height="1920" fill="#f2e4c8"/><rect x="34" y="34" width="1012" height="1852" rx="18" fill="none" stroke="#3a2a1e" stroke-width="6" opacity="0.85"/><rect x="52" y="52" width="976" height="1816" rx="12" fill="none" stroke="#3a2a1e" stroke-width="2" opacity="0.45"/><text x="72" y="150" fill="#3a2a1e" font-family="Oswald, Georgia, serif" font-size="48" font-weight="700" letter-spacing="1" text-anchor="start">БЕЗОПАСНОСТЬ</text><text x="72" y="200" fill="#2f6b6b" font-family="Oswald, Georgia, serif" font-size="22" font-weight="700" letter-spacing="1" text-anchor="start">разделка и приток воздуха</text><rect x="260" y="1320" width="540" height="40" fill="#3a2a1e" opacity="0.85"/><rect x="274" y="1290" width="512" height="30" fill="#8f9ea9"/><path d="M 300 1290 L 300 780 L 760 780 L 760 1290 Z" fill="url(#brick)" stroke="#3a2a1e" stroke-width="4"/><path d="M 370 1290 L 370 1030 Q 530.0 900 690 1030 L 690 1290 Z" fill="#fbf3e2" stroke="#3a2a1e" stroke-width="4"/><path d="M 370 1290 L 370 1030 Q 530.0 900 690 1030 L 690 1290" fill="none" stroke="#2f6b6b" stroke-width="10" opacity="0.75"/><path d="M 370 1030 L 690 1030 L 640 770 L 420 770 Z" fill="#fbf3e2" stroke="#3a2a1e" stroke-width="4"/><rect x="420" y="360" width="220" height="410" fill="url(#brick)" stroke="#3a2a1e" stroke-width="4"/><rect x="450" y="360" width="160" height="410" fill="#3a2a1e" opacity="0.22"/><rect x="420" y="340" width="220" height="26" fill="#3a2a1e" opacity="0.8"/><rect x="800" y="820" width="60" height="560" fill="url(#hatch)" stroke="#3a2a1e" stroke-width="3"/><line x1="780" y1="960" x2="880" y2="960" stroke="#c1442e" stroke-width="6"/><rect x="676" y="896" width="126" height="46" rx="8" fill="#f2e4c8"/><text x="700" y="932" fill="#c1442e" font-family="Oswald, Georgia, serif" font-size="30" font-weight="700" letter-spacing="1" text-anchor="start">38 см</text><rect x="660" y="980" width="150" height="34" rx="8" fill="#f2e4c8"/><text x="668" y="1006" fill="#3a2a1e" font-family="Oswald, Georgia, serif" font-size="21" font-weight="700" letter-spacing="1" text-anchor="start">до горючих</text><g id="air"><path d="M 170 1480 L 280 1480" stroke="#2f6b6b" stroke-width="6"/><polygon points="300,1480 270,1468 270,1492" fill="#2f6b6b"/></g><text x="112" y="1520" fill="#2f6b6b" font-family="Oswald, Georgia, serif" font-size="23" font-weight="700" letter-spacing="1" text-anchor="start">воздух</text></svg>
+        <div class="stamp" id="s5-stamp">правила</div>
+        <div class="foot" id="s5-foot">Разделка 38 см и приток воздуха</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    tl_s5.fromTo("#s5 .world", { scale: 1.0 }, { scale: 1.04, duration: 6, ease: "none" }, 0);
+    tl_s5.fromTo("#s5-stamp", { opacity: 0, rotate: -8 }, { opacity: 0.9, rotate: -2, duration: 0.5, ease: "back.out(1.6)" }, 0.15);
+    tl_s5.fromTo("#s5-foot", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.4);
+    
+    tl_s5.to("#air", {x:30, duration:0.75, yoyo:true, repeat:7, ease:"sine.inOut"}, 0.3);
+    tl_s5.to("#s5 .world", {y:-7, duration:2.8, yoyo:true, repeat:1, ease:"sine.inOut"}, 0);
+    tl_s5.fromTo("#s5 .world", {opacity:0.75}, {opacity:1, duration:0.7}, 0.05);
+    
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

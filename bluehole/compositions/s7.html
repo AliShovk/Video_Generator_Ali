@@ -1,0 +1,14 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#030d12}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920">
+    <div class="clip" id="s7-clip" data-start="0" data-duration="2.35">
+      <div id="s7-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#030d12"/><circle cx="540" cy="960" r="160" fill="none" stroke="#8aa9b3" stroke-width="1.5" opacity="0.28"/><circle cx="540" cy="960" r="270" fill="none" stroke="#8aa9b3" stroke-width="1.5" opacity="0.24"/><circle cx="540" cy="960" r="380" fill="none" stroke="#8aa9b3" stroke-width="1.5" opacity="0.20"/><circle cx="540" cy="960" r="490" fill="none" stroke="#8aa9b3" stroke-width="1.5" opacity="0.16"/><circle cx="540" cy="960" r="600" fill="none" stroke="#8aa9b3" stroke-width="1.5" opacity="0.12"/><circle cx="540" cy="960" r="710" fill="none" stroke="#8aa9b3" stroke-width="1.5" opacity="0.08"/><text class="hl" x="540" y="900" font-family="Nunito, Arial" font-size="240" font-weight="900" fill="#ffe6a8" text-anchor="middle" letter-spacing="0" stroke="#020a0e" stroke-width="9" paint-order="stroke" stroke-linejoin="round">10</text><text class="hl" x="540" y="1000" font-family="Nunito, Arial" font-size="72" font-weight="900" fill="#9fe8dd" text-anchor="middle" letter-spacing="6" stroke="#020a0e" stroke-width="9" paint-order="stroke" stroke-linejoin="round">ЛЕТ</text><text class="hl" x="540" y="1120" font-family="Nunito, Arial" font-size="30" font-weight="700" fill="#8aa9b3" text-anchor="middle" letter-spacing="0" stroke="#020a0e" stroke-width="9" paint-order="stroke" stroke-linejoin="round">никто не мог его достать</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s7 = gsap.timeline({ paused: true });
+    const tl = tl_s7;
+    tl.fromTo(".hl", {opacity:0, scale:0.9}, {opacity:1, scale:1, duration:0.6, stagger:0.1}, 0);
+    window.__timelines["s7"] = tl_s7;
+  </script>
+</template>

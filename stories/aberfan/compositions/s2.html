@@ -1,0 +1,28 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#101210}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div class="clip" id="s2-clip" data-start="0" data-duration="5.95">
+      <div id="s2-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#101210"/><g transform="translate(430 1500) scale(1.15)"><path d="M -430 0 q 210 -360 430 -360 q 220 0 430 360 z" fill="#3a352f"/><path d="M -300 -60 q 150 -240 300 -240 q 150 0 300 240" stroke="#4a443c" stroke-width="10" fill="none" opacity="0.6"/><rect x="-150" y="-120" width="300" height="120" fill="#4a443c" opacity="0.55"/><line x1="-140" y1="-120" x2="-140" y2="0" stroke="#2b2722" stroke-width="4" opacity="0.5"/><line x1="-100" y1="-120" x2="-100" y2="0" stroke="#2b2722" stroke-width="4" opacity="0.5"/><line x1="-60" y1="-120" x2="-60" y2="0" stroke="#2b2722" stroke-width="4" opacity="0.5"/><line x1="-20" y1="-120" x2="-20" y2="0" stroke="#2b2722" stroke-width="4" opacity="0.5"/><line x1="20" y1="-120" x2="20" y2="0" stroke="#2b2722" stroke-width="4" opacity="0.5"/><line x1="60" y1="-120" x2="60" y2="0" stroke="#2b2722" stroke-width="4" opacity="0.5"/><line x1="100" y1="-120" x2="100" y2="0" stroke="#2b2722" stroke-width="4" opacity="0.5"/><line x1="140" y1="-120" x2="140" y2="0" stroke="#2b2722" stroke-width="4" opacity="0.5"/><g><rect x="-110" y="18" width="220" height="110" fill="#6b5b4a"/><path d="M -130 18 l 130 -60 l 130 60 z" fill="#8a7460"/><rect x="-92" y="40" width="34" height="28" fill="#ffd98a" opacity="0.7"/><rect x="-34" y="40" width="34" height="28" fill="#ffd98a" opacity="0.7"/><rect x="24" y="40" width="34" height="28" fill="#ffd98a" opacity="0.7"/><rect x="82" y="40" width="34" height="28" fill="#ffd98a" opacity="0.7"/><rect x="-92" y="84" width="34" height="28" fill="#ffd98a" opacity="0.7"/><rect x="-34" y="84" width="34" height="28" fill="#ffd98a" opacity="0.7"/><rect x="24" y="84" width="34" height="28" fill="#ffd98a" opacity="0.7"/><rect x="82" y="84" width="34" height="28" fill="#ffd98a" opacity="0.7"/></g></g><g class="callouts"><g class="call c0" opacity="0"><rect x="60" y="380" width="420" height="150" rx="14" fill="#000000" opacity="0.45"/><text x="90" y="460" font-family="Nunito, Arial" font-size="62" font-weight="900" fill="#ffb03d">144</text><text x="90" y="506" font-family="Nunito, Arial" font-size="30" font-weight="800" fill="#ffffff" opacity="0.8">погибших</text></g><g class="call c1" opacity="0"><rect x="60" y="570" width="420" height="150" rx="14" fill="#000000" opacity="0.45"/><text x="90" y="650" font-family="Nunito, Arial" font-size="62" font-weight="900" fill="#ffb03d">116</text><text x="90" y="696" font-family="Nunito, Arial" font-size="30" font-weight="800" fill="#ffffff" opacity="0.8">детей</text></g><g class="call c2" opacity="0"><rect x="60" y="760" width="420" height="150" rx="14" fill="#000000" opacity="0.45"/><text x="90" y="840" font-family="Nunito, Arial" font-size="62" font-weight="900" fill="#ffb03d">9:15</text><text x="90" y="886" font-family="Nunito, Arial" font-size="30" font-weight="800" fill="#ffffff" opacity="0.8">утра</text></g></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s2 = gsap.timeline({ paused: true });
+    const tl = tl_s2;
+    tl.fromTo("#s2 .world", { scale:1.0 }, { scale:1.07, duration:5.95, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:26 }, { opacity:1, y:0, duration:0.5, stagger:0.14, ease:"power3.out" }, 0.1);
+    tl.fromTo(".sub", { opacity:0 }, { opacity:0.75, duration:0.7 }, 0.7);
+    tl.fromTo(".call", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.45, stagger:0.5 }, 0.3);
+    tl.to(".ring", { scale:1.6, opacity:0, duration:2.2, transformOrigin:"50% 50%", stagger:0.4, repeat:2, ease:"power2.out" }, 0);
+    tl.to(".flash", { opacity:0.28, duration:0.4, yoyo:true, repeat:8 }, 0);
+    tl.to(".debris", { y:-90, x:30, duration:2.0, stagger:0.05, repeat:3, ease:"power1.out" }, 0);
+    tl.to(".flame", { scaleY:1.15, transformOrigin:"50% 100%", duration:0.5, yoyo:true, repeat:16, stagger:0.08 }, 0);
+    tl.to(".smoke", { y:-160, opacity:0.15, duration:3.2, stagger:0.15, repeat:2 }, 0);
+    tl.to(".wave", { x:"+=160", duration:5.95, ease:"power1.in" }, 0);
+    tl.to(".gas", { y:-120, x:"+=40", duration:4.5, stagger:0.12, ease:"sine.inOut" }, 0);
+    tl.to(".piece", { y:260, rotation:40, duration:1.8, stagger:0.12, ease:"power2.in" }, 0.3);
+    tl.fromTo(".big", { scale:0.5, opacity:0 }, { scale:1, opacity:1, duration:0.7, ease:"back.out(2)" }, 0.2);
+    tl.to(".cap1", { opacity:1, duration:0.5 }, 0.8);
+    tl.to(".cap2", { opacity:1, duration:0.5 }, 1.2);
+    window.__timelines["s2"] = tl_s2;
+  </script>
+</template>

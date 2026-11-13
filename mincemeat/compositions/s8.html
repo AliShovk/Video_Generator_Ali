@@ -1,0 +1,15 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0b242d}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s8" data-width="1080" data-height="1920">
+    <div class="clip" id="s8-clip" data-start="0" data-duration="4.067">
+      <div id="s8-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#0b242d"/><circle cx="540" cy="900" r="440" fill="#123742"/><g class="wf" opacity="0.2"><path d="M 0 1500 q 30 -18 60 0 q 30 18 60 0" fill="none" stroke="#6f9a9a" stroke-width="4"/><path d="M 120 1500 q 30 -18 60 0 q 30 18 60 0" fill="none" stroke="#6f9a9a" stroke-width="4"/><path d="M 240 1500 q 30 -18 60 0 q 30 18 60 0" fill="none" stroke="#6f9a9a" stroke-width="4"/><path d="M 360 1500 q 30 -18 60 0 q 30 18 60 0" fill="none" stroke="#6f9a9a" stroke-width="4"/><path d="M 480 1500 q 30 -18 60 0 q 30 18 60 0" fill="none" stroke="#6f9a9a" stroke-width="4"/><path d="M 600 1500 q 30 -18 60 0 q 30 18 60 0" fill="none" stroke="#6f9a9a" stroke-width="4"/><path d="M 720 1500 q 30 -18 60 0 q 30 18 60 0" fill="none" stroke="#6f9a9a" stroke-width="4"/><path d="M 840 1500 q 30 -18 60 0 q 30 18 60 0" fill="none" stroke="#6f9a9a" stroke-width="4"/><path d="M 960 1500 q 30 -18 60 0 q 30 18 60 0" fill="none" stroke="#6f9a9a" stroke-width="4"/></g><text class="hl" x="540" y="700" font-family="Nunito, Arial" font-size="86" font-weight="900" fill="#f0e4c8" text-anchor="middle" letter-spacing="3">МЯСНОЙ</text><text class="hl" x="540" y="800" font-family="Nunito, Arial" font-size="86" font-weight="900" fill="#b5462b" text-anchor="middle" letter-spacing="8">ФАРШ</text><rect x="330" y="860" width="420" height="3" fill="#c9a227" opacity="0.7"/><text class="hl" x="540" y="930" font-family="Nunito, Arial" font-size="28" font-weight="700" fill="#6f9a9a" text-anchor="middle" letter-spacing="0">операция, которая сработала</text><text class="hl" x="540" y="1660" font-family="Nunito, Arial" font-size="26" font-weight="700" fill="#c9a227" text-anchor="middle" letter-spacing="0">National Archives, UK</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s8 = gsap.timeline({ paused: true });
+    const tl = tl_s8;
+    tl.fromTo("#s8 .world", { scale:1.02 }, { scale:1.07, duration:4.067, ease:"none" }, 0);
+    tl.fromTo(".hl", {opacity:0, y:20}, {opacity:1, y:0, duration:0.7, stagger:0.2}, 0.2);tl.to(".wf", {x:-30, duration:5, yoyo:true, repeat:-1, ease:"sine.inOut"}, 0);
+    window.__timelines["s8"] = tl_s8;
+  </script>
+</template>

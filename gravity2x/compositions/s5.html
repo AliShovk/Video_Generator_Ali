@@ -1,0 +1,118 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#bfe4f8; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+    .cap { position:absolute; left:44px; right:44px; top:150px; text-align:center;
+      font:900 50px/1.15 "Nunito", Arial, sans-serif; color:#1f2740;
+      background:rgba(255,255,255,0.86); border-radius:26px; padding:22px 26px; }
+  </style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="6">
+      <div id="s5-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8fcdf2"/><stop offset="0.6" stop-color="#cfeafd"/><stop offset="1" stop-color="#eaf7ff"/>
+  </linearGradient>
+  <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#6cc24a"/><stop offset="1" stop-color="#4ea336"/>
+  </linearGradient>
+  <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#fff3b0" stop-opacity="0.9"/><stop offset="1" stop-color="#fff3b0" stop-opacity="0"/>
+  </radialGradient>
+</defs><rect width="1080" height="1920" fill="url(#sky)"/><circle cx="880" cy="260" r="180" fill="url(#sun)"/><circle cx="880" cy="260" r="70" fill="#ffe08a"/><g opacity="0.9"><ellipse cx="220" cy="300" rx="90" ry="38" fill="#fff"/><ellipse cx="170" cy="312" rx="55" ry="26" fill="#fff"/><ellipse cx="280" cy="314" rx="62" ry="28" fill="#fff"/></g><g opacity="0.75"><ellipse cx="700" cy="180" rx="70" ry="30" fill="#fff"/><ellipse cx="660" cy="192" rx="44" ry="20" fill="#fff"/></g><rect x="40" y="1120" width="220" height="320" rx="14" fill="#e9e2d2"/><path d="M 20 1120 L 150 1030 L 280 1120 Z" fill="#b0503f"/><rect x="820" y="1160" width="220" height="280" rx="14" fill="#dfe7ef"/><path d="M 800 1160 L 930 1080 L 1060 1160 Z" fill="#8a5a4a"/><rect x="0" y="1400" width="1080" height="520" fill="url(#grass)"/><path d="M 0 1420 Q 300 1370 560 1410 Q 840 1450 1080 1400 L 1080 1480 L 0 1480 Z" fill="#7ad155" opacity="0.7"/><g transform="scale(0.75)">
+<g id="s5_mover">
+  <!-- дальняя нога -->
+  <g id="s5_legFar">
+    <path d="M -15 -4 q -3 46 -4 100 q 0 6 6 6 l 16 0 q 6 0 6 -6 q -2 -54 4 -100 z" fill="#e3b189"/>
+    <g id="s5_kneeFar">
+      <path d="M -12 0 q -2 40 -3 82 q 0 5 5 5 l 14 0 q 5 0 5 -5 q -1 -42 3 -82 z" fill="#e3b189"/>
+      <rect x="-12" y="74" width="26" height="14" rx="6" fill="#f2efe8"/>
+      <path d="M -13 86 q 13 -3 26 0 l 1 6 q 0 8 -8 8 l -16 0 q -6 0 -6 -6 z" fill="#22467d"/>
+      <path d="M -13 98 q 14 4 27 0 l 0 5 q -14 4 -27 0 z" fill="#182f52"/>
+    </g>
+  </g>
+  <!-- дальняя рука -->
+  <g id="s5_armFar">
+    <path d="M -10 -4 q -4 30 -5 52 q -1 18 3 36 l 16 0 q -5 -18 -4 -36 q 1 -22 4 -52 z" fill="#e3b189"/>
+    <g id="s5_elbowFar">
+      <path d="M -8 0 q -2 34 -2 62 q 0 8 4 16 l 12 0 q -5 -8 -4 -16 q 1 -28 3 -62 z" fill="#e3b189"/>
+      <path d="M -6 78 q 4 -6 10 0 q 3 10 -2 16 q -6 4 -10 -2 q -3 -8 2 -14 z" fill="#e3b189"/>
+    </g>
+  </g>
+  <!-- торс и шорты -->
+  <g id="s5_torso">
+    <path d="M -46 -118 q 8 -12 22 -14 q 12 -2 24 -2 q 12 0 24 2 q 14 2 22 14 q 6 30 4 62 q -2 26 -8 46 q -20 10 -42 10 q -22 0 -42 -10 q -6 -20 -8 -46 q -2 -32 4 -62 z" fill="#e04b3a"/>
+    <path d="M -46 -118 q 10 16 0 34 q -6 26 -6 50 l 14 4 q 2 -30 6 -52 q 4 -22 2 -36 z" fill="#c0392b" opacity="0.55"/>
+    <path d="M 46 -118 q -10 16 0 34 q 6 26 6 50 l -14 4 q -2 -30 -6 -52 q -4 -22 -2 -36 z" fill="#c0392b" opacity="0.55"/>
+    <path d="M -22 -132 q 22 10 44 0 l -2 -10 q -20 8 -40 0 z" fill="#c0392b" opacity="0.7"/>
+    <path d="M -34 -22 q 34 10 68 0 l -4 46 q -30 10 -60 0 z" fill="#3f6fb5"/>
+    <path d="M -30 24 q 30 8 60 0 l -2 16 q -28 8 -56 0 z" fill="#31578f" opacity="0.75"/>
+  </g>
+  <!-- ближняя нога -->
+  <g id="s5_legNear">
+    <path d="M -16 -4 q -3 48 -4 102 q 0 6 6 6 l 18 0 q 6 0 6 -6 q -2 -56 4 -102 z" fill="#f6c9a3"/>
+    <g id="s5_kneeNear">
+      <path d="M -13 0 q -2 42 -3 84 q 0 5 5 5 l 16 0 q 5 0 5 -5 q -1 -44 3 -84 z" fill="#f6c9a3"/>
+      <rect x="-13" y="76" width="28" height="15" rx="7" fill="#f2efe8"/>
+      <path d="M -14 88 q 14 -3 28 0 l 1 7 q 0 8 -8 8 l -18 0 q -6 0 -6 -6 z" fill="#2f5fa8"/>
+      <path d="M -14 100 q 15 4 29 0 l 0 6 q -15 4 -29 0 z" fill="#f2efe8"/>
+    </g>
+  </g>
+  <!-- голова -->
+  <g id="s5_head">
+    <path d="M -20 -12 q 0 22 10 30 q 10 8 20 8 q 12 0 22 -8 q 10 -8 10 -30 q 0 -32 -31 -32 q -31 0 -31 32 z" fill="#f6c9a3"/>
+    <path d="M 30 2 q 12 5 1 11 q -8 3 -11 -2 z" fill="#f6c9a3"/>
+    <path d="M 22 12 q 6 1 8 -3" stroke="#b87a58" stroke-width="2.6" fill="none"/>
+    <path d="M 2 18 q 8 5 16 -1" stroke="#c98f6a" stroke-width="2.4" fill="none"/>
+    <circle cx="14" cy="-2" r="4.4" fill="#2b2340"/>
+    <circle cx="15.6" cy="-3.2" r="1.5" fill="#fff"/>
+    <path d="M 8 -12 q 8 -4 14 0" stroke="#573820" stroke-width="3" fill="none"/>
+    <circle cx="6" cy="12" r="6" fill="#e58f7a" opacity="0.28"/>
+    <path d="M -32 -6 q -3 -30 32 -32 q 35 2 32 32 q -6 -16 -32 -16 q -26 0 -32 16 z" fill="#6b4527"/>
+    <path d="M -32 -6 q 4 -14 16 -18 q -6 10 -4 20 z" fill="#573820"/>
+    <path d="M -12 -34 q 14 -6 28 -2 q 10 4 12 12 q -16 -10 -40 -10 z" fill="#573820" opacity="0.8"/>
+    <path d="M -20 30 q 20 8 40 0 l 0 8 q -20 8 -40 0 z" fill="#e3b189" opacity="0.5"/>
+  </g>
+  <!-- ближняя рука -->
+  <g id="s5_armNear">
+    <path d="M -11 -4 q -4 32 -5 54 q -1 18 3 38 l 18 0 q -5 -20 -4 -38 q 1 -22 4 -54 z" fill="#f6c9a3"/>
+    <g id="s5_elbowNear">
+      <path d="M -9 0 q -2 36 -2 64 q 0 8 4 16 l 14 0 q -5 -8 -4 -16 q 1 -28 3 -64 z" fill="#f6c9a3"/>
+      <path d="M -7 80 q 5 -6 11 0 q 3 10 -2 17 q -7 4 -11 -2 q -3 -9 2 -15 z" fill="#f6c9a3"/>
+      <path d="M -4 88 q 5 3 10 0" stroke="#e3b189" stroke-width="2" fill="none"/>
+    </g>
+  </g>
+</g></g></svg>
+        <div class="cap" id="s5-cap">Вдвое тяжелее — <b>навсегда</b></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s5 .world", { scale:1.0 }, { scale:1.04, duration:6, ease:"none" }, 0);
+    
+gsap.set("#s5_mover", { x: 60, y: 1889 });
+gsap.set("#s5_legNear", { x: 7, y: 0 });
+gsap.set("#s5_legFar", { x: -7, y: 0 });
+gsap.set("#s5_kneeNear", { x: 0, y: 99 });
+gsap.set("#s5_kneeFar", { x: 0, y: 98 });
+gsap.set("#s5_torso", { x: 0, y: 0 });
+gsap.set("#s5_head", { x: 2, y: -162 });
+gsap.set("#s5_armNear", { x: 16, y: -112 });
+gsap.set("#s5_armFar", { x: -6, y: -112 });
+gsap.set("#s5_elbowNear", { x: 0, y: 90 });
+gsap.set("#s5_elbowFar", { x: 0, y: 88 });
+
+    
+tl.to("#s5_mover", { y: 1933, duration:0.7 }, 0.2);
+tl.to("#s5_legNear", { rotation: -86, duration:0.7 }, 0.2);
+tl.to("#s5_legFar", { rotation: -94, duration:0.7 }, 0.2);
+tl.to("#s5_kneeNear", { rotation: 128, duration:0.7 }, 0.2);
+tl.to("#s5_kneeFar", { rotation: 138, duration:0.7 }, 0.2);
+tl.to("#s5_torso", { rotation: 6, duration:2.2, yoyo:true, repeat:-1, ease:"sine.inOut" }, 0.9);
+tl.to("#s5_armNear", { rotation: -24, duration:2.0, yoyo:true, repeat:-1, ease:"sine.inOut" }, 1.0);
+
+    tl.fromTo("#s5-cap", { opacity:0, y:18 }, { opacity:1, y:0, duration:0.5 }, 0.2);
+    window.__timelines["s5"] = tl;
+  </script>
+</template>

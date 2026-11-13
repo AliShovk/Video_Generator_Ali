@@ -1,0 +1,29 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef4f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s8" data-width="1080" data-height="1920">
+    <div class="clip" id="s8-clip" data-start="0" data-duration="5.891">
+      <div id="s8-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="pipeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2d2dc"/><stop offset="0.5" stop-color="#93a8b6"/><stop offset="1" stop-color="#5d7280"/></linearGradient>
+<linearGradient id="waterG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b7fa8"/><stop offset="1" stop-color="#7fd0f2"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#eef4f7"/><text x="540" y="270" font-family="Nunito, Arial" font-size="56" font-weight="900" fill="#1f2c36" text-anchor="middle">ПРОВЕРЬ</text><g class="row r0"><circle cx="150" cy="470" r="42" fill="#2c8a58"/><path d="M 132 470 l 12 14 l 28 -32" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/><text x="225" y="482" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#1f2c36">уклон по уровню</text></g><g class="row r1"><circle cx="150" cy="670" r="42" fill="#2c8a58"/><path d="M 132 670 l 12 14 l 28 -32" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/><text x="225" y="682" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#1f2c36">50 мм — 3,5 см/м</text></g><g class="row r2"><circle cx="150" cy="870" r="42" fill="#2c8a58"/><path d="M 132 870 l 12 14 l 28 -32" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/><text x="225" y="882" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#1f2c36">110 мм — 2 см/м</text></g><g class="row r3"><circle cx="150" cy="1070" r="42" fill="#2c8a58"/><path d="M 132 1070 l 12 14 l 28 -32" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/><text x="225" y="1082" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#1f2c36">два отвода по 45°</text></g><g class="row r4"><circle cx="150" cy="1270" r="42" fill="#2c8a58"/><path d="M 132 1270 l 12 14 l 28 -32" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/><text x="225" y="1282" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#1f2c36">ревизия и вентиляция</text></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s8 = gsap.timeline({ paused: true });
+    const tl = tl_s8;
+    tl.fromTo("#s8 .world", { scale:1.0 }, { scale:1.04, duration:5.891, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.5, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.35, ease:"back.out(3)" }, 0.15);
+    tl.to(".still", { scaleY:1.12, transformOrigin:"50% 50%", duration:1.6, yoyo:true, repeat:3, ease:"sine.inOut" }, 0);
+    tl.to(".smell", { y:-60, opacity:0, duration:2.2, stagger:0.15, repeat:2 }, 0);
+    tl.to(".silt", { y:12, x:20, duration:2.4, stagger:0.08, ease:"sine.inOut" }, 0);
+    tl.to(".fast", { x:120, y:100, duration:1.4, stagger:0.1, repeat:6, ease:"none" }, 0);
+    tl.to(".left", { x:-20, opacity:0.4, duration:1.6, stagger:0.12, repeat:3 }, 0);
+    tl.to(".elb", { rotation:12, svgOrigin:"400 700", duration:1.2, yoyo:true, repeat:3 }, 0);
+    tl.to(".elb2", { rotation:-8, svgOrigin:"800 830", duration:1.4, yoyo:true, repeat:3 }, 0);
+    tl.to(".air7", { y:-40, duration:2.0, stagger:0.12, repeat:4 }, 0);
+    tl.to(".smell7", { y:-30, opacity:0.2, duration:2.0, repeat:4 }, 0);
+    tl.fromTo(".row, .row3", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s8"] = tl_s8;
+  </script>
+</template>

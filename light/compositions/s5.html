@@ -1,0 +1,19 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0c1116}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="3.726">
+      <div id="s5-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="cableG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a3f45"/><stop offset="1" stop-color="#23282d"/></linearGradient>
+<radialGradient id="bulbG"><stop offset="0" stop-color="#fff3b0" stop-opacity="0.95"/><stop offset="1" stop-color="#ffd60a" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#0c1116"/><g class="sw5" transform="translate(230 760) scale(1.6)"><rect x="-46" y="-70" width="92" height="140" rx="14" fill="#e8eef2" stroke="#8fa3b1" stroke-width="4"/><rect class="key" x="-32" y="-52" width="64" height="44" rx="8" fill="#ffd60a"/><rect class="key" x="-32" y="0" width="64" height="44" rx="8" fill="#ffd60a"/></g><path class="w5a" d="M 300 660 L 620 520" stroke="#ffd60a" stroke-width="8" fill="none" stroke-linecap="round"/><path class="w5b" d="M 300 740 L 620 700" stroke="#ffd60a" stroke-width="8" fill="none" stroke-linecap="round"/><g class="lamp5a" transform="translate(700 470) scale(1.5)"><path d="M -60 -40 q 30 -70 60 -70 q 30 0 60 70 z" fill="#3d4a52"/><rect x="-8" y="-118" width="16" height="20" fill="#8fa3b1"/><circle class="bulbGlow" cx="0" cy="0" r="150" fill="url(#bulbG)" opacity="0.9"/><ellipse cx="0" cy="-4" rx="52" ry="14" fill="#ffd60a" opacity="0.95"/></g><g class="lamp5b" transform="translate(820 760) scale(1.5)"><path d="M -60 -40 q 30 -70 60 -70 q 30 0 60 70 z" fill="#3d4a52"/><rect x="-8" y="-118" width="16" height="20" fill="#8fa3b1"/><circle class="bulbGlow" cx="0" cy="0" r="150" fill="url(#bulbG)" opacity="0.9"/><ellipse cx="0" cy="-4" rx="52" ry="14" fill="#ffd60a" opacity="0.95"/></g><circle class="cur5" cx="340" cy="660" r="7" fill="#ffd60a"/><circle class="cur5" cx="400" cy="660" r="7" fill="#ffd60a"/><circle class="cur5" cx="460" cy="660" r="7" fill="#ffd60a"/><circle class="cur5" cx="520" cy="660" r="7" fill="#ffd60a"/><circle class="cur5" cx="580" cy="660" r="7" fill="#ffd60a"/><text class="hl" x="60" y="220" font-family="Nunito, Arial, sans-serif" font-size="60" font-weight="900" fill="#f2f6f8" text-anchor="start" letter-spacing="-1">ДВЕ ГРУППЫ</text><text class="hl" x="60" y="300" font-family="Nunito, Arial, sans-serif" font-size="30" font-weight="900" fill="#8fa3b1" text-anchor="start" letter-spacing="-1">две клавиши — два провода</text><text class="hl" x="60" y="1500" font-family="Nunito, Arial, sans-serif" font-size="30" font-weight="900" fill="#8fa3b1" text-anchor="start" letter-spacing="-1">люстра: 1-я и 2-я группа ламп</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+    tl.fromTo("#s5 .world", { scale:1.0 }, { scale:1.04, duration:3.726, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.to(".cur5", {x:280, duration:1.4, stagger:0.1, repeat:6, ease:"none"}, 0.3);tl.to(".lamp5a .bulbGlow, .lamp5b .bulbGlow", {opacity:0.45, duration:0.8, yoyo:true, repeat:4}, 0.4);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

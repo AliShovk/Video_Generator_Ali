@@ -1,0 +1,38 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #f2e4c8; }
+    .world { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .stamp {
+      position: absolute; left: 72px; top: 238px;
+      border: 3px solid #c1442e; color: #c1442e; border-radius: 6px;
+      font: 700 24px/1 "Oswald", Arial, sans-serif; letter-spacing: 4px; text-transform: uppercase;
+      padding: 9px 14px; transform: rotate(-2deg); opacity: 0.9;
+    }
+    .foot {
+      position: absolute; left: 72px; right: 72px; bottom: 300px;
+      font: 700 46px/1.16 "Playfair Display", Georgia, serif; color: #3a2a1e; text-align: left;
+    }
+    .foot::before { content: ""; display: block; width: 120px; height: 6px; background: #c1442e; margin-bottom: 20px; }
+  </style>
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div class="clip" id="s3-clip" data-start="0" data-duration="6">
+      <div id="s3-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="brick" width="120" height="56" patternUnits="userSpaceOnUse"><rect width="120" height="56" fill="#c1442e" opacity="0.92"/><rect x="2" y="2" width="116" height="24" rx="3" fill="#b03c27"/><rect x="-58" y="30" width="116" height="24" rx="3" fill="#b03c27"/><rect x="62" y="30" width="116" height="24" rx="3" fill="#b03c27"/></pattern><pattern id="hatch" width="14" height="14" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="14" stroke="#3a2a1e" stroke-width="2" opacity="0.25"/></pattern></defs><rect width="1080" height="1920" fill="#f2e4c8"/><rect x="34" y="34" width="1012" height="1852" rx="18" fill="none" stroke="#3a2a1e" stroke-width="6" opacity="0.85"/><rect x="52" y="52" width="976" height="1816" rx="12" fill="none" stroke="#3a2a1e" stroke-width="2" opacity="0.45"/><text x="72" y="150" fill="#3a2a1e" font-family="Oswald, Georgia, serif" font-size="50" font-weight="700" letter-spacing="1" text-anchor="start">ДЫМОСБОРНИК</text><text x="72" y="200" fill="#2f6b6b" font-family="Oswald, Georgia, serif" font-size="24" font-weight="700" letter-spacing="1" text-anchor="start">зуб и задвижка</text><rect x="260" y="1540" width="560" height="40" fill="#3a2a1e" opacity="0.85"/><rect x="274" y="1510" width="532" height="30" fill="#8f9ea9"/><path d="M 300 1510 L 300 900 L 780 900 L 780 1510 Z" fill="url(#brick)" stroke="#3a2a1e" stroke-width="4"/><path d="M 370 1510 L 370 1150 Q 540.0 1020 710 1150 L 710 1510 Z" fill="#fbf3e2" stroke="#3a2a1e" stroke-width="4"/><path d="M 370 1510 L 370 1150 Q 540.0 1020 710 1150 L 710 1510" fill="none" stroke="#2f6b6b" stroke-width="10" opacity="0.75"/><path d="M 370 1150 L 710 1150 L 660 890 L 420 890 Z" fill="#fbf3e2" stroke="#3a2a1e" stroke-width="4"/><rect x="420" y="480" width="240" height="410" fill="url(#brick)" stroke="#3a2a1e" stroke-width="4"/><rect x="450" y="480" width="180" height="410" fill="#3a2a1e" opacity="0.22"/><rect x="420" y="460" width="240" height="26" fill="#3a2a1e" opacity="0.8"/><rect x="430" y="790" width="220" height="20" fill="#d8a13a" stroke="#3a2a1e" stroke-width="3"/><circle cx="560" cy="800" r="26" fill="#fbf3e2" stroke="#3a2a1e" stroke-width="3"/><line x1="560" y1="800" x2="640" y2="740" stroke="#3a2a1e" stroke-width="5"/><line x1="680" y1="800" x2="720" y2="760" stroke="#c1442e" stroke-width="2.5"/><circle cx="680" cy="800" r="7" fill="#c1442e"/><text x="730" y="750" fill="#c1442e" font-family="Oswald, Georgia, serif" font-size="26" font-weight="700" letter-spacing="1" text-anchor="start">задвижка</text><line x1="600" y1="700" x2="660" y2="650" stroke="#2f6b6b" stroke-width="2.5"/><circle cx="600" cy="700" r="7" fill="#2f6b6b"/><text x="670" y="640" fill="#2f6b6b" font-family="Oswald, Georgia, serif" font-size="24" font-weight="700" letter-spacing="1" text-anchor="start">дымовой зуб</text><text x="72" y="1700" fill="#3a2a1e" font-family="Oswald, Georgia, serif" font-size="22" font-weight="700" letter-spacing="1" text-anchor="start">закрыл — тяга стоит</text></svg>
+        <div class="stamp" id="s3-stamp">тяга</div>
+        <div class="foot" id="s3-foot">Дымосборник: зуб и задвижка</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s3 = gsap.timeline({ paused: true });
+    tl_s3.fromTo("#s3 .world", { scale: 1.0 }, { scale: 1.04, duration: 6, ease: "none" }, 0);
+    tl_s3.fromTo("#s3-stamp", { opacity: 0, rotate: -8 }, { opacity: 0.9, rotate: -2, duration: 0.5, ease: "back.out(1.6)" }, 0.15);
+    tl_s3.fromTo("#s3-foot", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.4);
+    
+    tl_s3.fromTo("#damper", {rotate:-30, svgOrigin:"560 800"}, {rotate:0, duration:1.0, ease:"back.out(1.7)"}, 0.7);
+    tl_s3.fromTo(".puff3", {y:40, opacity:0}, {y:-180, opacity:0.38, duration:2.2, stagger:0.5, repeat:2, ease:"sine.out"}, 1.2);
+    tl_s3.fromTo("#labels3 > *", {opacity:0, y:8}, {opacity:1, y:0, duration:0.4, stagger:0.45}, 1.6);
+    
+    window.__timelines["s3"] = tl_s3;
+  </script>
+</template>

@@ -1,0 +1,22 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#cfe6f2}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s6" data-width="1080" data-height="1920">
+    <div class="clip" id="s6-clip" data-start="0" data-duration="2.779">
+      <div id="s6-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="meshP" width="26" height="26" patternUnits="userSpaceOnUse">
+  <path d="M 0 0 L 26 0 M 0 0 L 0 26" stroke="#6f7a82" stroke-width="3" opacity="0.85"/>
+</pattern>
+<linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#7fc3ff"/><stop offset="1" stop-color="#3f8fd8"/>
+</linearGradient>
+</defs><rect width="1080" height="1920" fill="#cfe6f2"/><path d="M 0 1460 Q 180 1230 380 1340 Q 560 1450 720 1320 Q 900 1190 1080 1360 L 1080 1920 L 0 1920 Z" fill="#b9c98a" stroke="#2b2b2b" stroke-width="6"/><g class="troughG"><path d="M 90 520 l 520 0 l -18 56 l -484 0 z" fill="#9fb8c8" stroke="#2b2b2b" stroke-width="6"/><path d="M 112 512 l 476 0" stroke="#4da3ff" stroke-width="10"/></g><path class="pipe6" d="M 350 590 L 350 780 L 470 780" stroke="#8f9aa2" stroke-width="26" fill="none"/><g class="filt6"><rect x="450" y="700" width="90" height="180" rx="18" fill="#dfe7ec" stroke="#2b2b2b" stroke-width="6"/><rect x="560" y="700" width="90" height="180" rx="18" fill="#dfe7ec" stroke="#2b2b2b" stroke-width="6"/><text x="495" y="940" font-family="Nunito, Arial" font-size="26" font-weight="900" fill="#2b2b2b" text-anchor="middle">фильтры</text></g><path class="pipe6b" d="M 650 790 L 760 790 L 760 900" stroke="#8f9aa2" stroke-width="24" fill="none"/><g class="tank6"><rect x="640" y="900" width="330" height="400" rx="46" fill="#5f7d8c" stroke="#2b2b2b" stroke-width="7"/><clipPath id="tk640"><rect x="648" y="908" width="314" height="384" rx="40"/></clipPath><g clip-path="url(#tk640)"><rect class="tankFill" x="648" y="1160.4" width="314" height="131.6" fill="url(#waterG)"/></g><rect x="626" y="882" width="358" height="30" rx="10" fill="#5f7d8c" stroke="#2b2b2b" stroke-width="6"/></g><text class="hl" x="60" y="300" font-family="Nunito, Arial" font-size="52" font-weight="900" fill="#2b2b2b" text-anchor="start">ФИЛЬТРЫ И БАК</text><text class="hl" x="60" y="1640" font-family="Nunito, Arial" font-size="24" font-weight="900" fill="#5c666e" text-anchor="start">МУСОР И ПЕСОК — В ФИЛЬТРАХ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s6 = gsap.timeline({ paused: true });
+    const tl = tl_s6;
+    tl.fromTo("#s6 .world", { scale:1.0 }, { scale:1.03, duration:2.779, ease:"none" }, 0);
+    tl.fromTo(".filt6", {opacity:0, x:-30}, {opacity:1, x:0, duration:0.6}, 0.4);tl.fromTo(".tankFill", {scaleY:0, transformOrigin:"50% 100%"}, {scaleY:1, duration:1.4, ease:"power2.out"}, 0.9);tl.to(".draw", {attr:{"stroke-dashoffset":0}, duration:0.7, stagger:0.1}, 0.1);
+    window.__timelines["s6"] = tl_s6;
+  </script>
+</template>

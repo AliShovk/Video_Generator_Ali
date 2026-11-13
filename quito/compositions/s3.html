@@ -1,0 +1,14 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#16263f}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div class="clip" id="s3-clip" data-start="0" data-duration="2.596">
+      <div id="s3-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#16263f"/><circle cx="820" cy="520" r="260" fill="#f2b134" opacity="0.16"/><path d="M 0 1280 q 260 -200 520 -20 q 260 180 560 -40 L 1080 1920 L 0 1920 Z" fill="#0d1524"/><g class="saucer"><ellipse cx="560" cy="900" rx="260" ry="60" fill="#f6ecd8"/><path d="M 370 900 q 190 -140 380 0 z" fill="#2a9d8f"/><ellipse cx="560" cy="906" rx="120" ry="26" fill="#f2b134"/><path d="M 560 940 L 470 1240 L 650 1240 Z" fill="#f2b134" opacity="0.25"/></g><text class="hl" x="70" y="250" font-family="Nunito, Arial" font-size="52" font-weight="900" fill="#f2b134" text-anchor="start" letter-spacing="3">ПОСАДКА</text><text class="hl" x="70" y="330" font-family="Nunito, Arial" font-size="52" font-weight="900" fill="#f6ecd8" text-anchor="start" letter-spacing="0">под Кито</text><text class="hl" x="70" y="1660" font-family="Nunito, Arial" font-size="28" font-weight="700" fill="#f6ecd8" text-anchor="start" letter-spacing="0">марсиане высадились</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s3 = gsap.timeline({ paused: true });
+    const tl = tl_s3;
+    tl.fromTo(".saucer", {opacity:0, y:-120}, {opacity:1, y:0, duration:1.0, ease:"power2.out"}, 0.1);tl.to(".saucer", {y:-12, duration:1.6, yoyo:true, repeat:-1, ease:"sine.inOut"}, 1.1);tl.fromTo(".hl", {opacity:0}, {opacity:1, duration:0.5, stagger:0.15}, 0.2);
+    window.__timelines["s3"] = tl_s3;
+  </script>
+</template>

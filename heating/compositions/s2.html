@@ -1,0 +1,37 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef2f5}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div class="clip" id="s2-clip" data-start="0" data-duration="7.491">
+      <div id="s2-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="steelG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8c7d1"/><stop offset="0.5" stop-color="#e2ebf0"/><stop offset="1" stop-color="#8fa3b1"/></linearGradient>
+<linearGradient id="hotG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4a07a"/><stop offset="1" stop-color="#c9542f"/></linearGradient>
+<linearGradient id="coldG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8cde2"/><stop offset="1" stop-color="#4d7f9e"/></linearGradient>
+<radialGradient id="flameG"><stop offset="0" stop-color="#fff0b0"/><stop offset="0.5" stop-color="#ffb03a"/><stop offset="1" stop-color="#d1502f" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#eef2f5"/><g class="boiler"><rect x="90" y="820" width="200" height="250" rx="18" fill="url(#steelG)" stroke="#6d8290" stroke-width="5"/><rect x="108" y="844" width="164" height="96" rx="10" fill="#1f2a33"/><text x="190.0" y="928" font-family="Nunito, Arial" font-size="26" font-weight="900" fill="#f08a5d" text-anchor="middle">КОТЁЛ</text><g class="flameG"><ellipse cx="190.0" cy="1000" rx="62" ry="76" fill="url(#flameG)"/></g><rect x="182.0" y="790" width="16" height="34" fill="#6d8290"/></g><path d="M 290 900 L 400 900" stroke="#d1502f" stroke-width="24"/><circle cx="460" cy="900" r="52" fill="url(#steelG)" stroke="#6d8290" stroke-width="5"/><g class="imp"><path d="M 460 862 l 30 26 l -30 26 l -30 -26 z" fill="#d1502f"/></g><text x="460" y="1010" font-family="Nunito, Arial" font-size="26" font-weight="900" fill="#22303a" text-anchor="middle">НАСОС</text><path d="M 512 900 L 720 900 L 720 700" stroke="#d1502f" stroke-width="24" fill="none"/><g class="rad"><rect x="690" y="416" width="220" height="18" rx="8" fill="#6d8290"/><rect x="700" y="430" width="32" height="240" rx="10" fill="url(#hotG)" stroke="#6d8290" stroke-width="3"/><rect x="740" y="430" width="32" height="240" rx="10" fill="url(#hotG)" stroke="#6d8290" stroke-width="3"/><rect x="780" y="430" width="32" height="240" rx="10" fill="url(#hotG)" stroke="#6d8290" stroke-width="3"/><rect x="820" y="430" width="32" height="240" rx="10" fill="url(#hotG)" stroke="#6d8290" stroke-width="3"/><rect x="860" y="430" width="32" height="240" rx="10" fill="url(#hotG)" stroke="#6d8290" stroke-width="3"/><rect x="690" y="666" width="220" height="18" rx="8" fill="#6d8290"/></g><path d="M 700 760 L 700 1180 L 400 1180 L 400 1070" stroke="#5d8fae" stroke-width="24" fill="none"/><text x="560" y="1240" font-family="Nunito, Arial" font-size="26" font-weight="900" fill="#5d8fae" text-anchor="middle">ОБРАТКА</text><circle class="f1" cx="300.0" cy="900" r="10" fill="#3f9fd4"/><circle class="f1" cx="340.0" cy="900" r="10" fill="#3f9fd4"/><circle class="f1" cx="380.0" cy="900" r="10" fill="#3f9fd4"/><circle class="f2" cx="540.0" cy="900" r="10" fill="#3f9fd4"/><circle class="f2" cx="593.3333333333334" cy="900" r="10" fill="#3f9fd4"/><circle class="f2" cx="646.6666666666666" cy="900" r="10" fill="#3f9fd4"/><circle class="f3" cx="450.0" cy="1180" r="10" fill="#3f9fd4"/><circle class="f3" cx="530.0" cy="1180" r="10" fill="#3f9fd4"/><circle class="f3" cx="610.0" cy="1180" r="10" fill="#3f9fd4"/><text class="hl" x="52" y="140" fill="#22303a" font-family="Nunito, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-1">КАК ЭТО</text><text class="hl" x="52" y="218" fill="#2f8f5b" font-family="Nunito, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-1">РАБОТАЕТ</text><g class="fn"><rect x="52" y="1524" width="976" height="108" rx="18" fill="#ffffff" opacity="0.75"/><text x="80" y="1580" font-family="Nunito, Arial, sans-serif" font-size="34" font-weight="800" fill="#22303a">котёл → насос → радиатор → обратка</text></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s2 = gsap.timeline({ paused: true });
+    const tl = tl_s2;
+    tl.fromTo("#s2 .world", { scale:1.0 }, { scale:1.04, duration:7.491, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.6, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.4, ease:"back.out(2)" }, 0.2);
+    tl.to(".flameG", { scaleY:1.12, transformOrigin:"50% 100%", duration:0.4, yoyo:true, repeat:14, ease:"sine.inOut" }, 0);
+    tl.to(".f1", { x:150, duration:1.6, stagger:0.1, repeat:8, ease:"none" }, 0);
+    tl.to(".f2", { x:170, duration:1.6, stagger:0.12, repeat:8, ease:"none" }, 0);
+    tl.to(".f3", { x:-190, duration:1.8, stagger:0.12, repeat:8, ease:"none" }, 0);
+    tl.to(".imp", { rotation:360, svgOrigin:"460 900", duration:2.4, repeat:6, ease:"none" }, 0);
+    tl.to(".imp2", { rotation:360, svgOrigin:"420 900", duration:6.0, repeat:2, ease:"none" }, 0);
+    tl.to(".bleed", { rotation:90, svgOrigin:"540 580", duration:1.4, ease:"power2.out" }, 0.3);
+    tl.to(".bub", { y:-200, opacity:0, duration:1.6, stagger:0.1, repeat:2, ease:"power1.out" }, 0.3);
+    tl.to(".hiss", { opacity:0.2, duration:0.5, yoyo:true, repeat:8 }, 0.4);
+    tl.to(".v1", { rotation:-40, svgOrigin:"360 560", duration:2.0, ease:"power2.out" }, 0.3);
+    tl.to(".v2", { rotation:60, svgOrigin:"960 800", duration:2.2, ease:"power2.out" }, 0.5);
+    tl.to(".sed", { x:40, y:6, duration:2.2, yoyo:true, repeat:2, stagger:0.05, ease:"sine.inOut" }, 0);
+    tl.to(".mud", { opacity:0.95, duration:2.0, yoyo:true, repeat:1 }, 0);
+    tl.to(".cartr", { fill:"#7d5630", duration:4.0, ease:"none" }, 0);
+    tl.to(".mn7", { rotation:-85, svgOrigin:"340 800", duration:1.6, yoyo:true, repeat:2, ease:"sine.inOut" }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s2"] = tl_s2;
+  </script>
+</template>

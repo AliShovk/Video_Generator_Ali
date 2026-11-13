@@ -1,0 +1,28 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0d1418}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div class="clip" id="s2-clip" data-start="0" data-duration="5.61">
+      <div id="s2-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#0d1418"/><g transform="translate(430 1500) scale(1.15)"><path d="M -420 0 l 40 -520 l 120 0 l -30 520 z" fill="#3c4348"/><path d="M 300 0 l -40 -520 l 120 0 l 40 520 z" fill="#3c4348"/><path d="M -270 0 q 20 -470 270 -470 q 250 0 270 470 z" fill="#9aa4ab"/><path d="M -250 -30 q 20 -400 250 -400 q 230 0 250 400" stroke="#6f7a82" stroke-width="6" fill="none" opacity="0.7"/><line x1="-120" y1="-420" x2="-120" y2="0" stroke="#6f7a82" stroke-width="3" opacity="0.6"/><line x1="-40" y1="-420" x2="-40" y2="0" stroke="#6f7a82" stroke-width="3" opacity="0.6"/><line x1="40" y1="-420" x2="40" y2="0" stroke="#6f7a82" stroke-width="3" opacity="0.6"/><line x1="120" y1="-420" x2="120" y2="0" stroke="#6f7a82" stroke-width="3" opacity="0.6"/><rect x="-300" y="-470" width="600" height="46" fill="#c7d0d6"/><path d="M -250 -470 q 250 -60 500 0 l 0 -120 q -250 -60 -500 0 z" fill="#2f6f96" opacity="0.85"/><path d="M 20 -420 q 30 90 0 170 q -26 80 20 160" stroke="#ff5a5a" stroke-width="9" fill="none" opacity="0.7"/></g><g class="callouts"><g class="call c0" opacity="0"><rect x="60" y="380" width="420" height="150" rx="14" fill="#000000" opacity="0.45"/><text x="90" y="460" font-family="Nunito, Arial" font-size="62" font-weight="900" fill="#ff5a5a">260 м</text><text x="90" y="506" font-family="Nunito, Arial" font-size="30" font-weight="800" fill="#ffffff" opacity="0.8">плотина</text></g><g class="call c1" opacity="0"><rect x="60" y="570" width="420" height="150" rx="14" fill="#000000" opacity="0.45"/><text x="90" y="650" font-family="Nunito, Arial" font-size="62" font-weight="900" fill="#ff5a5a">115 м</text><text x="90" y="696" font-family="Nunito, Arial" font-size="30" font-weight="800" fill="#ffffff" opacity="0.8">волна</text></g><g class="call c2" opacity="0"><rect x="60" y="760" width="420" height="150" rx="14" fill="#000000" opacity="0.45"/><text x="90" y="840" font-family="Nunito, Arial" font-size="62" font-weight="900" fill="#ff5a5a">1 900</text><text x="90" y="886" font-family="Nunito, Arial" font-size="30" font-weight="800" fill="#ffffff" opacity="0.8">погибших</text></g></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s2 = gsap.timeline({ paused: true });
+    const tl = tl_s2;
+    tl.fromTo("#s2 .world", { scale:1.0 }, { scale:1.07, duration:5.61, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:26 }, { opacity:1, y:0, duration:0.5, stagger:0.14, ease:"power3.out" }, 0.1);
+    tl.fromTo(".sub", { opacity:0 }, { opacity:0.75, duration:0.7 }, 0.7);
+    tl.fromTo(".call", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.45, stagger:0.5 }, 0.3);
+    tl.to(".ring", { scale:1.6, opacity:0, duration:2.2, transformOrigin:"50% 50%", stagger:0.4, repeat:2, ease:"power2.out" }, 0);
+    tl.to(".flash", { opacity:0.28, duration:0.4, yoyo:true, repeat:8 }, 0);
+    tl.to(".debris", { y:-90, x:30, duration:2.0, stagger:0.05, repeat:3, ease:"power1.out" }, 0);
+    tl.to(".flame", { scaleY:1.15, transformOrigin:"50% 100%", duration:0.5, yoyo:true, repeat:16, stagger:0.08 }, 0);
+    tl.to(".smoke", { y:-160, opacity:0.15, duration:3.2, stagger:0.15, repeat:2 }, 0);
+    tl.to(".wave", { x:"+=160", duration:5.61, ease:"power1.in" }, 0);
+    tl.to(".gas", { y:-120, x:"+=40", duration:4.5, stagger:0.12, ease:"sine.inOut" }, 0);
+    tl.to(".piece", { y:260, rotation:40, duration:1.8, stagger:0.12, ease:"power2.in" }, 0.3);
+    tl.fromTo(".big", { scale:0.5, opacity:0 }, { scale:1, opacity:1, duration:0.7, ease:"back.out(2)" }, 0.2);
+    tl.to(".cap1", { opacity:1, duration:0.5 }, 0.8);
+    tl.to(".cap2", { opacity:1, duration:0.5 }, 1.2);
+    window.__timelines["s2"] = tl_s2;
+  </script>
+</template>

@@ -1,0 +1,35 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef3f6}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920">
+    <div class="clip" id="s7-clip" data-start="0" data-duration="3.592">
+      <div id="s7-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="pipeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9bcc8"/><stop offset="0.45" stop-color="#cfdde6"/><stop offset="1" stop-color="#7d909d"/></linearGradient>
+<linearGradient id="waterG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f8dc0"/><stop offset="1" stop-color="#7ccbea"/></linearGradient>
+<radialGradient id="glowB"><stop offset="0" stop-color="#8fd0ee" stop-opacity="0.6"/><stop offset="1" stop-color="#8fd0ee" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#eef3f6"/><text x="540" y="300" font-family="Nunito, Arial" font-size="62" font-weight="900" fill="#243039" text-anchor="middle">ПРОВЕРЬ</text><g class="row r0"><circle cx="170" cy="500" r="44" fill="#2f8f5b"/><path d="M 150 500 l 14 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/><text x="250" y="512" font-family="Nunito, Arial" font-size="42" font-weight="900" fill="#243039">диаметр трубы</text></g><g class="row r1"><circle cx="170" cy="695" r="44" fill="#2f8f5b"/><path d="M 150 695 l 14 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/><text x="250" y="707" font-family="Nunito, Arial" font-size="42" font-weight="900" fill="#243039">число поворотов</text></g><g class="row r2"><circle cx="170" cy="890" r="44" fill="#2f8f5b"/><path d="M 150 890 l 14 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/><text x="250" y="902" font-family="Nunito, Arial" font-size="42" font-weight="900" fill="#243039">гидроаккумулятор</text></g><g class="row r3"><circle cx="170" cy="1085" r="44" fill="#2f8f5b"/><path d="M 150 1085 l 14 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/><text x="250" y="1097" font-family="Nunito, Arial" font-size="42" font-weight="900" fill="#243039">фильтр</text></g><g class="row r4"><circle cx="170" cy="1280" r="44" fill="#2f8f5b"/><path d="M 150 1280 l 14 16 l 30 -34" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/><text x="250" y="1292" font-family="Nunito, Arial" font-size="42" font-weight="900" fill="#243039">воздушная пробка</text></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s7 = gsap.timeline({ paused: true });
+    const tl = tl_s7;
+    tl.fromTo("#s7 .world", { scale:1.0 }, { scale:1.04, duration:3.592, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.6, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.4, ease:"back.out(2)" }, 0.2);
+    tl.to(".stream", { y:26, opacity:0.6, duration:0.5, yoyo:true, repeat:12, stagger:0.05 }, 0);
+    tl.to("#needle1", { rotation:-70, svgOrigin:"300 900", duration:1.8, yoyo:true, repeat:2, ease:"sine.inOut" }, 0);
+    tl.to(".slow", { x:70, duration:3.2, stagger:0.2, ease:"none" }, 0);
+    tl.to(".smallF", { x:60, duration:3.0, stagger:0.15, ease:"none" }, 0);
+    tl.to(".bigF", { x:90, duration:2.2, stagger:0.15, ease:"none" }, 0);
+    tl.to(".wflow", { opacity:0.75, duration:0.8, yoyo:true, repeat:4 }, 0);
+    tl.to(".turns", { x:8, duration:0.9, yoyo:true, repeat:5 }, 0);
+    tl.to("#needle4", { rotation:0, svgOrigin:"830 800", duration:0.25, yoyo:true, repeat:18, ease:"none" }, 0);
+    tl.to(".pumpGlow", { opacity:0.15, duration:0.25, yoyo:true, repeat:18 }, 0);
+    tl.to(".cross4", { opacity:0.4, duration:0.7, yoyo:true, repeat:5 }, 0);
+    tl.to(".cartridge", { fill:"#8a5f34", duration:3.592, ease:"none" }, 0);
+    tl.to(".slowflow", { y:40, opacity:0, duration:1.4, repeat:6, ease:"none" }, 0);
+    tl.to(".air", { y:-8, x:6, duration:1.2, yoyo:true, repeat:6, ease:"sine.inOut" }, 0);
+    tl.to(".blocked", { scale:1.1, transformOrigin:"730 1210", duration:0.6, yoyo:true, repeat:6 }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.32 }, 0.2);
+    window.__timelines["s7"] = tl_s7;
+  </script>
+</template>

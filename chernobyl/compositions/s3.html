@@ -1,0 +1,79 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #05080c; }
+    .world { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .top { position: absolute; left: 48px; top: 120px; }
+    .chip {
+      display: inline-block; border: 1px solid rgba(111,211,242,0.45); color: #8fd8ef;
+      font: 500 28px/1 "JetBrains Mono", monospace; letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 12px 18px; background: rgba(6,12,18,0.6);
+    }
+    .head {
+      position: absolute; left: 48px; top: 230px;
+      font: 700 118px/0.92 "Oswald", sans-serif; text-transform: uppercase; color: #f1ece2;
+    }
+    .foot {
+      position: absolute; left: 48px; right: 48px; bottom: 430px;
+      font: 700 50px/1.1 "Oswald", sans-serif; text-transform: uppercase; color: #f6f1e7;
+      text-shadow: 0 3px 14px rgba(0,0,0,0.9);
+    }
+    .foot::before { content: ""; display: block; width: 74px; height: 4px; background: #ff7a1a; margin-bottom: 16px; }
+    .scrim {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 640px;
+      background: linear-gradient(to top, rgba(4,7,10,0.96) 34%, rgba(4,7,10,0.75) 62%, rgba(4,7,10,0) 100%);
+    }
+  </style>
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div class="clip" id="s3-clip" data-start="0" data-duration="7">
+      <div id="s3-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#05080c"/><stop offset="0.6" stop-color="#0b141c"/><stop offset="1" stop-color="#04070a"/>
+  </linearGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#9fb2c2"/><stop offset="0.5" stop-color="#5d7180"/><stop offset="1" stop-color="#33424d"/>
+  </linearGradient>
+  <linearGradient id="steelDark" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4a5b68"/><stop offset="1" stop-color="#222d36"/>
+  </linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#20262b"/><stop offset="1" stop-color="#0c1014"/>
+  </linearGradient>
+  <linearGradient id="concrete" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3a4148"/><stop offset="1" stop-color="#1c2126"/>
+  </linearGradient>
+  <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff7a1a" stop-opacity="0.55"/><stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#6fd3f2" stop-opacity="0.25"/><stop offset="1" stop-color="#6fd3f2" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+  <pattern id="panels" width="26" height="26" patternUnits="userSpaceOnUse">
+    <rect width="26" height="26" fill="none"/>
+    <line x1="0" y1="0" x2="0" y2="26" stroke="#0d151b" stroke-width="3" opacity="0.45"/>
+    <line x1="0" y1="13" x2="26" y2="13" stroke="#0d151b" stroke-width="1.5" opacity="0.25"/>
+  </pattern>
+  <pattern id="hatch" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="0" x2="0" y2="10" stroke="#8b98a3" stroke-width="1" opacity="0.35"/>
+  </pattern>
+</defs>
+<rect width="1080" height="1920" fill="#060a0e"/><rect x="80" y="520" width="920" height="980" fill="none" stroke="#1d3746" stroke-width="2"/><line x1="233" y1="520" x2="233" y2="1500" stroke="#0f1f2a" stroke-width="1"/><line x1="80" y1="683" x2="1000" y2="683" stroke="#0f1f2a" stroke-width="1"/><line x1="386" y1="520" x2="386" y2="1500" stroke="#0f1f2a" stroke-width="1"/><line x1="80" y1="846" x2="1000" y2="846" stroke="#0f1f2a" stroke-width="1"/><line x1="539" y1="520" x2="539" y2="1500" stroke="#0f1f2a" stroke-width="1"/><line x1="80" y1="1009" x2="1000" y2="1009" stroke="#0f1f2a" stroke-width="1"/><line x1="692" y1="520" x2="692" y2="1500" stroke="#0f1f2a" stroke-width="1"/><line x1="80" y1="1172" x2="1000" y2="1172" stroke="#0f1f2a" stroke-width="1"/><line x1="845" y1="520" x2="845" y2="1500" stroke="#0f1f2a" stroke-width="1"/><line x1="80" y1="1335" x2="1000" y2="1335" stroke="#0f1f2a" stroke-width="1"/><rect x="150" y="1080" width="360" height="280" fill="rgba(111,211,242,0.05)" stroke="#6fd3f2" stroke-width="3" stroke-dasharray="14 10"/><text x="330" y="1160" fill="#8fd8ef" font-family="JetBrains Mono, monospace" font-size="34" letter-spacing="2" text-anchor="middle" font-weight="400">СБОРКА</text><text x="330" y="1210" fill="#5f7280" font-family="JetBrains Mono, monospace" font-size="22" letter-spacing="2" text-anchor="middle" font-weight="400">здесь арку собрали</text><circle cx="770" cy="760" r="92" fill="rgba(255,122,26,0.08)" stroke="#ff7a1a" stroke-width="3"/><text x="770" y="750" fill="#ffb066" font-family="JetBrains Mono, monospace" font-size="46" letter-spacing="2" text-anchor="middle" font-weight="400">4</text><text x="770" y="800" fill="#ffb066" font-family="JetBrains Mono, monospace" font-size="20" letter-spacing="2" text-anchor="middle" font-weight="400">БЛОК</text><path d="M 512 1200 Q 640 1120 720 870" fill="none" stroke="#ff7a1a" stroke-width="7" stroke-dasharray="20 14"/><polygon points="726,852 706,890 744,884" fill="#ff7a1a"/><text x="560" y="1330" fill="#ffb066" font-family="JetBrains Mono, monospace" font-size="40" letter-spacing="2" text-anchor="middle" font-weight="400">327 м</text><line x1="150" y1="1440" x2="390" y2="1440" stroke="#5f7280" stroke-width="3"/><line x1="150" y1="1430" x2="150" y2="1450" stroke="#5f7280" stroke-width="3"/><line x1="390" y1="1430" x2="390" y2="1450" stroke="#5f7280" stroke-width="3"/><text x="270" y="1424" fill="#5f7280" font-family="JetBrains Mono, monospace" font-size="22" letter-spacing="2" text-anchor="middle" font-weight="400">100 м</text></svg>
+        <div class="scrim"></div>
+        <div class="top"><div class="chip" id="s3-chip">План</div></div>
+        
+        <div class="foot" id="s3-foot">Сборка в 300 метрах от реактора</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s3 = gsap.timeline({ paused: true });
+    tl_s3.fromTo("#s3 .world", { scale: 1.0 }, { scale: 1.05, duration: 7, ease: "none" }, 0);
+    tl_s3.fromTo("#s3-chip", { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 0.05);
+    
+    tl_s3.fromTo("#s3-foot", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.0);
+    
+    window.__timelines["s3"] = tl_s3;
+  </script>
+</template>

@@ -1,0 +1,22 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#cfe6f2}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s8" data-width="1080" data-height="1920">
+    <div class="clip" id="s8-clip" data-start="0" data-duration="5.031">
+      <div id="s8-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="meshP" width="26" height="26" patternUnits="userSpaceOnUse">
+  <path d="M 0 0 L 26 0 M 0 0 L 0 26" stroke="#6f7a82" stroke-width="3" opacity="0.85"/>
+</pattern>
+<linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#7fc3ff"/><stop offset="1" stop-color="#3f8fd8"/>
+</linearGradient>
+</defs><rect width="1080" height="1920" fill="#cfe6f2"/><path d="M 0 1410 Q 180 1180 380 1290 Q 560 1400 720 1270 Q 900 1140 1080 1310 L 1080 1920 L 0 1920 Z" fill="#b9c98a" stroke="#2b2b2b" stroke-width="6"/><g class="meshG"><rect x="140" y="700" width="420" height="380" fill="url(#meshP)" stroke="#2b2b2b" stroke-width="7"/><rect x="140" y="700" width="420" height="380" fill="none" stroke="#a9763f" stroke-width="14"/></g><path class="flow8" d="M 350 1080 l 0 120" stroke="#4da3ff" stroke-width="26" stroke-linecap="round"/><g class="tank8"><rect x="620" y="780" width="340" height="380" rx="46" fill="#5f7d8c" stroke="#2b2b2b" stroke-width="7"/><clipPath id="tk620"><rect x="628" y="788" width="324" height="364" rx="40"/></clipPath><g clip-path="url(#tk620)"><rect class="tankFill" x="628" y="902.8" width="324" height="249.2" fill="url(#waterG)"/></g><rect x="606" y="762" width="368" height="30" rx="10" fill="#5f7d8c" stroke="#2b2b2b" stroke-width="6"/></g><text class="hl" x="80" y="380" font-family="Nunito, Arial" font-size="96" font-weight="900" fill="#2b2b2b" text-anchor="start">40 м²</text><text class="hl" x="80" y="470" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#5c666e" text-anchor="start">сетки</text><text class="hl" x="80" y="620" font-family="Nunito, Arial" font-size="88" font-weight="900" fill="#2f6fa8" text-anchor="start">до 300 л</text><text class="hl" x="80" y="700" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#5c666e" text-anchor="start">в сутки</text><text class="hl" x="80" y="1660" font-family="Nunito, Arial" font-size="26" font-weight="900" fill="#8a4a2f" text-anchor="start">НО ТОЛЬКО ТАМ, ГДЕ ТУМАН РЕГУЛЯРНЫЙ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s8 = gsap.timeline({ paused: true });
+    const tl = tl_s8;
+    tl.fromTo("#s8 .world", { scale:1.0 }, { scale:1.03, duration:5.031, ease:"none" }, 0);
+    tl.fromTo(".flow8", {scaleY:0, transformOrigin:"50% 0%"}, {scaleY:1, duration:0.8}, 0.3);tl.fromTo(".tank8 .tankFill", {scaleY:0, transformOrigin:"50% 100%"}, {scaleY:1, duration:1.4}, 0.6);tl.to(".draw", {attr:{"stroke-dashoffset":0}, duration:0.7}, 0.1);
+    window.__timelines["s8"] = tl_s8;
+  </script>
+</template>

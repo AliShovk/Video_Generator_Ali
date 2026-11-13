@@ -1,0 +1,22 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#cfe6f2}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div class="clip" id="s4-clip" data-start="0" data-duration="3.738">
+      <div id="s4-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="meshP" width="26" height="26" patternUnits="userSpaceOnUse">
+  <path d="M 0 0 L 26 0 M 0 0 L 0 26" stroke="#6f7a82" stroke-width="3" opacity="0.85"/>
+</pattern>
+<linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#7fc3ff"/><stop offset="1" stop-color="#3f8fd8"/>
+</linearGradient>
+</defs><rect width="1080" height="1920" fill="#cfe6f2"/><path d="M 0 1400 Q 180 1170 380 1280 Q 560 1390 720 1260 Q 900 1130 1080 1300 L 1080 1920 L 0 1920 Z" fill="#b9c98a" stroke="#2b2b2b" stroke-width="6"/><rect class="postG" x="154" y="640" width="32" height="920" fill="#a9763f" stroke="#2b2b2b" stroke-width="6"/><rect class="postG" x="854" y="640" width="32" height="920" fill="#a9763f" stroke="#2b2b2b" stroke-width="6"/><g class="meshG"><rect x="186" y="660" width="668" height="560" fill="url(#meshP)" stroke="#2b2b2b" stroke-width="7"/><rect x="186" y="660" width="668" height="560" fill="none" stroke="#a9763f" stroke-width="14"/></g><path class="guy4" d="M 170 660 L 60 1520 M 870 660 L 990 1520" stroke="#2b2b2b" stroke-width="5" fill="none"/><g class="troughG"><path d="M 150 1290 l 790 0 l -18 56 l -754 0 z" fill="#9fb8c8" stroke="#2b2b2b" stroke-width="6"/><path d="M 172 1282 l 746 0" stroke="#4da3ff" stroke-width="10"/></g><text class="hl" x="60" y="300" font-family="Nunito, Arial" font-size="54" font-weight="900" fill="#2b2b2b" text-anchor="start">КОНСТРУКЦИЯ</text><text class="hl" x="60" y="360" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#5c666e" text-anchor="start">две стойки · сетка · жёлоб</text><text class="hl" x="300" y="1430" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#2b2b2b" text-anchor="start">ЖЁЛОБ</text><text class="hl" x="760" y="640" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#2b2b2b" text-anchor="end">СЕТКА</text><text class="hl" x="70" y="1740" font-family="Nunito, Arial" font-size="24" font-weight="900" fill="#5c666e" text-anchor="start">РАСТЯЖКИ ДЕРЖАТ ОТ ВЕТРА</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s4 = gsap.timeline({ paused: true });
+    const tl = tl_s4;
+    tl.fromTo("#s4 .world", { scale:1.0 }, { scale:1.03, duration:3.738, ease:"none" }, 0);
+    tl.to(".draw", {attr:{"stroke-dashoffset":0}, duration:0.9, stagger:0.12}, 0.1);tl.fromTo(".meshG", {opacity:0}, {opacity:1, duration:0.8}, 0.3);tl.fromTo(".troughG", {y:-60, opacity:0}, {y:0, opacity:1, duration:0.6, ease:"back.out(2)"}, 0.8);
+    window.__timelines["s4"] = tl_s4;
+  </script>
+</template>

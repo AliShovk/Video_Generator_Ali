@@ -1,0 +1,22 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#cfe6f2}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div class="clip" id="s2-clip" data-start="0" data-duration="3.525">
+      <div id="s2-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="meshP" width="26" height="26" patternUnits="userSpaceOnUse">
+  <path d="M 0 0 L 26 0 M 0 0 L 0 26" stroke="#6f7a82" stroke-width="3" opacity="0.85"/>
+</pattern>
+<linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#7fc3ff"/><stop offset="1" stop-color="#3f8fd8"/>
+</linearGradient>
+</defs><rect width="1080" height="1920" fill="#cfe6f2"/><path d="M 0 1280 Q 180 1050 380 1160 Q 560 1270 720 1140 Q 900 1010 1080 1180 L 1080 1920 L 0 1920 Z" fill="#b9c98a" stroke="#2b2b2b" stroke-width="6"/><rect class="postG" x="164" y="780" width="32" height="720" fill="#a9763f" stroke="#2b2b2b" stroke-width="6"/><rect class="postG" x="844" y="780" width="32" height="720" fill="#a9763f" stroke="#2b2b2b" stroke-width="6"/><g class="meshG"><rect x="196" y="800" width="648" height="520" fill="url(#meshP)" stroke="#2b2b2b" stroke-width="7"/><rect x="196" y="800" width="648" height="520" fill="none" stroke="#a9763f" stroke-width="14"/></g><g class="fog2" opacity="0.95"><ellipse cx="540" cy="880" rx="550.0" ry="90" fill="#ffffff"/><ellipse cx="298.0" cy="910" rx="330.0" ry="70" fill="#ffffff"/><ellipse cx="760.0" cy="906" rx="352.0" ry="78" fill="#ffffff"/><ellipse cx="595.0" cy="840" rx="286.0" ry="64" fill="#ffffff"/></g><text class="hl" x="70" y="300" font-family="Nunito, Arial" font-size="56" font-weight="900" fill="#2b2b2b" text-anchor="start">ТУМАН = ВОДА</text><text class="hl" x="70" y="370" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#5c666e" text-anchor="start">мелкие капли в воздухе</text><text class="hl" x="70" y="1740" font-family="Nunito, Arial" font-size="26" font-weight="900" fill="#5c666e" text-anchor="start">ВЕТЕР НЕСЁТ ИХ ЧЕРЕЗ СЕТКУ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s2 = gsap.timeline({ paused: true });
+    const tl = tl_s2;
+    tl.fromTo("#s2 .world", { scale:1.0 }, { scale:1.03, duration:3.525, ease:"none" }, 0);
+    tl.fromTo(".fog", {x:-260, opacity:0}, {x:20, opacity:0.95, duration:1.6, ease:"sine.out"}, 0.2);tl.fromTo(".meshG", {opacity:0, scaleY:0.6, transformOrigin:"50% 100%"}, {opacity:1, scaleY:1, duration:1.0}, 0.3);tl.to(".postG", {attr:{"stroke-width":6}, duration:0.2}, 0.2);
+    window.__timelines["s2"] = tl_s2;
+  </script>
+</template>

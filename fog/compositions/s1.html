@@ -1,0 +1,22 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#cfe6f2}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <div class="clip" id="s1-clip" data-start="0" data-duration="3.022">
+      <div id="s1-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="meshP" width="26" height="26" patternUnits="userSpaceOnUse">
+  <path d="M 0 0 L 26 0 M 0 0 L 0 26" stroke="#6f7a82" stroke-width="3" opacity="0.85"/>
+</pattern>
+<linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#7fc3ff"/><stop offset="1" stop-color="#3f8fd8"/>
+</linearGradient>
+</defs><rect width="1080" height="1920" fill="#cfe6f2"/><circle cx="880" cy="300" r="90" fill="#f2c14e" stroke="#2b2b2b" stroke-width="6"/><path d="M 0 1310 Q 180 1080 380 1190 Q 560 1300 720 1170 Q 900 1040 1080 1210 L 1080 1920 L 0 1920 Z" fill="#b9c98a" stroke="#2b2b2b" stroke-width="6"/><path d="M 120 1500 q 120 -40 240 0 M 600 1620 q 140 -30 280 0" stroke="#2b2b2b" stroke-width="4" fill="none" opacity="0.4"/><g opacity="0.9"><rect x="640" y="1180" width="120" height="80" fill="#e8dcc4" stroke="#2b2b2b" stroke-width="5"/><path d="M 620 1180 L 700 1120 L 780 1180 Z" fill="#c0603f" stroke="#2b2b2b" stroke-width="5"/></g><text class="hl" x="70" y="300" font-family="Nunito, Arial" font-size="58" font-weight="900" fill="#2b2b2b" text-anchor="start">ВОДА ИЗ ТУМАНА</text><text class="hl" x="70" y="380" font-family="Nunito, Arial" font-size="30" font-weight="900" fill="#5c666e" text-anchor="start">ТАМ, ГДЕ НЕТ ДОЖДЯ</text><text class="hl" x="70" y="1740" font-family="Nunito, Arial" font-size="30" font-weight="900" fill="#5c666e" text-anchor="start">ПРОСТО СЕТКА И ВЕТЕР</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s1 = gsap.timeline({ paused: true });
+    const tl = tl_s1;
+    tl.fromTo("#s1 .world", { scale:1.0 }, { scale:1.03, duration:3.022, ease:"none" }, 0);
+    tl.to(".draw", {attr:{"stroke-dashoffset":0}, duration:0.8, stagger:0.1}, 0.1);tl.fromTo(".hl", {opacity:0, y:16}, {opacity:1, y:0, duration:0.5, stagger:0.15}, 0.1);
+    window.__timelines["s1"] = tl_s1;
+  </script>
+</template>

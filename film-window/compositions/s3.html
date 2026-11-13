@@ -1,0 +1,19 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#e8f2fa}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div class="clip" id="s3-clip" data-start="0" data-duration="3.0">
+      <div id="s3-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="glassG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6f4fc"/><stop offset="0.5" stop-color="#c3e0f0"/><stop offset="1" stop-color="#9cc4da"/></linearGradient>
+<linearGradient id="warmG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd08a"/><stop offset="1" stop-color="#f0a63c"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#e8f2fa"/><g class="win"><rect x="96" y="356" width="888" height="948" rx="18" fill="#ffffff"/><rect x="120" y="380" width="840" height="900" fill="url(#glassG)"/><line x1="540.0" y1="380" x2="540.0" y2="1280" stroke="#ffffff" stroke-width="22"/><line x1="120" y1="830.0" x2="960" y2="830.0" stroke="#ffffff" stroke-width="22"/></g><g transform="translate(880 1120) scale(1.2)"><rect x="-40" y="0" width="80" height="150" rx="18" fill="#dff0f8" stroke="#2f7fa8" stroke-width="4"/><rect x="-22" y="-46" width="44" height="50" fill="#2f7fa8"/><path d="M 22 -40 l 46 18 l 0 14 l -46 -10 z" fill="#2f7fa8"/><rect x="-40" y="60" width="80" height="60" rx="10" fill="#8fd0ee" opacity="0.7"/></g><circle class="sprayD" cx="560" cy="700" r="4" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="597" cy="753" r="5" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="634" cy="806" r="6" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="671" cy="859" r="7" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="708" cy="912" r="4" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="745" cy="965" r="5" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="782" cy="1018" r="6" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="819" cy="1071" r="7" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="856" cy="1124" r="4" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="893" cy="1177" r="5" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="930" cy="730" r="6" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="587" cy="783" r="7" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="624" cy="836" r="4" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="661" cy="889" r="5" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="698" cy="942" r="6" fill="#9fd8f2" opacity="0.9"/><circle class="sprayD" cx="735" cy="995" r="7" fill="#9fd8f2" opacity="0.9"/><text class="hl" x="60" y="220" font-family="Nunito, Arial, sans-serif" font-size="62" font-weight="900" fill="#2f7fa8" text-anchor="start" letter-spacing="-1">ВОДА</text><text class="hl" x="60" y="290" font-family="Nunito, Arial, sans-serif" font-size="34" font-weight="900" fill="#5d7280" text-anchor="start" letter-spacing="-1">вместо клея</text><text class="hl" x="60" y="1780" font-family="Nunito, Arial, sans-serif" font-size="30" font-weight="900" fill="#5d7280" text-anchor="start" letter-spacing="-1">смочить стекло — плёнка ляжет ровно</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s3 = gsap.timeline({ paused: true });
+    const tl = tl_s3;
+    tl.fromTo("#s3 .world", { scale:1.0 }, { scale:1.04, duration:3.0, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:20 }, { opacity:1, y:0, duration:0.4, stagger:0.1 }, 0.05);
+    tl.to(".sprayD", {x:-120, y:80, opacity:0, duration:1.2, stagger:0.05, repeat:2, ease:"power1.in"}, 0.2);tl.to(".win", {opacity:0.95, duration:0.1}, 0);
+    window.__timelines["s3"] = tl_s3;
+  </script>
+</template>

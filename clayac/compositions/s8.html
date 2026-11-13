@@ -1,0 +1,16 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s8" data-width="1080" data-height="1920">
+    <div class="clip" id="s8-clip" data-start="0" data-duration="5.091">
+      <div id="s8-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd3ee"/><stop offset="1" stop-color="#e6f3fa"/></linearGradient></defs><rect width="1080" height="1920" fill="url(#bgg)"/><g><rect x="120" y="620" width="360" height="360" rx="24" fill="#f6e3c8" stroke="#2b2b2b" stroke-width="7"/><path class="hum8" d="M 300 900 q 90 -120 0 -220 q -90 100 0 220 z" fill="#2f8fd8" opacity="0.8" stroke="#2b2b2b" stroke-width="5"/><text x="300" y="1020" font-family="Nunito, Arial" font-size="30" font-weight="900" fill="#2b2b2b" text-anchor="middle">сухо</text></g><g><rect x="600" y="620" width="360" height="360" rx="24" fill="#f6e3c8" stroke="#2b2b2b" stroke-width="7"/><path d="M 780 900 q 90 -120 0 -220 q -90 100 0 220 z" fill="#9aa3aa" opacity="0.6" stroke="#2b2b2b" stroke-width="5"/><path d="M 700 700 l 160 160 M 860 700 l -160 160" stroke="#d2452f" stroke-width="14"/><text x="780" y="1020" font-family="Nunito, Arial" font-size="30" font-weight="900" fill="#2b2b2b" text-anchor="middle">влажно</text></g><text class="hl" x="60" y="320" font-family="Nunito, Arial" font-size="54" font-weight="900" fill="#2b2b2b" text-anchor="start">ГДЕ РАБОТАЕТ</text><text class="hl" x="60" y="1500" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#3f9d4a" text-anchor="start">СУХОЙ КЛИМАТ — ДА</text><text class="hl" x="60" y="1570" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#d2452f" text-anchor="start">ВЛАЖНЫЙ — ПОЧТИ НЕТ</text><text class="hl" x="60" y="1700" font-family="Nunito, Arial" font-size="28" font-weight="900" fill="#28506b" text-anchor="start">ЭФФЕКТ: −5…−10 °C НА ВЫХОДЕ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s8 = gsap.timeline({ paused: true });
+    const tl = tl_s8;
+    tl.fromTo("#s8 .world", { scale:1.0 }, { scale:1.03, duration:5.091, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:16 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".hum8", {scaleY:0, transformOrigin:"50% 100%"}, {scaleY:1, duration:0.8}, 0.3);tl.to(".draw", {attr:{"stroke-dashoffset":0}, duration:0.7}, 0.1);
+    window.__timelines["s8"] = tl_s8;
+  </script>
+</template>

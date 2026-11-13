@@ -1,0 +1,29 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#101a20; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+  </style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="6.531">
+      <div id="s5-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#243642"/><stop offset="1" stop-color="#0f181e"/></linearGradient>
+  <linearGradient id="molG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b3f1a"/><stop offset="1" stop-color="#2a1808"/></linearGradient>
+  <linearGradient id="steelG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6d7881"/><stop offset="0.45" stop-color="#a9b4bd"/><stop offset="1" stop-color="#5a636b"/></linearGradient>
+</defs>
+<rect width="1080" height="1920" fill="#0f181d"/><rect x="60" y="520" width="960" height="1000" rx="12" fill="#efe6d2"/><text x="540" y="640" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#5a4a36" text-anchor="middle">ИТОГ</text><g class="n21" opacity="1" transform-origin="540 860"><text x="540" y="900" font-family="Nunito, Arial" font-size="240" font-weight="900" fill="#c0392b" text-anchor="middle">21</text><text x="540" y="960" font-family="Nunito, Arial" font-size="40" font-weight="800" fill="#2a2118" text-anchor="middle">погибший</text></g><g class="n150" opacity="1" transform-origin="540 1150"><text x="540" y="1180" font-family="Nunito, Arial" font-size="150" font-weight="900" fill="#2a2118" text-anchor="middle">150</text><text x="540" y="1240" font-family="Nunito, Arial" font-size="38" font-weight="800" fill="#2a2118" text-anchor="middle">раненых</text></g><g class="money" opacity="0" transform="translate(0 30)"><rect x="150" y="1330" width="780" height="110" rx="10" fill="#dccfb4"/><text x="540" y="1400" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#4a3a28" text-anchor="middle">600 000 $ ВЫПЛАТ</text></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+
+    tl.fromTo("#s5 .world", { scale:1.02 }, { scale:1.06, duration:6.531, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:20 }, { opacity:1, y:0, duration:0.45, stagger:0.1, ease:"power2.out" }, 0.05);
+
+  tl.to("#s5 .n21", {scale:1.04, duration:0.5, ease:"power2.out"}, 0.00);
+  tl.to("#s5 .n150", {scale:1, opacity:1, duration:0.7, ease:"power2.out"}, 1.20);
+  tl.to("#s5 .money", {y:0, opacity:1, duration:0.9, ease:"power2.out"}, 3.27);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

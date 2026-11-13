@@ -1,0 +1,28 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#f2f5f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div class="clip" id="s3-clip" data-start="0" data-duration="5.223">
+      <div id="s3-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="hotG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb37a"/><stop offset="1" stop-color="#e0642f"/></linearGradient>
+<linearGradient id="insG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd98a"/><stop offset="1" stop-color="#e8a63a"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#f2f5f7"/><rect x="90" y="620" width="900" height="760" rx="12" fill="#e4e9ee"/><g class="coilG" stroke="#c0392b" stroke-width="10" fill="none" stroke-linecap="round"><line x1="160" y1="700" x2="920" y2="700"/><path d="M 920 700 q 28 37.0 0 74"/><line x1="920" y1="774" x2="160" y2="774"/><path d="M 160 774 q -28 37.0 0 74"/><line x1="160" y1="848" x2="920" y2="848"/><path d="M 920 848 q 28 37.0 0 74"/><line x1="920" y1="922" x2="160" y2="922"/><path d="M 160 922 q -28 37.0 0 74"/><line x1="160" y1="996" x2="920" y2="996"/><path d="M 920 996 q 28 37.0 0 74"/><line x1="920" y1="1070" x2="160" y2="1070"/><path d="M 160 1070 q -28 37.0 0 74"/><line x1="160" y1="1144" x2="920" y2="1144"/><path d="M 920 1144 q 28 37.0 0 74"/><line x1="920" y1="1218" x2="160" y2="1218"/><path d="M 160 1218 q -28 37.0 0 74"/><line x1="160" y1="1292" x2="920" y2="1292"/></g><line x1="160" y1="1600" x2="310" y2="1600" stroke="#1f2c36" stroke-width="5"/><line x1="160" y1="1580" x2="160" y2="1620" stroke="#1f2c36" stroke-width="5"/><line x1="310" y1="1580" x2="310" y2="1620" stroke="#1f2c36" stroke-width="5"/><text x="235" y="1660" font-family="Nunito, Arial" font-size="38" font-weight="900" fill="#1f2c36" text-anchor="middle">10–15 СМ</text><g class="b"><circle cx="106" cy="430" r="44" fill="#1f2c36"/><text x="106" y="444" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#fff" text-anchor="middle">1</text></g><text class="hl" x="52" y="150" fill="#1f2c36" font-family="Nunito, Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">ШАГ</text><text class="hl" x="52" y="230" fill="#2c8a58" font-family="Nunito, Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">ТРУБЫ</text><text x="54" y="360" font-family="Nunito, Arial" font-size="32" font-weight="800" fill="#1f2c36">у окон — 10 см, в центре — 15 см</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s3 = gsap.timeline({ paused: true });
+    const tl = tl_s3;
+    tl.fromTo("#s3 .world", { scale:1.0 }, { scale:1.04, duration:5.223, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.5, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.35, ease:"back.out(3)" }, 0.15);
+    tl.to(".coldWave", { y:-20, opacity:0.25, duration:1.4, yoyo:true, repeat:6, stagger:0.08 }, 0);
+    tl.to(".feet", { y:6, duration:1.0, yoyo:true, repeat:8, ease:"sine.inOut" }, 0);
+    tl.to(".heatUp", { y:-24, opacity:0.5, duration:1.6, yoyo:true, repeat:4 }, 0);
+    tl.to(".lay", { x:10, duration:0.6, yoyo:true, repeat:6, stagger:0.12 }, 0);
+    tl.to(".coilG", { opacity:0.75, duration:1.2, yoyo:true, repeat:4 }, 0);
+    tl.to(".crack5", { opacity:0.3, duration:0.5, yoyo:true, repeat:10 }, 0);
+    tl.to(".stripe", { opacity:0.9, duration:1.0, yoyo:true, repeat:4, stagger:0.05 }, 0);
+    tl.to(".sensor", { scale:1.6, transformOrigin:"50% 50%", duration:0.8, yoyo:true, repeat:5 }, 0);
+    tl.fromTo(".day", { scaleY:0, transformOrigin:"50% 100%" }, { scaleY:1, duration:0.5, stagger:0.25, ease:"power2.out" }, 0.2);
+    window.__timelines["s3"] = tl_s3;
+  </script>
+</template>

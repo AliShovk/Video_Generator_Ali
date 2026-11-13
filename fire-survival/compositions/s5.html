@@ -1,0 +1,48 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#141b33; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+    .pill {
+      position:absolute; left:50%; top:110px; transform:translateX(-50%);
+      background:#ffffff; color:#ff5a2b; border-radius:999px;
+      font:900 44px/1 "Nunito", Arial, sans-serif; padding:20px 42px; white-space:nowrap;
+      box-shadow:0 12px 26px rgba(0,0,0,0.25);
+    }
+    .scrim { position:absolute; left:0; right:0; bottom:0; height:520px;
+      background:linear-gradient(to top, rgba(10,15,30,0.85) 30%, rgba(10,15,30,0) 100%); }
+    .foot { position:absolute; left:56px; right:56px; bottom:330px;
+      font:900 50px/1.12 "Nunito", Arial, sans-serif; color:#ffffff; text-align:center; }
+    .foot::before { content:""; display:block; width:90px; height:9px; border-radius:6px; background:#ff8a3d; margin:0 auto 20px; }
+  </style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="9">
+      <div id="s5-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#ffb347" stop-opacity="0.75"/>
+    <stop offset="1" stop-color="#ffb347" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffd9a8"/><stop offset="0.55" stop-color="#bfe0f7"/><stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0b1226" flood-opacity="0.22"/>
+  </filter>
+</defs>
+<rect width="1080" height="1920" fill="#141b33"/><g transform="translate(-270 -780) scale(1.5)"><rect x="0" y="1250" width="1080" height="670" fill="#eaf1fb"/><rect x="0" y="1340" width="1080" height="60" fill="#d7e4f5"/><rect x="0" y="1400" width="1080" height="520" fill="#b9a184"/><rect x="0" y="1400" width="1080" height="26" fill="#a68b6a"/><g transform="translate(780 1250) scale(0.95)"><ellipse cx="0" cy="10" rx="150" ry="50" fill="url(#glow)"/><path d="M -80 0 q 18 -70 54 -96 q 10 44 30 58 q 12 -56 44 -74 q 22 74 -6 112 z" fill="#ff8a3d"/><path d="M -44 0 q 12 -46 34 -62 q 6 28 20 38 q 8 -32 26 -44 q 14 46 -4 68 z" fill="#ffc845"/><path d="M -96 6 l 34 -22 l 30 22 l 32 -22 l 34 22 l 30 -22 l 32 22 l -30 -14 l -34 8 l -32 -14 l -30 12 z" fill="#6b4a2f"/></g><ellipse cx="360" cy="1330" rx="200" ry="70" fill="#ffc845" opacity="0.35"/><ellipse cx="360" cy="1315" rx="150" ry="46" fill="#ff8a3d" opacity="0.45"/><g transform="translate(360 1300) scale(0.95 0.95)"><ellipse cx="0" cy="6" rx="120" ry="26" fill="#000" opacity="0.25"/><path d="M -120 0 q 0 -46 56 -46 h 130 q 54 0 54 46 z" fill="#6b5bd2"/><circle cx="-118" cy="-30" r="30" fill="#f2c39d"/><path d="M -146 -40 a 30 24 0 0 1 58 0 z" fill="#2b2340"/><path d="M -150 0 q 10 -20 34 -20" stroke="#6b5bd2" stroke-width="16" fill="none" stroke-linecap="round"/></g><path d="M 360 1400 v 120" stroke="#ffc845" stroke-width="8" stroke-dasharray="16 12"/><path d="M 330 1500 l 30 40 l 30 -40" fill="none" stroke="#ffc845" stroke-width="8"/></g></svg>
+        <div class="scrim"></div>
+        <div class="pill" id="s5-pill">земля-печь</div>
+        <div class="foot" id="s5-foot">Ложишься туда, где горел костёр</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    tl_s5.fromTo("#s5 .world", { scale:1.0 }, { scale:1.05, duration:9, ease:"none" }, 0);
+    tl_s5.fromTo("#s5-pill", { opacity:0, y:-16 }, { opacity:1, y:0, duration:0.45, ease:"back.out(1.7)" }, 0.05);
+    tl_s5.fromTo("#s5-foot", { opacity:0, y:14 }, { opacity:1, y:0, duration:0.45, ease:"power2.out" }, 0.6);
+    tl_s5.fromTo("#s5 .world", {opacity:0.6}, {opacity:1, duration:1.0}, 0.15);tl_s5.to("#s5 .world", {y:-6, duration:2.6, yoyo:true, repeat:2, ease:"sine.inOut"}, 0.8);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

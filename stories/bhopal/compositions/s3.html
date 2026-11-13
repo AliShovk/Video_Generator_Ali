@@ -1,0 +1,28 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0f1013}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div class="clip" id="s3-clip" data-start="0" data-duration="3.36">
+      <div id="s3-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#0f1013"/><g transform="translate(540 1560) scale(1.45)"><g><rect x="-260" y="-220" width="110" height="220" rx="12" fill="#8d99a3"/><ellipse cx="-205" cy="-220" rx="55" ry="16" fill="#a9b4bd"/></g><g><rect x="-110" y="-260" width="110" height="260" rx="12" fill="#8d99a3"/><ellipse cx="-55" cy="-260" rx="55" ry="16" fill="#a9b4bd"/></g><g><rect x="40" y="-220" width="110" height="220" rx="12" fill="#8d99a3"/><ellipse cx="95" cy="-220" rx="55" ry="16" fill="#a9b4bd"/></g><path d='M -280 -160 L 200 -160' stroke='#5f6b74' stroke-width='12'/><path d='M -280 -80 L 120 -80 L 120 -420' stroke='#5f6b74' stroke-width='10'/><rect x="180" y="-520" width="26" height="520" fill="#5f6b74"/><ellipse class="flare" cx="193" cy="-540" rx="34" ry="46" fill="#ff6f6f" opacity="0.55"/><rect x="-330" y="-40" width="660" height="40" fill="#4a545c"/></g><g class="cloudG"><ellipse class="gas" cx="240" cy="1180" rx="120" ry="80" fill="#ff6f6f" opacity="0.45"/><ellipse class="gas" cx="330" cy="1110" rx="160" ry="110" fill="#ff6f6f" opacity="0.45"/><ellipse class="gas" cx="420" cy="1040" rx="200" ry="140" fill="#ff6f6f" opacity="0.45"/><ellipse class="gas" cx="510" cy="970" rx="120" ry="80" fill="#ff6f6f" opacity="0.45"/><ellipse class="gas" cx="600" cy="1180" rx="160" ry="110" fill="#ff6f6f" opacity="0.45"/><ellipse class="gas" cx="690" cy="1110" rx="200" ry="140" fill="#ff6f6f" opacity="0.45"/><ellipse class="gas" cx="780" cy="1040" rx="120" ry="80" fill="#ff6f6f" opacity="0.45"/><ellipse class="gas" cx="870" cy="970" rx="160" ry="110" fill="#ff6f6f" opacity="0.45"/><ellipse class="gas" cx="960" cy="1180" rx="200" ry="140" fill="#ff6f6f" opacity="0.45"/></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s3 = gsap.timeline({ paused: true });
+    const tl = tl_s3;
+    tl.fromTo("#s3 .world", { scale:1.0 }, { scale:1.07, duration:3.36, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:26 }, { opacity:1, y:0, duration:0.5, stagger:0.14, ease:"power3.out" }, 0.1);
+    tl.fromTo(".sub", { opacity:0 }, { opacity:0.75, duration:0.7 }, 0.7);
+    tl.fromTo(".call", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.45, stagger:0.5 }, 0.3);
+    tl.to(".ring", { scale:1.6, opacity:0, duration:2.2, transformOrigin:"50% 50%", stagger:0.4, repeat:2, ease:"power2.out" }, 0);
+    tl.to(".flash", { opacity:0.28, duration:0.4, yoyo:true, repeat:8 }, 0);
+    tl.to(".debris", { y:-90, x:30, duration:2.0, stagger:0.05, repeat:3, ease:"power1.out" }, 0);
+    tl.to(".flame", { scaleY:1.15, transformOrigin:"50% 100%", duration:0.5, yoyo:true, repeat:16, stagger:0.08 }, 0);
+    tl.to(".smoke", { y:-160, opacity:0.15, duration:3.2, stagger:0.15, repeat:2 }, 0);
+    tl.to(".wave", { x:"+=160", duration:3.36, ease:"power1.in" }, 0);
+    tl.to(".gas", { y:-120, x:"+=40", duration:4.5, stagger:0.12, ease:"sine.inOut" }, 0);
+    tl.to(".piece", { y:260, rotation:40, duration:1.8, stagger:0.12, ease:"power2.in" }, 0.3);
+    tl.fromTo(".big", { scale:0.5, opacity:0 }, { scale:1, opacity:1, duration:0.7, ease:"back.out(2)" }, 0.2);
+    tl.to(".cap1", { opacity:1, duration:0.5 }, 0.8);
+    tl.to(".cap2", { opacity:1, duration:0.5 }, 1.2);
+    window.__timelines["s3"] = tl_s3;
+  </script>
+</template>

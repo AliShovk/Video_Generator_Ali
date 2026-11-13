@@ -1,0 +1,22 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#cfe6f2}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="2.594">
+      <div id="s5-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="meshP" width="26" height="26" patternUnits="userSpaceOnUse">
+  <path d="M 0 0 L 26 0 M 0 0 L 0 26" stroke="#6f7a82" stroke-width="3" opacity="0.85"/>
+</pattern>
+<linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#7fc3ff"/><stop offset="1" stop-color="#3f8fd8"/>
+</linearGradient>
+</defs><rect width="1080" height="1920" fill="#eef5f9"/><g class="meshG"><rect x="200" y="420" width="680" height="520" fill="url(#meshP)" stroke="#2b2b2b" stroke-width="7"/><rect x="200" y="420" width="680" height="520" fill="none" stroke="#a9763f" stroke-width="14"/></g><g class="troughG"><path d="M 160 980 l 780 0 l -18 56 l -744 0 z" fill="#9fb8c8" stroke="#2b2b2b" stroke-width="6"/><path d="M 182 972 l 736 0" stroke="#4da3ff" stroke-width="10"/></g><circle class="drip5" cx="260" cy="900" r="14" fill="#4da3ff"/><path class="run5" d="M 260 940 l 0 40" stroke="#4da3ff" stroke-width="9" stroke-linecap="round"/><circle class="drip5" cx="340" cy="860" r="14" fill="#4da3ff"/><path class="run5" d="M 340 940 l 0 40" stroke="#4da3ff" stroke-width="9" stroke-linecap="round"/><circle class="drip5" cx="420" cy="820" r="14" fill="#4da3ff"/><path class="run5" d="M 420 940 l 0 40" stroke="#4da3ff" stroke-width="9" stroke-linecap="round"/><circle class="drip5" cx="500" cy="900" r="14" fill="#4da3ff"/><path class="run5" d="M 500 940 l 0 40" stroke="#4da3ff" stroke-width="9" stroke-linecap="round"/><circle class="drip5" cx="580" cy="860" r="14" fill="#4da3ff"/><path class="run5" d="M 580 940 l 0 40" stroke="#4da3ff" stroke-width="9" stroke-linecap="round"/><circle class="drip5" cx="660" cy="820" r="14" fill="#4da3ff"/><path class="run5" d="M 660 940 l 0 40" stroke="#4da3ff" stroke-width="9" stroke-linecap="round"/><circle class="drip5" cx="740" cy="900" r="14" fill="#4da3ff"/><path class="run5" d="M 740 940 l 0 40" stroke="#4da3ff" stroke-width="9" stroke-linecap="round"/><circle class="drip5" cx="820" cy="860" r="14" fill="#4da3ff"/><path class="run5" d="M 820 940 l 0 40" stroke="#4da3ff" stroke-width="9" stroke-linecap="round"/><rect class="water5" x="180" y="1000" width="740" height="26" fill="#4da3ff" opacity="0.9"/><text class="hl" x="60" y="300" font-family="Nunito, Arial" font-size="50" font-weight="900" fill="#2b2b2b" text-anchor="start">СТЕКАЮТ В ЖЁЛОБ</text><text class="hl" x="60" y="1560" font-family="Nunito, Arial" font-size="26" font-weight="900" fill="#5c666e" text-anchor="start">МЕЛКИЕ КАПЛИ → КРУПНЫЕ → ВОДА</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+    tl.fromTo("#s5 .world", { scale:1.0 }, { scale:1.03, duration:2.594, ease:"none" }, 0);
+    tl.fromTo(".drip5", {y:-120, opacity:0}, {y:0, opacity:1, duration:0.7, stagger:0.12, ease:"power2.in"}, 0.2);tl.fromTo(".water5", {scaleX:0, transformOrigin:"0% 50%"}, {scaleX:1, duration:0.9, ease:"power2.out"}, 1.1);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

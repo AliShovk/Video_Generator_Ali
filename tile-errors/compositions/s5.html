@@ -1,0 +1,38 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef1f3}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="4.851">
+      <div id="s5-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="tileG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8e4da"/></linearGradient>
+<linearGradient id="glueG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bdb5a6"/><stop offset="1" stop-color="#948c7d"/></linearGradient>
+<linearGradient id="metalG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa6b0"/><stop offset="0.5" stop-color="#cfd8de"/><stop offset="1" stop-color="#8b97a1"/></linearGradient>
+<radialGradient id="dropG"><stop offset="0" stop-color="#9fd8ff"/><stop offset="1" stop-color="#5aa9d6"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#eef1f3"/><text x="100" y="620" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#26313a">6 ММ</text><rect x="100" y="700" width="360" height="18" fill="url(#metalG)"/><rect class="tooth" x="100" y="630" width="22.0" height="70" fill="url(#metalG)"/><rect class="tooth" x="140" y="630" width="22.0" height="70" fill="url(#metalG)"/><rect class="tooth" x="180" y="630" width="22.0" height="70" fill="url(#metalG)"/><rect class="tooth" x="220" y="630" width="22.0" height="70" fill="url(#metalG)"/><rect class="tooth" x="260" y="630" width="22.0" height="70" fill="url(#metalG)"/><rect class="tooth" x="300" y="630" width="22.0" height="70" fill="url(#metalG)"/><rect class="tooth" x="340" y="630" width="22.0" height="70" fill="url(#metalG)"/><rect class="tooth" x="380" y="630" width="22.0" height="70" fill="url(#metalG)"/><rect class="tooth" x="420" y="630" width="22.0" height="70" fill="url(#metalG)"/><rect x="264.0" y="718" width="32" height="90" rx="10" fill="#5b4a3a"/><text x="600" y="900" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#2f8f5b">10–12 ММ</text><rect x="600" y="980" width="368" height="18" fill="url(#metalG)"/><rect class="tooth" x="600" y="850" width="25.3" height="130" fill="url(#metalG)"/><rect class="tooth" x="646" y="850" width="25.3" height="130" fill="url(#metalG)"/><rect class="tooth" x="692" y="850" width="25.3" height="130" fill="url(#metalG)"/><rect class="tooth" x="738" y="850" width="25.3" height="130" fill="url(#metalG)"/><rect class="tooth" x="784" y="850" width="25.3" height="130" fill="url(#metalG)"/><rect class="tooth" x="830" y="850" width="25.3" height="130" fill="url(#metalG)"/><rect class="tooth" x="876" y="850" width="25.3" height="130" fill="url(#metalG)"/><rect class="tooth" x="922" y="850" width="25.3" height="130" fill="url(#metalG)"/><rect x="768.0" y="998" width="32" height="90" rx="10" fill="#5b4a3a"/><g class="bigTile"><rect x="120" y="1150" width="380" height="380" rx="8" fill="none" stroke="#c0392b" stroke-width="8" stroke-dasharray="18 12"/><text x="310" y="1360" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#c0392b" text-anchor="middle">60×60</text></g><g class="b4"><circle cx="120" cy="430" r="56" fill="#26313a"/><text x="120" y="450" font-family="Nunito, Arial" font-size="46" font-weight="900" fill="#fff" text-anchor="middle">4</text></g><text class="hl" x="54" y="250" fill="#c0392b" font-family="Nunito, Arial, sans-serif" font-size="46" font-weight="900" letter-spacing="-1">ГРЕБЁНКА НЕ ПО РАЗМЕРУ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+    tl.fromTo("#s5 .world", { scale:1.0 }, { scale:1.04, duration:4.851, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1, ease:"power2.out" }, 0.05);
+    tl.fromTo(".b1,.b2,.b3,.b4,.b5", { scale:0.6, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.45, ease:"back.out(2)" }, 0.2);
+    tl.fromTo("#falling", { y:-40, rotation:-4 }, { y:180, rotation:26, duration:2.2, ease:"power2.in" }, 0.3);
+    tl.to(".dustF", { y:-40, opacity:0.2, duration:2.2, stagger:0.06 }, 0.4);
+    tl.to(".drop", { y:150, opacity:0, duration:1.8, stagger:0.12, repeat:1, ease:"power1.in" }, 0.2);
+    tl.fromTo(".cross", { opacity:0, scale:0.6, transformOrigin:"50% 50%" }, { opacity:1, scale:1, duration:0.4, ease:"back.out(3)" }, 0.5);
+    tl.to(".arrows", { x:-18, duration:0.8, yoyo:true, repeat:6, ease:"sine.inOut" }, 0);
+    tl.to("#lift3", { rotation:-7, svgOrigin:"720 950", duration:2.2, ease:"power2.out" }, 0.6);
+    tl.to(".heat3", { y:-24, opacity:0.4, duration:1.4, yoyo:true, repeat:5 }, 0);
+    tl.to(".blob", { scale:1.05, transformOrigin:"50% 50%", duration:1.0, yoyo:true, repeat:5, stagger:0.1 }, 0);
+    tl.fromTo(".hammer", { y:-60 }, { y:0, duration:0.4, ease:"power2.in" }, 0.2);
+    tl.to(".hammer", { y:-50, duration:0.4, yoyo:true, repeat:7, ease:"power2.out" }, 0.6);
+    tl.to(".ripple", { scale:2.2, opacity:0, transformOrigin:"50% 50%", duration:1.2, stagger:0.3, repeat:3 }, 0.6);
+    tl.fromTo(".tooth", { scaleY:0.6, transformOrigin:"50% 100%" }, { scaleY:1, duration:0.5, stagger:0.03, ease:"back.out(2)" }, 0.2);
+    tl.to(".bigTile", { scale:1.04, transformOrigin:"50% 50%", duration:1.4, yoyo:true, repeat:2 }, 0.4);
+    tl.to(".wdrop", { y:420, opacity:0, duration:2.0, stagger:0.08, repeat:2, ease:"power1.in" }, 0.2);
+    tl.to(".under", { y:-12, duration:1.2, yoyo:true, repeat:4, ease:"sine.inOut" }, 0);
+    tl.to(".arrows6", { y:-20, duration:0.9, yoyo:true, repeat:5, ease:"sine.inOut" }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.35 }, 0.2);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

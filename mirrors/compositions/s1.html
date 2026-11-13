@@ -1,0 +1,35 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#080d16; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+    .head { position:absolute; left:56px; right:56px; top:150px; font-family:"Nunito",Arial,sans-serif;
+      font-weight:900; font-size:78px; line-height:0.98; text-transform:uppercase; letter-spacing:-1px; }
+    .line { opacity:1; }
+  </style>
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <div class="clip" id="s1-clip" data-start="0" data-duration="10">
+      <div id="s1-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#080d16" stop-opacity="1"/><stop offset="0.5" stop-color="#080d16" stop-opacity="0"/>
+    <stop offset="1" stop-color="#080d16" stop-opacity="1"/>
+  </linearGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#eaf2ff" stop-opacity="0.30"/><stop offset="1" stop-color="#eaf2ff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="beamRed" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff8a7a" stop-opacity="0.35"/><stop offset="1" stop-color="#ff8a7a" stop-opacity="0"/>
+  </linearGradient>
+</defs><rect width="1080" height="1920" fill="#080d16"/><rect x="60" y="0" width="960" height="1920" fill="#111a26"/><line x1="380.0" y1="0" x2="380.0" y2="1920" stroke="#dfe7f0" stroke-width="4" stroke-dasharray="46 40" opacity="0.5"/>"<line x1="700.0" y1="0" x2="700.0" y2="1920" stroke="#dfe7f0" stroke-width="4" stroke-dasharray="46 40" opacity="0.5"/>"<rect x="160" y="620" width="760" height="420" rx="28" fill="#0e1724" stroke="#26313f" stroke-width="6"/><rect x="168" y="628" width="432.80000000000007" height="404" rx="20" fill="#16202e"/><line x1="276.20000000000005" y1="628" x2="276.20000000000005" y2="1032" stroke="#dfe7f0" stroke-width="3" opacity="0.25"/><line x1="384.40000000000003" y1="628" x2="384.40000000000003" y2="1032" stroke="#dfe7f0" stroke-width="3" opacity="0.25"/><line x1="492.6" y1="628" x2="492.6" y2="1032" stroke="#dfe7f0" stroke-width="3" opacity="0.25"/><rect x="600.8000000000001" y="628" width="311.2" height="404" rx="20" fill="#e6402f" opacity="0.85"/><text x="624.8000000000001" y="830.0" fill="#fff" font-family="Nunito, Arial" font-size="30" font-weight="800" opacity="0.9">ТВОЯ ДВЕРЬ</text><g><rect x="160" y="560" width="330" height="52" rx="10" fill="#0b121c" stroke="#e6402f" stroke-width="2"/><text x="176" y="594" fill="#e6402f" font-family="Nunito, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="1">ВИДИШЬ В ЗЕРКАЛЕ</text></g><g><rect x="600" y="1080" width="300" height="52" rx="10" fill="#0b121c" stroke="#8b98a8" stroke-width="2"/><text x="616" y="1114" fill="#8b98a8" font-family="Nunito, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">ЭТО НЕ ДОРОГА</text></g><text class="hl" x="56" y="240" fill="#fff" font-family="Nunito, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">ВИДИШЬ В ЗЕРКАЛЕ</text><text class="hl" x="56" y="332" fill="#e6402f" font-family="Nunito, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">СВОЮ ДВЕРЬ?</text></svg>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s1 = gsap.timeline({ paused: true });
+    const tl = tl_s1;
+    tl_s1.fromTo("#s1 .world", { scale:1.0 }, { scale:1.05, duration:10, ease:"none" }, 0);
+    tl_s1.fromTo("#s1 .hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.16, ease:"power3.out" }, 0.15);
+    tl.fromTo("#s1 .world", {opacity:0.4, y:30}, {opacity:1, y:0, duration:0.9, ease:"power2.out"}, 0.15);
+    window.__timelines["s1"] = tl_s1;
+  </script>
+</template>

@@ -1,0 +1,34 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#f7f5f0; }
+    .world { position:absolute; inset:0; }
+    .kicker {
+      position:absolute; left:0; right:0; top:150px; text-align:center;
+      font:800 34px/1 "Nunito", Arial, sans-serif; letter-spacing:.18em; text-transform:uppercase; color:#241f3a; opacity:.6;
+    }
+    .art { position:absolute; left:50%; top:42%; transform:translate(-50%,-50%); width:1040px; }
+    .art img { width:100%; height:auto; display:block; }
+    .head {
+      position:absolute; left:70px; right:70px; bottom:330px; text-align:center;
+      font:900 62px/1.1 "Nunito", Arial, sans-serif; color:#241f3a;
+    }
+    .head .big { display:block; font-size:104px; line-height:.95; margin-bottom:18px; color:#7a4dff; }
+  </style>
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div class="clip" id="s4-clip" data-start="0" data-duration="6">
+      <div id="s4-in">
+        <div class="kicker" id="s4-kicker">как выжить в −40</div>
+        <div class="art" id="s4-art"><img src="assets/snow-globe_xrk9.svg" alt=""/></div>
+        <div class="head" id="s4-head"><span class="big">утро</span>Земля греет снизу, как печь</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s4 = gsap.timeline({ paused: true });
+    tl_s4.fromTo("#s4-art", {opacity:0, y:60, scale:0.94}, {opacity:1, y:0, scale:1, duration:1.2, ease:"power3.out"}, 0.1);
+    tl_s4.to("#s4-art", {y:-14, duration:6, ease:"none"}, 0.1);
+    tl_s4.fromTo("#s4-kicker", {opacity:0, y:-12}, {opacity:0.6, y:0, duration:0.5}, 0.3);
+    tl_s4.fromTo("#s4-head", {opacity:0, y:24}, {opacity:1, y:0, duration:0.7, ease:"power3.out"}, 0.45);
+    window.__timelines["s4"] = tl_s4;
+  </script>
+</template>

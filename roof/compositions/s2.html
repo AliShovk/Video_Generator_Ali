@@ -1,0 +1,37 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#f1f5f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div class="clip" id="s2-clip" data-start="0" data-duration="5.946">
+      <div id="s2-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="insG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#d9a63a"/></linearGradient>
+<linearGradient id="roofG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9c6046"/><stop offset="1" stop-color="#6d3f30"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#f1f5f7"/><rect class="lyr vapour" x="90" y="1175" width="900" height="40" fill="#6fa8c9" opacity="1"/><rect class="lyr insul" x="90" y="915" width="900" height="260" fill="url(#insG)" opacity="1"/><rect class="lyr gap" x="90" y="835" width="900" height="80" fill="#cfe6f2" opacity="0.9"/><rect class="lyr counter" x="90" y="785" width="900" height="50" fill="#b98a55" opacity="1"/><rect class="lyr batten" x="90" y="740" width="900" height="45" fill="#c9a06a" opacity="1"/><rect class="lyr roof" x="90" y="660" width="900" height="80" fill="url(#roofG)" opacity="1"/><g class="lyr"><rect x="210" y="860" width="34" height="330" fill="#b98a55" stroke="#8a6338" stroke-width="3"/><line x1="218" y1="860" x2="218" y2="1190" stroke="#8a6338" stroke-width="2" opacity="0.4"/></g><g class="lyr"><rect x="420" y="860" width="34" height="330" fill="#b98a55" stroke="#8a6338" stroke-width="3"/><line x1="428" y1="860" x2="428" y2="1190" stroke="#8a6338" stroke-width="2" opacity="0.4"/></g><g class="lyr"><rect x="630" y="860" width="34" height="330" fill="#b98a55" stroke="#8a6338" stroke-width="3"/><line x1="638" y1="860" x2="638" y2="1190" stroke="#8a6338" stroke-width="2" opacity="0.4"/></g><g class="lyr"><rect x="840" y="860" width="34" height="330" fill="#b98a55" stroke="#8a6338" stroke-width="3"/><line x1="848" y1="860" x2="848" y2="1190" stroke="#8a6338" stroke-width="2" opacity="0.4"/></g><text class="lb l0" x="120" y="1205" font-family="Nunito, Arial, sans-serif" font-size="26" font-weight="900" fill="#ffffff" text-anchor="start">ПАРОИЗОЛЯЦИЯ</text><text class="lb l1" x="120" y="1060" font-family="Nunito, Arial, sans-serif" font-size="28" font-weight="900" fill="#5c4308" text-anchor="start">УТЕПЛИТЕЛЬ 200–250 ММ</text><text class="lb l2" x="120" y="883" font-family="Nunito, Arial, sans-serif" font-size="24" font-weight="900" fill="#1d5d7d" text-anchor="start">ВЕНТЗАЗОР 50 ММ</text><text class="lb l3" x="120" y="818" font-family="Nunito, Arial, sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="start">КОНТРБРУС</text><text class="lb l4" x="120" y="770" font-family="Nunito, Arial, sans-serif" font-size="22" font-weight="900" fill="#5a4420" text-anchor="start">ОБРЕШЁТКА</text><text class="lb l5" x="120" y="712" font-family="Nunito, Arial, sans-serif" font-size="26" font-weight="900" fill="#ffffff" text-anchor="start">КРОВЛЯ</text><text class="hl" x="52" y="150" fill="#1e2b35" font-family="Nunito, Arial, sans-serif" font-size="60" font-weight="900" letter-spacing="-1">ПИРОГ</text><text class="hl" x="52" y="226" fill="#2c8a58" font-family="Nunito, Arial, sans-serif" font-size="60" font-weight="900" letter-spacing="-1">КРОВЛИ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s2 = gsap.timeline({ paused: true });
+    const tl = tl_s2;
+    tl.fromTo("#s2 .world", { scale:1.0 }, { scale:1.04, duration:5.946, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".heat", { y:0, opacity:0.55 }, { y:-120, opacity:1, duration:1.1, stagger:0.15, yoyo:true, repeat:12, ease:"sine.inOut" }, 0);
+    tl.fromTo(".lyr", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.32 }, 0.1);
+    tl.fromTo(".lb", { opacity:0 }, { opacity:1, duration:0.4, stagger:0.32 }, 0.3);
+    tl.fromTo(".plug", { opacity:0 }, { opacity:1, duration:0.6 }, 5.946 * 0.55);
+    tl.to(".leak", { y:-220, opacity:0, duration:1.0, stagger:0.1, repeat:3 }, 0);
+    tl.fromTo(".vap", { opacity:0, x:-60 }, { opacity:0.95, x:0, duration:1.2 }, 0.2);
+    tl.fromTo(".tape", { opacity:0, scaleX:0.4, transformOrigin:"50% 50%" }, { opacity:1, scaleX:1, duration:0.5 }, 5.946 * 0.55);
+    tl.to(".vapArr", { y:-30, opacity:0.3, duration:1.0, yoyo:true, repeat:4 }, 0);
+    tl.to(".air6", { x:120, duration:1.6, stagger:0.12, repeat:3, ease:"none" }, 0);
+    tl.to(".flow7", { x:80, duration:1.4, stagger:0.1, repeat:4, ease:"none" }, 0);
+    tl.fromTo(".cb", { opacity:0, y:-30 }, { opacity:1, y:0, duration:0.4, stagger:0.2 }, 0.1);
+    tl.to(".top8", { x:110, duration:1.6, ease:"power2.inOut" }, 0.4);
+    tl.to(".seamTop", { opacity:0.3, duration:0.5, yoyo:true, repeat:6 }, 1.0);
+    tl.to(".drop9", { y:120, opacity:0, duration:1.4, stagger:0.15, repeat:3, ease:"power1.in" }, 0.3);
+    tl.to(".mold", { opacity:0.9, duration:1.2, yoyo:true, repeat:3 }, 0.6);
+    tl.fromTo(".wrap", { opacity:0, scaleY:0.6, transformOrigin:"50% 100%" }, { opacity:1, scaleY:1, duration:0.8 }, 5.946 * 0.35);
+    tl.to(".coldLine", { opacity:0.2, duration:0.8, yoyo:true, repeat:5 }, 0);
+    tl.to(".air11", { x:150, duration:2.0, stagger:0.15, repeat:3, ease:"none" }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s2"] = tl_s2;
+  </script>
+</template>

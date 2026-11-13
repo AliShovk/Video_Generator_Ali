@@ -1,0 +1,14 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0a1016}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920">
+    <div class="clip" id="s7-clip" data-start="0" data-duration="3.143">
+      <div id="s7-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#0a1016"/><g class="ts7"><defs><linearGradient id="tsg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#d64545"/><stop offset="0.5" stop-color="#e0b23a"/><stop offset="1" stop-color="#3fa9f5"/></linearGradient></defs><rect x="120" y="500" width="26" height="900" rx="13" fill="url(#tsg)"/><path d="M 150 500 l 16 0" stroke="#8ea2ad" stroke-width="2"/><text x="174" y="508" font-family="Nunito" font-size="22" font-weight="800" fill="#8ea2ad">25 °C</text><path d="M 150 698 l 16 0" stroke="#8ea2ad" stroke-width="2"/><text x="174" y="706" font-family="Nunito" font-size="22" font-weight="800" fill="#8ea2ad">100</text><path d="M 150 896 l 16 0" stroke="#8ea2ad" stroke-width="2"/><text x="174" y="904" font-family="Nunito" font-size="22" font-weight="800" fill="#8ea2ad">180</text><path d="M 150 1094 l 16 0" stroke="#8ea2ad" stroke-width="2"/><text x="174" y="1102" font-family="Nunito" font-size="22" font-weight="800" fill="#8ea2ad">250</text><path d="M 150 1274 l 16 0" stroke="#8ea2ad" stroke-width="2"/><text x="174" y="1282" font-family="Nunito" font-size="22" font-weight="800" fill="#8ea2ad">350</text></g><circle class="pt0" cx="150" cy="560" r="12" fill="#dfefff"/><circle class="pt1" cx="150" cy="700" r="12" fill="#f2df8a"/><circle class="pt2" cx="150" cy="860" r="12" fill="#9fdbe0"/><circle class="pt3" cx="150" cy="1020" r="12" fill="#8cc63f"/><circle class="pt4" cx="150" cy="1180" r="12" fill="#4a3427"/><text class="hl" x="60" y="220" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#8ea2ad" text-anchor="start" letter-spacing="2">ВСЁ ДЕЛО В</text><text class="hl" x="60" y="290" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#f4f7f8" text-anchor="start" letter-spacing="0">ТЕМПЕРАТУРЕ КИПЕНИЯ</text><text class="hl" x="60" y="1520" font-family="Nunito, Arial" font-size="24" font-weight="700" fill="#8ea2ad" text-anchor="start" letter-spacing="0">чем ниже температура — тем выше фракция</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s7 = gsap.timeline({ paused: true });
+    const tl = tl_s7;
+    tl.fromTo(".ts7", {opacity:0, y:20}, {opacity:1, y:0, duration:0.6}, 0.05);tl.fromTo(".pt0, .pt1, .pt2, .pt3, .pt4", {opacity:0, scale:0.6}, {opacity:1, scale:1, duration:0.4, stagger:0.15}, 0.3);tl.fromTo(".hl", {opacity:0}, {opacity:1, duration:0.4, stagger:0.1}, 0);
+    window.__timelines["s7"] = tl_s7;
+  </script>
+</template>

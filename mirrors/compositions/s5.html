@@ -1,0 +1,35 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#080d16; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+    .head { position:absolute; left:56px; right:56px; top:150px; font-family:"Nunito",Arial,sans-serif;
+      font-weight:900; font-size:78px; line-height:0.98; text-transform:uppercase; letter-spacing:-1px; }
+    .line { opacity:1; }
+  </style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="12">
+      <div id="s5-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#080d16" stop-opacity="1"/><stop offset="0.5" stop-color="#080d16" stop-opacity="0"/>
+    <stop offset="1" stop-color="#080d16" stop-opacity="1"/>
+  </linearGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#eaf2ff" stop-opacity="0.30"/><stop offset="1" stop-color="#eaf2ff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="beamRed" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff8a7a" stop-opacity="0.35"/><stop offset="1" stop-color="#ff8a7a" stop-opacity="0"/>
+  </linearGradient>
+</defs><rect width="1080" height="1920" fill="#080d16"/><rect x="60" y="0" width="960" height="1920" fill="#111a26"/><line x1="380.0" y1="0" x2="380.0" y2="1920" stroke="#dfe7f0" stroke-width="4" stroke-dasharray="46 40" opacity="0.5"/>"<line x1="700.0" y1="0" x2="700.0" y2="1920" stroke="#dfe7f0" stroke-width="4" stroke-dasharray="46 40" opacity="0.5"/>"<rect x="120" y="620" width="840" height="440" rx="28" fill="#0e1724" stroke="#26313f" stroke-width="6"/><rect x="128" y="628" width="647.2" height="424" rx="20" fill="#16202e"/><line x1="289.8" y1="628" x2="289.8" y2="1052" stroke="#dfe7f0" stroke-width="3" opacity="0.25"/><line x1="451.6" y1="628" x2="451.6" y2="1052" stroke="#dfe7f0" stroke-width="3" opacity="0.25"/><line x1="613.4000000000001" y1="628" x2="613.4000000000001" y2="1052" stroke="#dfe7f0" stroke-width="3" opacity="0.25"/><rect x="775.2" y="628" width="176.8" height="424" rx="20" fill="#e6402f" opacity="0.85"/><text x="799.2" y="840.0" fill="#fff" font-family="Nunito, Arial" font-size="30" font-weight="800" opacity="0.9">КРАЙ КУЗОВА</text><g><rect x="140" y="560" width="520" height="52" rx="10" fill="#0b121c" stroke="#8b98a8" stroke-width="2"/><text x="156" y="594" fill="#8b98a8" font-family="Nunito, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">НАКЛОНИ ГОЛОВУ К СТЕКЛУ</text></g><g><rect x="140" y="1090" width="380" height="52" rx="10" fill="#0b121c" stroke="#f2c14e" stroke-width="2"/><text x="156" y="1124" fill="#f2c14e" font-family="Nunito, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">ПОВЕРНИ ЗЕРКАЛО</text></g><path d="M 820 1180 q 90 -30 40 -110" stroke="#f2c14e" stroke-width="8" fill="none" marker-end=""/><polygon points="852,1052 826,1104 880,1096" fill="#f2c14e"/><text class="hl" x="56" y="240" fill="#fff" font-family="Nunito, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">РАЗВЕРНИ</text><text class="hl" x="56" y="332" fill="#f2c14e" font-family="Nunito, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">ЗЕРКАЛО</text></svg>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+    tl_s5.fromTo("#s5 .world", { scale:1.0 }, { scale:1.05, duration:12, ease:"none" }, 0);
+    tl_s5.fromTo("#s5 .hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.16, ease:"power3.out" }, 0.15);
+    tl.fromTo("#s5 .world", {opacity:0.6}, {opacity:1, duration:0.6}, 0.2);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

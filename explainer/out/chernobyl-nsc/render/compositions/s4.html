@@ -1,0 +1,43 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#050b12; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+    .chip { position:absolute; left:48px; top:118px; border:1px solid rgba(111,211,242,.45);
+      color:#6fd3f2; font:500 27px/1 "JetBrains Mono",monospace; letter-spacing:.18em;
+      text-transform:uppercase; padding:11px 16px; background:rgba(6,12,18,.65); }
+    .foot { position:absolute; left:48px; right:48px; bottom:420px; font:700 48px/1.12 "Oswald",sans-serif;
+      text-transform:uppercase; color:#e8eef4; text-shadow:0 4px 18px rgba(0,0,0,.85); }
+    .foot::before { content:""; display:block; width:70px; height:4px; background:#ff7a1a; margin-bottom:14px; }
+  </style>
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div class="clip" id="s4-clip" data-start="0" data-duration="11">
+      <div id="s4-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="steel" x1="0" y1="0" x2="0.25" y2="1">
+    <stop offset="0" stop-color="#dfe9f2"/><stop offset="0.45" stop-color="#7f95a4"/><stop offset="1" stop-color="#2d3b46"/>
+  </linearGradient>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#050b12" stop-opacity="0"/><stop offset="1" stop-color="#050b12" stop-opacity="0.95"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#ff7a1a" stop-opacity="0.55"/><stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="grid" width="90" height="90" patternUnits="userSpaceOnUse">
+    <path d="M 90 0 L 0 0 0 90" fill="none" stroke="#0e1e2a" stroke-width="1"/>
+  </pattern>
+  <filter id="soft"><feGaussianBlur stdDeviation="16"/></filter>
+</defs>
+<rect width="1080" height="1920" fill="#050b12"/><rect width="1080" height="1920" fill="url(#grid)"/><rect x="0" y="1300" width="1080" height="620" fill="#0d1317"/><rect x="0" y="1290" width="1080" height="16" fill="#7f95a4"/><rect x="20" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="130" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="240" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="350" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="460" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="570" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="680" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="790" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="900" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="1010" y="1280" width="58" height="10" fill="#93a4b1" opacity="0.7"/><rect x="210" y="1190" width="660" height="76" rx="6" fill="url(#steel)" stroke="#c8d8e4" stroke-width="3"/><g id="jacks"><rect x="268" y="1266" width="124" height="110" fill="#1d2a33" stroke="#6fd3f2" stroke-width="3"/><rect class="piston" x="318" y="1190" width="24" height="80" rx="6" fill="#ff7a1a"/><circle cx="330" cy="1320" r="6" fill="#6fd3f2"/><rect x="478" y="1266" width="124" height="110" fill="#1d2a33" stroke="#6fd3f2" stroke-width="3"/><rect class="piston" x="528" y="1190" width="24" height="80" rx="6" fill="#ff7a1a"/><circle cx="540" cy="1320" r="6" fill="#6fd3f2"/><rect x="688" y="1266" width="124" height="110" fill="#1d2a33" stroke="#6fd3f2" stroke-width="3"/><rect class="piston" x="738" y="1190" width="24" height="80" rx="6" fill="#ff7a1a"/><circle cx="750" cy="1320" r="6" fill="#6fd3f2"/></g><path id="hyd" d="M 392 1376 L 688 1376" stroke="#6fd3f2" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.6"/><text x="540" y="1105" fill="#6fd3f2" font-family="JetBrains Mono, monospace" font-size="30" font-weight="500" letter-spacing="1.5" text-anchor="middle" opacity="1.0">224 ДОМКРАТА · СИНХРОННО</text></svg>
+        <div class="chip">Механизм</div>
+        <div class="foot">Гидравлика толкает опоры по рельсам</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s4 .world", { scale: 1.0 }, { scale: 1.05, duration: 11, ease: "none" }, 0);
+    tl.to(".piston",{y:-12,duration:0.45,yoyo:true,repeat:7,stagger:0.12,ease:"sine.inOut"},0.4);
+    window.__timelines["s4"] = tl;
+  </script>
+</template>

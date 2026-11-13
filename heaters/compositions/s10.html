@@ -1,0 +1,20 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0f1418}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s10" data-width="1080" data-height="1920">
+    <div class="clip" id="s10-clip" data-start="0" data-duration="6.673">
+      <div id="s10-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="steelG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f5f7"/><stop offset="0.5" stop-color="#c9d3da"/><stop offset="1" stop-color="#8f9ba4"/></linearGradient>
+<linearGradient id="oilG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0e3d0"/><stop offset="1" stop-color="#c9ab8a"/></linearGradient>
+<linearGradient id="hotG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb066"/><stop offset="1" stop-color="#e0592a"/></linearGradient>
+<radialGradient id="glowO"><stop offset="0" stop-color="#ff9a4d" stop-opacity="0.85"/><stop offset="1" stop-color="#ff9a4d" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#0f1418"/><text class="hl" x="540" y="220" font-family="Nunito, Arial, sans-serif" font-size="64" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-1">ЧТО КУДА</text><g class="row10"><rect x="70" y="480" width="940" height="230" rx="20" fill="#18242c"/><text x="120" y="570" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#ffffff">СПАЛЬНЯ</text><text x="120" y="640" font-family="Nunito, Arial" font-size="36" font-weight="900" fill="#f0c860">конвектор</text><circle cx="930" cy="595" r="34" fill="#f0c860" opacity="0.85"/></g><g class="row10"><rect x="70" y="780" width="940" height="230" rx="20" fill="#18242c"/><text x="120" y="870" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#ffffff">ВАННАЯ</text><text x="120" y="940" font-family="Nunito, Arial" font-size="36" font-weight="900" fill="#6fd3ff">с защитой IP</text><circle cx="930" cy="895" r="34" fill="#6fd3ff" opacity="0.85"/></g><g class="row10"><rect x="70" y="1080" width="940" height="230" rx="20" fill="#18242c"/><text x="120" y="1170" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#ffffff">ГАРАЖ</text><text x="120" y="1240" font-family="Nunito, Arial" font-size="36" font-weight="900" fill="#ff9a4d">инфракрасный</text><circle cx="930" cy="1195" r="34" fill="#ff9a4d" opacity="0.85"/></g><g class="row10"><rect x="70" y="1380" width="940" height="230" rx="20" fill="#18242c"/><text x="120" y="1470" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#ffffff">БЫСТРО</text><text x="120" y="1540" font-family="Nunito, Arial" font-size="36" font-weight="900" fill="#e08a5a">вентилятор</text><circle cx="930" cy="1495" r="34" fill="#e08a5a" opacity="0.85"/></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s10 = gsap.timeline({ paused: true });
+    const tl = tl_s10;
+    tl.fromTo("#s10 .world", { scale:1.0 }, { scale:1.05, duration:6.673, ease:"none" }, 0);
+    tl.fromTo(".row10", {opacity:0, x:-60}, {opacity:1, x:0, duration:0.5, stagger:0.3}, 0.1);
+    window.__timelines["s10"] = tl_s10;
+  </script>
+</template>

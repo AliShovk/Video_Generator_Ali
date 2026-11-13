@@ -1,0 +1,20 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#17181b}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="5.928">
+      <div id="s5-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="steelG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f5f7"/><stop offset="0.5" stop-color="#c9d3da"/><stop offset="1" stop-color="#8f9ba4"/></linearGradient>
+<linearGradient id="oilG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0e3d0"/><stop offset="1" stop-color="#c9ab8a"/></linearGradient>
+<linearGradient id="hotG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb066"/><stop offset="1" stop-color="#e0592a"/></linearGradient>
+<radialGradient id="glowO"><stop offset="0" stop-color="#ff9a4d" stop-opacity="0.85"/><stop offset="1" stop-color="#ff9a4d" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#17181b"/><g class="irG"><rect x="80" y="520" width="520" height="380" rx="18" fill="#2a2c30" stroke="#4a4d52" stroke-width="4"/><rect x="94" y="534" width="492" height="352" rx="12" fill="none" stroke="#6b6f75" stroke-width="3"/><rect x="110" y="560" width="46" height="260" rx="20" fill="#ff8a3d" opacity="0.9"/><rect x="200" y="560" width="46" height="260" rx="20" fill="#ff8a3d" opacity="0.9"/><rect x="290" y="560" width="46" height="260" rx="20" fill="#ff8a3d" opacity="0.9"/><rect x="380" y="560" width="46" height="260" rx="20" fill="#ff8a3d" opacity="0.9"/><rect x="470" y="560" width="46" height="260" rx="20" fill="#ff8a3d" opacity="0.9"/></g><circle cx="340" cy="710" r="360" fill="url(#glowO)" opacity="0.55" class="glow5"/><path class="ray5" d="M 620 700 L 980 560" stroke="#ff9a4d" stroke-width="7" opacity="0.45"/><path class="ray5" d="M 620 700 L 980 630" stroke="#ff9a4d" stroke-width="7" opacity="0.45"/><path class="ray5" d="M 620 700 L 980 700" stroke="#ff9a4d" stroke-width="7" opacity="0.45"/><path class="ray5" d="M 620 700 L 980 770" stroke="#ff9a4d" stroke-width="7" opacity="0.45"/><path class="ray5" d="M 620 700 L 980 840" stroke="#ff9a4d" stroke-width="7" opacity="0.45"/><path class="ray5" d="M 620 700 L 980 910" stroke="#ff9a4d" stroke-width="7" opacity="0.45"/><path class="ray5" d="M 620 700 L 980 980" stroke="#ff9a4d" stroke-width="7" opacity="0.45"/><g class="man5"><circle cx="840" cy="1180" r="46" fill="#40444a"/><rect x="800" y="1230" width="80" height="150" rx="30" fill="#40444a"/><rect x="812" y="1380" width="22" height="140" rx="10" fill="#40444a"/><rect x="846" y="1380" width="22" height="140" rx="10" fill="#40444a"/></g><text class="hl" x="60" y="1700" font-family="Nunito, Arial, sans-serif" font-size="62" font-weight="900" fill="#ffd2a8" text-anchor="start" letter-spacing="-1">ИНФРАКРАСНЫЙ</text><text class="hl" x="60" y="1770" font-family="Nunito, Arial, sans-serif" font-size="32" font-weight="800" fill="#c9a98e" text-anchor="start" letter-spacing="-1">греет предметы, а не воздух</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+    tl.fromTo("#s5 .world", { scale:1.0 }, { scale:1.05, duration:5.928, ease:"none" }, 0);
+    tl.to(".glow5", {opacity:0.8, duration:1.4, yoyo:true, repeat:5, ease:"sine.inOut"}, 0);tl.to(".ray5", {opacity:0.75, duration:1.0, stagger:0.08, yoyo:true, repeat:5}, 0.3);tl.fromTo(".man5", {opacity:0}, {opacity:1, duration:1.0}, 0.8);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

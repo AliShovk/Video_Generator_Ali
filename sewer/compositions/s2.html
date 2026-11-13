@@ -1,0 +1,29 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef4f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div class="clip" id="s2-clip" data-start="0" data-duration="5.59">
+      <div id="s2-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="pipeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2d2dc"/><stop offset="0.5" stop-color="#93a8b6"/><stop offset="1" stop-color="#5d7280"/></linearGradient>
+<linearGradient id="waterG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b7fa8"/><stop offset="1" stop-color="#7fd0f2"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#eef4f7"/><line x1="120" y1="820" x2="960" y2="820" stroke="#546a78" stroke-width="3" stroke-dasharray="12 10"/><line x1="120" y1="800" x2="960" y2="890" stroke="#7f97a6" stroke-width="100" stroke-linecap="round"/><line x1="120" y1="800" x2="960" y2="890" stroke="#2f8fc4" stroke-width="70" stroke-linecap="round" opacity="0.9"/><line x1="120" y1="700" x2="960" y2="700" stroke="#1f2c36" stroke-width="3" stroke-dasharray="10 8"/><text x="540" y="686" font-family="Nunito, Arial" font-size="30" font-weight="900" fill="#1f2c36" text-anchor="middle">1 МЕТР</text><line x1="980" y1="800" x2="980" y2="890" stroke="#c93a26" stroke-width="3" stroke-dasharray="10 8"/><text x="980" y="831" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#c93a26" text-anchor="middle">3 СМ</text><path d="M 960 890 l -46 0 l 0 -18" stroke="#c93a26" stroke-width="5" fill="none"/><text x="540" y="1120" font-family="Nunito, Arial" font-size="42" font-weight="900" fill="#1f2c36" text-anchor="middle">перепад высоты на метр трубы</text><g class="b"><circle cx="106" cy="430" r="44" fill="#1f2c36"/><text x="106" y="444" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#fff" text-anchor="middle">0</text></g><text class="hl" x="52" y="150" fill="#1f2c36" font-family="Nunito, Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">ЧТО ТАКОЕ</text><text class="hl" x="52" y="230" fill="#2c8a58" font-family="Nunito, Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">УКЛОН</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s2 = gsap.timeline({ paused: true });
+    const tl = tl_s2;
+    tl.fromTo("#s2 .world", { scale:1.0 }, { scale:1.04, duration:5.59, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.5, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.35, ease:"back.out(3)" }, 0.15);
+    tl.to(".still", { scaleY:1.12, transformOrigin:"50% 50%", duration:1.6, yoyo:true, repeat:3, ease:"sine.inOut" }, 0);
+    tl.to(".smell", { y:-60, opacity:0, duration:2.2, stagger:0.15, repeat:2 }, 0);
+    tl.to(".silt", { y:12, x:20, duration:2.4, stagger:0.08, ease:"sine.inOut" }, 0);
+    tl.to(".fast", { x:120, y:100, duration:1.4, stagger:0.1, repeat:6, ease:"none" }, 0);
+    tl.to(".left", { x:-20, opacity:0.4, duration:1.6, stagger:0.12, repeat:3 }, 0);
+    tl.to(".elb", { rotation:12, svgOrigin:"400 700", duration:1.2, yoyo:true, repeat:3 }, 0);
+    tl.to(".elb2", { rotation:-8, svgOrigin:"800 830", duration:1.4, yoyo:true, repeat:3 }, 0);
+    tl.to(".air7", { y:-40, duration:2.0, stagger:0.12, repeat:4 }, 0);
+    tl.to(".smell7", { y:-30, opacity:0.2, duration:2.0, repeat:4 }, 0);
+    tl.fromTo(".row, .row3", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s2"] = tl_s2;
+  </script>
+</template>

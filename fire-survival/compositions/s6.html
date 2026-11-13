@@ -1,0 +1,48 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#141b33; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+    .pill {
+      position:absolute; left:50%; top:110px; transform:translateX(-50%);
+      background:#ffffff; color:#ff5a2b; border-radius:999px;
+      font:900 44px/1 "Nunito", Arial, sans-serif; padding:20px 42px; white-space:nowrap;
+      box-shadow:0 12px 26px rgba(0,0,0,0.25);
+    }
+    .scrim { position:absolute; left:0; right:0; bottom:0; height:520px;
+      background:linear-gradient(to top, rgba(10,15,30,0.85) 30%, rgba(10,15,30,0) 100%); }
+    .foot { position:absolute; left:56px; right:56px; bottom:330px;
+      font:900 50px/1.12 "Nunito", Arial, sans-serif; color:#ffffff; text-align:center; }
+    .foot::before { content:""; display:block; width:90px; height:9px; border-radius:6px; background:#ff8a3d; margin:0 auto 20px; }
+  </style>
+  <div id="root" data-composition-id="s6" data-width="1080" data-height="1920">
+    <div class="clip" id="s6-clip" data-start="0" data-duration="7">
+      <div id="s6-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#ffb347" stop-opacity="0.75"/>
+    <stop offset="1" stop-color="#ffb347" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffd9a8"/><stop offset="0.55" stop-color="#bfe0f7"/><stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0b1226" flood-opacity="0.22"/>
+  </filter>
+</defs>
+<rect width="1080" height="1920" fill="#dff0fb"/><g transform="translate(-270 -780) scale(1.5)"><rect width="1080" height="1920" fill="url(#dawn)"/><circle cx="840" cy="980" r="110" fill="#ffe08a"/><circle cx="840" cy="980" r="170" fill="#ffe08a" opacity="0.25"/><path d="M 0 1530 Q 260 1410 540 1480 Q 840 1540 1080 1440 L 1080 1920 L 0 1920 Z" fill="#eaf1fb"/><path d="M 0 1570 Q 300 1480 560 1540 Q 830 1590 1080 1500 L 1080 1920 L 0 1920 Z" fill="#d7e4f5"/><g transform="translate(540 1490) scale(1.15 1.15)"><ellipse cx="0" cy="8" rx="46" ry="12" fill="#000" opacity="0.25"/><rect x="-28" y="-120" width="56" height="86" rx="24" fill="#ff9f6b"/><rect x="-24" y="-40" width="20" height="46" rx="10" fill="#2b2340"/><rect x="4" y="-40" width="20" height="46" rx="10" fill="#2b2340"/><circle cx="0" cy="-146" r="28" fill="#f2c39d"/><path d="M -30 -152 a 30 24 0 0 1 60 0 z" fill="#2b2340"/><rect x="-30" y="-156" width="60" height="12" rx="6" fill="#ffffff" opacity="0.85"/><path d="M -24 -110 q -40 -34 -44 -74" stroke="#ff9f6b" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M 24 -110 q 40 -34 44 -74" stroke="#ff9f6b" stroke-width="16" stroke-linecap="round" fill="none"/></g></g></svg>
+        <div class="scrim"></div>
+        <div class="pill" id="s6-pill">утро</div>
+        <div class="foot" id="s6-foot">Земля греет снизу, как печь</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s6 = gsap.timeline({ paused: true });
+    tl_s6.fromTo("#s6 .world", { scale:1.0 }, { scale:1.05, duration:7, ease:"none" }, 0);
+    tl_s6.fromTo("#s6-pill", { opacity:0, y:-16 }, { opacity:1, y:0, duration:0.45, ease:"back.out(1.7)" }, 0.05);
+    tl_s6.fromTo("#s6-foot", { opacity:0, y:14 }, { opacity:1, y:0, duration:0.45, ease:"power2.out" }, 0.6);
+    tl_s6.fromTo("#s6 .world", {opacity:0.6, y:18}, {opacity:1, y:0, duration:1.2}, 0.1);
+    window.__timelines["s6"] = tl_s6;
+  </script>
+</template>

@@ -1,0 +1,2263 @@
+{
+  "items": {
+    "firewall_cfej": {
+      "title": "Firewall",
+      "slug": "firewall_cfej",
+      "query": "fire",
+      "path": "undraw/firewall_cfej.svg",
+      "source": "https://cdn.undraw.co/illustration/firewall_cfej.svg",
+      "type": "undraw",
+      "bytes": 14964
+    },
+    "fireworks_2xuq": {
+      "title": "Fireworks",
+      "slug": "fireworks_2xuq",
+      "query": "fire",
+      "path": "undraw/fireworks_2xuq.svg",
+      "source": "https://cdn.undraw.co/illustrations/fireworks_2xuq.svg",
+      "type": "undraw",
+      "bytes": 20648
+    },
+    "light-the-fire_u2zp": {
+      "title": "Light the fire",
+      "slug": "light-the-fire_u2zp",
+      "query": "fire",
+      "path": "undraw/light-the-fire_u2zp.svg",
+      "source": "https://cdn.undraw.co/illustrations/light-the-fire_u2zp.svg",
+      "type": "undraw",
+      "bytes": 6568
+    },
+    "dark-alley_ykce": {
+      "title": "Dark alley",
+      "slug": "dark-alley_ykce",
+      "query": "fire",
+      "path": "undraw/dark-alley_ykce.svg",
+      "source": "https://cdn.undraw.co/illustrations/dark-alley_ykce.svg",
+      "type": "undraw",
+      "bytes": 24468
+    },
+    "building-blocks_h5jb": {
+      "title": "Building blocks",
+      "slug": "building-blocks_h5jb",
+      "query": "fire",
+      "path": "undraw/building-blocks_h5jb.svg",
+      "source": "https://cdn.undraw.co/illustrations/building-blocks_h5jb.svg",
+      "type": "undraw",
+      "bytes": 17559
+    },
+    "moonlight_ctir": {
+      "title": "Moonlight",
+      "slug": "moonlight_ctir",
+      "query": "fire",
+      "path": "undraw/moonlight_ctir.svg",
+      "source": "https://cdn.undraw.co/illustrations/moonlight_ctir.svg",
+      "type": "undraw",
+      "bytes": 17742
+    },
+    "new-year-2026_7kxo": {
+      "title": "New Year 2026",
+      "slug": "new-year-2026_7kxo",
+      "query": "fire",
+      "path": "undraw/new-year-2026_7kxo.svg",
+      "source": "https://cdn.undraw.co/illustration/new-year-2026_7kxo.svg",
+      "type": "undraw",
+      "bytes": 16796
+    },
+    "camping_1hz9": {
+      "title": "Camping",
+      "slug": "camping_1hz9",
+      "query": "fire",
+      "path": "undraw/camping_1hz9.svg",
+      "source": "https://cdn.undraw.co/illustrations/camping_1hz9.svg",
+      "type": "undraw",
+      "bytes": 16505
+    },
+    "launch-event_aur1": {
+      "title": "Launch Event",
+      "slug": "launch-event_aur1",
+      "query": "fire",
+      "path": "undraw/launch-event_aur1.svg",
+      "source": "https://cdn.undraw.co/illustration/launch-event_aur1.svg",
+      "type": "undraw",
+      "bytes": 56468
+    },
+    "into-the-night_nd84": {
+      "title": "Into the night",
+      "slug": "into-the-night_nd84",
+      "query": "fire",
+      "path": "undraw/into-the-night_nd84.svg",
+      "source": "https://cdn.undraw.co/illustrations/into-the-night_nd84.svg",
+      "type": "undraw",
+      "bytes": 21330
+    },
+    "winter-activities_v67l": {
+      "title": "Winter activities",
+      "slug": "winter-activities_v67l",
+      "query": "fire",
+      "path": "undraw/winter-activities_v67l.svg",
+      "source": "https://cdn.undraw.co/illustrations/winter-activities_v67l.svg",
+      "type": "undraw",
+      "bytes": 7433
+    },
+    "clearing-desk_emmv": {
+      "title": "Clearing Desk",
+      "slug": "clearing-desk_emmv",
+      "query": "fire",
+      "path": "undraw/clearing-desk_emmv.svg",
+      "source": "https://cdn.undraw.co/illustration/clearing-desk_emmv.svg",
+      "type": "undraw",
+      "bytes": 13035
+    },
+    "festivities_q090": {
+      "title": "Festivities",
+      "slug": "festivities_q090",
+      "query": "fire",
+      "path": "undraw/festivities_q090.svg",
+      "source": "https://cdn.undraw.co/illustrations/festivities_q090.svg",
+      "type": "undraw",
+      "bytes": 76467
+    },
+    "mello_uiud": {
+      "title": "Mello",
+      "slug": "mello_uiud",
+      "query": "fire",
+      "path": "undraw/mello_uiud.svg",
+      "source": "https://cdn.undraw.co/illustrations/mello_uiud.svg",
+      "type": "undraw",
+      "bytes": 14633
+    },
+    "security-on_3ykb": {
+      "title": "Security On",
+      "slug": "security-on_3ykb",
+      "query": "fire",
+      "path": "undraw/security-on_3ykb.svg",
+      "source": "https://cdn.undraw.co/illustration/security-on_3ykb.svg",
+      "type": "undraw",
+      "bytes": 2628
+    },
+    "online-security_1o24": {
+      "title": "Online Security",
+      "slug": "online-security_1o24",
+      "query": "fire",
+      "path": "undraw/online-security_1o24.svg",
+      "source": "https://cdn.undraw.co/illustration/online-security_1o24.svg",
+      "type": "undraw",
+      "bytes": 9632
+    },
+    "fantasy-writer_fx3f": {
+      "title": "Fantasy Writer",
+      "slug": "fantasy-writer_fx3f",
+      "query": "fire",
+      "path": "undraw/fantasy-writer_fx3f.svg",
+      "source": "https://cdn.undraw.co/illustration/fantasy-writer_fx3f.svg",
+      "type": "undraw",
+      "bytes": 42655
+    },
+    "protection-enabled_pve7": {
+      "title": "Protection Enabled",
+      "slug": "protection-enabled_pve7",
+      "query": "fire",
+      "path": "undraw/protection-enabled_pve7.svg",
+      "source": "https://cdn.undraw.co/illustration/protection-enabled_pve7.svg",
+      "type": "undraw",
+      "bytes": 1941
+    },
+    "maintenance_4unj": {
+      "title": "Maintenance",
+      "slug": "maintenance_4unj",
+      "query": "fire",
+      "path": "undraw/maintenance_4unj.svg",
+      "source": "https://cdn.undraw.co/illustration/maintenance_4unj.svg",
+      "type": "undraw",
+      "bytes": 6780
+    },
+    "cloudflare-dev_nf79": {
+      "title": "Cloudflare Dev",
+      "slug": "cloudflare-dev_nf79",
+      "query": "fire",
+      "path": "undraw/cloudflare-dev_nf79.svg",
+      "source": "https://cdn.undraw.co/illustration/cloudflare-dev_nf79.svg",
+      "type": "undraw",
+      "bytes": 44437
+    },
+    "file-manager_ivlr": {
+      "title": "File Manager",
+      "slug": "file-manager_ivlr",
+      "query": "fire",
+      "path": "undraw/file-manager_ivlr.svg",
+      "source": "https://cdn.undraw.co/illustration/file-manager_ivlr.svg",
+      "type": "undraw",
+      "bytes": 4021
+    },
+    "file-searching_yska": {
+      "title": "File Searching",
+      "slug": "file-searching_yska",
+      "query": "fire",
+      "path": "undraw/file-searching_yska.svg",
+      "source": "https://cdn.undraw.co/illustration/file-searching_yska.svg",
+      "type": "undraw",
+      "bytes": 9932
+    },
+    "files-missing_ntwe": {
+      "title": "Files Missing",
+      "slug": "files-missing_ntwe",
+      "query": "fire",
+      "path": "undraw/files-missing_ntwe.svg",
+      "source": "https://cdn.undraw.co/illustration/files-missing_ntwe.svg",
+      "type": "undraw",
+      "bytes": 16277
+    },
+    "file-analysis_nbtc": {
+      "title": "File Analysis",
+      "slug": "file-analysis_nbtc",
+      "query": "fire",
+      "path": "undraw/file-analysis_nbtc.svg",
+      "source": "https://cdn.undraw.co/illustration/file-analysis_nbtc.svg",
+      "type": "undraw",
+      "bytes": 15422
+    },
+    "five-year-plan_7hwj": {
+      "title": "Five Year Plan",
+      "slug": "five-year-plan_7hwj",
+      "query": "fire",
+      "path": "undraw/five-year-plan_7hwj.svg",
+      "source": "https://cdn.undraw.co/illustration/five-year-plan_7hwj.svg",
+      "type": "undraw",
+      "bytes": 14329
+    },
+    "friendly-guy-avatar_ibbp": {
+      "title": "Friendly Guy Avatar",
+      "slug": "friendly-guy-avatar_ibbp",
+      "query": "fire",
+      "path": "undraw/friendly-guy-avatar_ibbp.svg",
+      "source": "https://cdn.undraw.co/illustration/friendly-guy-avatar_ibbp.svg",
+      "type": "undraw",
+      "bytes": 3171
+    },
+    "friendly-guy-avatar_dqp5": {
+      "title": "Friendly Guy Avatar",
+      "slug": "friendly-guy-avatar_dqp5",
+      "query": "fire",
+      "path": "undraw/friendly-guy-avatar_dqp5.svg",
+      "source": "https://cdn.undraw.co/illustration/friendly-guy-avatar_dqp5.svg",
+      "type": "undraw",
+      "bytes": 2102
+    },
+    "friends-online_gvwz": {
+      "title": "Friends online",
+      "slug": "friends-online_gvwz",
+      "query": "fire",
+      "path": "undraw/friends-online_gvwz.svg",
+      "source": "https://cdn.undraw.co/illustration/friends-online_gvwz.svg",
+      "type": "undraw",
+      "bytes": 20231
+    },
+    "files-uploading_qf8u": {
+      "title": "Files Uploading",
+      "slug": "files-uploading_qf8u",
+      "query": "fire",
+      "path": "undraw/files-uploading_qf8u.svg",
+      "source": "https://cdn.undraw.co/illustration/files-uploading_qf8u.svg",
+      "type": "undraw",
+      "bytes": 7330
+    },
+    "file-search_cbur": {
+      "title": "File Search",
+      "slug": "file-search_cbur",
+      "query": "fire",
+      "path": "undraw/file-search_cbur.svg",
+      "source": "https://cdn.undraw.co/illustration/file-search_cbur.svg",
+      "type": "undraw",
+      "bytes": 8489
+    },
+    "file-manager_yics": {
+      "title": "File manager",
+      "slug": "file-manager_yics",
+      "query": "fire",
+      "path": "undraw/file-manager_yics.svg",
+      "source": "https://cdn.undraw.co/illustrations/file-manager_yics.svg",
+      "type": "undraw",
+      "bytes": 13976
+    },
+    "firmware_3fxd": {
+      "title": "Firmware",
+      "slug": "firmware_3fxd",
+      "query": "fire",
+      "path": "undraw/firmware_3fxd.svg",
+      "source": "https://cdn.undraw.co/illustrations/firmware_3fxd.svg",
+      "type": "undraw",
+      "bytes": 24005
+    },
+    "file-bundle_oaof": {
+      "title": "File bundle",
+      "slug": "file-bundle_oaof",
+      "query": "fire",
+      "path": "undraw/file-bundle_oaof.svg",
+      "source": "https://cdn.undraw.co/illustrations/file-bundle_oaof.svg",
+      "type": "undraw",
+      "bytes": 19158
+    },
+    "fresh-notification_hnv2": {
+      "title": "Fresh notification",
+      "slug": "fresh-notification_hnv2",
+      "query": "fire",
+      "path": "undraw/fresh-notification_hnv2.svg",
+      "source": "https://cdn.undraw.co/illustrations/fresh-notification_hnv2.svg",
+      "type": "undraw",
+      "bytes": 7819
+    },
+    "file-sync_ag5g": {
+      "title": "File sync",
+      "slug": "file-sync_ag5g",
+      "query": "fire",
+      "path": "undraw/file-sync_ag5g.svg",
+      "source": "https://cdn.undraw.co/illustrations/file-sync_ag5g.svg",
+      "type": "undraw",
+      "bytes": 9911
+    },
+    "file-synchronization_g9mj": {
+      "title": "File synchronization",
+      "slug": "file-synchronization_g9mj",
+      "query": "fire",
+      "path": "undraw/file-synchronization_g9mj.svg",
+      "source": "https://cdn.undraw.co/illustrations/file-synchronization_g9mj.svg",
+      "type": "undraw",
+      "bytes": 8107
+    },
+    "files-sent_o4sc": {
+      "title": "Files sent",
+      "slug": "files-sent_o4sc",
+      "query": "fire",
+      "path": "undraw/files-sent_o4sc.svg",
+      "source": "https://cdn.undraw.co/illustrations/files-sent_o4sc.svg",
+      "type": "undraw",
+      "bytes": 9127
+    },
+    "friends_xscy": {
+      "title": "Friends",
+      "slug": "friends_xscy",
+      "query": "fire",
+      "path": "undraw/friends_xscy.svg",
+      "source": "https://cdn.undraw.co/illustrations/friends_xscy.svg",
+      "type": "undraw",
+      "bytes": 11457
+    },
+    "friendship_chd3": {
+      "title": "Friendship",
+      "slug": "friendship_chd3",
+      "query": "fire",
+      "path": "undraw/friendship_chd3.svg",
+      "source": "https://cdn.undraw.co/illustrations/friendship_chd3.svg",
+      "type": "undraw",
+      "bytes": 30377
+    },
+    "image-files_exha": {
+      "title": "Image Files",
+      "slug": "image-files_exha",
+      "query": "fire",
+      "path": "undraw/image-files_exha.svg",
+      "source": "https://cdn.undraw.co/illustration/image-files_exha.svg",
+      "type": "undraw",
+      "bytes": 4346
+    },
+    "night-calls_ge07": {
+      "title": "Night calls",
+      "slug": "night-calls_ge07",
+      "query": "night",
+      "path": "undraw/night-calls_ge07.svg",
+      "source": "https://cdn.undraw.co/illustrations/night-calls_ge07.svg",
+      "type": "undraw",
+      "bytes": 81533
+    },
+    "movie-night_pkvp": {
+      "title": "Movie night",
+      "slug": "movie-night_pkvp",
+      "query": "night",
+      "path": "undraw/movie-night_pkvp.svg",
+      "source": "https://cdn.undraw.co/illustrations/movie-night_pkvp.svg",
+      "type": "undraw",
+      "bytes": 27971
+    },
+    "date-night_x6ro": {
+      "title": "Date night",
+      "slug": "date-night_x6ro",
+      "query": "night",
+      "path": "undraw/date-night_x6ro.svg",
+      "source": "https://cdn.undraw.co/illustrations/date-night_x6ro.svg",
+      "type": "undraw",
+      "bytes": 9311
+    },
+    "late-at-night_0fob": {
+      "title": "Late at night",
+      "slug": "late-at-night_0fob",
+      "query": "night",
+      "path": "undraw/late-at-night_0fob.svg",
+      "source": "https://cdn.undraw.co/illustrations/late-at-night_0fob.svg",
+      "type": "undraw",
+      "bytes": 32515
+    },
+    "video-game-night_fxcu": {
+      "title": "Video game night",
+      "slug": "video-game-night_fxcu",
+      "query": "night",
+      "path": "undraw/video-game-night_fxcu.svg",
+      "source": "https://cdn.undraw.co/illustrations/video-game-night_fxcu.svg",
+      "type": "undraw",
+      "bytes": 14321
+    },
+    "starry-window_yiga": {
+      "title": "Starry Window",
+      "slug": "starry-window_yiga",
+      "query": "night",
+      "path": "undraw/starry-window_yiga.svg",
+      "source": "https://cdn.undraw.co/illustration/starry-window_yiga.svg",
+      "type": "undraw",
+      "bytes": 9912
+    },
+    "halloween-2025_o47f": {
+      "title": "Halloween 2025",
+      "slug": "halloween-2025_o47f",
+      "query": "night",
+      "path": "undraw/halloween-2025_o47f.svg",
+      "source": "https://cdn.undraw.co/illustration/halloween-2025_o47f.svg",
+      "type": "undraw",
+      "bytes": 10330
+    },
+    "counting-stars_1fur": {
+      "title": "Counting Stars",
+      "slug": "counting-stars_1fur",
+      "query": "night",
+      "path": "undraw/counting-stars_1fur.svg",
+      "source": "https://cdn.undraw.co/illustration/counting-stars_1fur.svg",
+      "type": "undraw",
+      "bytes": 13074
+    },
+    "astronomy_ied1": {
+      "title": "Astronomy",
+      "slug": "astronomy_ied1",
+      "query": "night",
+      "path": "undraw/astronomy_ied1.svg",
+      "source": "https://cdn.undraw.co/illustration/astronomy_ied1.svg",
+      "type": "undraw",
+      "bytes": 6130
+    },
+    "dark-mode_lot3": {
+      "title": "Dark mode",
+      "slug": "dark-mode_lot3",
+      "query": "night",
+      "path": "undraw/dark-mode_lot3.svg",
+      "source": "https://cdn.undraw.co/illustrations/dark-mode_lot3.svg",
+      "type": "undraw",
+      "bytes": 6974
+    },
+    "working-late_nh09": {
+      "title": "Working late",
+      "slug": "working-late_nh09",
+      "query": "night",
+      "path": "undraw/working-late_nh09.svg",
+      "source": "https://cdn.undraw.co/illustrations/working-late_nh09.svg",
+      "type": "undraw",
+      "bytes": 38870
+    },
+    "stars_5pgw": {
+      "title": "Stars",
+      "slug": "stars_5pgw",
+      "query": "night",
+      "path": "undraw/stars_5pgw.svg",
+      "source": "https://cdn.undraw.co/illustration/stars_5pgw.svg",
+      "type": "undraw",
+      "bytes": 8030
+    },
+    "relaunch-day_k3qo": {
+      "title": "Relaunch day",
+      "slug": "relaunch-day_k3qo",
+      "query": "night",
+      "path": "undraw/relaunch-day_k3qo.svg",
+      "source": "https://cdn.undraw.co/illustrations/relaunch-day_k3qo.svg",
+      "type": "undraw",
+      "bytes": 8686
+    },
+    "back-home_3dun": {
+      "title": "Back home",
+      "slug": "back-home_3dun",
+      "query": "night",
+      "path": "undraw/back-home_3dun.svg",
+      "source": "https://cdn.undraw.co/illustrations/back-home_3dun.svg",
+      "type": "undraw",
+      "bytes": 14825
+    },
+    "polaroid_qqdz": {
+      "title": "Polaroid",
+      "slug": "polaroid_qqdz",
+      "query": "night",
+      "path": "undraw/polaroid_qqdz.svg",
+      "source": "https://cdn.undraw.co/illustrations/polaroid_qqdz.svg",
+      "type": "undraw",
+      "bytes": 15541
+    },
+    "dreamer_gb41": {
+      "title": "Dreamer",
+      "slug": "dreamer_gb41",
+      "query": "night",
+      "path": "undraw/dreamer_gb41.svg",
+      "source": "https://cdn.undraw.co/illustrations/dreamer_gb41.svg",
+      "type": "undraw",
+      "bytes": 22244
+    },
+    "special-occasion_ffh6": {
+      "title": "Special Occasion",
+      "slug": "special-occasion_ffh6",
+      "query": "night",
+      "path": "undraw/special-occasion_ffh6.svg",
+      "source": "https://cdn.undraw.co/illustration/special-occasion_ffh6.svg",
+      "type": "undraw",
+      "bytes": 14984
+    },
+    "unidentified-flying-object_x5ei": {
+      "title": "Unidentified Flying Object",
+      "slug": "unidentified-flying-object_x5ei",
+      "query": "night",
+      "path": "undraw/unidentified-flying-object_x5ei.svg",
+      "source": "https://cdn.undraw.co/illustration/unidentified-flying-object_x5ei.svg",
+      "type": "undraw",
+      "bytes": 7967
+    },
+    "out-of-office_sae8": {
+      "title": "Out of Office",
+      "slug": "out-of-office_sae8",
+      "query": "night",
+      "path": "undraw/out-of-office_sae8.svg",
+      "source": "https://cdn.undraw.co/illustration/out-of-office_sae8.svg",
+      "type": "undraw",
+      "bytes": 6098
+    },
+    "cinema-at-home_rp9i": {
+      "title": "Cinema at Home",
+      "slug": "cinema-at-home_rp9i",
+      "query": "night",
+      "path": "undraw/cinema-at-home_rp9i.svg",
+      "source": "https://cdn.undraw.co/illustration/cinema-at-home_rp9i.svg",
+      "type": "undraw",
+      "bytes": 7630
+    },
+    "tight-deadline_u4hu": {
+      "title": "Tight Deadline",
+      "slug": "tight-deadline_u4hu",
+      "query": "night",
+      "path": "undraw/tight-deadline_u4hu.svg",
+      "source": "https://cdn.undraw.co/illustration/tight-deadline_u4hu.svg",
+      "type": "undraw",
+      "bytes": 7828
+    },
+    "lightbulb-moment_16av": {
+      "title": "Lightbulb moment",
+      "slug": "lightbulb-moment_16av",
+      "query": "night",
+      "path": "undraw/lightbulb-moment_16av.svg",
+      "source": "https://cdn.undraw.co/illustration/lightbulb-moment_16av.svg",
+      "type": "undraw",
+      "bytes": 6071
+    },
+    "right-direction_arvo": {
+      "title": "Right direction",
+      "slug": "right-direction_arvo",
+      "query": "night",
+      "path": "undraw/right-direction_arvo.svg",
+      "source": "https://cdn.undraw.co/illustration/right-direction_arvo.svg",
+      "type": "undraw",
+      "bytes": 10077
+    },
+    "right-places_6czi": {
+      "title": "Right places",
+      "slug": "right-places_6czi",
+      "query": "night",
+      "path": "undraw/right-places_6czi.svg",
+      "source": "https://cdn.undraw.co/illustrations/right-places_6czi.svg",
+      "type": "undraw",
+      "bytes": 12334
+    },
+    "lighthouse_x9i6": {
+      "title": "Lighthouse",
+      "slug": "lighthouse_x9i6",
+      "query": "night",
+      "path": "undraw/lighthouse_x9i6.svg",
+      "source": "https://cdn.undraw.co/illustrations/lighthouse_x9i6.svg",
+      "type": "undraw",
+      "bytes": 4310
+    },
+    "the-right-time_n3ys": {
+      "title": "The Right Time",
+      "slug": "the-right-time_n3ys",
+      "query": "night",
+      "path": "undraw/the-right-time_n3ys.svg",
+      "source": "https://cdn.undraw.co/illustration/the-right-time_n3ys.svg",
+      "type": "undraw",
+      "bytes": 5523
+    },
+    "idea_hz8b": {
+      "title": "Idea",
+      "slug": "idea_hz8b",
+      "query": "night",
+      "path": "undraw/idea_hz8b.svg",
+      "source": "https://cdn.undraw.co/illustration/idea_hz8b.svg",
+      "type": "undraw",
+      "bytes": 6492
+    },
+    "contrast_r0d4": {
+      "title": "Contrast",
+      "slug": "contrast_r0d4",
+      "query": "night",
+      "path": "undraw/contrast_r0d4.svg",
+      "source": "https://cdn.undraw.co/illustrations/contrast_r0d4.svg",
+      "type": "undraw",
+      "bytes": 5086
+    },
+    "book-reading_i0eb": {
+      "title": "Book reading",
+      "slug": "book-reading_i0eb",
+      "query": "night",
+      "path": "undraw/book-reading_i0eb.svg",
+      "source": "https://cdn.undraw.co/illustrations/book-reading_i0eb.svg",
+      "type": "undraw",
+      "bytes": 22230
+    },
+    "got-an-idea_1z3i": {
+      "title": "Got An Idea",
+      "slug": "got-an-idea_1z3i",
+      "query": "night",
+      "path": "undraw/got-an-idea_1z3i.svg",
+      "source": "https://cdn.undraw.co/illustration/got-an-idea_1z3i.svg",
+      "type": "undraw",
+      "bytes": 26217
+    },
+    "correct-answer_vjt7": {
+      "title": "Correct Answer",
+      "slug": "correct-answer_vjt7",
+      "query": "night",
+      "path": "undraw/correct-answer_vjt7.svg",
+      "source": "https://cdn.undraw.co/illustration/correct-answer_vjt7.svg",
+      "type": "undraw",
+      "bytes": 5256
+    },
+    "a-better-world_y9ca": {
+      "title": "A better world",
+      "slug": "a-better-world_y9ca",
+      "query": "night",
+      "path": "undraw/a-better-world_y9ca.svg",
+      "source": "https://cdn.undraw.co/illustrations/a-better-world_y9ca.svg",
+      "type": "undraw",
+      "bytes": 7070
+    },
+    "fast-loading_ae60": {
+      "title": "Fast loading",
+      "slug": "fast-loading_ae60",
+      "query": "night",
+      "path": "undraw/fast-loading_ae60.svg",
+      "source": "https://cdn.undraw.co/illustrations/fast-loading_ae60.svg",
+      "type": "undraw",
+      "bytes": 12298
+    },
+    "christmas-tree_zxed": {
+      "title": "Christmas Tree",
+      "slug": "christmas-tree_zxed",
+      "query": "night",
+      "path": "undraw/christmas-tree_zxed.svg",
+      "source": "https://cdn.undraw.co/illustration/christmas-tree_zxed.svg",
+      "type": "undraw",
+      "bytes": 16526
+    },
+    "travelers_kud9": {
+      "title": "Travelers",
+      "slug": "travelers_kud9",
+      "query": "night",
+      "path": "undraw/travelers_kud9.svg",
+      "source": "https://cdn.undraw.co/illustration/travelers_kud9.svg",
+      "type": "undraw",
+      "bytes": 14739
+    },
+    "idea-to-plan_jnei": {
+      "title": "Idea to Plan",
+      "slug": "idea-to-plan_jnei",
+      "query": "night",
+      "path": "undraw/idea-to-plan_jnei.svg",
+      "source": "https://cdn.undraw.co/illustration/idea-to-plan_jnei.svg",
+      "type": "undraw",
+      "bytes": 16583
+    },
+    "electricity_7985": {
+      "title": "Electricity",
+      "slug": "electricity_7985",
+      "query": "night",
+      "path": "undraw/electricity_7985.svg",
+      "source": "https://cdn.undraw.co/illustration/electricity_7985.svg",
+      "type": "undraw",
+      "bytes": 6167
+    },
+    "snow-globe_xrk9": {
+      "title": "Snow globe",
+      "slug": "snow-globe_xrk9",
+      "query": "snow",
+      "path": "undraw/snow-globe_xrk9.svg",
+      "source": "https://cdn.undraw.co/illustrations/snow-globe_xrk9.svg",
+      "type": "undraw",
+      "bytes": 10037
+    },
+    "snow-fun_lee0": {
+      "title": "Snow fun",
+      "slug": "snow-fun_lee0",
+      "query": "snow",
+      "path": "undraw/snow-fun_lee0.svg",
+      "source": "https://cdn.undraw.co/illustrations/snow-fun_lee0.svg",
+      "type": "undraw",
+      "bytes": 14608
+    },
+    "snow-games_hqrm": {
+      "title": "Snow games",
+      "slug": "snow-games_hqrm",
+      "query": "snow",
+      "path": "undraw/snow-games_hqrm.svg",
+      "source": "https://cdn.undraw.co/illustrations/snow-games_hqrm.svg",
+      "type": "undraw",
+      "bytes": 4253
+    },
+    "snowman_m7tp": {
+      "title": "Snowman",
+      "slug": "snowman_m7tp",
+      "query": "snow",
+      "path": "undraw/snowman_m7tp.svg",
+      "source": "https://cdn.undraw.co/illustrations/snowman_m7tp.svg",
+      "type": "undraw",
+      "bytes": 11840
+    },
+    "xmas-snowman_vexw": {
+      "title": "Xmas snowman",
+      "slug": "xmas-snowman_vexw",
+      "query": "snow",
+      "path": "undraw/xmas-snowman_vexw.svg",
+      "source": "https://cdn.undraw.co/illustrations/xmas-snowman_vexw.svg",
+      "type": "undraw",
+      "bytes": 5959
+    },
+    "winter-walk_m5sd": {
+      "title": "Winter Walk",
+      "slug": "winter-walk_m5sd",
+      "query": "snow",
+      "path": "undraw/winter-walk_m5sd.svg",
+      "source": "https://cdn.undraw.co/illustration/winter-walk_m5sd.svg",
+      "type": "undraw",
+      "bytes": 13003
+    },
+    "winter-magic_r5xp": {
+      "title": "Winter magic",
+      "slug": "winter-magic_r5xp",
+      "query": "snow",
+      "path": "undraw/winter-magic_r5xp.svg",
+      "source": "https://cdn.undraw.co/illustrations/winter-magic_r5xp.svg",
+      "type": "undraw",
+      "bytes": 8899
+    },
+    "frozen-figure_88h4": {
+      "title": "Frozen figure",
+      "slug": "frozen-figure_88h4",
+      "query": "snow",
+      "path": "undraw/frozen-figure_88h4.svg",
+      "source": "https://cdn.undraw.co/illustrations/frozen-figure_88h4.svg",
+      "type": "undraw",
+      "bytes": 10300
+    },
+    "santa-claus_1z1i": {
+      "title": "Santa claus",
+      "slug": "santa-claus_1z1i",
+      "query": "snow",
+      "path": "undraw/santa-claus_1z1i.svg",
+      "source": "https://cdn.undraw.co/illustrations/santa-claus_1z1i.svg",
+      "type": "undraw",
+      "bytes": 10055
+    },
+    "weather-forecast_h6pw": {
+      "title": "Weather Forecast",
+      "slug": "weather-forecast_h6pw",
+      "query": "snow",
+      "path": "undraw/weather-forecast_h6pw.svg",
+      "source": "https://cdn.undraw.co/illustration/weather-forecast_h6pw.svg",
+      "type": "undraw",
+      "bytes": 8072
+    },
+    "weather-notification_5wuk": {
+      "title": "Weather notification",
+      "slug": "weather-notification_5wuk",
+      "query": "snow",
+      "path": "undraw/weather-notification_5wuk.svg",
+      "source": "https://cdn.undraw.co/illustrations/weather-notification_5wuk.svg",
+      "type": "undraw",
+      "bytes": 16452
+    },
+    "decorate-christmas-tree_brf2": {
+      "title": "Decorate Christmas tree",
+      "slug": "decorate-christmas-tree_brf2",
+      "query": "snow",
+      "path": "undraw/decorate-christmas-tree_brf2.svg",
+      "source": "https://cdn.undraw.co/illustrations/decorate-christmas-tree_brf2.svg",
+      "type": "undraw",
+      "bytes": 7310
+    },
+    "winter-skating_anjy": {
+      "title": "Winter skating",
+      "slug": "winter-skating_anjy",
+      "query": "snow",
+      "path": "undraw/winter-skating_anjy.svg",
+      "source": "https://cdn.undraw.co/illustrations/winter-skating_anjy.svg",
+      "type": "undraw",
+      "bytes": 15830
+    },
+    "time-change_lyxp": {
+      "title": "Time Change",
+      "slug": "time-change_lyxp",
+      "query": "snow",
+      "path": "undraw/time-change_lyxp.svg",
+      "source": "https://cdn.undraw.co/illustration/time-change_lyxp.svg",
+      "type": "undraw",
+      "bytes": 7393
+    },
+    "winter-road_hxt3": {
+      "title": "Winter road",
+      "slug": "winter-road_hxt3",
+      "query": "snow",
+      "path": "undraw/winter-road_hxt3.svg",
+      "source": "https://cdn.undraw.co/illustrations/winter-road_hxt3.svg",
+      "type": "undraw",
+      "bytes": 13686
+    },
+    "showing-support_ixfc": {
+      "title": "Showing support",
+      "slug": "showing-support_ixfc",
+      "query": "snow",
+      "path": "undraw/showing-support_ixfc.svg",
+      "source": "https://cdn.undraw.co/illustrations/showing-support_ixfc.svg",
+      "type": "undraw",
+      "bytes": 12728
+    },
+    "web-design-showcase_6t2l": {
+      "title": "Web Design Showcase",
+      "slug": "web-design-showcase_6t2l",
+      "query": "snow",
+      "path": "undraw/web-design-showcase_6t2l.svg",
+      "source": "https://cdn.undraw.co/illustration/web-design-showcase_6t2l.svg",
+      "type": "undraw",
+      "bytes": 9290
+    },
+    "product-demo_9d4i": {
+      "title": "Product Demo",
+      "slug": "product-demo_9d4i",
+      "query": "snow",
+      "path": "undraw/product-demo_9d4i.svg",
+      "source": "https://cdn.undraw.co/illustration/product-demo_9d4i.svg",
+      "type": "undraw",
+      "bytes": 12339
+    },
+    "appreciate-it_aans": {
+      "title": "Appreciate it",
+      "slug": "appreciate-it_aans",
+      "query": "snow",
+      "path": "undraw/appreciate-it_aans.svg",
+      "source": "https://cdn.undraw.co/illustrations/appreciate-it_aans.svg",
+      "type": "undraw",
+      "bytes": 12521
+    },
+    "steps_s8km": {
+      "title": "Steps",
+      "slug": "steps_s8km",
+      "query": "snow",
+      "path": "undraw/steps_s8km.svg",
+      "source": "https://cdn.undraw.co/illustrations/steps_s8km.svg",
+      "type": "undraw",
+      "bytes": 9582
+    },
+    "netflix_qmju": {
+      "title": "Netflix",
+      "slug": "netflix_qmju",
+      "query": "snow",
+      "path": "undraw/netflix_qmju.svg",
+      "source": "https://cdn.undraw.co/illustrations/netflix_qmju.svg",
+      "type": "undraw",
+      "bytes": 8038
+    },
+    "with-love_rs1k": {
+      "title": "With love",
+      "slug": "with-love_rs1k",
+      "query": "snow",
+      "path": "undraw/with-love_rs1k.svg",
+      "source": "https://cdn.undraw.co/illustration/with-love_rs1k.svg",
+      "type": "undraw",
+      "bytes": 13294
+    },
+    "online-gallery_dljd": {
+      "title": "Online gallery",
+      "slug": "online-gallery_dljd",
+      "query": "snow",
+      "path": "undraw/online-gallery_dljd.svg",
+      "source": "https://cdn.undraw.co/illustrations/online-gallery_dljd.svg",
+      "type": "undraw",
+      "bytes": 9238
+    },
+    "product-explainer_b7ft": {
+      "title": "Product Explainer",
+      "slug": "product-explainer_b7ft",
+      "query": "snow",
+      "path": "undraw/product-explainer_b7ft.svg",
+      "source": "https://cdn.undraw.co/illustration/product-explainer_b7ft.svg",
+      "type": "undraw",
+      "bytes": 9542
+    },
+    "reminder_ustg": {
+      "title": "Reminder",
+      "slug": "reminder_ustg",
+      "query": "snow",
+      "path": "undraw/reminder_ustg.svg",
+      "source": "https://cdn.undraw.co/illustration/reminder_ustg.svg",
+      "type": "undraw",
+      "bytes": 4316
+    },
+    "conference-speaker_kl0d": {
+      "title": "Conference Speaker",
+      "slug": "conference-speaker_kl0d",
+      "query": "snow",
+      "path": "undraw/conference-speaker_kl0d.svg",
+      "source": "https://cdn.undraw.co/illustration/conference-speaker_kl0d.svg",
+      "type": "undraw",
+      "bytes": 11466
+    },
+    "add-notes_9xls": {
+      "title": "Add notes",
+      "slug": "add-notes_9xls",
+      "query": "snow",
+      "path": "undraw/add-notes_9xls.svg",
+      "source": "https://cdn.undraw.co/illustrations/add-notes_9xls.svg",
+      "type": "undraw",
+      "bytes": 10029
+    },
+    "presentation_4ik4": {
+      "title": "Presentation",
+      "slug": "presentation_4ik4",
+      "query": "snow",
+      "path": "undraw/presentation_4ik4.svg",
+      "source": "https://cdn.undraw.co/illustration/presentation_4ik4.svg",
+      "type": "undraw",
+      "bytes": 6649
+    },
+    "team-up_qeem": {
+      "title": "Team up",
+      "slug": "team-up_qeem",
+      "query": "snow",
+      "path": "undraw/team-up_qeem.svg",
+      "source": "https://cdn.undraw.co/illustration/team-up_qeem.svg",
+      "type": "undraw",
+      "bytes": 15870
+    },
+    "team-collaboration_phnf": {
+      "title": "Team collaboration",
+      "slug": "team-collaboration_phnf",
+      "query": "snow",
+      "path": "undraw/team-collaboration_phnf.svg",
+      "source": "https://cdn.undraw.co/illustrations/team-collaboration_phnf.svg",
+      "type": "undraw",
+      "bytes": 53924
+    },
+    "car-salesman_ni2a": {
+      "title": "Car Salesman",
+      "slug": "car-salesman_ni2a",
+      "query": "snow",
+      "path": "undraw/car-salesman_ni2a.svg",
+      "source": "https://cdn.undraw.co/illustration/car-salesman_ni2a.svg",
+      "type": "undraw",
+      "bytes": 5507
+    },
+    "features-overview_uone": {
+      "title": "Features overview",
+      "slug": "features-overview_uone",
+      "query": "snow",
+      "path": "undraw/features-overview_uone.svg",
+      "source": "https://cdn.undraw.co/illustrations/features-overview_uone.svg",
+      "type": "undraw",
+      "bytes": 14918
+    },
+    "bear-market_dhi3": {
+      "title": "Bear market",
+      "slug": "bear-market_dhi3",
+      "query": "snow",
+      "path": "undraw/bear-market_dhi3.svg",
+      "source": "https://cdn.undraw.co/illustrations/bear-market_dhi3.svg",
+      "type": "undraw",
+      "bytes": 6967
+    },
+    "fitness-guy-avatar_50y6": {
+      "title": "Fitness Guy Avatar",
+      "slug": "fitness-guy-avatar_50y6",
+      "query": "snow",
+      "path": "undraw/fitness-guy-avatar_50y6.svg",
+      "source": "https://cdn.undraw.co/illustration/fitness-guy-avatar_50y6.svg",
+      "type": "undraw",
+      "bytes": 2629
+    },
+    "our-solution_qv3b": {
+      "title": "Our solution",
+      "slug": "our-solution_qv3b",
+      "query": "snow",
+      "path": "undraw/our-solution_qv3b.svg",
+      "source": "https://cdn.undraw.co/illustration/our-solution_qv3b.svg",
+      "type": "undraw",
+      "bytes": 17974
+    },
+    "overly-proud_d6j1": {
+      "title": "Overly Proud",
+      "slug": "overly-proud_d6j1",
+      "query": "snow",
+      "path": "undraw/overly-proud_d6j1.svg",
+      "source": "https://cdn.undraw.co/illustration/overly-proud_d6j1.svg",
+      "type": "undraw",
+      "bytes": 7852
+    },
+    "profile-data_xkr9": {
+      "title": "Profile data",
+      "slug": "profile-data_xkr9",
+      "query": "snow",
+      "path": "undraw/profile-data_xkr9.svg",
+      "source": "https://cdn.undraw.co/illustrations/profile-data_xkr9.svg",
+      "type": "undraw",
+      "bytes": 8462
+    },
+    "all-the-data_ijgn": {
+      "title": "All the Data",
+      "slug": "all-the-data_ijgn",
+      "query": "snow",
+      "path": "undraw/all-the-data_ijgn.svg",
+      "source": "https://cdn.undraw.co/illustration/all-the-data_ijgn.svg",
+      "type": "undraw",
+      "bytes": 8397
+    },
+    "reminders_o8j5": {
+      "title": "Reminders",
+      "slug": "reminders_o8j5",
+      "query": "snow",
+      "path": "undraw/reminders_o8j5.svg",
+      "source": "https://cdn.undraw.co/illustration/reminders_o8j5.svg",
+      "type": "undraw",
+      "bytes": 12421
+    },
+    "referral_ihsd": {
+      "title": "Referral",
+      "slug": "referral_ihsd",
+      "query": "snow",
+      "path": "undraw/referral_ihsd.svg",
+      "source": "https://cdn.undraw.co/illustration/referral_ihsd.svg",
+      "type": "undraw",
+      "bytes": 9151
+    },
+    "among-nature_2f9e": {
+      "title": "Among nature",
+      "slug": "among-nature_2f9e",
+      "query": "forest",
+      "path": "undraw/among-nature_2f9e.svg",
+      "source": "https://cdn.undraw.co/illustrations/among-nature_2f9e.svg",
+      "type": "undraw",
+      "bytes": 10857
+    },
+    "nature_yf30": {
+      "title": "Nature",
+      "slug": "nature_yf30",
+      "query": "forest",
+      "path": "undraw/nature_yf30.svg",
+      "source": "https://cdn.undraw.co/illustrations/nature_yf30.svg",
+      "type": "undraw",
+      "bytes": 6210
+    },
+    "campfire_42p5": {
+      "title": "Campfire",
+      "slug": "campfire_42p5",
+      "query": "forest",
+      "path": "undraw/campfire_42p5.svg",
+      "source": "https://cdn.undraw.co/illustrations/campfire_42p5.svg",
+      "type": "undraw",
+      "bytes": 25674
+    },
+    "walking-outside_7jfy": {
+      "title": "Walking outside",
+      "slug": "walking-outside_7jfy",
+      "query": "forest",
+      "path": "undraw/walking-outside_7jfy.svg",
+      "source": "https://cdn.undraw.co/illustrations/walking-outside_7jfy.svg",
+      "type": "undraw",
+      "bytes": 8736
+    },
+    "environment_9luj": {
+      "title": "Environment",
+      "slug": "environment_9luj",
+      "query": "forest",
+      "path": "undraw/environment_9luj.svg",
+      "source": "https://cdn.undraw.co/illustrations/environment_9luj.svg",
+      "type": "undraw",
+      "bytes": 10446
+    },
+    "a-moment-to-relax_mrkn": {
+      "title": "A moment to relax",
+      "slug": "a-moment-to-relax_mrkn",
+      "query": "forest",
+      "path": "undraw/a-moment-to-relax_mrkn.svg",
+      "source": "https://cdn.undraw.co/illustrations/a-moment-to-relax_mrkn.svg",
+      "type": "undraw",
+      "bytes": 12925
+    },
+    "cabin_7fei": {
+      "title": "Cabin",
+      "slug": "cabin_7fei",
+      "query": "forest",
+      "path": "undraw/cabin_7fei.svg",
+      "source": "https://cdn.undraw.co/illustrations/cabin_7fei.svg",
+      "type": "undraw",
+      "bytes": 9974
+    },
+    "waiting-for-you_xhp2": {
+      "title": "Waiting for you",
+      "slug": "waiting-for-you_xhp2",
+      "query": "forest",
+      "path": "undraw/waiting-for-you_xhp2.svg",
+      "source": "https://cdn.undraw.co/illustrations/waiting-for-you_xhp2.svg",
+      "type": "undraw",
+      "bytes": 20561
+    },
+    "remote-cabin_6x4q": {
+      "title": "Remote Cabin",
+      "slug": "remote-cabin_6x4q",
+      "query": "forest",
+      "path": "undraw/remote-cabin_6x4q.svg",
+      "source": "https://cdn.undraw.co/illustration/remote-cabin_6x4q.svg",
+      "type": "undraw",
+      "bytes": 6018
+    },
+    "romantic-getaway_qqwb": {
+      "title": "Romantic getaway",
+      "slug": "romantic-getaway_qqwb",
+      "query": "forest",
+      "path": "undraw/romantic-getaway_qqwb.svg",
+      "source": "https://cdn.undraw.co/illustrations/romantic-getaway_qqwb.svg",
+      "type": "undraw",
+      "bytes": 30860
+    },
+    "environmental-study_c69w": {
+      "title": "Environmental Study",
+      "slug": "environmental-study_c69w",
+      "query": "forest",
+      "path": "undraw/environmental-study_c69w.svg",
+      "source": "https://cdn.undraw.co/illustration/environmental-study_c69w.svg",
+      "type": "undraw",
+      "bytes": 9816
+    },
+    "playing-fetch_eij7": {
+      "title": "Playing Fetch",
+      "slug": "playing-fetch_eij7",
+      "query": "forest",
+      "path": "undraw/playing-fetch_eij7.svg",
+      "source": "https://cdn.undraw.co/illustration/playing-fetch_eij7.svg",
+      "type": "undraw",
+      "bytes": 7733
+    },
+    "nature-fun_vkot": {
+      "title": "Nature fun",
+      "slug": "nature-fun_vkot",
+      "query": "forest",
+      "path": "undraw/nature-fun_vkot.svg",
+      "source": "https://cdn.undraw.co/illustrations/nature-fun_vkot.svg",
+      "type": "undraw",
+      "bytes": 20189
+    },
+    "photo_1cl2": {
+      "title": "Photo",
+      "slug": "photo_1cl2",
+      "query": "forest",
+      "path": "undraw/photo_1cl2.svg",
+      "source": "https://cdn.undraw.co/illustration/photo_1cl2.svg",
+      "type": "undraw",
+      "bytes": 2967
+    },
+    "eco-conscious_oqny": {
+      "title": "Eco conscious",
+      "slug": "eco-conscious_oqny",
+      "query": "forest",
+      "path": "undraw/eco-conscious_oqny.svg",
+      "source": "https://cdn.undraw.co/illustrations/eco-conscious_oqny.svg",
+      "type": "undraw",
+      "bytes": 11398
+    },
+    "relaxing-outdoors_s653": {
+      "title": "Relaxing Outdoors",
+      "slug": "relaxing-outdoors_s653",
+      "query": "forest",
+      "path": "undraw/relaxing-outdoors_s653.svg",
+      "source": "https://cdn.undraw.co/illustration/relaxing-outdoors_s653.svg",
+      "type": "undraw",
+      "bytes": 10915
+    },
+    "travel-destination_d2a9": {
+      "title": "Travel Destination",
+      "slug": "travel-destination_d2a9",
+      "query": "forest",
+      "path": "undraw/travel-destination_d2a9.svg",
+      "source": "https://cdn.undraw.co/illustration/travel-destination_d2a9.svg",
+      "type": "undraw",
+      "bytes": 10074
+    },
+    "looking-for-answers_5p23": {
+      "title": "Looking for Answers",
+      "slug": "looking-for-answers_5p23",
+      "query": "forest",
+      "path": "undraw/looking-for-answers_5p23.svg",
+      "source": "https://cdn.undraw.co/illustration/looking-for-answers_5p23.svg",
+      "type": "undraw",
+      "bytes": 13772
+    },
+    "route-planning_2psv": {
+      "title": "Route Planning",
+      "slug": "route-planning_2psv",
+      "query": "forest",
+      "path": "undraw/route-planning_2psv.svg",
+      "source": "https://cdn.undraw.co/illustration/route-planning_2psv.svg",
+      "type": "undraw",
+      "bytes": 9710
+    },
+    "moments-captured_3mk1": {
+      "title": "Moments Captured",
+      "slug": "moments-captured_3mk1",
+      "query": "forest",
+      "path": "undraw/moments-captured_3mk1.svg",
+      "source": "https://cdn.undraw.co/illustration/moments-captured_3mk1.svg",
+      "type": "undraw",
+      "bytes": 10976
+    },
+    "exploring_d1vd": {
+      "title": "Exploring",
+      "slug": "exploring_d1vd",
+      "query": "forest",
+      "path": "undraw/exploring_d1vd.svg",
+      "source": "https://cdn.undraw.co/illustration/exploring_d1vd.svg",
+      "type": "undraw",
+      "bytes": 9783
+    },
+    "fast-changing-world_3ee6": {
+      "title": "Fast-Changing World",
+      "slug": "fast-changing-world_3ee6",
+      "query": "forest",
+      "path": "undraw/fast-changing-world_3ee6.svg",
+      "source": "https://cdn.undraw.co/illustration/fast-changing-world_3ee6.svg",
+      "type": "undraw",
+      "bytes": 37312
+    },
+    "camping_q4ji": {
+      "title": "Camping",
+      "slug": "camping_q4ji",
+      "query": "camping",
+      "path": "undraw/camping_q4ji.svg",
+      "source": "https://cdn.undraw.co/illustration/camping_q4ji.svg",
+      "type": "undraw",
+      "bytes": 28885
+    },
+    "outdoor-adventure_0xrb": {
+      "title": "Outdoor adventure",
+      "slug": "outdoor-adventure_0xrb",
+      "query": "camping",
+      "path": "undraw/outdoor-adventure_0xrb.svg",
+      "source": "https://cdn.undraw.co/illustrations/outdoor-adventure_0xrb.svg",
+      "type": "undraw",
+      "bytes": 14780
+    },
+    "hiking_9zta": {
+      "title": "Hiking",
+      "slug": "hiking_9zta",
+      "query": "camping",
+      "path": "undraw/hiking_9zta.svg",
+      "source": "https://cdn.undraw.co/illustration/hiking_9zta.svg",
+      "type": "undraw",
+      "bytes": 11236
+    },
+    "wilderness_218l": {
+      "title": "Wilderness",
+      "slug": "wilderness_218l",
+      "query": "camping",
+      "path": "undraw/wilderness_218l.svg",
+      "source": "https://cdn.undraw.co/illustrations/wilderness_218l.svg",
+      "type": "undraw",
+      "bytes": 13156
+    },
+    "adventure-map_3e4p": {
+      "title": "Adventure Map",
+      "slug": "adventure-map_3e4p",
+      "query": "adventure",
+      "path": "undraw/adventure-map_3e4p.svg",
+      "source": "https://cdn.undraw.co/illustration/adventure-map_3e4p.svg",
+      "type": "undraw",
+      "bytes": 11400
+    },
+    "next-adventure_pzln": {
+      "title": "Next Adventure",
+      "slug": "next-adventure_pzln",
+      "query": "adventure",
+      "path": "undraw/next-adventure_pzln.svg",
+      "source": "https://cdn.undraw.co/illustration/next-adventure_pzln.svg",
+      "type": "undraw",
+      "bytes": 15481
+    },
+    "avatar-traveler_ljy2": {
+      "title": "Avatar Traveler",
+      "slug": "avatar-traveler_ljy2",
+      "query": "adventure",
+      "path": "undraw/avatar-traveler_ljy2.svg",
+      "source": "https://cdn.undraw.co/illustration/avatar-traveler_ljy2.svg",
+      "type": "undraw",
+      "bytes": 3659
+    },
+    "explore_kfv3": {
+      "title": "Explore",
+      "slug": "explore_kfv3",
+      "query": "adventure",
+      "path": "undraw/explore_kfv3.svg",
+      "source": "https://cdn.undraw.co/illustrations/explore_kfv3.svg",
+      "type": "undraw",
+      "bytes": 40562
+    },
+    "destinations_izq9": {
+      "title": "Destinations",
+      "slug": "destinations_izq9",
+      "query": "adventure",
+      "path": "undraw/destinations_izq9.svg",
+      "source": "https://cdn.undraw.co/illustrations/destinations_izq9.svg",
+      "type": "undraw",
+      "bytes": 16995
+    },
+    "vacation-selfie_q5bs": {
+      "title": "Vacation Selfie",
+      "slug": "vacation-selfie_q5bs",
+      "query": "adventure",
+      "path": "undraw/vacation-selfie_q5bs.svg",
+      "source": "https://cdn.undraw.co/illustration/vacation-selfie_q5bs.svg",
+      "type": "undraw",
+      "bytes": 12098
+    },
+    "finding-the-way_qp1z": {
+      "title": "Finding the Way",
+      "slug": "finding-the-way_qp1z",
+      "query": "adventure",
+      "path": "undraw/finding-the-way_qp1z.svg",
+      "source": "https://cdn.undraw.co/illustration/finding-the-way_qp1z.svg",
+      "type": "undraw",
+      "bytes": 5764
+    },
+    "airplane_do9t": {
+      "title": "Airplane",
+      "slug": "airplane_do9t",
+      "query": "adventure",
+      "path": "undraw/airplane_do9t.svg",
+      "source": "https://cdn.undraw.co/illustration/airplane_do9t.svg",
+      "type": "undraw",
+      "bytes": 5915
+    },
+    "travel-together_uhlf": {
+      "title": "Travel together",
+      "slug": "travel-together_uhlf",
+      "query": "adventure",
+      "path": "undraw/travel-together_uhlf.svg",
+      "source": "https://cdn.undraw.co/illustrations/travel-together_uhlf.svg",
+      "type": "undraw",
+      "bytes": 176347
+    },
+    "travel-everywhere_sxzj": {
+      "title": "Travel Everywhere",
+      "slug": "travel-everywhere_sxzj",
+      "query": "adventure",
+      "path": "undraw/travel-everywhere_sxzj.svg",
+      "source": "https://cdn.undraw.co/illustration/travel-everywhere_sxzj.svg",
+      "type": "undraw",
+      "bytes": 15969
+    },
+    "hot-air-balloon_6knx": {
+      "title": "Hot Air Balloon",
+      "slug": "hot-air-balloon_6knx",
+      "query": "adventure",
+      "path": "undraw/hot-air-balloon_6knx.svg",
+      "source": "https://cdn.undraw.co/illustration/hot-air-balloon_6knx.svg",
+      "type": "undraw",
+      "bytes": 13586
+    },
+    "on-the-way_zwi3": {
+      "title": "On the Way",
+      "slug": "on-the-way_zwi3",
+      "query": "adventure",
+      "path": "undraw/on-the-way_zwi3.svg",
+      "source": "https://cdn.undraw.co/illustration/on-the-way_zwi3.svg",
+      "type": "undraw",
+      "bytes": 10002
+    },
+    "destination_fkst": {
+      "title": "Destination",
+      "slug": "destination_fkst",
+      "query": "adventure",
+      "path": "undraw/destination_fkst.svg",
+      "source": "https://cdn.undraw.co/illustration/destination_fkst.svg",
+      "type": "undraw",
+      "bytes": 10504
+    },
+    "vacation-photos_070r": {
+      "title": "Vacation Photos",
+      "slug": "vacation-photos_070r",
+      "query": "adventure",
+      "path": "undraw/vacation-photos_070r.svg",
+      "source": "https://cdn.undraw.co/illustration/vacation-photos_070r.svg",
+      "type": "undraw",
+      "bytes": 15216
+    },
+    "mobile-gaming_di2l": {
+      "title": "Mobile Gaming",
+      "slug": "mobile-gaming_di2l",
+      "query": "adventure",
+      "path": "undraw/mobile-gaming_di2l.svg",
+      "source": "https://cdn.undraw.co/illustration/mobile-gaming_di2l.svg",
+      "type": "undraw",
+      "bytes": 12901
+    },
+    "skateboarding_i2pz": {
+      "title": "Skateboarding",
+      "slug": "skateboarding_i2pz",
+      "query": "adventure",
+      "path": "undraw/skateboarding_i2pz.svg",
+      "source": "https://cdn.undraw.co/illustration/skateboarding_i2pz.svg",
+      "type": "undraw",
+      "bytes": 9713
+    },
+    "dream-gift_5ave": {
+      "title": "Dream Gift",
+      "slug": "dream-gift_5ave",
+      "query": "adventure",
+      "path": "undraw/dream-gift_5ave.svg",
+      "source": "https://cdn.undraw.co/illustration/dream-gift_5ave.svg",
+      "type": "undraw",
+      "bytes": 5666
+    },
+    "location-search_9mdg": {
+      "title": "Location Search",
+      "slug": "location-search_9mdg",
+      "query": "adventure",
+      "path": "undraw/location-search_9mdg.svg",
+      "source": "https://cdn.undraw.co/illustration/location-search_9mdg.svg",
+      "type": "undraw",
+      "bytes": 7358
+    },
+    "travel-mode_103y": {
+      "title": "Travel Mode",
+      "slug": "travel-mode_103y",
+      "query": "adventure",
+      "path": "undraw/travel-mode_103y.svg",
+      "source": "https://cdn.undraw.co/illustration/travel-mode_103y.svg",
+      "type": "undraw",
+      "bytes": 5458
+    },
+    "airplane_yor6": {
+      "title": "Airplane",
+      "slug": "airplane_yor6",
+      "query": "adventure",
+      "path": "undraw/airplane_yor6.svg",
+      "source": "https://cdn.undraw.co/illustration/airplane_yor6.svg",
+      "type": "undraw",
+      "bytes": 4117
+    },
+    "visiting-japan_edss": {
+      "title": "Visiting Japan",
+      "slug": "visiting-japan_edss",
+      "query": "adventure",
+      "path": "undraw/visiting-japan_edss.svg",
+      "source": "https://cdn.undraw.co/illustration/visiting-japan_edss.svg",
+      "type": "undraw",
+      "bytes": 10767
+    },
+    "travel-booking_a6s2": {
+      "title": "Travel Booking",
+      "slug": "travel-booking_a6s2",
+      "query": "adventure",
+      "path": "undraw/travel-booking_a6s2.svg",
+      "source": "https://cdn.undraw.co/illustration/travel-booking_a6s2.svg",
+      "type": "undraw",
+      "bytes": 19657
+    },
+    "artemis-ii_4w4o": {
+      "title": "Artemis II",
+      "slug": "artemis-ii_4w4o",
+      "query": "adventure",
+      "path": "undraw/artemis-ii_4w4o.svg",
+      "source": "https://cdn.undraw.co/illustration/artemis-ii_4w4o.svg",
+      "type": "undraw",
+      "bytes": 9902
+    },
+    "pricing-page_88g4": {
+      "title": "Pricing Page",
+      "slug": "pricing-page_88g4",
+      "query": "adventure",
+      "path": "undraw/pricing-page_88g4.svg",
+      "source": "https://cdn.undraw.co/illustration/pricing-page_88g4.svg",
+      "type": "undraw",
+      "bytes": 11435
+    },
+    "success-factors_i417": {
+      "title": "Success factors",
+      "slug": "success-factors_i417",
+      "query": "adventure",
+      "path": "undraw/success-factors_i417.svg",
+      "source": "https://cdn.undraw.co/illustration/success-factors_i417.svg",
+      "type": "undraw",
+      "bytes": 7771
+    },
+    "term-sheet_70lo": {
+      "title": "Term sheet",
+      "slug": "term-sheet_70lo",
+      "query": "adventure",
+      "path": "undraw/term-sheet_70lo.svg",
+      "source": "https://cdn.undraw.co/illustrations/term-sheet_70lo.svg",
+      "type": "undraw",
+      "bytes": 17930
+    },
+    "investment_ojxu": {
+      "title": "Investment",
+      "slug": "investment_ojxu",
+      "query": "adventure",
+      "path": "undraw/investment_ojxu.svg",
+      "source": "https://cdn.undraw.co/illustrations/investment_ojxu.svg",
+      "type": "undraw",
+      "bytes": 9760
+    },
+    "mobile-office_w861": {
+      "title": "Mobile Office",
+      "slug": "mobile-office_w861",
+      "query": "adventure",
+      "path": "undraw/mobile-office_w861.svg",
+      "source": "https://cdn.undraw.co/illustration/mobile-office_w861.svg",
+      "type": "undraw",
+      "bytes": 10107
+    },
+    "pitching_y6kw": {
+      "title": "Pitching",
+      "slug": "pitching_y6kw",
+      "query": "adventure",
+      "path": "undraw/pitching_y6kw.svg",
+      "source": "https://cdn.undraw.co/illustration/pitching_y6kw.svg",
+      "type": "undraw",
+      "bytes": 6914
+    },
+    "investor-update_ou4c": {
+      "title": "Investor Update",
+      "slug": "investor-update_ou4c",
+      "query": "adventure",
+      "path": "undraw/investor-update_ou4c.svg",
+      "source": "https://cdn.undraw.co/illustration/investor-update_ou4c.svg",
+      "type": "undraw",
+      "bytes": 12721
+    },
+    "winter-designer_a6kq": {
+      "title": "Winter designer",
+      "slug": "winter-designer_a6kq",
+      "query": "winter",
+      "path": "undraw/winter-designer_a6kq.svg",
+      "source": "https://cdn.undraw.co/illustrations/winter-designer_a6kq.svg",
+      "type": "undraw",
+      "bytes": 42038
+    },
+    "christmas-reindeer_4tvk": {
+      "title": "Christmas Reindeer",
+      "slug": "christmas-reindeer_4tvk",
+      "query": "winter",
+      "path": "undraw/christmas-reindeer_4tvk.svg",
+      "source": "https://cdn.undraw.co/illustration/christmas-reindeer_4tvk.svg",
+      "type": "undraw",
+      "bytes": 14250
+    },
+    "santa-claus-avatar_2e53": {
+      "title": "Santa Claus Avatar",
+      "slug": "santa-claus-avatar_2e53",
+      "query": "winter",
+      "path": "undraw/santa-claus-avatar_2e53.svg",
+      "source": "https://cdn.undraw.co/illustration/santa-claus-avatar_2e53.svg",
+      "type": "undraw",
+      "bytes": 3312
+    },
+    "hot-cocoa_64a7": {
+      "title": "Hot Cocoa",
+      "slug": "hot-cocoa_64a7",
+      "query": "winter",
+      "path": "undraw/hot-cocoa_64a7.svg",
+      "source": "https://cdn.undraw.co/illustration/hot-cocoa_64a7.svg",
+      "type": "undraw",
+      "bytes": 10322
+    },
+    "small-town_76a2": {
+      "title": "Small town",
+      "slug": "small-town_76a2",
+      "query": "winter",
+      "path": "undraw/small-town_76a2.svg",
+      "source": "https://cdn.undraw.co/illustrations/small-town_76a2.svg",
+      "type": "undraw",
+      "bytes": 14323
+    },
+    "winner_x40e": {
+      "title": "Winner",
+      "slug": "winner_x40e",
+      "query": "winter",
+      "path": "undraw/winner_x40e.svg",
+      "source": "https://cdn.undraw.co/illustration/winner_x40e.svg",
+      "type": "undraw",
+      "bytes": 5502
+    },
+    "winners_fre4": {
+      "title": "Winners",
+      "slug": "winners_fre4",
+      "query": "winter",
+      "path": "undraw/winners_fre4.svg",
+      "source": "https://cdn.undraw.co/illustrations/winners_fre4.svg",
+      "type": "undraw",
+      "bytes": 15207
+    },
+    "awards_faq6": {
+      "title": "Awards",
+      "slug": "awards_faq6",
+      "query": "winter",
+      "path": "undraw/awards_faq6.svg",
+      "source": "https://cdn.undraw.co/illustrations/awards_faq6.svg",
+      "type": "undraw",
+      "bytes": 20116
+    },
+    "goal_v712": {
+      "title": "Goal",
+      "slug": "goal_v712",
+      "query": "winter",
+      "path": "undraw/goal_v712.svg",
+      "source": "https://cdn.undraw.co/illustration/goal_v712.svg",
+      "type": "undraw",
+      "bytes": 14101
+    },
+    "interior-design_j887": {
+      "title": "Interior design",
+      "slug": "interior-design_j887",
+      "query": "winter",
+      "path": "undraw/interior-design_j887.svg",
+      "source": "https://cdn.undraw.co/illustrations/interior-design_j887.svg",
+      "type": "undraw",
+      "bytes": 19877
+    },
+    "interview_yz52": {
+      "title": "Interview",
+      "slug": "interview_yz52",
+      "query": "winter",
+      "path": "undraw/interview_yz52.svg",
+      "source": "https://cdn.undraw.co/illustrations/interview_yz52.svg",
+      "type": "undraw",
+      "bytes": 17761
+    },
+    "internet-on-the-go_npa2": {
+      "title": "Internet on the go",
+      "slug": "internet-on-the-go_npa2",
+      "query": "winter",
+      "path": "undraw/internet-on-the-go_npa2.svg",
+      "source": "https://cdn.undraw.co/illustrations/internet-on-the-go_npa2.svg",
+      "type": "undraw",
+      "bytes": 10578
+    },
+    "system-interface_jffo": {
+      "title": "System Interface",
+      "slug": "system-interface_jffo",
+      "query": "winter",
+      "path": "undraw/system-interface_jffo.svg",
+      "source": "https://cdn.undraw.co/illustration/system-interface_jffo.svg",
+      "type": "undraw",
+      "bytes": 18885
+    },
+    "click-interaction_r772": {
+      "title": "Click Interaction",
+      "slug": "click-interaction_r772",
+      "query": "winter",
+      "path": "undraw/click-interaction_r772.svg",
+      "source": "https://cdn.undraw.co/illustration/click-interaction_r772.svg",
+      "type": "undraw",
+      "bytes": 2814
+    },
+    "chat-interface_vofq": {
+      "title": "Chat Interface",
+      "slug": "chat-interface_vofq",
+      "query": "winter",
+      "path": "undraw/chat-interface_vofq.svg",
+      "source": "https://cdn.undraw.co/illustration/chat-interface_vofq.svg",
+      "type": "undraw",
+      "bytes": 2310
+    },
+    "futuristic-interface_sv51": {
+      "title": "Futuristic interface",
+      "slug": "futuristic-interface_sv51",
+      "query": "winter",
+      "path": "undraw/futuristic-interface_sv51.svg",
+      "source": "https://cdn.undraw.co/illustrations/futuristic-interface_sv51.svg",
+      "type": "undraw",
+      "bytes": 10073
+    },
+    "mobile-interface_z1b3": {
+      "title": "Mobile interface",
+      "slug": "mobile-interface_z1b3",
+      "query": "winter",
+      "path": "undraw/mobile-interface_z1b3.svg",
+      "source": "https://cdn.undraw.co/illustrations/mobile-interface_z1b3.svg",
+      "type": "undraw",
+      "bytes": 21638
+    },
+    "voice-interface_vo02": {
+      "title": "Voice interface",
+      "slug": "voice-interface_vo02",
+      "query": "winter",
+      "path": "undraw/voice-interface_vo02.svg",
+      "source": "https://cdn.undraw.co/illustrations/voice-interface_vo02.svg",
+      "type": "undraw",
+      "bytes": 15996
+    },
+    "social-media-interactions_5rls": {
+      "title": "Social Media Interactions",
+      "slug": "social-media-interactions_5rls",
+      "query": "winter",
+      "path": "undraw/social-media-interactions_5rls.svg",
+      "source": "https://cdn.undraw.co/illustration/social-media-interactions_5rls.svg",
+      "type": "undraw",
+      "bytes": 7436
+    },
+    "ai-voice-interface_7uqq": {
+      "title": "AI Voice Interface",
+      "slug": "ai-voice-interface_7uqq",
+      "query": "winter",
+      "path": "undraw/ai-voice-interface_7uqq.svg",
+      "source": "https://cdn.undraw.co/illustration/ai-voice-interface_7uqq.svg",
+      "type": "undraw",
+      "bytes": 6985
+    },
+    "web-devices_i15y": {
+      "title": "Web devices",
+      "slug": "web-devices_i15y",
+      "query": "winter",
+      "path": "undraw/web-devices_i15y.svg",
+      "source": "https://cdn.undraw.co/illustrations/web-devices_i15y.svg",
+      "type": "undraw",
+      "bytes": 21447
+    },
+    "connected-world_anke": {
+      "title": "Connected world",
+      "slug": "connected-world_anke",
+      "query": "winter",
+      "path": "undraw/connected-world_anke.svg",
+      "source": "https://cdn.undraw.co/illustrations/connected-world_anke.svg",
+      "type": "undraw",
+      "bytes": 34754
+    },
+    "download_sa8g": {
+      "title": "Download",
+      "slug": "download_sa8g",
+      "query": "winter",
+      "path": "undraw/download_sa8g.svg",
+      "source": "https://cdn.undraw.co/illustrations/download_sa8g.svg",
+      "type": "undraw",
+      "bytes": 5481
+    },
+    "screen-time_f7ev": {
+      "title": "Screen Time",
+      "slug": "screen-time_f7ev",
+      "query": "winter",
+      "path": "undraw/screen-time_f7ev.svg",
+      "source": "https://cdn.undraw.co/illustration/screen-time_f7ev.svg",
+      "type": "undraw",
+      "bytes": 4996
+    },
+    "social-media-post_tg7l": {
+      "title": "Social Media Post",
+      "slug": "social-media-post_tg7l",
+      "query": "winter",
+      "path": "undraw/social-media-post_tg7l.svg",
+      "source": "https://cdn.undraw.co/illustration/social-media-post_tg7l.svg",
+      "type": "undraw",
+      "bytes": 6545
+    },
+    "painting-the-room_xuf4": {
+      "title": "Painting the Room",
+      "slug": "painting-the-room_xuf4",
+      "query": "winter",
+      "path": "undraw/painting-the-room_xuf4.svg",
+      "source": "https://cdn.undraw.co/illustration/painting-the-room_xuf4.svg",
+      "type": "undraw",
+      "bytes": 26720
+    },
+    "social-media-profile_hjh9": {
+      "title": "Social Media Profile",
+      "slug": "social-media-profile_hjh9",
+      "query": "winter",
+      "path": "undraw/social-media-profile_hjh9.svg",
+      "source": "https://cdn.undraw.co/illustration/social-media-profile_hjh9.svg",
+      "type": "undraw",
+      "bytes": 4702
+    },
+    "broadcast_gyxl": {
+      "title": "Broadcast",
+      "slug": "broadcast_gyxl",
+      "query": "winter",
+      "path": "undraw/broadcast_gyxl.svg",
+      "source": "https://cdn.undraw.co/illustrations/broadcast_gyxl.svg",
+      "type": "undraw",
+      "bytes": 3397
+    },
+    "design-critique_anz2": {
+      "title": "Design Critique",
+      "slug": "design-critique_anz2",
+      "query": "winter",
+      "path": "undraw/design-critique_anz2.svg",
+      "source": "https://cdn.undraw.co/illustration/design-critique_anz2.svg",
+      "type": "undraw",
+      "bytes": 9006
+    },
+    "usability-testing_w7dd": {
+      "title": "Usability testing",
+      "slug": "usability-testing_w7dd",
+      "query": "winter",
+      "path": "undraw/usability-testing_w7dd.svg",
+      "source": "https://cdn.undraw.co/illustrations/usability-testing_w7dd.svg",
+      "type": "undraw",
+      "bytes": 10849
+    },
+    "road-sign_2g9d": {
+      "title": "Road sign",
+      "slug": "road-sign_2g9d",
+      "query": "hiking",
+      "path": "undraw/road-sign_2g9d.svg",
+      "source": "https://cdn.undraw.co/illustration/road-sign_2g9d.svg",
+      "type": "undraw",
+      "bytes": 7704
+    },
+    "hiring_8szx": {
+      "title": "Hiring",
+      "slug": "hiring_8szx",
+      "query": "hiking",
+      "path": "undraw/hiring_8szx.svg",
+      "source": "https://cdn.undraw.co/illustrations/hiring_8szx.svg",
+      "type": "undraw",
+      "bytes": 17614
+    },
+    "hire_hadq": {
+      "title": "Hire",
+      "slug": "hire_hadq",
+      "query": "hiking",
+      "path": "undraw/hire_hadq.svg",
+      "source": "https://cdn.undraw.co/illustrations/hire_hadq.svg",
+      "type": "undraw",
+      "bytes": 10966
+    },
+    "recruiter-suggestions_afdd": {
+      "title": "Recruiter Suggestions",
+      "slug": "recruiter-suggestions_afdd",
+      "query": "hiking",
+      "path": "undraw/recruiter-suggestions_afdd.svg",
+      "source": "https://cdn.undraw.co/illustration/recruiter-suggestions_afdd.svg",
+      "type": "undraw",
+      "bytes": 5535
+    },
+    "my-resume_etai": {
+      "title": "My Resume",
+      "slug": "my-resume_etai",
+      "query": "hiking",
+      "path": "undraw/my-resume_etai.svg",
+      "source": "https://cdn.undraw.co/illustration/my-resume_etai.svg",
+      "type": "undraw",
+      "bytes": 9226
+    },
+    "person-search_wuzp": {
+      "title": "Person Search",
+      "slug": "person-search_wuzp",
+      "query": "hiking",
+      "path": "undraw/person-search_wuzp.svg",
+      "source": "https://cdn.undraw.co/illustration/person-search_wuzp.svg",
+      "type": "undraw",
+      "bytes": 18635
+    },
+    "resume-folder_hf4p": {
+      "title": "Resume folder",
+      "slug": "resume-folder_hf4p",
+      "query": "hiking",
+      "path": "undraw/resume-folder_hf4p.svg",
+      "source": "https://cdn.undraw.co/illustrations/resume-folder_hf4p.svg",
+      "type": "undraw",
+      "bytes": 9585
+    },
+    "job-offers_55y0": {
+      "title": "Job offers",
+      "slug": "job-offers_55y0",
+      "query": "hiking",
+      "path": "undraw/job-offers_55y0.svg",
+      "source": "https://cdn.undraw.co/illustrations/job-offers_55y0.svg",
+      "type": "undraw",
+      "bytes": 14247
+    },
+    "screening-resumes_dh9s": {
+      "title": "Screening Resumes",
+      "slug": "screening-resumes_dh9s",
+      "query": "hiking",
+      "path": "undraw/screening-resumes_dh9s.svg",
+      "source": "https://cdn.undraw.co/illustration/screening-resumes_dh9s.svg",
+      "type": "undraw",
+      "bytes": 12733
+    },
+    "agreement_ftet": {
+      "title": "Agreement",
+      "slug": "agreement_ftet",
+      "query": "hiking",
+      "path": "undraw/agreement_ftet.svg",
+      "source": "https://cdn.undraw.co/illustration/agreement_ftet.svg",
+      "type": "undraw",
+      "bytes": 10511
+    },
+    "contract_ynau": {
+      "title": "Contract",
+      "slug": "contract_ynau",
+      "query": "hiking",
+      "path": "undraw/contract_ynau.svg",
+      "source": "https://cdn.undraw.co/illustration/contract_ynau.svg",
+      "type": "undraw",
+      "bytes": 12924
+    },
+    "profile_9xdn": {
+      "title": "Profile",
+      "slug": "profile_9xdn",
+      "query": "hiking",
+      "path": "undraw/profile_9xdn.svg",
+      "source": "https://cdn.undraw.co/illustration/profile_9xdn.svg",
+      "type": "undraw",
+      "bytes": 11714
+    },
+    "contract-signed_vutk": {
+      "title": "Contract Signed",
+      "slug": "contract-signed_vutk",
+      "query": "hiking",
+      "path": "undraw/contract-signed_vutk.svg",
+      "source": "https://cdn.undraw.co/illustration/contract-signed_vutk.svg",
+      "type": "undraw",
+      "bytes": 5205
+    },
+    "remote-meeting_kqj0": {
+      "title": "Remote Meeting",
+      "slug": "remote-meeting_kqj0",
+      "query": "hiking",
+      "path": "undraw/remote-meeting_kqj0.svg",
+      "source": "https://cdn.undraw.co/illustration/remote-meeting_kqj0.svg",
+      "type": "undraw",
+      "bytes": 4571
+    },
+    "peekaboo_5o8i": {
+      "title": "Peekaboo",
+      "slug": "peekaboo_5o8i",
+      "query": "hiking",
+      "path": "undraw/peekaboo_5o8i.svg",
+      "source": "https://cdn.undraw.co/illustration/peekaboo_5o8i.svg",
+      "type": "undraw",
+      "bytes": 10696
+    },
+    "biking_m4mb": {
+      "title": "Biking",
+      "slug": "biking_m4mb",
+      "query": "hiking",
+      "path": "undraw/biking_m4mb.svg",
+      "source": "https://cdn.undraw.co/illustrations/biking_m4mb.svg",
+      "type": "undraw",
+      "bytes": 7612
+    },
+    "bike-ride_ba0o": {
+      "title": "Bike ride",
+      "slug": "bike-ride_ba0o",
+      "query": "hiking",
+      "path": "undraw/bike-ride_ba0o.svg",
+      "source": "https://cdn.undraw.co/illustration/bike-ride_ba0o.svg",
+      "type": "undraw",
+      "bytes": 16347
+    },
+    "indoor-bike_h658": {
+      "title": "Indoor Bike",
+      "slug": "indoor-bike_h658",
+      "query": "hiking",
+      "path": "undraw/indoor-bike_h658.svg",
+      "source": "https://cdn.undraw.co/illustration/indoor-bike_h658.svg",
+      "type": "undraw",
+      "bytes": 10113
+    },
+    "to-the-moon_w1wa": {
+      "title": "To the moon",
+      "slug": "to-the-moon_w1wa",
+      "query": "moon",
+      "path": "undraw/to-the-moon_w1wa.svg",
+      "source": "https://cdn.undraw.co/illustration/to-the-moon_w1wa.svg",
+      "type": "undraw",
+      "bytes": 8591
+    },
+    "launching_szjw": {
+      "title": "Launching",
+      "slug": "launching_szjw",
+      "query": "moon",
+      "path": "undraw/launching_szjw.svg",
+      "source": "https://cdn.undraw.co/illustrations/launching_szjw.svg",
+      "type": "undraw",
+      "bytes": 12137
+    },
+    "launch-day_w9g1": {
+      "title": "Launch day",
+      "slug": "launch-day_w9g1",
+      "query": "moon",
+      "path": "undraw/launch-day_w9g1.svg",
+      "source": "https://cdn.undraw.co/illustrations/launch-day_w9g1.svg",
+      "type": "undraw",
+      "bytes": 8250
+    },
+    "my-universe_qqch": {
+      "title": "My universe",
+      "slug": "my-universe_qqch",
+      "query": "moon",
+      "path": "undraw/my-universe_qqch.svg",
+      "source": "https://cdn.undraw.co/illustration/my-universe_qqch.svg",
+      "type": "undraw",
+      "bytes": 12877
+    },
+    "i-can-fly_0cuj": {
+      "title": "I can fly",
+      "slug": "i-can-fly_0cuj",
+      "query": "moon",
+      "path": "undraw/i-can-fly_0cuj.svg",
+      "source": "https://cdn.undraw.co/illustrations/i-can-fly_0cuj.svg",
+      "type": "undraw",
+      "bytes": 9512
+    },
+    "searching-everywhere_tffi": {
+      "title": "Searching Everywhere",
+      "slug": "searching-everywhere_tffi",
+      "query": "moon",
+      "path": "undraw/searching-everywhere_tffi.svg",
+      "source": "https://cdn.undraw.co/illustration/searching-everywhere_tffi.svg",
+      "type": "undraw",
+      "bytes": 5809
+    },
+    "monitoring-data_twub": {
+      "title": "Monitoring Data",
+      "slug": "monitoring-data_twub",
+      "query": "moon",
+      "path": "undraw/monitoring-data_twub.svg",
+      "source": "https://cdn.undraw.co/illustration/monitoring-data_twub.svg",
+      "type": "undraw",
+      "bytes": 34222
+    },
+    "morning-news_h9nz": {
+      "title": "Morning News",
+      "slug": "morning-news_h9nz",
+      "query": "moon",
+      "path": "undraw/morning-news_h9nz.svg",
+      "source": "https://cdn.undraw.co/illustration/morning-news_h9nz.svg",
+      "type": "undraw",
+      "bytes": 14173
+    },
+    "morning-plans_5vln": {
+      "title": "Morning Plans",
+      "slug": "morning-plans_5vln",
+      "query": "moon",
+      "path": "undraw/morning-plans_5vln.svg",
+      "source": "https://cdn.undraw.co/illustration/morning-plans_5vln.svg",
+      "type": "undraw",
+      "bytes": 7259
+    },
+    "money-received_eg1c": {
+      "title": "Money Received",
+      "slug": "money-received_eg1c",
+      "query": "moon",
+      "path": "undraw/money-received_eg1c.svg",
+      "source": "https://cdn.undraw.co/illustration/money-received_eg1c.svg",
+      "type": "undraw",
+      "bytes": 8099
+    },
+    "morning-workout_73u9": {
+      "title": "Morning Workout",
+      "slug": "morning-workout_73u9",
+      "query": "moon",
+      "path": "undraw/morning-workout_73u9.svg",
+      "source": "https://cdn.undraw.co/illustration/morning-workout_73u9.svg",
+      "type": "undraw",
+      "bytes": 8987
+    },
+    "monthly-users_m84v": {
+      "title": "Monthly Users",
+      "slug": "monthly-users_m84v",
+      "query": "moon",
+      "path": "undraw/monthly-users_m84v.svg",
+      "source": "https://cdn.undraw.co/illustrations/monthly-users_m84v.svg",
+      "type": "undraw",
+      "bytes": 5113
+    },
+    "mornings_kmib": {
+      "title": "Mornings",
+      "slug": "mornings_kmib",
+      "query": "moon",
+      "path": "undraw/mornings_kmib.svg",
+      "source": "https://cdn.undraw.co/illustrations/mornings_kmib.svg",
+      "type": "undraw",
+      "bytes": 5000
+    },
+    "monster-artist_rcpn": {
+      "title": "Monster artist",
+      "slug": "monster-artist_rcpn",
+      "query": "moon",
+      "path": "undraw/monster-artist_rcpn.svg",
+      "source": "https://cdn.undraw.co/illustrations/monster-artist_rcpn.svg",
+      "type": "undraw",
+      "bytes": 4524
+    },
+    "saving-money_wzaa": {
+      "title": "Saving Money",
+      "slug": "saving-money_wzaa",
+      "query": "moon",
+      "path": "undraw/saving-money_wzaa.svg",
+      "source": "https://cdn.undraw.co/illustration/saving-money_wzaa.svg",
+      "type": "undraw",
+      "bytes": 16756
+    },
+    "transfer-money_5wd8": {
+      "title": "Transfer Money",
+      "slug": "transfer-money_5wd8",
+      "query": "moon",
+      "path": "undraw/transfer-money_5wd8.svg",
+      "source": "https://cdn.undraw.co/illustration/transfer-money_5wd8.svg",
+      "type": "undraw",
+      "bytes": 8366
+    },
+    "send-money_4qc7": {
+      "title": "Send Money",
+      "slug": "send-money_4qc7",
+      "query": "moon",
+      "path": "undraw/send-money_4qc7.svg",
+      "source": "https://cdn.undraw.co/illustration/send-money_4qc7.svg",
+      "type": "undraw",
+      "bytes": 9845
+    },
+    "savings_d97f": {
+      "title": "Savings",
+      "slug": "savings_d97f",
+      "query": "moon",
+      "path": "undraw/savings_d97f.svg",
+      "source": "https://cdn.undraw.co/illustration/savings_d97f.svg",
+      "type": "undraw",
+      "bytes": 20925
+    },
+    "wallet_diag": {
+      "title": "Wallet",
+      "slug": "wallet_diag",
+      "query": "moon",
+      "path": "undraw/wallet_diag.svg",
+      "source": "https://cdn.undraw.co/illustration/wallet_diag.svg",
+      "type": "undraw",
+      "bytes": 21279
+    },
+    "vault_tyfh": {
+      "title": "Vault",
+      "slug": "vault_tyfh",
+      "query": "moon",
+      "path": "undraw/vault_tyfh.svg",
+      "source": "https://cdn.undraw.co/illustrations/vault_tyfh.svg",
+      "type": "undraw",
+      "bytes": 22453
+    },
+    "startled_ez5h": {
+      "title": "Startled",
+      "slug": "startled_ez5h",
+      "query": "moon",
+      "path": "undraw/startled_ez5h.svg",
+      "source": "https://cdn.undraw.co/illustrations/startled_ez5h.svg",
+      "type": "undraw",
+      "bytes": 34752
+    },
+    "empty-wallet_j0kn": {
+      "title": "Empty Wallet",
+      "slug": "empty-wallet_j0kn",
+      "query": "moon",
+      "path": "undraw/empty-wallet_j0kn.svg",
+      "source": "https://cdn.undraw.co/illustration/empty-wallet_j0kn.svg",
+      "type": "undraw",
+      "bytes": 7070
+    },
+    "personal-finance_xpqg": {
+      "title": "Personal Finance",
+      "slug": "personal-finance_xpqg",
+      "query": "moon",
+      "path": "undraw/personal-finance_xpqg.svg",
+      "source": "https://cdn.undraw.co/illustration/personal-finance_xpqg.svg",
+      "type": "undraw",
+      "bytes": 11976
+    },
+    "investment-data_frxx": {
+      "title": "Investment Data",
+      "slug": "investment-data_frxx",
+      "query": "moon",
+      "path": "undraw/investment-data_frxx.svg",
+      "source": "https://cdn.undraw.co/illustration/investment-data_frxx.svg",
+      "type": "undraw",
+      "bytes": 9852
+    },
+    "stripe-payments_jxnn": {
+      "title": "Stripe payments",
+      "slug": "stripe-payments_jxnn",
+      "query": "moon",
+      "path": "undraw/stripe-payments_jxnn.svg",
+      "source": "https://cdn.undraw.co/illustration/stripe-payments_jxnn.svg",
+      "type": "undraw",
+      "bytes": 10614
+    },
+    "web-app_141a": {
+      "title": "Web App",
+      "slug": "web-app_141a",
+      "query": "moon",
+      "path": "undraw/web-app_141a.svg",
+      "source": "https://cdn.undraw.co/illustration/web-app_141a.svg",
+      "type": "undraw",
+      "bytes": 2350
+    },
+    "online-banking_l9sn": {
+      "title": "Online Banking",
+      "slug": "online-banking_l9sn",
+      "query": "moon",
+      "path": "undraw/online-banking_l9sn.svg",
+      "source": "https://cdn.undraw.co/illustration/online-banking_l9sn.svg",
+      "type": "undraw",
+      "bytes": 5956
+    },
+    "pay-online_806n": {
+      "title": "Pay online",
+      "slug": "pay-online_806n",
+      "query": "moon",
+      "path": "undraw/pay-online_806n.svg",
+      "source": "https://cdn.undraw.co/illustrations/pay-online_806n.svg",
+      "type": "undraw",
+      "bytes": 10153
+    },
+    "video-upload_n7oz": {
+      "title": "Video upload",
+      "slug": "video-upload_n7oz",
+      "query": "moon",
+      "path": "undraw/video-upload_n7oz.svg",
+      "source": "https://cdn.undraw.co/illustrations/video-upload_n7oz.svg",
+      "type": "undraw",
+      "bytes": 10761
+    },
+    "digital-currency_u5p6": {
+      "title": "Digital currency",
+      "slug": "digital-currency_u5p6",
+      "query": "moon",
+      "path": "undraw/digital-currency_u5p6.svg",
+      "source": "https://cdn.undraw.co/illustrations/digital-currency_u5p6.svg",
+      "type": "undraw",
+      "bytes": 16423
+    }
+  }
+}

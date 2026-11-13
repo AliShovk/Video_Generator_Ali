@@ -1,0 +1,15 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0b242d}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s6" data-width="1080" data-height="1920">
+    <div class="clip" id="s6-clip" data-start="0" data-duration="2.146">
+      <div id="s6-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#0b242d"/><rect x="0" y="1180" width="1080" height="740" fill="#20504f"/><rect x="0" y="1180" width="1080" height="40" fill="#f0e4c8" opacity="0.25"/><g class="boat"><path d="M 260 1180 L 820 1180 L 760 1300 L 320 1300 Z" fill="#243b3d"/><rect x="420" y="1100" width="240" height="80" fill="#2d4a4c"/><path d="M 700 1180 l 40 -110 l 20 0 l -20 110 z" fill="#2d4a4c"/></g><g class="sold"><circle cx="340" cy="1110" r="24" fill="#131f1e"/><rect x="320" y="1136" width="40" height="48" fill="#131f1e"/></g><g class="sold"><circle cx="430" cy="1110" r="24" fill="#131f1e"/><rect x="410" y="1136" width="40" height="48" fill="#131f1e"/></g><g class="sold"><circle cx="520" cy="1110" r="24" fill="#131f1e"/><rect x="500" y="1136" width="40" height="48" fill="#131f1e"/></g><g class="sold"><circle cx="610" cy="1110" r="24" fill="#131f1e"/><rect x="590" y="1136" width="40" height="48" fill="#131f1e"/></g><path d="M 540 900 q 0 -140 0 -220" stroke="#b5462b" stroke-width="8" fill="none" stroke-dasharray="18 14"/><path d="M 540 660 l -26 34 l 52 0 z" fill="#b5462b"/><text class="hl" x="70" y="250" font-family="Nunito, Arial" font-size="56" font-weight="900" fill="#f0e4c8" text-anchor="start" letter-spacing="2">СИЦИЛИЯ</text><text class="hl" x="70" y="320" font-family="Nunito, Arial" font-size="26" font-weight="700" fill="#c9a227" text-anchor="start" letter-spacing="0">10 июля 1943</text><text class="hl" x="70" y="1720" font-family="Nunito, Arial" font-size="26" font-weight="700" fill="#f0e4c8" text-anchor="start" letter-spacing="0">высадка союзников</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s6 = gsap.timeline({ paused: true });
+    const tl = tl_s6;
+    tl.fromTo("#s6 .world", { scale:1.02 }, { scale:1.07, duration:2.146, ease:"none" }, 0);
+    tl.fromTo(".boat", {opacity:0, y:30}, {opacity:1, y:0, duration:0.8}, 0.1);tl.to(".boat", {y:-8, duration:1.8, yoyo:true, repeat:-1, ease:"sine.inOut"}, 1.0);tl.fromTo(".sold", {opacity:0, y:20}, {opacity:1, y:0, duration:0.5, stagger:0.1}, 0.5);tl.fromTo(".hl", {opacity:0}, {opacity:1, duration:0.5, stagger:0.15}, 0.2);
+    window.__timelines["s6"] = tl_s6;
+  </script>
+</template>

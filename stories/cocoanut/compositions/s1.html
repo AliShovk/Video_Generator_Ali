@@ -1,0 +1,28 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#120e0c}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <div class="clip" id="s1-clip" data-start="0" data-duration="5.66">
+      <div id="s1-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#120e0c"/><rect x="0" y="1500" width="1080" height="420" fill="#000000" opacity="0.35"/><rect x="0" y="1460" width="1080" height="460" fill="#000000" opacity="0.45"/><rect x="0" y="1560" width="1080" height="30" fill="#ffffff" opacity="0.08"/><g class="wline"><path d="M -40 1620 q 50 -22 100 0" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.25"/><path d="M 100 1690 q 50 -22 100 0" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.25"/><path d="M 240 1760 q 50 -22 100 0" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.25"/><path d="M 380 1620 q 50 -22 100 0" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.25"/><path d="M 520 1690 q 50 -22 100 0" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.25"/><path d="M 660 1760 q 50 -22 100 0" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.25"/><path d="M 800 1620 q 50 -22 100 0" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.25"/><path d="M 940 1690 q 50 -22 100 0" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.25"/><path d="M 1080 1760 q 50 -22 100 0" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.25"/></g><g transform="translate(540 1560) scale(1.55)"><rect x="-180" y="-520" width="360" height="520" fill="#ffa04d"/><rect x="-150" y="-480" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-80" y="-480" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-10" y="-480" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="60" y="-480" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-150" y="-390" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-80" y="-390" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-10" y="-390" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="60" y="-390" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-150" y="-300" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-80" y="-300" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-10" y="-300" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="60" y="-300" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-150" y="-210" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-80" y="-210" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-10" y="-210" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="60" y="-210" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-150" y="-120" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-80" y="-120" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="-10" y="-120" width="40" height="56" fill="#ffd98a" opacity="0.45"/><rect x="60" y="-120" width="40" height="56" fill="#ffd98a" opacity="0.45"/></g><text class="hl" x="56" y="210" fill="#ffa04d" font-family="Nunito, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">ДВЕРЬ ОТКРЫВАЛАСЬ</text><text class="hl" x="56" y="306" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">ВНУТРЬ</text><text class="sub" x="56" y="520" font-family="Nunito, Arial" font-size="40" font-weight="800" fill="#ffffff" opacity="0.75">Это стоило 492 жизней</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s1 = gsap.timeline({ paused: true });
+    const tl = tl_s1;
+    tl.fromTo("#s1 .world", { scale:1.0 }, { scale:1.07, duration:5.66, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:26 }, { opacity:1, y:0, duration:0.5, stagger:0.14, ease:"power3.out" }, 0.1);
+    tl.fromTo(".sub", { opacity:0 }, { opacity:0.75, duration:0.7 }, 0.7);
+    tl.fromTo(".call", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.45, stagger:0.5 }, 0.3);
+    tl.to(".ring", { scale:1.6, opacity:0, duration:2.2, transformOrigin:"50% 50%", stagger:0.4, repeat:2, ease:"power2.out" }, 0);
+    tl.to(".flash", { opacity:0.28, duration:0.4, yoyo:true, repeat:8 }, 0);
+    tl.to(".debris", { y:-90, x:30, duration:2.0, stagger:0.05, repeat:3, ease:"power1.out" }, 0);
+    tl.to(".flame", { scaleY:1.15, transformOrigin:"50% 100%", duration:0.5, yoyo:true, repeat:16, stagger:0.08 }, 0);
+    tl.to(".smoke", { y:-160, opacity:0.15, duration:3.2, stagger:0.15, repeat:2 }, 0);
+    tl.to(".wave", { x:"+=160", duration:5.66, ease:"power1.in" }, 0);
+    tl.to(".gas", { y:-120, x:"+=40", duration:4.5, stagger:0.12, ease:"sine.inOut" }, 0);
+    tl.to(".piece", { y:260, rotation:40, duration:1.8, stagger:0.12, ease:"power2.in" }, 0.3);
+    tl.fromTo(".big", { scale:0.5, opacity:0 }, { scale:1, opacity:1, duration:0.7, ease:"back.out(2)" }, 0.2);
+    tl.to(".cap1", { opacity:1, duration:0.5 }, 0.8);
+    tl.to(".cap2", { opacity:1, duration:0.5 }, 1.2);
+    window.__timelines["s1"] = tl_s1;
+  </script>
+</template>

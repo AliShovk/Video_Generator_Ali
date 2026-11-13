@@ -1,0 +1,19 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0c1116}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920">
+    <div class="clip" id="s7-clip" data-start="0" data-duration="4.822">
+      <div id="s7-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="cableG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a3f45"/><stop offset="1" stop-color="#23282d"/></linearGradient>
+<radialGradient id="bulbG"><stop offset="0" stop-color="#fff3b0" stop-opacity="0.95"/><stop offset="1" stop-color="#ffd60a" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#0c1116"/><text class="hl" x="60" y="220" font-family="Nunito, Arial, sans-serif" font-size="60" font-weight="900" fill="#f2f6f8" text-anchor="start" letter-spacing="-1">СОЕДИНЕНИЯ</text><rect x="80" y="420" width="420" height="300" rx="18" fill="#151d24"/><rect x="140" y="520" width="300" height="90" rx="10" fill="#e8eef2"/><circle cx="180" cy="565" r="22" fill="#8fa3b1"/><circle cx="180" cy="565" r="10" fill="#1c242a"/><circle cx="270" cy="565" r="22" fill="#8fa3b1"/><circle cx="270" cy="565" r="10" fill="#1c242a"/><circle cx="360" cy="565" r="22" fill="#8fa3b1"/><circle cx="360" cy="565" r="10" fill="#1c242a"/><text class="hl" x="290" y="700" font-family="Nunito, Arial, sans-serif" font-size="32" font-weight="900" fill="#4ad07a" text-anchor="middle" letter-spacing="-1">КЛЕММЫ</text><rect x="580" y="420" width="420" height="300" rx="18" fill="#151d24"/><path class="twist" d="M 640 560 q 60 -40 120 0 q 60 40 120 0" stroke="#c07a3a" stroke-width="12" fill="none"/><path d="M 660 540 l 40 60 M 720 540 l 40 60" stroke="#e03e2f" stroke-width="6"/><text class="hl" x="790" y="700" font-family="Nunito, Arial, sans-serif" font-size="32" font-weight="900" fill="#e03e2f" text-anchor="middle" letter-spacing="-1">СКРУТКА</text><text class="hl" x="60" y="900" font-family="Nunito, Arial, sans-serif" font-size="34" font-weight="900" fill="#ffd60a" text-anchor="start" letter-spacing="-1">медь + алюминий = нагрев</text><text class="hl" x="60" y="960" font-family="Nunito, Arial, sans-serif" font-size="34" font-weight="900" fill="#e03e2f" text-anchor="start" letter-spacing="-1">и пожар</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s7 = gsap.timeline({ paused: true });
+    const tl = tl_s7;
+    tl.fromTo("#s7 .world", { scale:1.0 }, { scale:1.04, duration:4.822, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.to(".twist", {opacity:0.4, duration:0.5, yoyo:true, repeat:6}, 0.3);
+    window.__timelines["s7"] = tl_s7;
+  </script>
+</template>

@@ -1,0 +1,98 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #05080c; }
+    .world { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .top { position: absolute; left: 48px; top: 120px; }
+    .chip {
+      display: inline-block; border: 1px solid rgba(111,211,242,0.42); color: #8fd8ef;
+      font: 500 28px/1 "JetBrains Mono", monospace; letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 12px 18px; background: rgba(6,12,18,0.62); backdrop-filter: blur(6px);
+    }
+    .head {
+      position: absolute; left: 48px; top: 230px;
+      font: 700 118px/0.92 "Oswald", sans-serif; text-transform: uppercase; color: #f2ede3;
+      text-shadow: 0 6px 26px rgba(0,0,0,0.85);
+    }
+    .scrim {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 640px;
+      background: linear-gradient(to top, rgba(4,7,10,0.96) 34%, rgba(4,7,10,0.72) 64%, rgba(4,7,10,0) 100%);
+    }
+    .foot {
+      position: absolute; left: 48px; right: 48px; bottom: 430px;
+      font: 700 50px/1.1 "Oswald", sans-serif; text-transform: uppercase; color: #f6f1e7;
+      text-shadow: 0 3px 14px rgba(0,0,0,0.9);
+    }
+    .foot::before { content: ""; display: block; width: 74px; height: 4px; background: #ff7a1a; margin-bottom: 16px; }
+  </style>
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div class="clip" id="s3-clip" data-start="0" data-duration="7">
+      <div id="s3-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="skyDusk" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#05080d"/><stop offset="0.45" stop-color="#0b1622"/>
+    <stop offset="0.78" stop-color="#1a2634"/><stop offset="1" stop-color="#2a3138"/>
+  </linearGradient>
+  <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#ff9a4d" stop-opacity="0.55"/><stop offset="1" stop-color="#ff9a4d" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="0.2" y2="1">
+    <stop offset="0" stop-color="#dfe9f1"/><stop offset="0.22" stop-color="#9fb2c1"/>
+    <stop offset="0.55" stop-color="#61727f"/><stop offset="0.8" stop-color="#3a4852"/><stop offset="1" stop-color="#212b33"/>
+  </linearGradient>
+  <linearGradient id="steelDark" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#4c5b67"/><stop offset="0.5" stop-color="#2b353d"/><stop offset="1" stop-color="#151c22"/>
+  </linearGradient>
+  <linearGradient id="concrete" x1="0" y1="0" x2="0.3" y2="1">
+    <stop offset="0" stop-color="#5b6167"/><stop offset="0.5" stop-color="#3a4046"/><stop offset="1" stop-color="#232a30"/>
+  </linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3a3a36"/><stop offset="0.35" stop-color="#232421"/><stop offset="1" stop-color="#0c0e0f"/>
+  </linearGradient>
+  <linearGradient id="rail" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#b9c6cf"/><stop offset="0.5" stop-color="#6f808c"/><stop offset="1" stop-color="#2f3a42"/>
+  </linearGradient>
+  <radialGradient id="warm" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#ffb066" stop-opacity="0.85"/><stop offset="1" stop-color="#ff6a1a" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="vignette" cx="50%" cy="45%" r="72%">
+    <stop offset="0.55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.72"/>
+  </radialGradient>
+  <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8fa6b8" stop-opacity="0"/><stop offset="1" stop-color="#8fa6b8" stop-opacity="0.16"/>
+  </linearGradient>
+  <filter id="soft8"><feGaussianBlur stdDeviation="8"/></filter>
+  <filter id="soft24"><feGaussianBlur stdDeviation="24"/></filter>
+  <filter id="soft60"><feGaussianBlur stdDeviation="60"/></filter>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.55"/>
+  </filter>
+  <filter id="metalNoise">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02 0.6" numOctaves="2" seed="3" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0" result="g"/>
+    <feComposite in="g" in2="SourceGraphic" operator="in" result="c"/>
+    <feBlend in="SourceGraphic" in2="c" mode="overlay"/>
+  </filter>
+</defs>
+<rect width="1080" height="1920" fill="#060a0e"/><rect width="1080" height="1920" fill="#080c10"/><rect x="40" y="420" width="1000" height="1040" fill="#101519"/><line x1="151" y1="420" x2="151" y2="1460" stroke="#1a232a" stroke-width="1.5"/><line x1="40" y1="550" x2="1040" y2="550" stroke="#1a232a" stroke-width="1.5"/><line x1="262" y1="420" x2="262" y2="1460" stroke="#1a232a" stroke-width="1.5"/><line x1="40" y1="680" x2="1040" y2="680" stroke="#1a232a" stroke-width="1.5"/><line x1="373" y1="420" x2="373" y2="1460" stroke="#1a232a" stroke-width="1.5"/><line x1="40" y1="810" x2="1040" y2="810" stroke="#1a232a" stroke-width="1.5"/><line x1="484" y1="420" x2="484" y2="1460" stroke="#1a232a" stroke-width="1.5"/><line x1="40" y1="940" x2="1040" y2="940" stroke="#1a232a" stroke-width="1.5"/><line x1="595" y1="420" x2="595" y2="1460" stroke="#1a232a" stroke-width="1.5"/><line x1="40" y1="1070" x2="1040" y2="1070" stroke="#1a232a" stroke-width="1.5"/><line x1="706" y1="420" x2="706" y2="1460" stroke="#1a232a" stroke-width="1.5"/><line x1="40" y1="1200" x2="1040" y2="1200" stroke="#1a232a" stroke-width="1.5"/><line x1="817" y1="420" x2="817" y2="1460" stroke="#1a232a" stroke-width="1.5"/><line x1="40" y1="1330" x2="1040" y2="1330" stroke="#1a232a" stroke-width="1.5"/><line x1="928" y1="420" x2="928" y2="1460" stroke="#1a232a" stroke-width="1.5"/><line x1="40" y1="1460" x2="1040" y2="1460" stroke="#1a232a" stroke-width="1.5"/><path d="M 60 980 L 420 900 L 800 760" stroke="#2a333a" stroke-width="26" fill="none" opacity="0.9"/><path d="M 60 980 L 420 900 L 800 760" stroke="#3d474f" stroke-width="2" stroke-dasharray="18 16" fill="none"/><rect x="140" y="1060" width="380" height="300" fill="#20282e" stroke="#6fd3f2" stroke-width="3" stroke-dasharray="16 12"/><rect x="170" y="1090" width="320" height="240" fill="#2a343b" opacity="0.6"/><text x="330" y="1150" fill="#8fd8ef" font-family="JetBrains Mono, monospace" font-size="32" letter-spacing="2" text-anchor="middle" font-weight="400" opacity="1">СБОРКА</text><text x="330" y="1196" fill="#5f7280" font-family="JetBrains Mono, monospace" font-size="21" letter-spacing="2" text-anchor="middle" font-weight="400" opacity="1">6 лет, 300 м от блока</text><circle cx="790" cy="740" r="96" fill="rgba(255,122,26,0.07)" stroke="#ff7a1a" stroke-width="3"/><circle cx="790" cy="740" r="34" fill="#3a2a20" stroke="#ffb066" stroke-width="2"/><text x="790" y="748" fill="#ffb066" font-family="JetBrains Mono, monospace" font-size="40" letter-spacing="2" text-anchor="middle" font-weight="400" opacity="1">4</text><path d="M 520 1180 Q 650 1080 730 830" fill="none" stroke="#ff7a1a" stroke-width="6" stroke-dasharray="22 16"/><polygon points="736,810 714,850 754,842" fill="#ff7a1a"/><circle cx="556" cy="1140" r="7" fill="#0b1116" stroke="#ffb066" stroke-width="3"/><circle cx="610" cy="1050" r="7" fill="#0b1116" stroke="#ffb066" stroke-width="3"/><circle cx="668" cy="950" r="7" fill="#0b1116" stroke="#ffb066" stroke-width="3"/><text x="600" y="1240" fill="#ffb066" font-family="JetBrains Mono, monospace" font-size="40" letter-spacing="2" text-anchor="middle" font-weight="400" opacity="1">327 м</text><line x1="700" y1="1300" x2="940" y2="1300" stroke="#8f9aa4" stroke-width="3"/><line x1="700" y1="1290" x2="700" y2="1310" stroke="#8f9aa4" stroke-width="3"/><line x1="940" y1="1290" x2="940" y2="1310" stroke="#8f9aa4" stroke-width="3"/><text x="820" y="1282" fill="#8f9aa4" font-family="JetBrains Mono, monospace" font-size="22" letter-spacing="2" text-anchor="middle" font-weight="400" opacity="1">100 м</text><path d="M 960 500 L 960 560" stroke="#5f7280" stroke-width="3"/><polygon points="960,486 950,512 970,512" fill="#5f7280"/><text x="960" y="588" fill="#5f7280" font-family="JetBrains Mono, monospace" font-size="22" letter-spacing="2" text-anchor="middle" font-weight="400" opacity="1">С</text><rect width="1080" height="1920" fill="url(#vignette)"/><rect width="1080" height="1920" filter="url(#grain)" opacity="0.05" style="mix-blend-mode:overlay"/></svg>
+        <div class="scrim"></div>
+        <div class="top"><div class="chip" id="s3-chip">План</div></div>
+        
+        <div class="foot" id="s3-foot">Сборка в 300 метрах от реактора</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s3 = gsap.timeline({ paused: true });
+    tl_s3.fromTo("#s3 .world", { scale: 1.0 }, { scale: 1.06, duration: 7, ease: "none" }, 0);
+    tl_s3.fromTo("#s3-chip", { opacity: 0, x: -12 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, 0.05);
+    
+    tl_s3.fromTo("#s3-foot", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.8);
+    
+    window.__timelines["s3"] = tl_s3;
+  </script>
+</template>

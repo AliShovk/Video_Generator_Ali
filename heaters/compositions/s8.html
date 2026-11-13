@@ -1,0 +1,20 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef2f5}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s8" data-width="1080" data-height="1920">
+    <div class="clip" id="s8-clip" data-start="0" data-duration="4.392">
+      <div id="s8-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="steelG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f5f7"/><stop offset="0.5" stop-color="#c9d3da"/><stop offset="1" stop-color="#8f9ba4"/></linearGradient>
+<linearGradient id="oilG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0e3d0"/><stop offset="1" stop-color="#c9ab8a"/></linearGradient>
+<linearGradient id="hotG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb066"/><stop offset="1" stop-color="#e0592a"/></linearGradient>
+<radialGradient id="glowO"><stop offset="0" stop-color="#ff9a4d" stop-opacity="0.85"/><stop offset="1" stop-color="#ff9a4d" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#eef2f5"/><rect x="80" y="420" width="920" height="620" rx="26" fill="#ffffff" stroke="#cfd8de" stroke-width="5"/><text class="hl" x="140" y="560" font-family="Nunito, Arial, sans-serif" font-size="84" font-weight="900" fill="#1f2c36" text-anchor="start" letter-spacing="-1">100 Вт × м²</text><line x1="140" y1="620" x2="940" y2="620" stroke="#e2e8ec" stroke-width="4"/><text class="hl" x="140" y="720" font-family="Nunito, Arial, sans-serif" font-size="48" font-weight="800" fill="#5d7280" text-anchor="start" letter-spacing="-1">комната 20 м²</text><text class="hl" x="940" y="720" font-family="Nunito, Arial, sans-serif" font-size="64" font-weight="900" fill="#c0392b" text-anchor="end" letter-spacing="-1">2000 Вт</text><text class="hl" x="140" y="840" font-family="Nunito, Arial, sans-serif" font-size="30" font-weight="700" fill="#7d8a93" text-anchor="start" letter-spacing="-1">потолок до 3 м, обычное утепление</text><text class="hl" x="140" y="940" font-family="Nunito, Arial, sans-serif" font-size="30" font-weight="700" fill="#7d8a93" text-anchor="start" letter-spacing="-1">холодная стена или гараж — плюс 20–30%</text><!-- нет иконки mdi-calculator --><text class="hl" x="540" y="1500" font-family="Nunito, Arial, sans-serif" font-size="46" font-weight="900" fill="#1f2c36" text-anchor="middle" letter-spacing="-1">МОЩНОСТЬ ПО ПЛОЩАДИ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s8 = gsap.timeline({ paused: true });
+    const tl = tl_s8;
+    tl.fromTo("#s8 .world", { scale:1.0 }, { scale:1.05, duration:4.392, ease:"none" }, 0);
+    tl.fromTo(".hl", {opacity:0, x:-30}, {opacity:1, x:0, duration:0.6, stagger:0.12}, 0.1);tl.fromTo(".ico", {scale:0.5, opacity:0, transformOrigin:"50% 50%"}, {scale:1, opacity:1, duration:0.6, ease:"back.out(2)"}, 0.6);
+    window.__timelines["s8"] = tl_s8;
+  </script>
+</template>

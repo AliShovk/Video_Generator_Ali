@@ -1,0 +1,22 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#cfe6f2}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920">
+    <div class="clip" id="s7-clip" data-start="0" data-duration="2.899">
+      <div id="s7-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<pattern id="meshP" width="26" height="26" patternUnits="userSpaceOnUse">
+  <path d="M 0 0 L 26 0 M 0 0 L 0 26" stroke="#6f7a82" stroke-width="3" opacity="0.85"/>
+</pattern>
+<linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#7fc3ff"/><stop offset="1" stop-color="#3f8fd8"/>
+</linearGradient>
+</defs><rect width="1080" height="1920" fill="#cfe6f2"/><path d="M 0 1580 Q 180 1350 380 1460 Q 560 1570 720 1440 Q 900 1310 1080 1480 L 1080 1920 L 0 1920 Z" fill="#b9c98a" stroke="#2b2b2b" stroke-width="6"/><g class="tank7"><rect x="120" y="700" width="300" height="360" rx="46" fill="#5f7d8c" stroke="#2b2b2b" stroke-width="7"/><clipPath id="tk120"><rect x="128" y="708" width="284" height="344" rx="40"/></clipPath><g clip-path="url(#tk120)"><rect class="tankFill" x="128" y="800.0" width="284" height="252.0" fill="url(#waterG)"/></g><rect x="106" y="682" width="328" height="30" rx="10" fill="#5f7d8c" stroke="#2b2b2b" stroke-width="6"/></g><path class="pipe7" d="M 420 880 L 560 880" stroke="#8f9aa2" stroke-width="22" fill="none"/><g class="tap7"><rect x="556" y="836" width="66" height="76" rx="10" fill="#8f9aa2" stroke="#2b2b2b" stroke-width="5"/><path d="M 622 862 l 44 0 q 18 0 18 18 l 0 34" fill="none" stroke="#8f9aa2" stroke-width="18" stroke-linecap="round"/><path d="M 574 806 l 30 0" stroke="#2b2b2b" stroke-width="12" stroke-linecap="round"/></g><path class="jet7" d="M 684 918 l 0 82" stroke="#4da3ff" stroke-width="13"/><g class="cup7"><path d="M 646 1000 l 76 0 l -10 92 l -56 0 z" fill="#eaf6ff" stroke="#2b2b2b" stroke-width="5"/></g><rect x="700" y="1400" width="340" height="70" rx="10" fill="#7a5a3a" stroke="#2b2b2b" stroke-width="5"/><g class="p70" transform="translate(770 1420) scale(1.5)"><path d="M 0 0 L 0 -50" stroke="#5b9e4a" stroke-width="8"/><ellipse cx="-22" cy="-58" rx="24" ry="14" fill="#5b9e4a" stroke="#2b2b2b" stroke-width="4"/><ellipse cx="22" cy="-58" rx="24" ry="14" fill="#5b9e4a" stroke="#2b2b2b" stroke-width="4"/><circle cx="0" cy="-72" r="16" fill="#e8734a" stroke="#2b2b2b" stroke-width="4"/></g><path class="drip7" d="M 770 1300 l 0 30" stroke="#4da3ff" stroke-width="10" stroke-dasharray="6 14"/><g class="p71" transform="translate(880 1420) scale(1.5)"><path d="M 0 0 L 0 -50" stroke="#5b9e4a" stroke-width="8"/><ellipse cx="-22" cy="-58" rx="24" ry="14" fill="#5b9e4a" stroke="#2b2b2b" stroke-width="4"/><ellipse cx="22" cy="-58" rx="24" ry="14" fill="#5b9e4a" stroke="#2b2b2b" stroke-width="4"/><circle cx="0" cy="-72" r="16" fill="#e8734a" stroke="#2b2b2b" stroke-width="4"/></g><path class="drip7" d="M 880 1300 l 0 30" stroke="#4da3ff" stroke-width="10" stroke-dasharray="6 14"/><g class="p72" transform="translate(990 1420) scale(1.5)"><path d="M 0 0 L 0 -50" stroke="#5b9e4a" stroke-width="8"/><ellipse cx="-22" cy="-58" rx="24" ry="14" fill="#5b9e4a" stroke="#2b2b2b" stroke-width="4"/><ellipse cx="22" cy="-58" rx="24" ry="14" fill="#5b9e4a" stroke="#2b2b2b" stroke-width="4"/><circle cx="0" cy="-72" r="16" fill="#e8734a" stroke="#2b2b2b" stroke-width="4"/></g><path class="drip7" d="M 990 1300 l 0 30" stroke="#4da3ff" stroke-width="10" stroke-dasharray="6 14"/><text class="hl" x="60" y="300" font-family="Nunito, Arial" font-size="54" font-weight="900" fill="#2b2b2b" text-anchor="start">ПИТЬЁ И ПОЛИВ</text><text class="hl" x="60" y="1680" font-family="Nunito, Arial" font-size="26" font-weight="900" fill="#5c666e" text-anchor="start">БЕЗ НАСОСА — САМОТЁКОМ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s7 = gsap.timeline({ paused: true });
+    const tl = tl_s7;
+    tl.fromTo("#s7 .world", { scale:1.0 }, { scale:1.03, duration:2.899, ease:"none" }, 0);
+    tl.fromTo(".tankFill", {scaleY:0.2, transformOrigin:"50% 100%"}, {scaleY:1, duration:1.2}, 0.3);tl.to(".jet7", {opacity:0.4, duration:0.5, yoyo:true, repeat:4}, 1.2);tl.fromTo(".plantG", {scale:0.6, opacity:0}, {scale:1, opacity:1, duration:0.5, stagger:0.2}, 1.0);
+    window.__timelines["s7"] = tl_s7;
+  </script>
+</template>

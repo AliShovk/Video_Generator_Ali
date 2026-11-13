@@ -1,0 +1,41 @@
+{
+  "slug": "chernobyl-nsc",
+  "title": "Как передвинули 36 000 тонн над Чернобылем",
+  "subtitle": "Новый безопасный конфайнмент, 2016",
+  "hook": "36 000 тонн металла. Эту арку построили в стороне — и передвинули целиком.",
+  "structure": "arch",
+  "dims": {"span_m": 257, "height_m": 108, "length_m": 162, "weight_t": 36000},
+  "principle": "Нагрузка от собственного веса передаётся через стальной каркас на опорные балки, а те — на рельсовые пути и фундамент. Перемещение выполняют гидравлические домкраты, толкая опоры по направляющим.",
+  "load_path": [
+    "Снег и ветер → оболочка арки",
+    "Оболочка → ферменные рёбра",
+    "Рёбра → опорные балки",
+    "Опорные балки → домкраты и рельсы",
+    "Рельсы → фундамент"
+  ],
+  "flows": [
+    "224 гидравлических домкрата толкают опоры синхронно",
+    "Арка едет по рельсам на 327 метров",
+    "Внутри — герметичная оболочка над разрушенным блоком"
+  ],
+  "details": [
+    "Оболочка собрана из стальных панелей на ферменном каркасе",
+    "Опоры стоят на рельсовых путях, по которым арку двигали",
+    "Домкраты работают группами, чтобы конструкция не перекосилась"
+  ],
+  "facts": [
+    {"id": "height", "value": 108, "unit": "м", "claim": "Высота арки — 108 метров.", "source": "EBRD, Chernobyl New Safe Confinement"},
+    {"id": "span", "value": 257, "unit": "м", "claim": "Пролёт арки — 257 метров.", "source": "EBRD, Chernobyl New Safe Confinement"},
+    {"id": "length", "value": 162, "unit": "м", "claim": "Длина арки — 162 метра.", "source": "EBRD, Chernobyl New Safe Confinement"},
+    {"id": "weight", "value": 36000, "unit": "т", "claim": "Масса конструкции — около 36 000 тонн.", "source": "EBRD, Chernobyl New Safe Confinement"},
+    {"id": "jacks", "value": 224, "unit": "шт", "claim": "Перемещение выполняли 224 гидравлических домкрата.", "source": "Novarka / Bouygues Construction"},
+    {"id": "move", "value": 327, "unit": "м", "claim": "Арку переместили на 327 метров.", "source": "EBRD, Chernobyl New Safe Confinement"},
+    {"id": "year", "value": 2016, "unit": "год", "claim": "Перемещение завершили в ноябре 2016 года.", "source": "EBRD"},
+    {"id": "damage", "value": 2025, "unit": "год", "claim": "В феврале 2025 года оболочка получила повреждения; восстановление не завершено.", "source": "EBRD, заявление 2025"}
+  ],
+  "sources": [
+    "https://www.ebrd.com/news/2016/engineering-feat-chernobyl-arch-moved-into-place.html",
+    "https://www.novarka.com/en/projects/new-safe-confinement",
+    "https://www.bouygues-construction.com/en/projects/chernobyl"
+  ]
+}

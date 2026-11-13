@@ -1,0 +1,14 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#ffd93d}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920">
+    <div class="clip" id="s7-clip" data-start="0" data-duration="4.155">
+      <div id="s7-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#4ecdc4"/><rect x="0" y="0" width="1080" height="1920" fill="#4ecdc4" opacity="0.5"/><g class="env"><rect x="120" y="620" width="840" height="560" rx="24" fill="#fffaf0" stroke="#22313c" stroke-width="9"/><path d="M 120 640 L 540 950 L 960 640" fill="none" stroke="#22313c" stroke-width="8"/><rect x="700" y="1000" width="200" height="120" fill="#ff6b6b" stroke="#22313c" stroke-width="6"/><text class="hl" x="800" y="1075" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#fffaf0" text-anchor="middle" letter-spacing="0">FBI</text></g><text class="hl" x="540" y="1320" font-family="Nunito, Arial" font-size="72" font-weight="900" fill="#22313c" text-anchor="middle" letter-spacing="0">«Я ЖИВ»</text><text class="hl" x="540" y="1400" font-family="Nunito, Arial" font-size="24" font-weight="700" fill="#22313c" text-anchor="middle" letter-spacing="0">письмо якобы от Джона Англина · 2013</text><g class="maybe"><rect x="240" y="1480" width="600" height="110" rx="20" fill="#ff6b6b" stroke="#22313c" stroke-width="8"/><text class="hl" x="540" y="1556" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#fffaf0" text-anchor="middle" letter-spacing="0">НЕ ПОДТВЕРЖДЕНО</text></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s7 = gsap.timeline({ paused: true });
+    const tl = tl_s7;
+    tl.fromTo(".env", {opacity:0, y:60}, {opacity:1, y:0, duration:0.8, ease:"back.out(1.5)"}, 0.1);tl.fromTo(".maybe", {opacity:0, scale:0.8}, {opacity:1, scale:1, duration:0.5, ease:"back.out(2)"}, 0.9);tl.fromTo(".hl", {opacity:0}, {opacity:1, duration:0.5, stagger:0.15}, 0.3);
+    window.__timelines["s7"] = tl_s7;
+  </script>
+</template>

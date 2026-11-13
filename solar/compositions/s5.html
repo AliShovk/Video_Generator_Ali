@@ -1,0 +1,14 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#f3f7fa}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="4.12">
+      <div id="s5-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3f7fa"/><stop offset="1" stop-color="#e6eef4"/></linearGradient></defs><rect width="1080" height="1920" fill="url(#bg)"/><g class="hs5"><path d="M 930 420 L 1000 380 L 1000 1540 L 930 1600 Z" fill="#e6d9bd" stroke="#5f7079" stroke-width="3"/><path d="M 150 420 L 930 420 L 930 1600 L 150 1600 Z" fill="#f7efdd" stroke="#5f7079" stroke-width="4"/><path d="M 130 424 L 540 230 L 950 424 L 930 448 L 540 258 L 150 448 Z" fill="#e9dcc0" stroke="#5f7079" stroke-width="4"/><path d="M 150 448 L 930 448" stroke="#5f7079" stroke-width="2" opacity="0.5"/><rect x="150" y="1000" width="780" height="24" fill="#e6d9bd" stroke="#5f7079" stroke-width="2"/></g><g class="tk5"><rect x="380" y="620" width="320" height="620" fill="#bcd6e2" stroke="#8fb2c3" stroke-width="4"/><ellipse cx="540.0" cy="620" rx="160.0" ry="26" fill="#d8ecf3" stroke="#8fb2c3" stroke-width="4"/><ellipse cx="540.0" cy="1240" rx="160.0" ry="26" fill="#bcd6e2" stroke="#8fb2c3" stroke-width="4"/><rect class="wlevel" x="388" y="899" width="304" height="310" fill="#7fb8d4" opacity="0.55"/></g><path class="lvl" d="M 400 1150 l 280 0" stroke="#ffffff" stroke-width="4" opacity="0.7"/><g class="hl"><rect x="48" y="143" width="350" height="54" rx="10" fill="#ffffff" opacity="0.85"/><text x="60" y="180" font-family="Nunito" font-size="34" font-weight="900" fill="#33404a" letter-spacing="1">БАК-АККУМУЛЯТОР</text></g><text class="hl" x="64" y="240" font-family="Nunito, Arial" font-size="22" font-weight="700" fill="#5f7079" text-anchor="start" letter-spacing="0">запас на ночь и на пасмурный день</text><circle class="moon" cx="860" cy="320" r="70" fill="#dfe9f0" stroke="#7a97a3" stroke-width="4"/></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+    tl.fromTo(".tk5", {opacity:0, scale:0.96}, {opacity:1, scale:1, duration:0.7}, 0.1);tl.fromTo(".wlevel", {opacity:0, y:60}, {opacity:0.55, y:0, duration:1.4}, 0.5);tl.fromTo(".lvl", {opacity:0}, {opacity:0.7, duration:0.6}, 1.4);tl.fromTo(".moon", {opacity:0, y:-14}, {opacity:1, y:0, duration:0.6}, 0.8);tl.fromTo(".hl", {opacity:0}, {opacity:1, duration:0.5, stagger:0.12}, 0.2);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

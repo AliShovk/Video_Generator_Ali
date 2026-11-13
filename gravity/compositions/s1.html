@@ -1,0 +1,38 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #bfe4f8; }
+    .world { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .pill {
+      position: absolute; left: 50%; top: 118px; transform: translateX(-50%);
+      background: #f7c93f; color: #241f1a; border-radius: 999px;
+      font: 800 46px/1 "Nunito", Arial, sans-serif;
+      padding: 22px 40px; white-space: nowrap; box-shadow: 0 8px 0 rgba(0,0,0,0.12);
+    }
+    .foot {
+      position: absolute; left: 44px; right: 44px; bottom: 400px;
+      font: 800 52px/1.12 "Nunito", Arial, sans-serif; color: #ffffff; text-align: center;
+      -webkit-text-stroke: 10px rgba(20,26,30,0.85); paint-order: stroke fill;
+      text-shadow: 0 4px 0 rgba(20,26,30,0.35);
+    }
+  </style>
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <div class="clip" id="s1-clip" data-start="0" data-duration="4">
+      <div id="s1-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#79c6f3"/><stop offset="1" stop-color="#d3ecfd"/></linearGradient><linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f7fa"/><stop offset="1" stop-color="#b9c7d1"/></linearGradient></defs><rect width="1080" height="1920" fill="url(#sky)"/><rect width="1080" height="1920" fill="#f6efe2"/><rect x="0" y="1180" width="1080" height="740" fill="#d9c39d"/><rect x="0" y="1170" width="1080" height="22" fill="#c3a97e"/><rect x="700" y="430" width="280" height="360" rx="18" fill="#bfe4f8" stroke="#d8cdb8" stroke-width="12"/><line x1="840" y1="430" x2="840" y2="790" stroke="#d8cdb8" stroke-width="10"/><line x1="700" y1="610" x2="980" y2="610" stroke="#d8cdb8" stroke-width="10"/><rect x="250" y="1010" width="520" height="34" rx="12" fill="#b98451"/><rect x="286" y="1044" width="20" height="150" rx="8" fill="#9a6a3c"/><rect x="714" y="1044" width="20" height="150" rx="8" fill="#9a6a3c"/><g transform="translate(410 1010) rotate(0) scale(1.0)"><path d="M -34 -46 L 34 -46 L 26 30 L -26 30 Z" fill="#ffffff" stroke="#d8d2c6" stroke-width="3"/><path d="M 34 -34 q26 0 26 18 q0 18 -26 18" fill="none" stroke="#d8d2c6" stroke-width="7"/><ellipse cx="0" cy="-44" rx="32" ry="8" fill="#7a4a2a"/></g><g transform="translate(880 1180) rotate(0) scale(1.0)"><rect x="-44" y="-26" width="88" height="18" rx="8" fill="#c58b52"/><rect x="-44" y="-96" width="16" height="74" rx="7" fill="#c58b52"/><rect x="-40" y="-12" width="12" height="46" rx="6" fill="#9a6a3c"/><rect x="28" y="-12" width="12" height="46" rx="6" fill="#9a6a3c"/></g><g transform="translate(660 1180) scale(1.0)"><rect x="-11" y="-52" width="22" height="34" rx="8" fill="#2f4a5a"/><rect x="-10" y="-20" width="8" height="22" rx="4" fill="#24323c"/><rect x="2" y="-20" width="8" height="22" rx="4" fill="#24323c"/><circle cx="0" cy="-62" r="11" fill="#f0c39a"/><path d="M-13 -66 a13 11 0 0 1 26 0 z" fill="#f7c93f"/></g></svg>
+        <div class="pill" id="s1-pill">10 секунд</div>
+        <div class="foot" id="s1-foot">Что будет, если гравитация исчезнет?</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s1 = gsap.timeline({ paused: true });
+    tl_s1.fromTo("#s1 .world", { scale: 1.0 }, { scale: 1.05, duration: 4, ease: "none" }, 0);
+    tl_s1.fromTo("#s1-pill", { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.6)" }, 0.05);
+    tl_s1.fromTo("#s1-foot", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.5);
+    
+    tl_s1.to("#s1 .world", {y:-6, duration:2, ease:"sine.inOut"}, 0.4);
+    tl_s1.to("#s1 .world > g:last-of-type", {y:-8, duration:0.9, yoyo:true, repeat:1, ease:"sine.inOut"}, 2.2);
+    
+    window.__timelines["s1"] = tl_s1;
+  </script>
+</template>

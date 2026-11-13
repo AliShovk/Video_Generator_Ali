@@ -1,0 +1,37 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#f1f5f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s9" data-width="1080" data-height="1920">
+    <div class="clip" id="s9-clip" data-start="0" data-duration="3.86">
+      <div id="s9-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="insG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#d9a63a"/></linearGradient>
+<linearGradient id="roofG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9c6046"/><stop offset="1" stop-color="#6d3f30"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#f1f5f7"/><rect class="" x="90" y="850" width="900" height="120" fill="url(#roofG)" opacity="1"/><rect class="insul9" x="90" y="970" width="900" height="240" fill="url(#insG)" opacity="1"/><g class="cond"><circle class="drop9" cx="180" cy="970" r="10" fill="#3f8fb8"/><circle class="drop9" cx="290" cy="1000" r="13" fill="#3f8fb8"/><circle class="drop9" cx="400" cy="1030" r="16" fill="#3f8fb8"/><circle class="drop9" cx="510" cy="970" r="10" fill="#3f8fb8"/><circle class="drop9" cx="620" cy="1000" r="13" fill="#3f8fb8"/><circle class="drop9" cx="730" cy="1030" r="16" fill="#3f8fb8"/><circle class="drop9" cx="840" cy="970" r="10" fill="#3f8fb8"/><circle class="drop9" cx="950" cy="1000" r="13" fill="#3f8fb8"/></g><circle class="mold" cx="200" cy="1230" r="16" fill="#4a5a3a" opacity="0.7"/><circle class="mold" cx="320" cy="1230" r="16" fill="#4a5a3a" opacity="0.7"/><circle class="mold" cx="440" cy="1230" r="16" fill="#4a5a3a" opacity="0.7"/><circle class="mold" cx="560" cy="1230" r="16" fill="#4a5a3a" opacity="0.7"/><circle class="mold" cx="680" cy="1230" r="16" fill="#4a5a3a" opacity="0.7"/><circle class="mold" cx="800" cy="1230" r="16" fill="#4a5a3a" opacity="0.7"/><path d="M 540 970 l 0 -40" stroke="#c0392b" stroke-width="8" stroke-dasharray="10 8"/><text class="lab" x="540" y="1420" font-family="Nunito, Arial, sans-serif" font-size="32" font-weight="900" fill="#c0392b" text-anchor="middle">нет зазора → конденсат → гниль</text><text class="hl" x="52" y="150" fill="#1e2b35" font-family="Nunito, Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="-1">ПРИЖАТ</text><text class="hl" x="52" y="222" fill="#c0392b" font-family="Nunito, Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="-1">К КРОВЛЕ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s9 = gsap.timeline({ paused: true });
+    const tl = tl_s9;
+    tl.fromTo("#s9 .world", { scale:1.0 }, { scale:1.04, duration:3.86, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".heat", { y:0, opacity:0.55 }, { y:-120, opacity:1, duration:1.1, stagger:0.15, yoyo:true, repeat:12, ease:"sine.inOut" }, 0);
+    tl.fromTo(".lyr", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.32 }, 0.1);
+    tl.fromTo(".lb", { opacity:0 }, { opacity:1, duration:0.4, stagger:0.32 }, 0.3);
+    tl.fromTo(".plug", { opacity:0 }, { opacity:1, duration:0.6 }, 3.86 * 0.55);
+    tl.to(".leak", { y:-220, opacity:0, duration:1.0, stagger:0.1, repeat:3 }, 0);
+    tl.fromTo(".vap", { opacity:0, x:-60 }, { opacity:0.95, x:0, duration:1.2 }, 0.2);
+    tl.fromTo(".tape", { opacity:0, scaleX:0.4, transformOrigin:"50% 50%" }, { opacity:1, scaleX:1, duration:0.5 }, 3.86 * 0.55);
+    tl.to(".vapArr", { y:-30, opacity:0.3, duration:1.0, yoyo:true, repeat:4 }, 0);
+    tl.to(".air6", { x:120, duration:1.6, stagger:0.12, repeat:3, ease:"none" }, 0);
+    tl.to(".flow7", { x:80, duration:1.4, stagger:0.1, repeat:4, ease:"none" }, 0);
+    tl.fromTo(".cb", { opacity:0, y:-30 }, { opacity:1, y:0, duration:0.4, stagger:0.2 }, 0.1);
+    tl.to(".top8", { x:110, duration:1.6, ease:"power2.inOut" }, 0.4);
+    tl.to(".seamTop", { opacity:0.3, duration:0.5, yoyo:true, repeat:6 }, 1.0);
+    tl.to(".drop9", { y:120, opacity:0, duration:1.4, stagger:0.15, repeat:3, ease:"power1.in" }, 0.3);
+    tl.to(".mold", { opacity:0.9, duration:1.2, yoyo:true, repeat:3 }, 0.6);
+    tl.fromTo(".wrap", { opacity:0, scaleY:0.6, transformOrigin:"50% 100%" }, { opacity:1, scaleY:1, duration:0.8 }, 3.86 * 0.35);
+    tl.to(".coldLine", { opacity:0.2, duration:0.8, yoyo:true, repeat:5 }, 0);
+    tl.to(".air11", { x:150, duration:2.0, stagger:0.15, repeat:3, ease:"none" }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s9"] = tl_s9;
+  </script>
+</template>

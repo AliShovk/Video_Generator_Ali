@@ -1,0 +1,35 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#080d16; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+    .head { position:absolute; left:56px; right:56px; top:150px; font-family:"Nunito",Arial,sans-serif;
+      font-weight:900; font-size:78px; line-height:0.98; text-transform:uppercase; letter-spacing:-1px; }
+    .line { opacity:1; }
+  </style>
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
+    <div class="clip" id="s3-clip" data-start="0" data-duration="12">
+      <div id="s3-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#080d16" stop-opacity="1"/><stop offset="0.5" stop-color="#080d16" stop-opacity="0"/>
+    <stop offset="1" stop-color="#080d16" stop-opacity="1"/>
+  </linearGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#eaf2ff" stop-opacity="0.30"/><stop offset="1" stop-color="#eaf2ff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="beamRed" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff8a7a" stop-opacity="0.35"/><stop offset="1" stop-color="#ff8a7a" stop-opacity="0"/>
+  </linearGradient>
+</defs><rect width="1080" height="1920" fill="#080d16"/><rect x="60" y="0" width="960" height="1920" fill="#111a26"/><line x1="380.0" y1="0" x2="380.0" y2="1920" stroke="#dfe7f0" stroke-width="4" stroke-dasharray="46 40" opacity="0.5"/>"<line x1="700.0" y1="0" x2="700.0" y2="1920" stroke="#dfe7f0" stroke-width="4" stroke-dasharray="46 40" opacity="0.5"/>"<g id="hero" transform="translate(420 1300) rotate(0)"><path d="M -64.0 -130.0 L 64.0 -130.0 L 176.0 -442.0 L -176.0 -442.0 Z" fill="url(#beam)"/><rect x="-80.0" y="-130.0" width="160" height="260" rx="26" fill="#2f9fd8"/><rect x="-64.0" y="-96.0" width="128" height="88.4" rx="14" fill="#0d1620" opacity="0.75"/><rect x="-64.0" y="41.6" width="128" height="52.0" rx="12" fill="#0d1620" opacity="0.45"/><circle cx="-54.0" cy="-114.0" r="7" fill="#ffe9a8"/><circle cx="54.0" cy="-114.0" r="7" fill="#ffe9a8"/></g><g id="shadow"><path d="M 300 1150 L 540 1150 L 640 620 L 200 620 Z" fill="#e6402f" opacity="0.10"/></g><g id="red" transform="translate(300 900) rotate(-4)"><path d="M -60.0 -120.0 L 60.0 -120.0 L 165.0 -408.0 L -165.0 -408.0 Z" fill="url(#beam)"/><rect x="-75.0" y="-120.0" width="150" height="240" rx="26" fill="#e6402f"/><rect x="-59.0" y="-86.0" width="118" height="81.60000000000001" rx="14" fill="#0d1620" opacity="0.75"/><rect x="-59.0" y="38.4" width="118" height="48.0" rx="12" fill="#0d1620" opacity="0.45"/><circle cx="-49.0" cy="-104.0" r="7" fill="#ffe9a8"/><circle cx="49.0" cy="-104.0" r="7" fill="#ffe9a8"/></g><g><rect x="620" y="760" width="380" height="52" rx="10" fill="#0b121c" stroke="#e6402f" stroke-width="2"/><text x="636" y="794" fill="#e6402f" font-family="Nunito, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">НЕ ВИДНО В ЗЕРКАЛЕ</text></g><text class="hl" x="56" y="240" fill="#fff" font-family="Nunito, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">МАШИНА</text><text class="hl" x="56" y="332" fill="#e6402f" font-family="Nunito, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">ИСЧЕЗЛА</text></svg>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s3 = gsap.timeline({ paused: true });
+    const tl = tl_s3;
+    tl_s3.fromTo("#s3 .world", { scale:1.0 }, { scale:1.05, duration:12, ease:"none" }, 0);
+    tl_s3.fromTo("#s3 .hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.16, ease:"power3.out" }, 0.15);
+    tl.fromTo("#red", {opacity:0}, {opacity:1, duration:1.2}, 0.6);tl.to("#shadow", {opacity:0.35, duration:2.0, yoyo:true, repeat:2}, 1.0);
+    window.__timelines["s3"] = tl_s3;
+  </script>
+</template>

@@ -1,0 +1,35 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef3f6}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="3.761">
+      <div id="s5-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="pipeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9bcc8"/><stop offset="0.45" stop-color="#cfdde6"/><stop offset="1" stop-color="#7d909d"/></linearGradient>
+<linearGradient id="waterG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f8dc0"/><stop offset="1" stop-color="#7ccbea"/></linearGradient>
+<radialGradient id="glowB"><stop offset="0" stop-color="#8fd0ee" stop-opacity="0.6"/><stop offset="1" stop-color="#8fd0ee" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#eef3f6"/><rect x="330" y="560" width="420" height="620" rx="24" fill="#dbe6ec" stroke="#6d8290" stroke-width="6"/><rect x="380" y="620" width="320" height="500" rx="14" fill="#a97b4a" class="cartridge"/><rect x="380" y="640" width="320" height="16" fill="#7d5630" opacity="0.7"/><rect x="380" y="710" width="320" height="16" fill="#7d5630" opacity="0.7"/><rect x="380" y="780" width="320" height="16" fill="#7d5630" opacity="0.7"/><rect x="380" y="850" width="320" height="16" fill="#7d5630" opacity="0.7"/><rect x="380" y="920" width="320" height="16" fill="#7d5630" opacity="0.7"/><rect x="380" y="990" width="320" height="16" fill="#7d5630" opacity="0.7"/><rect x="380" y="1060" width="320" height="16" fill="#7d5630" opacity="0.7"/><path d="M 540 1180 l 0 120" stroke="#8fa3b1" stroke-width="46"/><g class="slowflow"><circle cx="540" cy="1320" r="8" fill="#8fd0ee" opacity="0.6"/><circle cx="540" cy="1360" r="8" fill="#8fd0ee" opacity="0.6"/><circle cx="540" cy="1400" r="8" fill="#8fd0ee" opacity="0.6"/><circle cx="540" cy="1440" r="8" fill="#8fd0ee" opacity="0.6"/></g><g class="b"><circle cx="118" cy="520" r="54" fill="#243039"/><text x="118" y="538" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#fff" text-anchor="middle">4</text></g><text class="hl" x="54" y="150" fill="#243039" font-family="Nunito, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-1">ЗАБИТЫЙ</text><text class="hl" x="54" y="228" fill="#c0392b" font-family="Nunito, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-1">ФИЛЬТР</text><text x="54" y="330" font-family="Nunito, Arial" font-size="32" font-weight="800" fill="#243039">картридж не меняли полгода</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+    tl.fromTo("#s5 .world", { scale:1.0 }, { scale:1.04, duration:3.761, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.6, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.4, ease:"back.out(2)" }, 0.2);
+    tl.to(".stream", { y:26, opacity:0.6, duration:0.5, yoyo:true, repeat:12, stagger:0.05 }, 0);
+    tl.to("#needle1", { rotation:-70, svgOrigin:"300 900", duration:1.8, yoyo:true, repeat:2, ease:"sine.inOut" }, 0);
+    tl.to(".slow", { x:70, duration:3.2, stagger:0.2, ease:"none" }, 0);
+    tl.to(".smallF", { x:60, duration:3.0, stagger:0.15, ease:"none" }, 0);
+    tl.to(".bigF", { x:90, duration:2.2, stagger:0.15, ease:"none" }, 0);
+    tl.to(".wflow", { opacity:0.75, duration:0.8, yoyo:true, repeat:4 }, 0);
+    tl.to(".turns", { x:8, duration:0.9, yoyo:true, repeat:5 }, 0);
+    tl.to("#needle4", { rotation:0, svgOrigin:"830 800", duration:0.25, yoyo:true, repeat:18, ease:"none" }, 0);
+    tl.to(".pumpGlow", { opacity:0.15, duration:0.25, yoyo:true, repeat:18 }, 0);
+    tl.to(".cross4", { opacity:0.4, duration:0.7, yoyo:true, repeat:5 }, 0);
+    tl.to(".cartridge", { fill:"#8a5f34", duration:3.761, ease:"none" }, 0);
+    tl.to(".slowflow", { y:40, opacity:0, duration:1.4, repeat:6, ease:"none" }, 0);
+    tl.to(".air", { y:-8, x:6, duration:1.2, yoyo:true, repeat:6, ease:"sine.inOut" }, 0);
+    tl.to(".blocked", { scale:1.1, transformOrigin:"730 1210", duration:0.6, yoyo:true, repeat:6 }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.32 }, 0.2);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

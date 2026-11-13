@@ -1,0 +1,79 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #05080c; }
+    .world { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .top { position: absolute; left: 48px; top: 120px; }
+    .chip {
+      display: inline-block; border: 1px solid rgba(111,211,242,0.45); color: #8fd8ef;
+      font: 500 28px/1 "JetBrains Mono", monospace; letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 12px 18px; background: rgba(6,12,18,0.6);
+    }
+    .head {
+      position: absolute; left: 48px; top: 230px;
+      font: 700 118px/0.92 "Oswald", sans-serif; text-transform: uppercase; color: #f1ece2;
+    }
+    .foot {
+      position: absolute; left: 48px; right: 48px; bottom: 430px;
+      font: 700 50px/1.1 "Oswald", sans-serif; text-transform: uppercase; color: #f6f1e7;
+      text-shadow: 0 3px 14px rgba(0,0,0,0.9);
+    }
+    .foot::before { content: ""; display: block; width: 74px; height: 4px; background: #ff7a1a; margin-bottom: 16px; }
+    .scrim {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 640px;
+      background: linear-gradient(to top, rgba(4,7,10,0.96) 34%, rgba(4,7,10,0.75) 62%, rgba(4,7,10,0) 100%);
+    }
+  </style>
+  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920">
+    <div class="clip" id="s7-clip" data-start="0" data-duration="5">
+      <div id="s7-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#05080c"/><stop offset="0.6" stop-color="#0b141c"/><stop offset="1" stop-color="#04070a"/>
+  </linearGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#9fb2c2"/><stop offset="0.5" stop-color="#5d7180"/><stop offset="1" stop-color="#33424d"/>
+  </linearGradient>
+  <linearGradient id="steelDark" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4a5b68"/><stop offset="1" stop-color="#222d36"/>
+  </linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#20262b"/><stop offset="1" stop-color="#0c1014"/>
+  </linearGradient>
+  <linearGradient id="concrete" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3a4148"/><stop offset="1" stop-color="#1c2126"/>
+  </linearGradient>
+  <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff7a1a" stop-opacity="0.55"/><stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#6fd3f2" stop-opacity="0.25"/><stop offset="1" stop-color="#6fd3f2" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+  <pattern id="panels" width="26" height="26" patternUnits="userSpaceOnUse">
+    <rect width="26" height="26" fill="none"/>
+    <line x1="0" y1="0" x2="0" y2="26" stroke="#0d151b" stroke-width="3" opacity="0.45"/>
+    <line x1="0" y1="13" x2="26" y2="13" stroke="#0d151b" stroke-width="1.5" opacity="0.25"/>
+  </pattern>
+  <pattern id="hatch" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="0" x2="0" y2="10" stroke="#8b98a3" stroke-width="1" opacity="0.35"/>
+  </pattern>
+</defs>
+<rect width="1080" height="1920" fill="#060a0e"/><circle cx="540" cy="760" r="420" fill="url(#halo)" opacity="0.5"/><text x="540" y="700" fill="#ff7a1a" font-family="JetBrains Mono, monospace" font-size="74" letter-spacing="2" text-anchor="middle" font-weight="400">ФЕВРАЛЬ 2025</text><text x="540" y="800" fill="#e9e4da" font-family="JetBrains Mono, monospace" font-size="46" letter-spacing="2" text-anchor="middle" font-weight="400">АРКА ПОВРЕЖДЕНА</text><text x="540" y="900" fill="#8f8a80" font-family="JetBrains Mono, monospace" font-size="28" letter-spacing="2" text-anchor="middle" font-weight="400">восстановление ещё не завершено</text><line x1="240" y1="960" x2="840" y2="960" stroke="#2a3540" stroke-width="2"/><text x="540" y="1030" fill="#6f7a84" font-family="JetBrains Mono, monospace" font-size="26" letter-spacing="2" text-anchor="middle" font-weight="400">ИСТОРИЯ СТРОИТЕЛЬСТВА</text><text x="540" y="1072" fill="#4f5a64" font-family="JetBrains Mono, monospace" font-size="22" letter-spacing="2" text-anchor="middle" font-weight="400">НЕ ЗНАЧИТ, ЧТО ОБЪЕКТ СЕЙЧАС В СТРОЮ</text></svg>
+        <div class="scrim"></div>
+        <div class="top"><div class="chip" id="s7-chip">Февраль 2025</div></div>
+        
+        <div class="foot" id="s7-foot">История стройки ≠ объект в строю</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s7 = gsap.timeline({ paused: true });
+    tl_s7.fromTo("#s7 .world", { scale: 1.0 }, { scale: 1.05, duration: 5, ease: "none" }, 0);
+    tl_s7.fromTo("#s7-chip", { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 0.05);
+    
+    tl_s7.fromTo("#s7-foot", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.4);
+    
+    window.__timelines["s7"] = tl_s7;
+  </script>
+</template>

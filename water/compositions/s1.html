@@ -1,0 +1,35 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef3f6}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <div class="clip" id="s1-clip" data-start="0" data-duration="4.83">
+      <div id="s1-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="pipeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9bcc8"/><stop offset="0.45" stop-color="#cfdde6"/><stop offset="1" stop-color="#7d909d"/></linearGradient>
+<linearGradient id="waterG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f8dc0"/><stop offset="1" stop-color="#7ccbea"/></linearGradient>
+<radialGradient id="glowB"><stop offset="0" stop-color="#8fd0ee" stop-opacity="0.6"/><stop offset="1" stop-color="#8fd0ee" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#eef3f6"/><rect x="520" y="560" width="44" height="520" fill="url(#pipeG)" stroke="#6d8290" stroke-width="4"/><path d="M 542 560 q 0 -90 90 -90 l 150 0" stroke="#8fa3b1" stroke-width="54" fill="none" stroke-linecap="round"/><rect x="740" y="440" width="56" height="86" rx="12" fill="#c9a24a"/><circle cx="542" cy="600" r="30" fill="#c9a24a"/><path class="stream" d="M 768 526 q 4 150 0 300" stroke="#8fd0ee" stroke-width="10" fill="none" opacity="0.9"/><path class="stream" d="M 768 526 q 4 150 0 300" stroke="#8fd0ee" stroke-width="12" fill="none" opacity="0.9"/><path class="stream" d="M 768 526 q 4 150 0 300" stroke="#8fd0ee" stroke-width="14" fill="none" opacity="0.9"/><path class="stream" d="M 768 526 q 4 150 0 300" stroke="#8fd0ee" stroke-width="16" fill="none" opacity="0.9"/><rect x="600" y="850" width="360" height="150" rx="26" fill="#dbe6ec" stroke="#6d8290" stroke-width="6"/><ellipse cx="780" cy="870" rx="150" ry="26" fill="#c3d3dc"/><ellipse cx="780" cy="872" rx="60" ry="12" fill="#3f9fd4" opacity="0.25"/><rect x="760" y="1000" width="40" height="150" fill="#8fa3b1" opacity="0.7"/><g class="gauge"><circle cx="300" cy="900" r="150" fill="#fff" stroke="#6d8290" stroke-width="8"/><line x1="300" y1="760" x2="300" y2="776" stroke="#5b6b76" stroke-width="5" transform="rotate(-120 300 900)"/><line x1="300" y1="760" x2="300" y2="776" stroke="#5b6b76" stroke-width="5" transform="rotate(-90 300 900)"/><line x1="300" y1="760" x2="300" y2="776" stroke="#5b6b76" stroke-width="5" transform="rotate(-60 300 900)"/><line x1="300" y1="760" x2="300" y2="776" stroke="#5b6b76" stroke-width="5" transform="rotate(-30 300 900)"/><line x1="300" y1="760" x2="300" y2="776" stroke="#5b6b76" stroke-width="5" transform="rotate(0 300 900)"/><line x1="300" y1="760" x2="300" y2="776" stroke="#5b6b76" stroke-width="5" transform="rotate(30 300 900)"/><line x1="300" y1="760" x2="300" y2="776" stroke="#5b6b76" stroke-width="5" transform="rotate(60 300 900)"/><line x1="300" y1="760" x2="300" y2="776" stroke="#5b6b76" stroke-width="5" transform="rotate(90 300 900)"/><line x1="300" y1="760" x2="300" y2="776" stroke="#5b6b76" stroke-width="5" transform="rotate(120 300 900)"/><circle cx="300" cy="900" r="10" fill="#243039"/><g id="needle1" transform="rotate(-80 300 900)"><rect x="296" y="770" width="8" height="120" rx="4" fill="#c0392b"/></g><text x="300" y="1032" font-family="Nunito, Arial" font-size="26" font-weight="800" fill="#243039" text-anchor="middle">бар</text></g><text x="300" y="1130" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#c0392b" text-anchor="middle">0,5 бар</text><text class="hl" x="54" y="190" fill="#243039" font-family="Nunito, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-1">НАПОР</text><text class="hl" x="54" y="284" fill="#c0392b" font-family="Nunito, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-1">УПАЛ</text><text x="54" y="470" font-family="Nunito, Arial" font-size="34" font-weight="800" fill="#243039">насос работает, а вода еле идёт</text><g class="chip"><rect x="120" y="1330" width="380" height="90" rx="45" fill="#243039"/><text x="310" y="1390" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#fff" text-anchor="middle">5 ПРИЧИН</text></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s1 = gsap.timeline({ paused: true });
+    const tl = tl_s1;
+    tl.fromTo("#s1 .world", { scale:1.0 }, { scale:1.04, duration:4.83, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.6, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.4, ease:"back.out(2)" }, 0.2);
+    tl.to(".stream", { y:26, opacity:0.6, duration:0.5, yoyo:true, repeat:12, stagger:0.05 }, 0);
+    tl.to("#needle1", { rotation:-70, svgOrigin:"300 900", duration:1.8, yoyo:true, repeat:2, ease:"sine.inOut" }, 0);
+    tl.to(".slow", { x:70, duration:3.2, stagger:0.2, ease:"none" }, 0);
+    tl.to(".smallF", { x:60, duration:3.0, stagger:0.15, ease:"none" }, 0);
+    tl.to(".bigF", { x:90, duration:2.2, stagger:0.15, ease:"none" }, 0);
+    tl.to(".wflow", { opacity:0.75, duration:0.8, yoyo:true, repeat:4 }, 0);
+    tl.to(".turns", { x:8, duration:0.9, yoyo:true, repeat:5 }, 0);
+    tl.to("#needle4", { rotation:0, svgOrigin:"830 800", duration:0.25, yoyo:true, repeat:18, ease:"none" }, 0);
+    tl.to(".pumpGlow", { opacity:0.15, duration:0.25, yoyo:true, repeat:18 }, 0);
+    tl.to(".cross4", { opacity:0.4, duration:0.7, yoyo:true, repeat:5 }, 0);
+    tl.to(".cartridge", { fill:"#8a5f34", duration:4.83, ease:"none" }, 0);
+    tl.to(".slowflow", { y:40, opacity:0, duration:1.4, repeat:6, ease:"none" }, 0);
+    tl.to(".air", { y:-8, x:6, duration:1.2, yoyo:true, repeat:6, ease:"sine.inOut" }, 0);
+    tl.to(".blocked", { scale:1.1, transformOrigin:"730 1210", duration:0.6, yoyo:true, repeat:6 }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.32 }, 0.2);
+    window.__timelines["s1"] = tl_s1;
+  </script>
+</template>

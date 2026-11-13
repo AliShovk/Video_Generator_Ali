@@ -1,0 +1,37 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#f1f5f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s11" data-width="1080" data-height="1920">
+    <div class="clip" id="s11-clip" data-start="0" data-duration="2.846">
+      <div id="s11-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="insG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#d9a63a"/></linearGradient>
+<linearGradient id="roofG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9c6046"/><stop offset="1" stop-color="#6d3f30"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#f1f5f7"/><rect class="" x="90" y="900" width="900" height="260" fill="url(#insG)" opacity="1"/><rect class="gap11" x="60" y="830" width="960" height="70" fill="#cfe6f2" opacity="0.95"/><path d="M 60 830 l 0 -90 l 60 0" stroke="#7d4b3a" stroke-width="20" fill="none"/><path d="M 960 830 l 0 -110 l -70 0" stroke="#7d4b3a" stroke-width="20" fill="none"/><text class="lab" x="150" y="700" font-family="Nunito, Arial, sans-serif" font-size="26" font-weight="900" fill="#3f8fb8" text-anchor="start">ПРОДУХ</text><text class="lab" x="900" y="690" font-family="Nunito, Arial, sans-serif" font-size="26" font-weight="900" fill="#3f8fb8" text-anchor="end">КОНЁК</text><g class="air11"><circle cx="160" cy="865" r="12" fill="#3f8fb8"/></g><g class="air11"><circle cx="330" cy="865" r="12" fill="#3f8fb8"/></g><g class="air11"><circle cx="500" cy="865" r="12" fill="#3f8fb8"/></g><g class="air11"><circle cx="670" cy="865" r="12" fill="#3f8fb8"/></g><g class="air11"><circle cx="840" cy="865" r="12" fill="#3f8fb8"/></g><text class="hl" x="52" y="150" fill="#1e2b35" font-family="Nunito, Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-1">ВЕНТИЛЯЦИЯ</text><text class="hl" x="52" y="214" fill="#2c8a58" font-family="Nunito, Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-1">КАРНИЗ → КОНЁК</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s11 = gsap.timeline({ paused: true });
+    const tl = tl_s11;
+    tl.fromTo("#s11 .world", { scale:1.0 }, { scale:1.04, duration:2.846, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".heat", { y:0, opacity:0.55 }, { y:-120, opacity:1, duration:1.1, stagger:0.15, yoyo:true, repeat:12, ease:"sine.inOut" }, 0);
+    tl.fromTo(".lyr", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.32 }, 0.1);
+    tl.fromTo(".lb", { opacity:0 }, { opacity:1, duration:0.4, stagger:0.32 }, 0.3);
+    tl.fromTo(".plug", { opacity:0 }, { opacity:1, duration:0.6 }, 2.846 * 0.55);
+    tl.to(".leak", { y:-220, opacity:0, duration:1.0, stagger:0.1, repeat:3 }, 0);
+    tl.fromTo(".vap", { opacity:0, x:-60 }, { opacity:0.95, x:0, duration:1.2 }, 0.2);
+    tl.fromTo(".tape", { opacity:0, scaleX:0.4, transformOrigin:"50% 50%" }, { opacity:1, scaleX:1, duration:0.5 }, 2.846 * 0.55);
+    tl.to(".vapArr", { y:-30, opacity:0.3, duration:1.0, yoyo:true, repeat:4 }, 0);
+    tl.to(".air6", { x:120, duration:1.6, stagger:0.12, repeat:3, ease:"none" }, 0);
+    tl.to(".flow7", { x:80, duration:1.4, stagger:0.1, repeat:4, ease:"none" }, 0);
+    tl.fromTo(".cb", { opacity:0, y:-30 }, { opacity:1, y:0, duration:0.4, stagger:0.2 }, 0.1);
+    tl.to(".top8", { x:110, duration:1.6, ease:"power2.inOut" }, 0.4);
+    tl.to(".seamTop", { opacity:0.3, duration:0.5, yoyo:true, repeat:6 }, 1.0);
+    tl.to(".drop9", { y:120, opacity:0, duration:1.4, stagger:0.15, repeat:3, ease:"power1.in" }, 0.3);
+    tl.to(".mold", { opacity:0.9, duration:1.2, yoyo:true, repeat:3 }, 0.6);
+    tl.fromTo(".wrap", { opacity:0, scaleY:0.6, transformOrigin:"50% 100%" }, { opacity:1, scaleY:1, duration:0.8 }, 2.846 * 0.35);
+    tl.to(".coldLine", { opacity:0.2, duration:0.8, yoyo:true, repeat:5 }, 0);
+    tl.to(".air11", { x:150, duration:2.0, stagger:0.15, repeat:3, ease:"none" }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s11"] = tl_s11;
+  </script>
+</template>

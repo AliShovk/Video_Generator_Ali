@@ -1,0 +1,37 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#f1f5f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s10" data-width="1080" data-height="1920">
+    <div class="clip" id="s10-clip" data-start="0" data-duration="3.892">
+      <div id="s10-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="insG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#d9a63a"/></linearGradient>
+<linearGradient id="roofG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9c6046"/><stop offset="1" stop-color="#6d3f30"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#f1f5f7"/><rect class="" x="90" y="1100" width="900" height="220" fill="url(#insG)" opacity="1"/><rect class="beam" x="470" y="850" width="60" height="700" fill="#8fa3b1" stroke="#5f6b74" stroke-width="4"/><path class="coldLine" d="M 500 880 l 0 640" stroke="#3f8fb8" stroke-width="14" opacity="0.6"/><rect class="wrap" x="270" y="1080" width="200" height="260" fill="url(#insG)" opacity="0"/><rect class="wrap" x="610" y="1080" width="200" height="260" fill="url(#insG)" opacity="0"/><text class="hl" x="52" y="150" fill="#1e2b35" font-family="Nunito, Arial, sans-serif" font-size="60" font-weight="900" letter-spacing="-1">МОСТИК</text><text class="hl" x="52" y="226" fill="#c0392b" font-family="Nunito, Arial, sans-serif" font-size="60" font-weight="900" letter-spacing="-1">ХОЛОДА</text><text class="lab" x="540" y="1620" font-family="Nunito, Arial, sans-serif" font-size="26" font-weight="900" fill="#1e2b35" text-anchor="middle">металл промерзает — закрываем утеплителем</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s10 = gsap.timeline({ paused: true });
+    const tl = tl_s10;
+    tl.fromTo("#s10 .world", { scale:1.0 }, { scale:1.04, duration:3.892, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".heat", { y:0, opacity:0.55 }, { y:-120, opacity:1, duration:1.1, stagger:0.15, yoyo:true, repeat:12, ease:"sine.inOut" }, 0);
+    tl.fromTo(".lyr", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.32 }, 0.1);
+    tl.fromTo(".lb", { opacity:0 }, { opacity:1, duration:0.4, stagger:0.32 }, 0.3);
+    tl.fromTo(".plug", { opacity:0 }, { opacity:1, duration:0.6 }, 3.892 * 0.55);
+    tl.to(".leak", { y:-220, opacity:0, duration:1.0, stagger:0.1, repeat:3 }, 0);
+    tl.fromTo(".vap", { opacity:0, x:-60 }, { opacity:0.95, x:0, duration:1.2 }, 0.2);
+    tl.fromTo(".tape", { opacity:0, scaleX:0.4, transformOrigin:"50% 50%" }, { opacity:1, scaleX:1, duration:0.5 }, 3.892 * 0.55);
+    tl.to(".vapArr", { y:-30, opacity:0.3, duration:1.0, yoyo:true, repeat:4 }, 0);
+    tl.to(".air6", { x:120, duration:1.6, stagger:0.12, repeat:3, ease:"none" }, 0);
+    tl.to(".flow7", { x:80, duration:1.4, stagger:0.1, repeat:4, ease:"none" }, 0);
+    tl.fromTo(".cb", { opacity:0, y:-30 }, { opacity:1, y:0, duration:0.4, stagger:0.2 }, 0.1);
+    tl.to(".top8", { x:110, duration:1.6, ease:"power2.inOut" }, 0.4);
+    tl.to(".seamTop", { opacity:0.3, duration:0.5, yoyo:true, repeat:6 }, 1.0);
+    tl.to(".drop9", { y:120, opacity:0, duration:1.4, stagger:0.15, repeat:3, ease:"power1.in" }, 0.3);
+    tl.to(".mold", { opacity:0.9, duration:1.2, yoyo:true, repeat:3 }, 0.6);
+    tl.fromTo(".wrap", { opacity:0, scaleY:0.6, transformOrigin:"50% 100%" }, { opacity:1, scaleY:1, duration:0.8 }, 3.892 * 0.35);
+    tl.to(".coldLine", { opacity:0.2, duration:0.8, yoyo:true, repeat:5 }, 0);
+    tl.to(".air11", { x:150, duration:2.0, stagger:0.15, repeat:3, ease:"none" }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s10"] = tl_s10;
+  </script>
+</template>

@@ -1,0 +1,14 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0a1016}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s8" data-width="1080" data-height="1920">
+    <div class="clip" id="s8-clip" data-start="0" data-duration="3.361">
+      <div id="s8-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#0a1016"/><g class="pr0"><circle cx="210" cy="700" r="130" fill="#16232b" stroke="#f2df8a" stroke-width="4"/><rect x="164" y="640" width="70" height="110" rx="10" fill="#f2df8a"/><rect x="176" y="658" width="46" height="30" rx="5" fill="#0a1016"/><path d="M 234 660 q 26 0 26 26 l 0 40 q 0 12 -12 12" stroke="#f2df8a" stroke-width="9" fill="none"/><text x="210" y="880" font-family="Nunito" font-size="26" font-weight="900" fill="#f4f7f8" text-anchor="middle">ТОПЛИВО</text></g><g class="pr1"><circle cx="540" cy="700" r="130" fill="#16232b" stroke="#9fdbe0" stroke-width="4"/><rect x="512" y="640" width="52" height="96" rx="12" fill="#9fdbe0" opacity="0.9"/><rect x="526" y="614" width="24" height="30" rx="6" fill="#9fdbe0" opacity="0.9"/><rect x="512" y="668" width="52" height="10" fill="#0a1016" opacity="0.35"/><text x="540" y="880" font-family="Nunito" font-size="26" font-weight="900" fill="#f4f7f8" text-anchor="middle">ПЛАСТИК</text></g><g class="pr2"><circle cx="870" cy="700" r="130" fill="#16232b" stroke="#4a3427" stroke-width="5"/><path d="M 790 770 l 30 -110 l 130 0 l 30 110 z" fill="#2a2f33"/><path d="M 840 770 l 12 -110 l 10 0 l -4 110 z M 890 770 l -6 -110 l 10 0 l 6 110 z" fill="#f4f7f8" opacity="0.7"/><text x="870" y="880" font-family="Nunito" font-size="26" font-weight="900" fill="#f4f7f8" text-anchor="middle">ДОРОГИ</text></g><text class="hl" x="60" y="300" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#f4f7f8" text-anchor="start" letter-spacing="0">ТОПЛИВО · ПЛАСТИК · ДОРОГИ</text><text class="hl" x="60" y="1660" font-family="Nunito, Arial" font-size="26" font-weight="700" fill="#8ea2ad" text-anchor="start" letter-spacing="0">всё из одной бочки нефти</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s8 = gsap.timeline({ paused: true });
+    const tl = tl_s8;
+    tl.fromTo(".pr0, .pr1, .pr2", {opacity:0, y:20}, {opacity:1, y:0, duration:0.5, stagger:0.18}, 0.1);tl.fromTo(".hl", {opacity:0}, {opacity:1, duration:0.4, stagger:0.1}, 0);
+    window.__timelines["s8"] = tl_s8;
+  </script>
+</template>

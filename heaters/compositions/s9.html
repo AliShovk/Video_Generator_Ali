@@ -1,0 +1,20 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#fbf3e6}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s9" data-width="1080" data-height="1920">
+    <div class="clip" id="s9-clip" data-start="0" data-duration="4.278">
+      <div id="s9-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="steelG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f5f7"/><stop offset="0.5" stop-color="#c9d3da"/><stop offset="1" stop-color="#8f9ba4"/></linearGradient>
+<linearGradient id="oilG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0e3d0"/><stop offset="1" stop-color="#c9ab8a"/></linearGradient>
+<linearGradient id="hotG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb066"/><stop offset="1" stop-color="#e0592a"/></linearGradient>
+<radialGradient id="glowO"><stop offset="0" stop-color="#ff9a4d" stop-opacity="0.85"/><stop offset="1" stop-color="#ff9a4d" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#fbf3e6"/><text class="hl" x="60" y="260" font-family="Nunito, Arial, sans-serif" font-size="64" font-weight="900" fill="#2a2418" text-anchor="start" letter-spacing="-1">БЕЗОПАСНОСТЬ</text><g class="safe"><rect x="80" y="620" width="920" height="300" rx="24" fill="#ffffff" stroke="#e6d8c2" stroke-width="4"/><g class="ico " transform="translate(130 710) scale(4.583333333333333)" opacity="1.0"><path fill="#c0392b" d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"/></g><text x="300" y="760" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#2a2418">защита от брызг</text><text x="300" y="820" font-family="Nunito, Arial" font-size="32" font-weight="800" fill="#8a7a5c">ванная</text></g><g class="safe"><rect x="80" y="1000" width="920" height="300" rx="24" fill="#ffffff" stroke="#e6d8c2" stroke-width="4"/><g class="ico " transform="translate(130 1090) scale(4.583333333333333)" opacity="1.0"><path fill="#c0392b" d="M13 13h-2V7h2m0 10h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></g><text x="300" y="1140" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#2a2418">защита от опрокидывания</text><text x="300" y="1200" font-family="Nunito, Arial" font-size="32" font-weight="800" fill="#8a7a5c">дом</text></g><g class="safe"><rect x="80" y="1380" width="920" height="300" rx="24" fill="#ffffff" stroke="#e6d8c2" stroke-width="4"/><g class="ico " transform="translate(130 1470) scale(4.583333333333333)" opacity="1.0"><path fill="#c0392b" d="m16.95 16.95l-2.12-2.12C15.55 14.1 16 13.1 16 12c0-.74-.21-1.43-.57-2l2.17-2.19A6.86 6.86 0 0 1 19 12c0 1.93-.78 3.68-2.05 4.95M12 5c1.57 0 3 .5 4.19 1.4L14 8.56c-.57-.35-1.26-.56-2-.56a4 4 0 0 0-4 4c0 1.1.45 2.1 1.17 2.83l-2.12 2.12A6.98 6.98 0 0 1 5 12a7 7 0 0 1 7-7m0-3A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10c0-5.53-4.5-10-10-10"/></g><text x="300" y="1520" font-family="Nunito, Arial" font-size="44" font-weight="900" fill="#2a2418">термостат и отключение</text><text x="300" y="1580" font-family="Nunito, Arial" font-size="32" font-weight="800" fill="#8a7a5c">везде</text></g></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s9 = gsap.timeline({ paused: true });
+    const tl = tl_s9;
+    tl.fromTo("#s9 .world", { scale:1.0 }, { scale:1.05, duration:4.278, ease:"none" }, 0);
+    tl.fromTo(".safe", {opacity:0, y:40}, {opacity:1, y:0, duration:0.6, stagger:0.35}, 0.1);
+    window.__timelines["s9"] = tl_s9;
+  </script>
+</template>

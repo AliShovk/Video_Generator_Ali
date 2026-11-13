@@ -1,0 +1,38 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef1f3}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div class="clip" id="s4-clip" data-start="0" data-duration="4.285">
+      <div id="s4-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="tileG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8e4da"/></linearGradient>
+<linearGradient id="glueG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bdb5a6"/><stop offset="1" stop-color="#948c7d"/></linearGradient>
+<linearGradient id="metalG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa6b0"/><stop offset="0.5" stop-color="#cfd8de"/><stop offset="1" stop-color="#8b97a1"/></linearGradient>
+<radialGradient id="dropG"><stop offset="0" stop-color="#9fd8ff"/><stop offset="1" stop-color="#5aa9d6"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#eef1f3"/><g id="" transform="rotate(0 540.0 1140.0)"><rect x="100" y="760" width="880" height="760" rx="6" fill="url(#tileG)" stroke="#dcd7cb" stroke-width="4"/><rect x="110" y="770" width="860" height="740" rx="4" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7"/></g><ellipse class="blob" cx="250" cy="900" rx="90" ry="62.99999999999999" fill="#b3ab9c" opacity="0.75"/><ellipse class="blob" cx="520" cy="980" rx="110" ry="77.0" fill="#b3ab9c" opacity="0.75"/><ellipse class="blob" cx="760" cy="900" rx="80" ry="56.0" fill="#b3ab9c" opacity="0.75"/><ellipse class="blob" cx="330" cy="1300" rx="100" ry="70.0" fill="#b3ab9c" opacity="0.75"/><ellipse class="blob" cx="700" cy="1330" rx="95" ry="66.5" fill="#b3ab9c" opacity="0.75"/><text x="540" y="1640" font-family="Nunito, Arial" font-size="32" font-weight="800" fill="#26313a" text-anchor="middle" opacity="0.75">пустота под плиткой</text><g class="hammer"><rect x="500" y="560" width="20" height="150" fill="#8a5a34"/><rect x="446" y="520" width="128" height="46" rx="10" fill="#5f6b74"/></g><g class="ripple"><circle cx="540" cy="760" r="60" fill="none" stroke="#c0392b" stroke-width="6" opacity="0.8"/></g><g class="b3"><circle cx="120" cy="420" r="56" fill="#26313a"/><text x="120" y="440" font-family="Nunito, Arial" font-size="46" font-weight="900" fill="#fff" text-anchor="middle">3</text></g><text class="hl" x="54" y="250" fill="#c0392b" font-family="Nunito, Arial, sans-serif" font-size="60" font-weight="900" letter-spacing="-1">КЛЕЙ ПЛЮХАМИ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s4 = gsap.timeline({ paused: true });
+    const tl = tl_s4;
+    tl.fromTo("#s4 .world", { scale:1.0 }, { scale:1.04, duration:4.285, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1, ease:"power2.out" }, 0.05);
+    tl.fromTo(".b1,.b2,.b3,.b4,.b5", { scale:0.6, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.45, ease:"back.out(2)" }, 0.2);
+    tl.fromTo("#falling", { y:-40, rotation:-4 }, { y:180, rotation:26, duration:2.2, ease:"power2.in" }, 0.3);
+    tl.to(".dustF", { y:-40, opacity:0.2, duration:2.2, stagger:0.06 }, 0.4);
+    tl.to(".drop", { y:150, opacity:0, duration:1.8, stagger:0.12, repeat:1, ease:"power1.in" }, 0.2);
+    tl.fromTo(".cross", { opacity:0, scale:0.6, transformOrigin:"50% 50%" }, { opacity:1, scale:1, duration:0.4, ease:"back.out(3)" }, 0.5);
+    tl.to(".arrows", { x:-18, duration:0.8, yoyo:true, repeat:6, ease:"sine.inOut" }, 0);
+    tl.to("#lift3", { rotation:-7, svgOrigin:"720 950", duration:2.2, ease:"power2.out" }, 0.6);
+    tl.to(".heat3", { y:-24, opacity:0.4, duration:1.4, yoyo:true, repeat:5 }, 0);
+    tl.to(".blob", { scale:1.05, transformOrigin:"50% 50%", duration:1.0, yoyo:true, repeat:5, stagger:0.1 }, 0);
+    tl.fromTo(".hammer", { y:-60 }, { y:0, duration:0.4, ease:"power2.in" }, 0.2);
+    tl.to(".hammer", { y:-50, duration:0.4, yoyo:true, repeat:7, ease:"power2.out" }, 0.6);
+    tl.to(".ripple", { scale:2.2, opacity:0, transformOrigin:"50% 50%", duration:1.2, stagger:0.3, repeat:3 }, 0.6);
+    tl.fromTo(".tooth", { scaleY:0.6, transformOrigin:"50% 100%" }, { scaleY:1, duration:0.5, stagger:0.03, ease:"back.out(2)" }, 0.2);
+    tl.to(".bigTile", { scale:1.04, transformOrigin:"50% 50%", duration:1.4, yoyo:true, repeat:2 }, 0.4);
+    tl.to(".wdrop", { y:420, opacity:0, duration:2.0, stagger:0.08, repeat:2, ease:"power1.in" }, 0.2);
+    tl.to(".under", { y:-12, duration:1.2, yoyo:true, repeat:4, ease:"sine.inOut" }, 0);
+    tl.to(".arrows6", { y:-20, duration:0.9, yoyo:true, repeat:5, ease:"sine.inOut" }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.35 }, 0.2);
+    window.__timelines["s4"] = tl_s4;
+  </script>
+</template>

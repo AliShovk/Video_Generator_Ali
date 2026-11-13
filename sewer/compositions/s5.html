@@ -1,0 +1,29 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef4f7}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="5.336">
+      <div id="s5-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="pipeG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2d2dc"/><stop offset="0.5" stop-color="#93a8b6"/><stop offset="1" stop-color="#5d7280"/></linearGradient>
+<linearGradient id="waterG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b7fa8"/><stop offset="1" stop-color="#7fd0f2"/></linearGradient>
+</defs><rect x="0" y="0" width="1080" height="1920" fill="#eef4f7"/><line x1="120" y1="760" x2="960" y2="1250" stroke="#7f97a6" stroke-width="110" stroke-linecap="round"/><line x1="120" y1="760" x2="960" y2="1250" stroke="#2f8fc4" stroke-width="80" stroke-linecap="round" opacity="0.9"/><circle class="fast" cx="180" cy="790" r="10" fill="#8fdcff"/><circle class="fast" cx="300" cy="862" r="10" fill="#8fdcff"/><circle class="fast" cx="420" cy="933" r="10" fill="#8fdcff"/><circle class="fast" cx="540" cy="1005" r="10" fill="#8fdcff"/><circle class="fast" cx="660" cy="1077" r="10" fill="#8fdcff"/><circle class="fast" cx="780" cy="1148" r="10" fill="#8fdcff"/><circle class="left" cx="300" cy="830" r="8" fill="#8a6a3a" opacity="0.9"/><circle class="left" cx="390" cy="890" r="9" fill="#8a6a3a" opacity="0.9"/><circle class="left" cx="480" cy="950" r="10" fill="#8a6a3a" opacity="0.9"/><circle class="left" cx="570" cy="1010" r="8" fill="#8a6a3a" opacity="0.9"/><circle class="left" cx="660" cy="1070" r="9" fill="#8a6a3a" opacity="0.9"/><circle class="left" cx="750" cy="1130" r="10" fill="#8a6a3a" opacity="0.9"/><circle class="left" cx="840" cy="1190" r="8" fill="#8a6a3a" opacity="0.9"/><text x="120" y="1420" font-family="Nunito, Arial" font-size="34" font-weight="800" fill="#1f2c36">вода убегает, твёрдое остаётся</text><g class="b"><circle cx="106" cy="420" r="44" fill="#1f2c36"/><text x="106" y="434" font-family="Nunito, Arial" font-size="34" font-weight="900" fill="#fff" text-anchor="middle">2</text></g><text class="hl" x="52" y="150" fill="#1f2c36" font-family="Nunito, Arial, sans-serif" font-size="54" font-weight="900" letter-spacing="-1">БОЛЬШЕ НОРМЫ</text><text class="hl" x="52" y="220" fill="#c93a26" font-family="Nunito, Arial, sans-serif" font-size="54" font-weight="900" letter-spacing="-1">ТОЖЕ ПЛОХО</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+    tl.fromTo("#s5 .world", { scale:1.0 }, { scale:1.04, duration:5.336, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.fromTo(".b", { scale:0.5, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.35, ease:"back.out(3)" }, 0.15);
+    tl.to(".still", { scaleY:1.12, transformOrigin:"50% 50%", duration:1.6, yoyo:true, repeat:3, ease:"sine.inOut" }, 0);
+    tl.to(".smell", { y:-60, opacity:0, duration:2.2, stagger:0.15, repeat:2 }, 0);
+    tl.to(".silt", { y:12, x:20, duration:2.4, stagger:0.08, ease:"sine.inOut" }, 0);
+    tl.to(".fast", { x:120, y:100, duration:1.4, stagger:0.1, repeat:6, ease:"none" }, 0);
+    tl.to(".left", { x:-20, opacity:0.4, duration:1.6, stagger:0.12, repeat:3 }, 0);
+    tl.to(".elb", { rotation:12, svgOrigin:"400 700", duration:1.2, yoyo:true, repeat:3 }, 0);
+    tl.to(".elb2", { rotation:-8, svgOrigin:"800 830", duration:1.4, yoyo:true, repeat:3 }, 0);
+    tl.to(".air7", { y:-40, duration:2.0, stagger:0.12, repeat:4 }, 0);
+    tl.to(".smell7", { y:-30, opacity:0.2, duration:2.0, repeat:4 }, 0);
+    tl.fromTo(".row, .row3", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.3 }, 0.2);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

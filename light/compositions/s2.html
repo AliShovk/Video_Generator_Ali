@@ -1,0 +1,19 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#0c1116}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div class="clip" id="s2-clip" data-start="0" data-duration="6.011">
+      <div id="s2-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="cableG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a3f45"/><stop offset="1" stop-color="#23282d"/></linearGradient>
+<radialGradient id="bulbG"><stop offset="0" stop-color="#fff3b0" stop-opacity="0.95"/><stop offset="1" stop-color="#ffd60a" stop-opacity="0"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#0c1116"/><g class="brk2" transform="translate(140 700) scale(1.1)"><rect x="-70" y="-100" width="140" height="200" rx="12" fill="#dfe6ea" stroke="#8fa3b1" stroke-width="4"/><rect class="lever" x="-26" y="-30" width="52" height="70" rx="8" fill="#ffd60a"/><text x="0" y="-66" font-family="Nunito, Arial" font-size="30" font-weight="900" fill="#2a333a" text-anchor="middle">2</text></g><path class="w2a" d="M 210 700 L 420 700" stroke="#ffd60a" stroke-width="9" fill="none" stroke-linecap="round"/><g class="sw2" transform="translate(470 700) scale(1.3)"><rect x="-46" y="-70" width="92" height="140" rx="14" fill="#e8eef2" stroke="#8fa3b1" stroke-width="4"/><rect class="key" x="-32" y="-52" width="64" height="44" rx="8" fill="#ffd60a"/></g><path class="w2b" d="M 510 700 L 760 700" stroke="#ffd60a" stroke-width="9" fill="none" stroke-linecap="round"/><path class="w2c" d="M 820 700 L 820 980" stroke="#ffd60a" stroke-width="9" fill="none" stroke-linecap="round"/><g class="lamp2" transform="translate(820 1060) scale(1.9)"><path d="M -60 -40 q 30 -70 60 -70 q 30 0 60 70 z" fill="#3d4a52"/><rect x="-8" y="-118" width="16" height="20" fill="#8fa3b1"/><circle class="bulbGlow" cx="0" cy="0" r="150" fill="url(#bulbG)" opacity="0.9"/><ellipse cx="0" cy="-4" rx="52" ry="14" fill="#ffd60a" opacity="0.95"/></g><path class="w2d" d="M 820 1080 L 820 1330" stroke="#4da3ff" stroke-width="8" fill="none" stroke-linecap="round"/><path class="w2e" d="M 820 1330 L 210 1330" stroke="#4da3ff" stroke-width="8" fill="none" stroke-linecap="round"/><path class="w2f" d="M 210 1330 L 210 760" stroke="#4da3ff" stroke-width="8" fill="none" stroke-linecap="round"/><circle class="cur2" cx="240" cy="700" r="7" fill="#ffd60a"/><circle class="cur2" cx="320" cy="700" r="7" fill="#ffd60a"/><circle class="cur2" cx="400" cy="700" r="7" fill="#ffd60a"/><circle class="cur2" cx="480" cy="700" r="7" fill="#ffd60a"/><circle class="cur2" cx="560" cy="700" r="7" fill="#ffd60a"/><circle class="cur2" cx="640" cy="700" r="7" fill="#ffd60a"/><text class="hl" x="60" y="200" font-family="Nunito, Arial, sans-serif" font-size="64" font-weight="900" fill="#f2f6f8" text-anchor="start" letter-spacing="-1">СХЕМА</text><text class="hl" x="60" y="1640" font-family="Nunito, Arial, sans-serif" font-size="28" font-weight="900" fill="#8fa3b1" text-anchor="start" letter-spacing="-1">щиток → автомат → кабель → выключатель → лампа</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s2 = gsap.timeline({ paused: true });
+    const tl = tl_s2;
+    tl.fromTo("#s2 .world", { scale:1.0 }, { scale:1.04, duration:6.011, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1 }, 0.05);
+    tl.to(".wire", {strokeDashoffset:0, duration:1.2, stagger:0.25, ease:"power2.out"}, 0.1);tl.to(".cur2", {x:400, duration:1.6, stagger:0.08, repeat:6, ease:"none"}, 0.4);tl.to(".lamp2 .bulbGlow", {opacity:0.5, duration:0.9, yoyo:true, repeat:4}, 0.6);
+    window.__timelines["s2"] = tl_s2;
+  </script>
+</template>

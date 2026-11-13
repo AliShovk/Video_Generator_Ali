@@ -1,0 +1,14 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#fdf3dc}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div class="clip" id="s4-clip" data-start="0" data-duration="2.842">
+      <div id="s4-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#e6397f"/><circle cx="540" cy="1000" r="460" fill="#fdf3dc" stroke="#141414" stroke-width="12"/><g class="wh4"><path d="M 160.0 1000 q 20 -120 190 -120 q 170 0 190 120 q 20 110 -190 110 q -210 0 -190 -110 z" fill="#4a5b6b" stroke="#141414" stroke-width="8"/><path d="M 160.0 1000 q -90 -60 -120 -130 q 90 20 120 90" fill="#4a5b6b" stroke="#141414" stroke-width="8"/><path d="M 180.0 1060.0 q 180 80 360 0" stroke="#141414" stroke-width="6" fill="none" opacity="0.5"/><path d="M 240.0 1080.0 q 150 60 300 0 q -40 70 -150 70 q -110 0 -150 -70 z" fill="#dfe9ee" stroke="#141414" stroke-width="5"/><circle cx="320.0" cy="920.0" r="20.0" fill="#141414"/><path d="M 240.0 980.0 q 30 16 60 0" stroke="#141414" stroke-width="5" fill="none"/></g><g class="ar0"><path d="M 180 760 l 60 30" stroke="#e63946" stroke-width="10" stroke-linecap="round"/><path d="M 240 790 l -4 -26" stroke="#e63946" stroke-width="10"/></g><g class="ar1"><path d="M 900 760 l -60 30" stroke="#e63946" stroke-width="10" stroke-linecap="round"/><path d="M 840 790 l 4 -26" stroke="#e63946" stroke-width="10"/></g><g class="ar2"><path d="M 200 1200 l 60 -30" stroke="#e63946" stroke-width="10" stroke-linecap="round"/><path d="M 260 1170 l -4 -26" stroke="#e63946" stroke-width="10"/></g><g class="ar3"><path d="M 880 1200 l -60 -30" stroke="#e63946" stroke-width="10" stroke-linecap="round"/><path d="M 820 1170 l 4 -26" stroke="#e63946" stroke-width="10"/></g><text class="hl" x="540" y="260" font-family="Nunito, Arial" font-size="74" font-weight="900" fill="#fdf3dc" text-anchor="middle" letter-spacing="2">ДАВЛЕНИЕ</text><text class="hl" x="540" y="340" font-family="Nunito, Arial" font-size="30" font-weight="800" fill="#141414" text-anchor="middle" letter-spacing="0">как в мяче</text><text class="hl" x="540" y="1640" font-family="Nunito, Arial" font-size="34" font-weight="800" fill="#141414" text-anchor="middle" letter-spacing="0">разложение + жара</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s4 = gsap.timeline({ paused: true });
+    const tl = tl_s4;
+    tl.fromTo(".wh4", {opacity:0, scale:0.85}, {opacity:1, scale:1, duration:0.7, ease:"back.out(1.4)"}, 0.05);tl.to(".wh4", {scale:1.03, duration:0.8, yoyo:true, repeat:-1, ease:"sine.inOut"}, 0.8);tl.fromTo(".ar0, .ar1, .ar2, .ar3", {opacity:0}, {opacity:1, duration:0.4, stagger:0.12}, 0.5);tl.fromTo(".hl", {opacity:0}, {opacity:1, duration:0.4, stagger:0.1}, 0);
+    window.__timelines["s4"] = tl_s4;
+  </script>
+</template>

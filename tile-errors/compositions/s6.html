@@ -1,0 +1,38 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#eef1f3}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s6" data-width="1080" data-height="1920">
+    <div class="clip" id="s6-clip" data-start="0" data-duration="4.384">
+      <div id="s6-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="tileG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8e4da"/></linearGradient>
+<linearGradient id="glueG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bdb5a6"/><stop offset="1" stop-color="#948c7d"/></linearGradient>
+<linearGradient id="metalG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa6b0"/><stop offset="0.5" stop-color="#cfd8de"/><stop offset="1" stop-color="#8b97a1"/></linearGradient>
+<radialGradient id="dropG"><stop offset="0" stop-color="#9fd8ff"/><stop offset="1" stop-color="#5aa9d6"/></radialGradient>
+</defs><rect width="1080" height="1920" fill="#dfeaf0"/><g id="" transform="rotate(0 540.0 1070.0)"><rect x="140" y="620" width="800" height="900" rx="6" fill="url(#tileG)" stroke="#dcd7cb" stroke-width="4"/><rect x="150" y="630" width="780" height="880" rx="4" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7"/></g><rect x="140" y="620" width="800" height="900" fill="none" stroke="#dcd7cb" stroke-width="6"/><g class="shower"><rect x="820" y="360" width="18" height="180" fill="#6c7a86"/><path d="M 760 540 l 140 0 l -30 -60 l -80 0 z" fill="#6c7a86"/></g><path class="wdrop" d="M 790 560 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 808 560 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 826 560 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 844 560 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 790 586 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 808 586 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 826 586 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 844 586 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 790 612 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 808 612 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 826 612 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><path class="wdrop" d="M 844 612 q 8 40 0 62" stroke="#7fc4e8" stroke-width="7" fill="none" opacity="0.9"/><g class="under"><path d="M 200 1500 q 300 -80 700 0 l 0 40 l -700 0 z" fill="#7fc4e8" opacity="0.55"/></g><g class="arrows6"><path d="M 300 1440 l 0 -220" stroke="#c0392b" stroke-width="12"/><path d="M 300 1220 l -26 40 l 52 0 z" fill="#c0392b"/></g><g class="b5"><circle cx="120" cy="400" r="56" fill="#26313a"/><text x="120" y="420" font-family="Nunito, Arial" font-size="46" font-weight="900" fill="#fff" text-anchor="middle">5</text></g><text class="hl" x="54" y="210" fill="#c0392b" font-family="Nunito, Arial, sans-serif" font-size="52" font-weight="900" letter-spacing="-1">НЕТ ГИДРОИЗОЛЯЦИИ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s6 = gsap.timeline({ paused: true });
+    const tl = tl_s6;
+    tl.fromTo("#s6 .world", { scale:1.0 }, { scale:1.04, duration:4.384, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:22 }, { opacity:1, y:0, duration:0.45, stagger:0.1, ease:"power2.out" }, 0.05);
+    tl.fromTo(".b1,.b2,.b3,.b4,.b5", { scale:0.6, opacity:0, transformOrigin:"50% 50%" }, { scale:1, opacity:1, duration:0.45, ease:"back.out(2)" }, 0.2);
+    tl.fromTo("#falling", { y:-40, rotation:-4 }, { y:180, rotation:26, duration:2.2, ease:"power2.in" }, 0.3);
+    tl.to(".dustF", { y:-40, opacity:0.2, duration:2.2, stagger:0.06 }, 0.4);
+    tl.to(".drop", { y:150, opacity:0, duration:1.8, stagger:0.12, repeat:1, ease:"power1.in" }, 0.2);
+    tl.fromTo(".cross", { opacity:0, scale:0.6, transformOrigin:"50% 50%" }, { opacity:1, scale:1, duration:0.4, ease:"back.out(3)" }, 0.5);
+    tl.to(".arrows", { x:-18, duration:0.8, yoyo:true, repeat:6, ease:"sine.inOut" }, 0);
+    tl.to("#lift3", { rotation:-7, svgOrigin:"720 950", duration:2.2, ease:"power2.out" }, 0.6);
+    tl.to(".heat3", { y:-24, opacity:0.4, duration:1.4, yoyo:true, repeat:5 }, 0);
+    tl.to(".blob", { scale:1.05, transformOrigin:"50% 50%", duration:1.0, yoyo:true, repeat:5, stagger:0.1 }, 0);
+    tl.fromTo(".hammer", { y:-60 }, { y:0, duration:0.4, ease:"power2.in" }, 0.2);
+    tl.to(".hammer", { y:-50, duration:0.4, yoyo:true, repeat:7, ease:"power2.out" }, 0.6);
+    tl.to(".ripple", { scale:2.2, opacity:0, transformOrigin:"50% 50%", duration:1.2, stagger:0.3, repeat:3 }, 0.6);
+    tl.fromTo(".tooth", { scaleY:0.6, transformOrigin:"50% 100%" }, { scaleY:1, duration:0.5, stagger:0.03, ease:"back.out(2)" }, 0.2);
+    tl.to(".bigTile", { scale:1.04, transformOrigin:"50% 50%", duration:1.4, yoyo:true, repeat:2 }, 0.4);
+    tl.to(".wdrop", { y:420, opacity:0, duration:2.0, stagger:0.08, repeat:2, ease:"power1.in" }, 0.2);
+    tl.to(".under", { y:-12, duration:1.2, yoyo:true, repeat:4, ease:"sine.inOut" }, 0);
+    tl.to(".arrows6", { y:-20, duration:0.9, yoyo:true, repeat:5, ease:"sine.inOut" }, 0);
+    tl.fromTo(".row", { opacity:0, x:-40 }, { opacity:1, x:0, duration:0.4, stagger:0.35 }, 0.2);
+    window.__timelines["s6"] = tl_s6;
+  </script>
+</template>

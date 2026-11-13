@@ -1,0 +1,40 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #bfe4f8; }
+    .world { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .pill {
+      position: absolute; left: 50%; top: 118px; transform: translateX(-50%);
+      background: #f7c93f; color: #241f1a; border-radius: 999px;
+      font: 800 46px/1 "Nunito", Arial, sans-serif;
+      padding: 22px 40px; white-space: nowrap; box-shadow: 0 8px 0 rgba(0,0,0,0.12);
+    }
+    .foot {
+      position: absolute; left: 44px; right: 44px; bottom: 400px;
+      font: 800 52px/1.12 "Nunito", Arial, sans-serif; color: #ffffff; text-align: center;
+      -webkit-text-stroke: 10px rgba(20,26,30,0.85); paint-order: stroke fill;
+      text-shadow: 0 4px 0 rgba(20,26,30,0.35);
+    }
+  </style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="10">
+      <div id="s5-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#79c6f3"/><stop offset="1" stop-color="#d3ecfd"/></linearGradient><linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f7fa"/><stop offset="1" stop-color="#b9c7d1"/></linearGradient></defs><rect width="1080" height="1920" fill="url(#sky)"/><rect width="1080" height="1920" fill="#f6efe2"/><rect x="0" y="1180" width="1080" height="740" fill="#d9c39d"/><rect x="0" y="1170" width="1080" height="22" fill="#c3a97e"/><rect x="250" y="1010" width="520" height="34" rx="12" fill="#b98451"/><g id="fall-cup"><g transform="translate(400 470) rotate(30) scale(1.1)"><path d="M -34 -46 L 34 -46 L 26 30 L -26 30 Z" fill="#ffffff" stroke="#d8d2c6" stroke-width="3"/><path d="M 34 -34 q26 0 26 18 q0 18 -26 18" fill="none" stroke="#d8d2c6" stroke-width="7"/><ellipse cx="0" cy="-44" rx="32" ry="8" fill="#7a4a2a"/></g></g><g id="fall-chair"><g transform="translate(760 400) rotate(40) scale(1.05)"><rect x="-44" y="-26" width="88" height="18" rx="8" fill="#c58b52"/><rect x="-44" y="-96" width="16" height="74" rx="7" fill="#c58b52"/><rect x="-40" y="-12" width="12" height="46" rx="6" fill="#9a6a3c"/><rect x="28" y="-12" width="12" height="46" rx="6" fill="#9a6a3c"/></g></g><g id="fall-person"><g transform="translate(560 450) scale(1.1)"><rect x="-11" y="-52" width="22" height="34" rx="8" fill="#2f4a5a"/><rect x="-10" y="-20" width="8" height="22" rx="4" fill="#24323c"/><rect x="2" y="-20" width="8" height="22" rx="4" fill="#24323c"/><circle cx="0" cy="-62" r="11" fill="#f0c39a"/><path d="M-13 -66 a13 11 0 0 1 26 0 z" fill="#f7c93f"/></g></g><line x1="382" y1="180" x2="382" y2="260" stroke="#2aa7e0" stroke-width="7" opacity="0.45" stroke-linecap="round"/><line x1="400" y1="206" x2="400" y2="286" stroke="#2aa7e0" stroke-width="7" opacity="0.45" stroke-linecap="round"/><line x1="418" y1="232" x2="418" y2="312" stroke="#2aa7e0" stroke-width="7" opacity="0.45" stroke-linecap="round"/><line x1="742" y1="180" x2="742" y2="260" stroke="#2aa7e0" stroke-width="7" opacity="0.45" stroke-linecap="round"/><line x1="760" y1="206" x2="760" y2="286" stroke="#2aa7e0" stroke-width="7" opacity="0.45" stroke-linecap="round"/><line x1="778" y1="232" x2="778" y2="312" stroke="#2aa7e0" stroke-width="7" opacity="0.45" stroke-linecap="round"/><line x1="542" y1="180" x2="542" y2="260" stroke="#2aa7e0" stroke-width="7" opacity="0.45" stroke-linecap="round"/><line x1="560" y1="206" x2="560" y2="286" stroke="#2aa7e0" stroke-width="7" opacity="0.45" stroke-linecap="round"/><line x1="578" y1="232" x2="578" y2="312" stroke="#2aa7e0" stroke-width="7" opacity="0.45" stroke-linecap="round"/></svg>
+        <div class="pill" id="s5-pill">падение</div>
+        <div class="foot" id="s5-foot">Гравитация вернулась — всё падает</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    tl_s5.fromTo("#s5 .world", { scale: 1.0 }, { scale: 1.05, duration: 10, ease: "none" }, 0);
+    tl_s5.fromTo("#s5-pill", { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.6)" }, 0.05);
+    tl_s5.fromTo("#s5-foot", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.6);
+    
+    tl_s5.fromTo("#fall-cup", {y:-40}, {y:710, duration:5.2, ease:"power2.in"}, 0.4);
+    tl_s5.fromTo("#fall-chair", {y:-60}, {y:780, duration:5.6, ease:"power2.in"}, 0.6);
+    tl_s5.fromTo("#fall-person", {y:-80}, {y:730, duration:6.0, ease:"power2.in"}, 0.8);
+    tl_s5.to("#s5 .world", {x:0, duration:0.05, repeat:7, yoyo:true, ease:"none"}, 6.6);
+    
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

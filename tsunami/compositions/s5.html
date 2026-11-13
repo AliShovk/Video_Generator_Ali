@@ -1,0 +1,14 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#ffffff}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
+    <div class="clip" id="s5-clip" data-start="0" data-duration="3.379">
+      <div id="s5-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><rect width="1080" height="1920" fill="#ffffff"/><text class="hl" x="60" y="170" font-family="Nunito, Arial" font-size="40" font-weight="900" fill="#1e3d63" text-anchor="start" letter-spacing="0">ГЛУБИНА И ВЫСОТА</text><g class="oc5"><path d="M 40 620 L 1080 430 L 1080 920 L 40 1140 Z" fill="#2a94b5"/><path d="M 40 1140 L 1080 920 L 1080 1340 L 40 1560 Z" fill="#1d6f8c"/><path d="M 40 620 L 1080 430 L 1080 680 L 40 870 Z" fill="#8fd3e8" opacity="0.30"/><path d="M 40 870 L 1080 680 L 1080 920 L 40 1140 Z" fill="#124f66" opacity="0.25"/></g><g class="cr5"><path d="M 40 1320 L 1080 1100 L 1080 1540 L 40 1940 Z" fill="#d9762f"/><path d="M 40 1320 L 1080 1100 L 1080 1180 L 40 1400 Z" fill="#3b3b3b"/><path d="M 40 1320 L 1080 1100 L 1080 1180 L 40 1400 Z" fill="none" stroke="#b4562a" stroke-width="3" opacity="0.5"/></g><g class="meter"><rect x="120" y="980" width="60" height="300" rx="10" fill="#ffffff" stroke="#1e3d63" stroke-width="4"/><rect x="126" y="1140" width="48" height="134" rx="6" fill="#2a94b5"/><text x="210" y="1010" font-family="Nunito" font-size="30" font-weight="900" fill="#1e3d63">ВОЛНА</text><text x="210" y="1050" font-family="Nunito" font-size="30" font-weight="900" fill="#1d6f8c">1 М</text></g><g class="depth"><rect x="760" y="980" width="60" height="300" rx="10" fill="#ffffff" stroke="#1e3d63" stroke-width="4"/><rect x="766" y="994" width="48" height="280" rx="6" fill="#1d6f8c"/><text x="620" y="1010" font-family="Nunito" font-size="30" font-weight="900" fill="#1e3d63" text-anchor="end">ГЛУБИНА</text><text x="620" y="1050" font-family="Nunito" font-size="30" font-weight="900" fill="#1d6f8c" text-anchor="end">4 КМ</text></g><text class="hl" x="60" y="1600" font-family="Nunito, Arial" font-size="22" font-weight="700" fill="#1e3d63" text-anchor="start" letter-spacing="0">вся энергия спрятана в толще воды</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s5 = gsap.timeline({ paused: true });
+    const tl = tl_s5;
+    tl.fromTo(".meter rect", {opacity:0}, {opacity:1, duration:0.5, stagger:0.1}, 0.2);tl.fromTo(".depth rect", {opacity:0}, {opacity:1, duration:0.5, stagger:0.1}, 0.4);tl.to(".meter", {y:-10, duration:1.2, yoyo:true, repeat:-1, ease:"sine.inOut"}, 0.8);tl.fromTo(".hl", {opacity:0}, {opacity:1, duration:0.4}, 0.2);
+    window.__timelines["s5"] = tl_s5;
+  </script>
+</template>

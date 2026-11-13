@@ -1,0 +1,42 @@
+<template>
+  <style>#root{position:absolute;inset:0;overflow:hidden;background:#080c0e}.world{position:absolute;inset:0;width:100%;height:100%}</style>
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <div class="clip" id="s1-clip" data-start="0" data-duration="7.599">
+      <div id="s1-in"><svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg"><defs>
+<linearGradient id="rockG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f3a33"/><stop offset="1" stop-color="#221f1b"/></linearGradient>
+<linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22303c"/><stop offset="1" stop-color="#121a20"/></linearGradient>
+<radialGradient id="lampG"><stop offset="0" stop-color="#ffe6b0" stop-opacity="0.85"/><stop offset="1" stop-color="#ffe6b0" stop-opacity="0"/></radialGradient>
+<linearGradient id="shaftG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#12100e"/><stop offset="0.5" stop-color="#1b1814"/><stop offset="1" stop-color="#12100e"/></linearGradient>
+</defs><rect width="1080" height="1920" fill="#080c0e"/><path class="beam" d="M 540 520 L 190 1500 L 890 1500 Z" fill="url(#lampG)" opacity="0.85"/><ellipse cx="540" cy="520" rx="26" ry="16" fill="#fff3d0" opacity="0.9"/><g class="helmBig"><path d="M 379.0 1290 a 161.0 161.0 0 0 1 322.0 0 z" fill="#e0a33e"/><rect x="342.20000000000005" y="1276.2" width="395.59999999999997" height="36.8" rx="18.4" fill="#e0a33e"/><rect x="498.6" y="1161.2" width="82.8" height="13.799999999999999" fill="#000" opacity="0.25"/><text x="540" y="1239.4" font-family="Nunito, Arial" font-size="59.8" font-weight="900" fill="#1a1208" text-anchor="middle">33</text></g><rect x="0" y="1560" width="1080" height="360" fill="#05080a"/><circle class="dust" cx="150" cy="640" r="2" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="247" cy="803" r="3" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="344" cy="966" r="4" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="441" cy="1129" r="5" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="538" cy="1292" r="2" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="635" cy="675" r="3" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="732" cy="838" r="4" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="829" cy="1001" r="5" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="926" cy="1164" r="2" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="243" cy="1327" r="3" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="340" cy="710" r="4" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="437" cy="873" r="5" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="534" cy="1036" r="2" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="631" cy="1199" r="3" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="728" cy="1362" r="4" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="825" cy="745" r="5" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="922" cy="908" r="2" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="239" cy="1071" r="3" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="336" cy="1234" r="4" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="433" cy="1397" r="5" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="530" cy="780" r="2" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="627" cy="943" r="3" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="724" cy="1106" r="4" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="821" cy="1269" r="5" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="918" cy="652" r="2" fill="#ffd98a" opacity="0.35"/><circle class="dust" cx="235" cy="815" r="3" fill="#ffd98a" opacity="0.35"/><text class="hl" x="54" y="190" fill="#ffffff" font-family="Nunito, Arial, sans-serif" font-size="70" font-weight="900" letter-spacing="-1">33 ПОД ЗЕМЛЁЙ</text><text class="hl" x="54" y="280" fill="#e0a33e" font-family="Nunito, Arial, sans-serif" font-size="70" font-weight="900" letter-spacing="-1">69 ДНЕЙ</text></svg></div>
+    </div>
+  </div>
+  <script>
+    const tl_s1 = gsap.timeline({ paused: true });
+    const tl = tl_s1;
+    tl.fromTo("#s1 .world", { scale:1.0 }, { scale:1.05, duration:7.599, ease:"none" }, 0);
+    tl.fromTo(".hl", { opacity:0, y:24 }, { opacity:1, y:0, duration:0.5, stagger:0.12, ease:"power3.out" }, 0.05);
+    tl.fromTo(".tag", { opacity:0 }, { opacity:0.9, duration:0.6 }, 0.6);
+    tl.to(".dust", { y:-120, opacity:0, duration:4.0, stagger:{each:0.08, from:"random"}, repeat:2, ease:"none" }, 0);
+    tl.to(".beam", { opacity:0.55, duration:1.6, yoyo:true, repeat:5, ease:"sine.inOut" }, 0);
+    tl.to(".helmBig", { rotation:6, svgOrigin:"540 1290", duration:2.4, yoyo:true, repeat:4, ease:"sine.inOut" }, 0.2);
+    tl.to(".rock", { y:700, opacity:0, duration:3.4, stagger:0.16, ease:"power1.in" }, 0);
+    tl.to(".beamB", { rotation:3, svgOrigin:"480 900", duration:2.0, yoyo:true, repeat:3, ease:"sine.inOut" }, 0.2);
+    tl.to(".runner", { x:180, duration:2.2, stagger:0.08, ease:"power1.in" }, 0.1);
+    tl.to(".dust2", { y:-60, duration:3.0, yoyo:true, repeat:1, ease:"sine.inOut" }, 0);
+    tl.to(".camlight", { x:300, y:-60, duration:3.4, yoyo:true, repeat:1, ease:"sine.inOut" }, 0);
+    tl.to(".mario", { x:-40, duration:3.0, yoyo:true, repeat:1, ease:"sine.inOut" }, 0);
+    tl.to(".urzu", { y:-6, duration:1.4, yoyo:true, repeat:3, ease:"sine.inOut" }, 0);
+    tl.to(".mast", { y:-120, duration:2.6, ease:"power2.out" }, 0.2);
+    tl.to(".crowd", { x:26, duration:2.0, stagger:0.06, yoyo:true, repeat:2, ease:"sine.inOut" }, 0);
+    tl.to(".drill", { y:9, duration:0.16, yoyo:true, repeat:24, ease:"none" }, 0);
+    tl.to(".capsule", { y:-90, duration:2.4, ease:"power1.inOut" }, 0.4);
+    tl.to(".note", { y:-30, rotation:-2, svgOrigin:"540 1400", duration:2.2, ease:"power2.out" }, 0.8);
+    tl.to(".capsule2", { y:-940, duration:6.399, ease:"none" }, 0.6);
+    tl.to(".capsule3", { y:-40, duration:2.0, ease:"power2.out" }, 0.1);
+    tl.to(".helmOff", { y:-230, rotation:24, svgOrigin:"660 1180", duration:1.8, ease:"power2.out" }, 1.0);
+    tl.to(".helmItem", { opacity:1, duration:0.35, stagger:0.06 }, 1.4);
+    tl.to(".fin1", { opacity:1, duration:0.6 }, 3.0);
+    tl.to(".fin2", { opacity:1, duration:0.6 }, 3.4);
+    window.__timelines["s1"] = tl_s1;
+  </script>
+</template>

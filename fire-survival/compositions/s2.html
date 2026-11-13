@@ -1,0 +1,48 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#141b33; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+    .pill {
+      position:absolute; left:50%; top:110px; transform:translateX(-50%);
+      background:#ffffff; color:#ff5a2b; border-radius:999px;
+      font:900 44px/1 "Nunito", Arial, sans-serif; padding:20px 42px; white-space:nowrap;
+      box-shadow:0 12px 26px rgba(0,0,0,0.25);
+    }
+    .scrim { position:absolute; left:0; right:0; bottom:0; height:520px;
+      background:linear-gradient(to top, rgba(10,15,30,0.85) 30%, rgba(10,15,30,0) 100%); }
+    .foot { position:absolute; left:56px; right:56px; bottom:330px;
+      font:900 50px/1.12 "Nunito", Arial, sans-serif; color:#ffffff; text-align:center; }
+    .foot::before { content:""; display:block; width:90px; height:9px; border-radius:6px; background:#ff8a3d; margin:0 auto 20px; }
+  </style>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920">
+    <div class="clip" id="s2-clip" data-start="0" data-duration="9">
+      <div id="s2-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#ffb347" stop-opacity="0.75"/>
+    <stop offset="1" stop-color="#ffb347" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffd9a8"/><stop offset="0.55" stop-color="#bfe0f7"/><stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0b1226" flood-opacity="0.22"/>
+  </filter>
+</defs>
+<rect width="1080" height="1920" fill="#141b33"/><g transform="translate(-270 -780) scale(1.5)"><circle cx="673" cy="584" r="2.3" fill="#dfe8ff" opacity="0.67"/><circle cx="799" cy="707" r="1.0" fill="#dfe8ff" opacity="0.41"/><circle cx="1019" cy="521" r="2.4" fill="#dfe8ff" opacity="0.21"/><circle cx="507" cy="248" r="1.9" fill="#dfe8ff" opacity="0.47"/><circle cx="14" cy="227" r="1.4" fill="#dfe8ff" opacity="0.65"/><circle cx="827" cy="189" r="2.3" fill="#dfe8ff" opacity="0.23"/><circle cx="667" cy="166" r="1.0" fill="#dfe8ff" opacity="0.63"/><circle cx="226" cy="227" r="2.6" fill="#dfe8ff" opacity="0.63"/><circle cx="312" cy="734" r="1.9" fill="#dfe8ff" opacity="0.52"/><circle cx="221" cy="720" r="2.1" fill="#dfe8ff" opacity="0.68"/><circle cx="965" cy="283" r="1.6" fill="#dfe8ff" opacity="0.24"/><circle cx="157" cy="124" r="1.5" fill="#dfe8ff" opacity="0.48"/><circle cx="4" cy="541" r="1.5" fill="#dfe8ff" opacity="0.32"/><circle cx="884" cy="407" r="1.5" fill="#dfe8ff" opacity="0.41"/><circle cx="761" cy="119" r="2.6" fill="#dfe8ff" opacity="0.16"/><circle cx="810" cy="655" r="1.0" fill="#dfe8ff" opacity="0.58"/><circle cx="395" cy="473" r="1.0" fill="#dfe8ff" opacity="0.18"/><circle cx="195" cy="730" r="1.3" fill="#dfe8ff" opacity="0.57"/><circle cx="1004" cy="721" r="1.6" fill="#dfe8ff" opacity="0.35"/><circle cx="567" cy="607" r="1.2" fill="#dfe8ff" opacity="0.56"/><circle cx="861" cy="665" r="1.1" fill="#dfe8ff" opacity="0.67"/><circle cx="98" cy="312" r="2.0" fill="#dfe8ff" opacity="0.65"/><circle cx="367" cy="708" r="1.9" fill="#dfe8ff" opacity="0.32"/><circle cx="342" cy="201" r="1.1" fill="#dfe8ff" opacity="0.23"/><circle cx="744" cy="758" r="1.3" fill="#dfe8ff" opacity="0.18"/><circle cx="1066" cy="443" r="1.6" fill="#dfe8ff" opacity="0.28"/><circle cx="641" cy="642" r="1.7" fill="#dfe8ff" opacity="0.38"/><circle cx="60" cy="703" r="1.1" fill="#dfe8ff" opacity="0.42"/><circle cx="906" cy="169" r="2.2" fill="#dfe8ff" opacity="0.67"/><circle cx="681" cy="616" r="1.2" fill="#dfe8ff" opacity="0.39"/><circle cx="161" cy="654" r="1.5" fill="#dfe8ff" opacity="0.40"/><circle cx="1079" cy="660" r="2.6" fill="#dfe8ff" opacity="0.40"/><circle cx="527" cy="576" r="1.8" fill="#dfe8ff" opacity="0.31"/><circle cx="436" cy="180" r="1.6" fill="#dfe8ff" opacity="0.69"/><circle cx="1037" cy="506" r="1.8" fill="#dfe8ff" opacity="0.34"/><circle cx="96" cy="265" r="2.3" fill="#dfe8ff" opacity="0.63"/><circle cx="390" cy="614" r="2.2" fill="#dfe8ff" opacity="0.53"/><circle cx="717" cy="597" r="1.6" fill="#dfe8ff" opacity="0.54"/><circle cx="303" cy="410" r="2.2" fill="#dfe8ff" opacity="0.53"/><circle cx="317" cy="723" r="2.0" fill="#dfe8ff" opacity="0.47"/><path d="M 0 1530 Q 260 1410 540 1480 Q 840 1540 1080 1440 L 1080 1920 L 0 1920 Z" fill="#eaf1fb"/><path d="M 0 1570 Q 300 1480 560 1540 Q 830 1590 1080 1500 L 1080 1920 L 0 1920 Z" fill="#d7e4f5"/><path d="M 80 1450 L 34 1334 L 59 1341 L 17 1286 L 80 1240 L 143 1286 L 101 1341 L 126 1334 Z" fill="#0e1526" opacity="0.55"/><path d="M 200 1450 L 143 1307 L 174 1315 L 122 1247 L 200 1190 L 278 1247 L 226 1315 L 257 1307 Z" fill="#0e1526" opacity="0.45"/><path d="M 880 1450 L 827 1318 L 856 1325 L 808 1263 L 880 1210 L 952 1263 L 904 1325 L 933 1318 Z" fill="#0e1526" opacity="0.5"/><path d="M 990 1450 L 946 1340 L 970 1346 L 930 1294 L 990 1250 L 1050 1294 L 1010 1346 L 1034 1340 Z" fill="#0e1526" opacity="0.6"/><path d="M 760 1450 L 723 1356 L 743 1362 L 709 1317 L 760 1280 L 811 1317 L 777 1362 L 797 1356 Z" fill="#0e1526" opacity="0.35"/><g transform="translate(400 1420) scale(1.15)" filter="url(#sh)"><rect x="-170" y="-34" width="340" height="62" rx="30" fill="#7a4f30"/><rect x="-170" y="-72" width="340" height="60" rx="30" fill="#8b5b38"/><path d="M -160 -34 q 160 22 320 0" stroke="#ff5a2b" stroke-width="8" fill="none" opacity="0.9"/><ellipse cx="-170" cy="-4" rx="14" ry="30" fill="#a9743f"/><ellipse cx="170" cy="-4" rx="14" ry="30" fill="#a9743f"/><ellipse cx="-170" cy="-44" rx="14" ry="28" fill="#b8834a"/><ellipse cx="170" cy="-44" rx="14" ry="28" fill="#b8834a"/></g><ellipse cx="400" cy="1430" rx="240" ry="120" fill="url(#glow)" opacity="0.8"/><g transform="translate(820 1460) scale(-0.95 0.95)"><ellipse cx="0" cy="8" rx="46" ry="12" fill="#000" opacity="0.25"/><rect x="-28" y="-120" width="56" height="86" rx="24" fill="#2aa9c9"/><rect x="-24" y="-40" width="20" height="46" rx="10" fill="#2b2340"/><rect x="4" y="-40" width="20" height="46" rx="10" fill="#2b2340"/><circle cx="0" cy="-146" r="28" fill="#f2c39d"/><path d="M -30 -152 a 30 24 0 0 1 60 0 z" fill="#2b2340"/><rect x="-30" y="-156" width="60" height="12" rx="6" fill="#ffffff" opacity="0.85"/><path d="M -24 -110 q -26 26 -26 62" stroke="#2aa9c9" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M 24 -110 q 26 26 26 62" stroke="#2aa9c9" stroke-width="16" stroke-linecap="round" fill="none"/></g></g></svg>
+        <div class="scrim"></div>
+        <div class="pill" id="s2-pill">2 бревна</div>
+        <div class="foot" id="s2-foot">Два бревна: огонь тлеет по щели до утра</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s2 = gsap.timeline({ paused: true });
+    tl_s2.fromTo("#s2 .world", { scale:1.0 }, { scale:1.05, duration:9, ease:"none" }, 0);
+    tl_s2.fromTo("#s2-pill", { opacity:0, y:-16 }, { opacity:1, y:0, duration:0.45, ease:"back.out(1.7)" }, 0.05);
+    tl_s2.fromTo("#s2-foot", { opacity:0, y:14 }, { opacity:1, y:0, duration:0.45, ease:"power2.out" }, 0.6);
+    tl_s2.fromTo("#s2 .world", {opacity:0.7, y:20}, {opacity:1, y:0, duration:1.0}, 0.2);tl_s2.to("#s2 .world", {y:-10, duration:2.4, yoyo:true, repeat:2, ease:"sine.inOut"}, 1.0);
+    window.__timelines["s2"] = tl_s2;
+  </script>
+</template>

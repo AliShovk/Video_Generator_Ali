@@ -1,0 +1,21 @@
+{
+  "slug": "chernobyl-nsc",
+  "artifacts": [
+    "engineering.md",
+    "factcheck.json",
+    "final.mp4",
+    "manifest.json",
+    "research.md",
+    "script.md",
+    "sources.md",
+    "storyboard.json",
+    "subtitles.srt",
+    "timings.json",
+    "voice.wav"
+  ],
+  "duration_s": 53,
+  "scenes": 6,
+  "voice": "piper",
+  "renderer": "hyperframes",
+  "final": null
+}

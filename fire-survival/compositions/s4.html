@@ -1,0 +1,48 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#141b33; }
+    .world { position:absolute; inset:0; width:100%; height:100%; }
+    .pill {
+      position:absolute; left:50%; top:110px; transform:translateX(-50%);
+      background:#ffffff; color:#ff5a2b; border-radius:999px;
+      font:900 44px/1 "Nunito", Arial, sans-serif; padding:20px 42px; white-space:nowrap;
+      box-shadow:0 12px 26px rgba(0,0,0,0.25);
+    }
+    .scrim { position:absolute; left:0; right:0; bottom:0; height:520px;
+      background:linear-gradient(to top, rgba(10,15,30,0.85) 30%, rgba(10,15,30,0) 100%); }
+    .foot { position:absolute; left:56px; right:56px; bottom:330px;
+      font:900 50px/1.12 "Nunito", Arial, sans-serif; color:#ffffff; text-align:center; }
+    .foot::before { content:""; display:block; width:90px; height:9px; border-radius:6px; background:#ff8a3d; margin:0 auto 20px; }
+  </style>
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div class="clip" id="s4-clip" data-start="0" data-duration="9">
+      <div id="s4-in">
+        <svg class="world" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#ffb347" stop-opacity="0.75"/>
+    <stop offset="1" stop-color="#ffb347" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffd9a8"/><stop offset="0.55" stop-color="#bfe0f7"/><stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0b1226" flood-opacity="0.22"/>
+  </filter>
+</defs>
+<rect width="1080" height="1920" fill="#141b33"/><g transform="translate(-270 -780) scale(1.5)"><circle cx="673" cy="584" r="2.3" fill="#dfe8ff" opacity="0.67"/><circle cx="799" cy="707" r="1.0" fill="#dfe8ff" opacity="0.41"/><circle cx="1019" cy="521" r="2.4" fill="#dfe8ff" opacity="0.21"/><circle cx="507" cy="248" r="1.9" fill="#dfe8ff" opacity="0.47"/><circle cx="14" cy="227" r="1.4" fill="#dfe8ff" opacity="0.65"/><circle cx="827" cy="189" r="2.3" fill="#dfe8ff" opacity="0.23"/><circle cx="667" cy="166" r="1.0" fill="#dfe8ff" opacity="0.63"/><circle cx="226" cy="227" r="2.6" fill="#dfe8ff" opacity="0.63"/><circle cx="312" cy="734" r="1.9" fill="#dfe8ff" opacity="0.52"/><circle cx="221" cy="720" r="2.1" fill="#dfe8ff" opacity="0.68"/><circle cx="965" cy="283" r="1.6" fill="#dfe8ff" opacity="0.24"/><circle cx="157" cy="124" r="1.5" fill="#dfe8ff" opacity="0.48"/><circle cx="4" cy="541" r="1.5" fill="#dfe8ff" opacity="0.32"/><circle cx="884" cy="407" r="1.5" fill="#dfe8ff" opacity="0.41"/><circle cx="761" cy="119" r="2.6" fill="#dfe8ff" opacity="0.16"/><circle cx="810" cy="655" r="1.0" fill="#dfe8ff" opacity="0.58"/><circle cx="395" cy="473" r="1.0" fill="#dfe8ff" opacity="0.18"/><circle cx="195" cy="730" r="1.3" fill="#dfe8ff" opacity="0.57"/><circle cx="1004" cy="721" r="1.6" fill="#dfe8ff" opacity="0.35"/><circle cx="567" cy="607" r="1.2" fill="#dfe8ff" opacity="0.56"/><circle cx="861" cy="665" r="1.1" fill="#dfe8ff" opacity="0.67"/><circle cx="98" cy="312" r="2.0" fill="#dfe8ff" opacity="0.65"/><circle cx="367" cy="708" r="1.9" fill="#dfe8ff" opacity="0.32"/><circle cx="342" cy="201" r="1.1" fill="#dfe8ff" opacity="0.23"/><circle cx="744" cy="758" r="1.3" fill="#dfe8ff" opacity="0.18"/><circle cx="1066" cy="443" r="1.6" fill="#dfe8ff" opacity="0.28"/><circle cx="641" cy="642" r="1.7" fill="#dfe8ff" opacity="0.38"/><circle cx="60" cy="703" r="1.1" fill="#dfe8ff" opacity="0.42"/><circle cx="906" cy="169" r="2.2" fill="#dfe8ff" opacity="0.67"/><circle cx="681" cy="616" r="1.2" fill="#dfe8ff" opacity="0.39"/><path d="M 0 1560 Q 260 1440 540 1510 Q 840 1570 1080 1470 L 1080 1920 L 0 1920 Z" fill="#eaf1fb"/><path d="M 0 1600 Q 300 1510 560 1570 Q 830 1620 1080 1530 L 1080 1920 L 0 1920 Z" fill="#d7e4f5"/><path d="M 80 1480 L 34 1364 L 59 1371 L 17 1316 L 80 1270 L 143 1316 L 101 1371 L 126 1364 Z" fill="#0e1526" opacity="0.55"/><path d="M 200 1480 L 143 1337 L 174 1345 L 122 1277 L 200 1220 L 278 1277 L 226 1345 L 257 1337 Z" fill="#0e1526" opacity="0.45"/><path d="M 880 1480 L 827 1348 L 856 1355 L 808 1293 L 880 1240 L 952 1293 L 904 1355 L 933 1348 Z" fill="#0e1526" opacity="0.5"/><path d="M 990 1480 L 946 1370 L 970 1376 L 930 1324 L 990 1280 L 1050 1324 L 1010 1376 L 1034 1370 Z" fill="#0e1526" opacity="0.6"/><path d="M 760 1480 L 723 1386 L 743 1392 L 709 1347 L 760 1310 L 811 1347 L 777 1392 L 797 1386 Z" fill="#0e1526" opacity="0.35"/><rect x="322" y="1130" width="16" height="340" rx="6" fill="#6b4a2f"/><rect x="972" y="1100" width="16" height="370" rx="6" fill="#6b4a2f"/><g transform="translate(700 1230) rotate(-5) scale(1.05)" filter="url(#sh)"><rect x="-190" y="-150" width="380" height="300" rx="10" fill="#f4f1e6"/><rect x="-190" y="-150" width="380" height="300" rx="10" fill="none" stroke="#c9bfa6" stroke-width="6"/><rect x="-150" y="-100" width="300" height="60" rx="8" fill="#2aa9c9" opacity="0.85"/><rect x="-150" y="-20" width="180" height="20" rx="10" fill="#c9bfa6"/><rect x="-150" y="20" width="240" height="20" rx="10" fill="#dcd3bd"/><circle cx="110" cy="70" r="40" fill="#ff8a3d" opacity="0.85"/></g><g transform="translate(470 1480) scale(0.9 0.9)"><ellipse cx="0" cy="6" rx="120" ry="26" fill="#000" opacity="0.25"/><path d="M -120 0 q 0 -46 56 -46 h 130 q 54 0 54 46 z" fill="#6b5bd2"/><circle cx="-118" cy="-30" r="30" fill="#f2c39d"/><path d="M -146 -40 a 30 24 0 0 1 58 0 z" fill="#2b2340"/><path d="M -150 0 q 10 -20 34 -20" stroke="#6b5bd2" stroke-width="16" fill="none" stroke-linecap="round"/></g><g transform="translate(300 1460) scale(1.0)"><ellipse cx="0" cy="10" rx="150" ry="50" fill="url(#glow)"/><path d="M -80 0 q 18 -70 54 -96 q 10 44 30 58 q 12 -56 44 -74 q 22 74 -6 112 z" fill="#ff8a3d"/><path d="M -44 0 q 12 -46 34 -62 q 6 28 20 38 q 8 -32 26 -44 q 14 46 -4 68 z" fill="#ffc845"/><path d="M -96 6 l 34 -22 l 30 22 l 32 -22 l 34 22 l 30 -22 l 32 22 l -30 -14 l -34 8 l -32 -14 l -30 12 z" fill="#6b4a2f"/></g><path d="M 380 1300 q 120 -36 220 0" stroke="#ffc845" stroke-width="7" fill="none" opacity="0.55" stroke-dasharray="16 14"/><path d="M 380 1360 q 120 -36 220 0" stroke="#ffc845" stroke-width="7" fill="none" opacity="0.55" stroke-dasharray="16 14"/><path d="M 380 1420 q 120 -36 220 0" stroke="#ffc845" stroke-width="7" fill="none" opacity="0.55" stroke-dasharray="16 14"/></g></svg>
+        <div class="scrim"></div>
+        <div class="pill" id="s4-pill">экран</div>
+        <div class="foot" id="s4-foot">Баннер за спиной возвращает тепло</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl_s4 = gsap.timeline({ paused: true });
+    tl_s4.fromTo("#s4 .world", { scale:1.0 }, { scale:1.05, duration:9, ease:"none" }, 0);
+    tl_s4.fromTo("#s4-pill", { opacity:0, y:-16 }, { opacity:1, y:0, duration:0.45, ease:"back.out(1.7)" }, 0.05);
+    tl_s4.fromTo("#s4-foot", { opacity:0, y:14 }, { opacity:1, y:0, duration:0.45, ease:"power2.out" }, 0.6);
+    tl_s4.fromTo("#s4 .world", {opacity:0.75, y:16}, {opacity:1, y:0, duration:1.0}, 0.2);tl_s4.to("#s4 .world", {y:-8, duration:2.4, yoyo:true, repeat:2, ease:"sine.inOut"}, 1.2);
+    window.__timelines["s4"] = tl_s4;
+  </script>
+</template>
