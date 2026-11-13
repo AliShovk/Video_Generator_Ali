@@ -8,6 +8,7 @@
   vg final  <name>            сведение звука + концовка -> <name>-final.mp4
   vg make   <name>            voice + build + render + final одной командой
   vg new    <name> [--from solarfence]   копия проекта как шаблон
+  vg push                     залить исходники в GitHub (AliShovk/Video_Generator_Ali)
 """
 import json
 import os
@@ -109,6 +110,37 @@ def cmd_new(name, src="solarfence"):
     print("дальше: правь voice.py + build.py, затем vg make", name)
 
 
+MIRROR = Path("/root/.video-gen-mirror")
+REMOTE = "git@github.com:AliShovk/Video_Generator_Ali.git"
+
+
+def cmd_push(msg=None):
+    """Синхронизирует исходники в зеркало и пушит в GitHub."""
+    if not (MIRROR / ".git").exists():
+        if MIRROR.exists():
+            shutil.rmtree(MIRROR)
+        run(["git", "clone", REMOTE, str(MIRROR)])
+    run(["rsync", "-a", "--delete",
+         "--exclude", ".git/", "--exclude", "node_modules/", "--exclude", "browsers/", "--exclude", "__pycache__/",
+         "--exclude", ".hyperframes/", "--exclude", "*.wav", "--exclude", "*.mp4", "--exclude", "*.log",
+         f"{ROOT}/", f"{MIRROR}/"])
+    for f in ("outro.mp4", "outro-old.mp4"):
+        src = ROOT / "assets/outro" / f
+        if src.exists():
+            shutil.copy2(src, MIRROR / "assets/outro" / f)
+    run(["git", "add", "-A"], cwd=MIRROR)
+    diff = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=MIRROR)
+    if diff.returncode == 0:
+        print("нет изменений — всё уже в GitHub")
+        return
+    import datetime
+    text = msg or f"Обновление видеогенератора {datetime.datetime.now():%d.%m.%Y %H:%M}"
+    run(["git", "-c", "user.name=AliShovk", "-c", "user.email=alishovk@users.noreply.github.com",
+         "commit", "-q", "-m", text], cwd=MIRROR)
+    run(["git", "push", "origin", "HEAD:main"], cwd=MIRROR)
+    print("запушено:", subprocess.check_output(["git", "rev-parse", "--short", "HEAD"], cwd=MIRROR).decode().strip())
+
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(__doc__)
@@ -129,5 +161,7 @@ if __name__ == "__main__":
         cmd_make(args[0])
     elif c == "new":
         cmd_new(args[0], args[2] if len(args) > 2 and args[1] == "--from" else "solarfence")
+    elif c == "push":
+        cmd_push(args[0] if args else None)
     else:
         print(__doc__)
