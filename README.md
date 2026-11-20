@@ -37,6 +37,21 @@ vg final myclip
 vg push                            # залить исходники в GitHub
 ```
 
+## Второй движок: Animation Studio (рисованные ролики + музыка кодом)
+
+`engines/animation-studio/` — вендоренный движок `i-afaqrashid/claude-animation-studio` (v1.0.1): каждый кадр рисуется кодом на canvas, музыка синтезируется в JS, один `score.js` синхронизирует картинку и звук. Выход 1080p MP4 в 16:9, 9:16, 1:1 или 4:5. Зависимостей нет: Node 22+, ffmpeg, Chrome.
+
+```bash
+vg studio list
+vg studio new myclip --format 9:16 --from app-promo   # стартовые точки: app-promo, product-launch, lyric-video, birthday-card, wedding-invite, gully-cricket, qawwali-night, world-cup-2026
+vg studio make myclip --draft                          # музыка + draft-рендер + склейка (~2 мин на 20 с)
+vg studio make myclip                                  # финал в полном разрешении
+vg studio render myclip verify                         # замер синхро-точек, звука и картинки
+vg studio outro myclip                                 # приклеить утверждённую концовку MasterHacks
+```
+
+Стиль канала: `vg studio render myclip video --style flat`. Полный API движка — `engines/animation-studio/SKILL.md`.
+
 ## Правила стиля (утверждены)
 
 - 9:16, 1080×1920, 30 fps, 25–35 с контента + 5,8 с концовки.

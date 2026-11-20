@@ -8,6 +8,8 @@
   vg final  <name>            сведение звука + концовка -> <name>-final.mp4
   vg make   <name>            voice + build + render + final одной командой
   vg new    <name> [--from solarfence]   копия проекта как шаблон
+  vg studio new <name> [--format 9:16] [--from demo]   рисованный ролик (Animation Studio)
+  vg studio list | song | make | render | outro <name>  второй движок: кадры кодом + музыка кодом
   vg push                     залить исходники в GitHub (AliShovk/Video_Generator_Ali)
 """
 import json
@@ -110,6 +112,65 @@ def cmd_new(name, src="solarfence"):
     print("дальше: правь voice.py + build.py, затем vg make", name)
 
 
+# ---------- Animation Studio (второй движок: рисованные ролики + синтезированная музыка) ----------
+STUDIO = ROOT / "engines/animation-studio"
+
+
+def studio_proj(name: str) -> Path:
+    p = ROOT / name
+    if not (p / "score.js").exists():
+        sys.exit(f"нет studio-проекта: {p} — создай: vg studio new {name}")
+    return p
+
+
+def cmd_studio_list():
+    rows = []
+    for p in sorted(ROOT.iterdir()):
+        if (p / "score.js").exists():
+            out = list((p / "out").glob("*.mp4")) if (p / "out").is_dir() else []
+            rows.append((p.name, "video" if any(o.stat().st_size > 100_000 for o in out) else "src"))
+    print(f"studio-проектов: {len(rows)}")
+    for n, st in rows:
+        print(f"  {n:<20} {st}")
+
+
+def cmd_studio_new(name, extra=None):
+    dst = ROOT / name
+    if dst.exists():
+        sys.exit(f"уже существует: {dst}")
+    run(["node", str(STUDIO / "scripts/new-project.js"), str(dst)] + (extra or []))
+
+
+def cmd_studio_song(name):
+    p = studio_proj(name)
+    run(["node", "song.js"], cwd=p)
+
+
+def cmd_studio_render(name, rest):
+    p = studio_proj(name)
+    run(["node", "engine/render.js"] + rest, cwd=p)
+
+
+def cmd_studio_make(name, draft=False):
+    p = studio_proj(name)
+    cmd_studio_song(name)
+    run(["node", "engine/render.js", "video"] + (["--draft"] if draft else []), cwd=p)
+    run(["node", "engine/render.js", "mux"] + (["--draft"] if draft else []), cwd=p)
+
+
+def cmd_studio_outro(name):
+    """Приклеивает утверждённую концовку MasterHacks к готовому studio-ролику (9:16)."""
+    p = studio_proj(name)
+    vids = sorted((p / "out").glob("*.mp4"), key=lambda x: x.stat().st_mtime, reverse=True)
+    vids = [v for v in vids if not v.name.startswith("clip_")]
+    if not vids:
+        sys.exit("нет готового mp4 в out/ — сначала vg studio make")
+    src = vids[0]
+    out = ROOT / f"{name}-final.mp4"
+    run([PY, str(APPEND), str(src), str(out)])
+    print(f"готово: {out}")
+
+
 MIRROR = Path("/root/.video-gen-mirror")
 REMOTE = "git@github.com:AliShovk/Video_Generator_Ali.git"
 
@@ -161,6 +222,30 @@ if __name__ == "__main__":
         cmd_make(args[0])
     elif c == "new":
         cmd_new(args[0], args[2] if len(args) > 2 and args[1] == "--from" else "solarfence")
+    elif c == "studio":
+        if not args:
+            print("vg studio new <name> [--format 9:16] [--from <demo>]\n"
+                  "vg studio list\n"
+                  "vg studio song <name>\n"
+                  "vg studio make <name> [--draft]\n"
+                  "vg studio render <name> <engine-команда> [...]\n"
+                  "vg studio outro <name>")
+        else:
+            sub, rest = args[0], args[1:]
+            if sub == "list":
+                cmd_studio_list()
+            elif sub == "new":
+                cmd_studio_new(rest[0], rest[1:])
+            elif sub == "song":
+                cmd_studio_song(rest[0])
+            elif sub == "make":
+                cmd_studio_make(rest[0], "--draft" in rest)
+            elif sub == "outro":
+                cmd_studio_outro(rest[0])
+            elif sub == "render":
+                cmd_studio_render(rest[0], rest[1:])
+            else:
+                print("неизвестная studio-команда:", sub)
     elif c == "push":
         cmd_push(args[0] if args else None)
     else:
