@@ -188,16 +188,16 @@
     const a = fade(t, ev.table, 0.4);
     ctx.save();
     ctx.globalAlpha = a;
-    G.rrect(ctx, 80, 590, W - 160, 660, 24, { fill: C.cream, stroke: C.ink, lw: 6, seed: 91 });
-    text(ctx, 'ПОДБОР НАСОСА', W / 2, 640, { size: 34, color: C.muted });
+    G.rrect(ctx, 80, 700, W - 160, 660, 24, { fill: C.cream, stroke: C.ink, lw: 6, seed: 91 });
+    text(ctx, 'ПОДБОР НАСОСА', W / 2, 734, { size: 32, color: C.muted });
     const cols = [200, 420, 640, 860];
-    const head = ['высота', 'давление', 'мощность', 'труба'];
+    const head = ['высота', 'давление, бар', 'мощность, л.с.', 'труба'];
     for (let i = 0; i < 4; i++) {
-      text(ctx, head[i], cols[i], 660, { size: 24, weight: 700, color: C.muted });
+      text(ctx, head[i], cols[i], 792, { size: 24, weight: 700, color: C.muted });
     }
-    G.line(ctx, [[110, 690], [W - 110, 690]], { color: 'rgba(22,35,46,0.2)', lw: 3, seed: 92 });
+    G.line(ctx, [[110, 818], [W - 110, 818]], { color: 'rgba(22,35,46,0.2)', lw: 3, seed: 92 });
     STEPS.forEach((s, i) => {
-      const y = 742 + i * 98;
+      const y = 872 + i * 96;
       const p = pop(t, ev.table + 0.15 + i * 0.12, 0.35, 1.8);
       ctx.save();
       ctx.globalAlpha = a * clamp(p);
@@ -208,7 +208,7 @@
       ctx.restore();
       if (i < 4) G.line(ctx, [[110, y + 48], [W - 110, y + 48]], { color: 'rgba(22,35,46,0.10)', lw: 2, seed: 93 + i });
     });
-    text(ctx, 'при расходе 30–60 л/мин', W / 2, 1215, { size: 28, weight: 700, color: C.muted });
+    text(ctx, 'при расходе 30–60 л/мин', W / 2, 1322, { size: 28, weight: 700, color: C.muted });
     ctx.restore();
   }
 
