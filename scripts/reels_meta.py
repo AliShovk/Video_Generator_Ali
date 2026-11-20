@@ -26,8 +26,19 @@ def read_lines(voice_py: Path) -> list[str]:
     tree = ast.parse(voice_py.read_text(encoding="utf-8"))
     for node in ast.walk(tree):
         if isinstance(node, ast.Assign) and any(getattr(t, "id", "") == "LINES" for t in node.targets):
-            return [str(x) for x in ast.literal_eval(node.value)]
+            return [spoken(x) for x in ast.literal_eval(node.value)]
     return []
+
+
+def spoken(item) -> str:
+    """Строка или кортеж ("v1", start, end, ["фраза", ...]) -> произносимый текст."""
+    if isinstance(item, str):
+        return item
+    phrases = [s for part in item if isinstance(part, (list, tuple)) for s in part if isinstance(s, str)]
+    if phrases:
+        return " ".join(phrases)
+    strs = [part for part in item if isinstance(part, str)]
+    return strs[-1] if strs else ""
 
 
 def utm_link(page: str, campaign: str) -> str:
