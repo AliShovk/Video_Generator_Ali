@@ -37,6 +37,15 @@ vg final myclip
 vg push                            # залить исходники в GitHub
 ```
 
+Для Instagram Reels:
+
+```bash
+vg make myclip --reels             # без 5,8 с концовки, звук -14 LUFS, сразу instagram.md
+vg meta myclip                     # подпись, хештеги, UTM-ссылка на qantcore, проверка хука
+```
+
+Правила сценария и воронки на сайт — `AGENTS.md`.
+
 ## Второй движок: Animation Studio (рисованные ролики + музыка кодом)
 
 `engines/animation-studio/` — вендоренный движок `i-afaqrashid/claude-animation-studio` (v1.0.1): каждый кадр рисуется кодом на canvas, музыка синтезируется в JS, один `score.js` синхронизирует картинку и звук. Выход 1080p MP4 в 16:9, 9:16, 1:1 или 4:5. Зависимостей нет: Node 22+, ffmpeg, Chrome.
