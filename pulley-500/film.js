@@ -23,6 +23,7 @@
   const BLOCK = { cx: 540, cy: 1290, w: 300, h: 180 };
   const FEET = 1560, HAND_Y = 1180, GROUND = 1548;
   const SAFE_TOP = 232;
+  let LIFT = 0; // 0..1 — насколько блок уже поднят
 
   const pop = (t, t0, dur = 0.32, k = 2.1) => (t < t0 ? 0 : ease.outBack(clamp((t - t0) / dur), k));
   const fade = (t, t0, dur = 0.4) => clamp((t - t0) / dur);
@@ -180,24 +181,27 @@
     const a = fade(t, ev.rig, 0.7);
     if (a <= 0) return;
     const tail = fade(t, ev.arrows, 0.4); // хвост верёвки вниз, когда тянут
+    const my = MID.y - 150 * LIFT;        // средние блоки поднимаются
+    const by = BOT.y - 235 * LIFT;        // нижние блоки и груз — выше
+    const hy = HAND_Y + 120 * LIFT;       // руки тянут вниз
 
     // ЛЕВАЯ сторона
     const lA = [
       [448, BEAM.y + BEAM.h],
-      [448, MID.y - MID.r * 0.9],
-      ...arcPts(MID.lx, MID.y, MID.r, 0, Math.PI, 14),        // под средним блоком
+      [448, my - MID.r * 0.9],
+      ...arcPts(MID.lx, my, MID.r, 0, Math.PI, 14),        // под средним блоком
       [FIX.lx + FIX.r * 0.86, FIX.y + FIX.r * 0.46],
       ...arcPts(FIX.lx, FIX.y, FIX.r, 0.5, -Math.PI + 0.15, 14), // через верх неподвижного
-      [118, HAND_Y],
+      [118, hy],
     ];
     rope(ctx, lA, 81, a);
-    if (tail > 0) rope(ctx, [[118, HAND_Y], [118, 1420]], 85, a * tail, 8);
+    if (tail > 0) rope(ctx, [[118, hy], [118, hy + 150]], 85, a * tail, 8);
 
     const lB = [
       [426, BEAM.y + BEAM.h],
-      [426, BOT.y - BOT.r * 0.9],
-      ...arcPts(BOT.lx, BOT.y, BOT.r, Math.PI, 0, 12),          // под нижним блоком
-      [MID.lx + 6, MID.y + MID.r + 10],
+      [426, by - BOT.r * 0.9],
+      ...arcPts(BOT.lx, by, BOT.r, Math.PI, 0, 12),          // под нижним блоком
+      [MID.lx + 6, my + MID.r + 10],
     ];
     rope(ctx, lB, 82, a);
 
@@ -205,20 +209,20 @@
     const m = (x) => W - x;
     const rA = [
       [m(448), BEAM.y + BEAM.h],
-      [m(448), MID.y - MID.r * 0.9],
-      ...arcPts(m(MID.lx), MID.y, MID.r, Math.PI, 0, 14),
+      [m(448), my - MID.r * 0.9],
+      ...arcPts(m(MID.lx), my, MID.r, Math.PI, 0, 14),
       [m(FIX.lx + FIX.r * 0.86), FIX.y + FIX.r * 0.46],
       ...arcPts(m(FIX.lx), FIX.y, FIX.r, Math.PI - 0.5, 0.15, 14),
-      [W - 118, HAND_Y],
+      [W - 118, hy],
     ];
     rope(ctx, rA, 83, a);
-    if (tail > 0) rope(ctx, [[W - 118, HAND_Y], [W - 118, 1420]], 86, a * tail, 8);
+    if (tail > 0) rope(ctx, [[W - 118, hy], [W - 118, hy + 150]], 86, a * tail, 8);
 
     const rB = [
       [m(426), BEAM.y + BEAM.h],
-      [m(426), BOT.y - BOT.r * 0.9],
-      ...arcPts(m(BOT.lx), BOT.y, BOT.r, 0, Math.PI, 12),
-      [m(MID.lx + 6), MID.y + MID.r + 10],
+      [m(426), by - BOT.r * 0.9],
+      ...arcPts(m(BOT.lx), by, BOT.r, 0, Math.PI, 12),
+      [m(MID.lx + 6), my + MID.r + 10],
     ];
     rope(ctx, rB, 84, a);
 
@@ -246,12 +250,13 @@
     // стропы от нижних блоков к камню
     if (t >= ev.rig) {
       const a = fade(t, ev.rig + 0.2, 0.4);
-      rope(ctx, [[BOT.lx, BOT.y + BOT.r - 6], [BOT.lx + 4, BLOCK.cy - 82 + y]], 94, a, 10);
-      rope(ctx, [[BOT.rx, BOT.y + BOT.r - 6], [BOT.rx - 4, BLOCK.cy - 82 + y]], 95, a, 10);
+      const by = BOT.y - 235 * LIFT, bcy = BLOCK.cy + y - 235 * LIFT;
+      rope(ctx, [[BOT.lx, by + BOT.r - 6], [BOT.lx + 4, bcy - 82]], 94, a, 10);
+      rope(ctx, [[BOT.rx, by + BOT.r - 6], [BOT.rx - 4, bcy - 82]], 95, a, 10);
     }
 
     ctx.save();
-    ctx.translate(BLOCK.cx, BLOCK.cy + y + hookShift);
+    ctx.translate(BLOCK.cx, BLOCK.cy + y + hookShift - 235 * LIFT);
     ctx.scale((1 + squash) * zoom, (1 - squash) * zoom);
     const w = BLOCK.w, h = BLOCK.h;
     const pts = [
@@ -265,9 +270,10 @@
     });
     G.line(ctx, [[-92, -58], [-18, -80], [58, -66]], { color: 'rgba(255,255,255,0.20)', lw: 7, seed: 92 });
     G.text(ctx, '500 кг', 0, 10, { size: 62, fam: F, weight: 800, color: C.cream, align: 'center', baseline: 'middle', stroke: 'rgba(0,0,0,0.35)', strokeW: 8, boil: 0 });
-    // постамент
-    G.rrect(ctx, -126, h / 2 + 8, 252, 26, 6, { fill: C.woodDark, stroke: C.ink, lw: 5, seed: 93 });
     ctx.restore();
+
+    // постамент стоит на полу и не поднимается вместе с грузом
+    G.rrect(ctx, BLOCK.cx - 126, BLOCK.cy + 90, 252, 26, 6, { fill: C.woodDark, stroke: C.ink, lw: 5, seed: 93 });
 
     if (t >= landT && t < landT + 0.9) {
       const u = (t - landT) / 0.9;
@@ -289,39 +295,44 @@
     const g1 = t >= ev.split ? pulse(t, ev.split, 5) * 0.9 : 0;
     const g2 = t >= ev.half1 ? pulse(t, ev.half1, 5) * 0.9 : 0;
     const g3 = t >= ev.half2 ? pulse(t, ev.half2, 5) * 0.9 : 0;
-    const spin = t * 0.8;
+    const spin = t * 0.8 + LIFT * 7;
+    const my = MID.y - 150 * LIFT, by = BOT.y - 235 * LIFT;
     pulley(ctx, FIX.lx, FIX.y, FIX.r, { alpha: a, glow: g3, spin });
     pulley(ctx, FIX.rx, FIX.y, FIX.r, { alpha: a, glow: g3, spin: -spin });
-    pulley(ctx, MID.lx, MID.y, MID.r, { alpha: a, glow: g2, spin: -spin * 1.1 });
-    pulley(ctx, MID.rx, MID.y, MID.r, { alpha: a, glow: g2, spin: spin * 1.1 });
-    pulley(ctx, BOT.lx, BOT.y, BOT.r, { alpha: a, glow: g1, spin });
-    pulley(ctx, BOT.rx, BOT.y, BOT.r, { alpha: a, glow: g1, spin: -spin });
+    pulley(ctx, MID.lx, my, MID.r, { alpha: a, glow: g2, spin: -spin * 1.1 });
+    pulley(ctx, MID.rx, my, MID.r, { alpha: a, glow: g2, spin: spin * 1.1 });
+    pulley(ctx, BOT.lx, by, BOT.r, { alpha: a, glow: g1, spin });
+    pulley(ctx, BOT.rx, by, BOT.r, { alpha: a, glow: g1, spin: -spin });
   }
 
   function weights(ctx, t) {
     if (t >= ev.answer - 0.15) return;
-    const lxTop = FIX.lx + FIX.r + 138, rxTop = W - lxTop;
-    const lxMid = 250, rxMid = W - lxMid;
-    if (t >= ev.split) {
-      weightLabel(ctx, '250 кг', lxMid, BOT.y, t, ev.split, C.ink, [BOT.lx - BOT.r - 6, BOT.y]);
-      weightLabel(ctx, '250 кг', rxMid, BOT.y, t, ev.split + 0.12, C.ink, [BOT.rx + BOT.r + 6, BOT.y]);
-    }
-    if (t >= ev.half1) {
-      weightLabel(ctx, '125 кг', lxMid, MID.y, t, ev.half1, C.ink, [MID.lx - MID.r - 6, MID.y]);
-      weightLabel(ctx, '125 кг', rxMid, MID.y, t, ev.half1 + 0.12, C.ink, [MID.rx + MID.r + 6, MID.y]);
-    }
-    if (t >= ev.half2) {
-      weightLabel(ctx, '62,5 кг', lxTop, FIX.y, t, ev.half2, C.accent, [FIX.lx + FIX.r + 8, FIX.y]);
-      weightLabel(ctx, '62,5 кг', rxTop, FIX.y, t, ev.half2 + 0.12, C.accent, [FIX.rx - FIX.r - 8, FIX.y]);
+    const hy = HAND_Y + 120 * LIFT;
+    // при подъёме блоки уезжают — подписи-выноски убираем
+    if (LIFT < 0.02) {
+      const lxTop = FIX.lx + FIX.r + 138, rxTop = W - lxTop;
+      const lxMid = 250, rxMid = W - lxMid;
+      if (t >= ev.split) {
+        weightLabel(ctx, '250 кг', lxMid, BOT.y, t, ev.split, C.ink, [BOT.lx - BOT.r - 6, BOT.y]);
+        weightLabel(ctx, '250 кг', rxMid, BOT.y, t, ev.split + 0.12, C.ink, [BOT.rx + BOT.r + 6, BOT.y]);
+      }
+      if (t >= ev.half1) {
+        weightLabel(ctx, '125 кг', lxMid, MID.y, t, ev.half1, C.ink, [MID.lx - MID.r - 6, MID.y]);
+        weightLabel(ctx, '125 кг', rxMid, MID.y, t, ev.half1 + 0.12, C.ink, [MID.rx + MID.r + 6, MID.y]);
+      }
+      if (t >= ev.half2) {
+        weightLabel(ctx, '62,5 кг', lxTop, FIX.y, t, ev.half2, C.accent, [FIX.lx + FIX.r + 8, FIX.y]);
+        weightLabel(ctx, '62,5 кг', rxTop, FIX.y, t, ev.half2 + 0.12, C.accent, [FIX.rx - FIX.r - 8, FIX.y]);
+      }
     }
     if (t >= ev.arrows) {
       const p = pop(t, ev.arrows, 0.3, 2.4);
       ctx.save();
       ctx.globalAlpha = clamp(p);
-      arrowHead(ctx, 118, 1420, C.accent, 22);
-      arrowHead(ctx, W - 118, 1420, C.accent, 22);
-      G.text(ctx, 'F', 118 + 74, 1290, { size: 62, fam: F, weight: 800, color: C.accent, align: 'center', baseline: 'middle', stroke: C.cream, strokeW: 9, boil: 0 });
-      G.text(ctx, 'F', W - 118 - 74, 1290, { size: 62, fam: F, weight: 800, color: C.accent, align: 'center', baseline: 'middle', stroke: C.cream, strokeW: 9, boil: 0 });
+      arrowHead(ctx, 118, hy + 150, C.accent, 22);
+      arrowHead(ctx, W - 118, hy + 150, C.accent, 22);
+      G.text(ctx, 'F', 118 + 74, hy + 110, { size: 62, fam: F, weight: 800, color: C.accent, align: 'center', baseline: 'middle', stroke: C.cream, strokeW: 9, boil: 0 });
+      G.text(ctx, 'F', W - 118 - 74, hy + 110, { size: 62, fam: F, weight: 800, color: C.accent, align: 'center', baseline: 'middle', stroke: C.cream, strokeW: 9, boil: 0 });
       ctx.restore();
     }
   }
@@ -332,12 +343,14 @@
     if (a <= 0) return;
     ctx.save();
     ctx.globalAlpha = a;
+    const hy = HAND_Y + 120 * LIFT;
     const pull = t >= ev.arrows ? 0.5 + 0.5 * Math.max(0, Math.sin(Math.PI * ((t - ev.arrows) % BEAT) / BEAT)) : 0;
-    worker(ctx, 66, [118, HAND_Y], t, pull);
-    worker(ctx, 1014, [W - 118, HAND_Y], t, pull);
+    const step = 12 * LIFT;
+    worker(ctx, 66 - step, [118, hy], t, pull + 0.3 * LIFT);
+    worker(ctx, 1014 + step, [W - 118, hy], t, pull + 0.3 * LIFT);
     // кисти на верёвке
     for (const x of [118, W - 118]) {
-      G.ellipse(ctx, x, HAND_Y, 15, 17, { fill: '#E8B48A', stroke: C.ink, lw: 4, seed: 140 });
+      G.ellipse(ctx, x, hy, 15, 17, { fill: '#E8B48A', stroke: C.ink, lw: 4, seed: 140 });
     }
     ctx.restore();
   }
@@ -399,6 +412,7 @@
   }
 
   function draw(ctx, t) {
+    LIFT = ease.inOutCubic(clamp((t - 16.6) / 4.8)); // блок идёт вверх, пока тянут
     background(ctx, t);
     rig(ctx, t);
     ropes(ctx, t);

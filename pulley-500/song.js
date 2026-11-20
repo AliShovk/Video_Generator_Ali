@@ -51,21 +51,25 @@ for (const n of sc.melody.filter((_, i) => i % 2 === 0)) {
 
 // ---------- эффекты по событиям ----------
 fx.addMono(I.noiseSweep(0.5, 300, 2600, { q: 1.2, pink: true }), 0.02, 0.16);
-fx.addMono(I.thud(72, 0.10), ev.blockLand, 0.55);
+fx.addMono(I.thud(72, 0.10), ev.blockLand, 0.8);
 for (const t of [ev.split, ev.half1, ev.half2]) fx.addMono(I.woodTick(320, 3), t, 0.5);
 fx.addMono(I.noiseSweep(0.7, 200, 6000, { q: 0.9, pink: true }), ev.answer - 0.75, 0.28);
 fx.addMono(I.subBoom(1.6, 90, 45), ev.answer, 0.5);
 fx.addMono(I.ting(m('A5'), { gap: 0.09 }), ev.answer + 0.05, 0.22);
 fx.addMono(I.pop(520), ev.recap, 0.22);
 
+// ---------- озвучка (Silero, out/voice.wav) ----------
+const voice = MIX.loadAudio(path.join(__dirname, 'out/voice.wav'), { at: 0, gain: 1.0 });
+
 // ---------- микс ----------
 MIX.sidechain([pad, bass], kicks);
+MIX.duck([drums, bass, pad, keys], voice, { depth: 0.5, attack: 0.02, release: 0.35, threshold: 0.02 });
 const stems = {
-  drums, bass, pad, keys, fx,
+  drums, bass, pad, keys, fx, voice,
   verb: reverb(verb, { room: 0.8, damp: 0.35 }),
   dly: pingpong(dly, BEAT * 0.75, 0.3, 3200),
 };
-const GAIN = { drums: 0.45, bass: 0.75, pad: 2.2, keys: 1.0, fx: 0.8, verb: 0.9, dly: 0.7 };
+const GAIN = { drums: 0.45, bass: 0.75, pad: 2.2, keys: 1.0, fx: 0.8, voice: 1.9, verb: 0.9, dly: 0.7 };
 const out = path.join(__dirname, 'out');
 const mix = MIX.mixdown(stems, GAIN, { stemDir: process.env.STEMS ? out : null });
 MIX.highpass(mix, 24);
