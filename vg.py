@@ -5,8 +5,10 @@
   vg voice  <name>            синтез озвучки (Silero) -> timings.json, voice.wav
   vg build  <name>            сборка HTML-сцен
   vg render <name> [quality]   рендер HyperFrames -> render.mp4
-  vg final  <name>            сведение звука + концовка -> <name>-final.mp4
-  vg make   <name>            voice + build + render + final одной командой
+  vg final  <name> [--reels]  сведение звука + концовка -> <name>-final.mp4
+                              --reels: без 5,8 с концовки, громкость -14 LUFS (Instagram)
+  vg make   <name> [--reels]  voice + build + render + final одной командой
+  vg meta   <name>            подпись, UTM-ссылка, проверка хука -> <name>/instagram.md
   vg new    <name> [--from solarfence]   копия проекта как шаблон
   vg studio new <name> [--format 9:16] [--from demo]   рисованный ролик (Animation Studio)
   vg studio list | song | make | render | outro <name>  второй движок: кадры кодом + музыка кодом
@@ -68,7 +70,7 @@ def cmd_render(name, quality="high"):
          "-o", "render.mp4", "--quality", quality], cwd=p)
 
 
-def cmd_final(name):
+def cmd_final(name, reels=False):
     p = proj(name)
     render, voice = p / "render.mp4", p / "voice.wav"
     if not render.exists():
@@ -78,7 +80,7 @@ def cmd_final(name):
     tmp = p / "_main.mp4"
     cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(render)]
     if voice.exists():
-        cmd += ["-i", str(voice), "-filter_complex", "[1:a]loudnorm=I=-16:TP=-1.5:LRA=11[a]",
+        cmd += ["-i", str(voice), "-filter_complex", f"[1:a]loudnorm=I={-14 if reels else -16}:TP=-1.5:LRA=11[a]",
                 "-map", "0:v", "-map", "[a]"]
     else:
         cmd += ["-map", "0:v"]
@@ -87,19 +89,28 @@ def cmd_final(name):
             "-aspect", "9:16", str(tmp)]
     run(cmd)
     out = ROOT / f"{name}-final.mp4"
-    run([PY, str(APPEND), str(tmp), str(out)])
-    tmp.unlink(missing_ok=True)
+    if reels:
+        tmp.replace(out)
+    else:
+        run([PY, str(APPEND), str(tmp), str(out)])
+        tmp.unlink(missing_ok=True)
     probe = subprocess.check_output(
         ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
          "stream=width,height,display_aspect_ratio", "-of", "csv=p=0", str(out)]).decode().strip()
     print(f"готово: {out} | {probe}")
 
 
-def cmd_make(name):
+def cmd_make(name, reels=False):
     cmd_voice(name)
     cmd_build(name)
     cmd_render(name)
-    cmd_final(name)
+    cmd_final(name, reels)
+    if reels:
+        cmd_meta(name)
+
+
+def cmd_meta(name):
+    run([PY, str(ROOT / "scripts/reels_meta.py"), str(proj(name))])
 
 
 def cmd_new(name, src="solarfence"):
@@ -217,9 +228,11 @@ if __name__ == "__main__":
     elif c == "render":
         cmd_render(args[0], args[1] if len(args) > 1 else "high")
     elif c == "final":
-        cmd_final(args[0])
+        cmd_final(args[0], "--reels" in args)
     elif c == "make":
-        cmd_make(args[0])
+        cmd_make(args[0], "--reels" in args)
+    elif c == "meta":
+        cmd_meta(args[0])
     elif c == "new":
         cmd_new(args[0], args[2] if len(args) > 2 and args[1] == "--from" else "solarfence")
     elif c == "studio":
