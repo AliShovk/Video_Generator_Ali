@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -43,7 +44,10 @@ def spoken(item) -> str:
 
 def utm_link(page: str, campaign: str) -> str:
     page = page if page.startswith("/") else "/" + page
-    return f"{SITE}{page}?utm_source=instagram&utm_medium=reels&utm_campaign={campaign}"
+    u = urllib.parse.urlsplit(SITE + page)
+    utm = urllib.parse.urlencode({"utm_source": "instagram", "utm_medium": "reels", "utm_campaign": campaign})
+    query = f"{u.query}&{utm}" if u.query else utm
+    return urllib.parse.urlunsplit(u._replace(query=query))
 
 
 def hook_report(lines: list[str]) -> list[str]:
