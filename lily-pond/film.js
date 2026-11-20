@@ -184,9 +184,13 @@
     if (t < ev.moral) return;
     const a = fade(t, ev.moral, 0.5);
     ctx.save();
-    ctx.globalAlpha = 0.55 * a;
+    ctx.globalAlpha = 0.62 * a;
     ctx.fillStyle = '#04100F';
     ctx.fillRect(0, 0, W, H);
+    ctx.restore();
+    ctx.save();
+    ctx.globalAlpha = 0.72 * a;
+    G.rrect(ctx, 70, 742, W - 140, 320, 26, { fill: 'rgba(3,12,11,0.72)', seed: 77 });
     ctx.restore();
     ctx.save();
     ctx.globalAlpha = a;
