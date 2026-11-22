@@ -20,7 +20,7 @@ description: Создаёт русский сценарий Shorts, пишет v
 
 Создай пять разных хуков и оцени:
 ~~~bash
-python3 ~/.hermes/skills/youtube-script-agent/hookscore_ru.py --hook "ВАРИАНТ 1" --hook "ВАРИАНТ 2" --json
+python3 ~/youtube-intelligence/bin/hookscore_ru.py --hook "ВАРИАНТ 1" --hook "ВАРИАНТ 2" --json
 ~~~
 Выбери два лучших. Hook score — редакционная эвристика, не прогноз просмотров.
 
